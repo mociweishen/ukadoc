@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="zh">
 <head>
 <meta charset="utf-8" />
 <meta name="robots" content="INDEX,FOLLOW">
 <meta name="author" content="UKADOC Project">
 <meta name="keywords" content="ゴースト,配布,nar,アーカイブ,伺か">
-<title>UKADOC Project 配布用ファイルの作成</title>
+<title>UKADOC Project 制作分发的文件</title>
 <link rel="stylesheet" href="base.css">
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 </head>
@@ -25,183 +25,183 @@
 
 
 <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-<h1>配布用ファイルの作成</h1>
+<h1>制作分发的文件</h1>
 <section>
 	<div class="passage">
-		<p><em>SSP2.3.00以降の場合、オーナードロー（右クリックメニュー）から「設定」→「本体設定」の「一般」にある「開発者機能を有効にする」がオンになっていないと、このページで使っている「フォルダを投下してupdates2.dauやnarを作成する機能」が使えませんので注意してください。</em></p>
+		<p><em>对于SSP2.3.00及更高版本，如果未在“所有者绘图”（右键菜单）中依次选择“选项”→“偏好设置”的“常规”选项卡下的“启用开发者功能”，则本页面所使用的“投下文件夹以生成updates2.dau或nar的功能”将无法使用，请注意。</em></p>
 	</div>
 	<div class="passage">
-		<p>ここでは配布用のファイル（アーカイブ）を作成する手順を解説します。</p>
-		<p>ゴーストに限らず、追加シェル、バルーン、その他の伺か/SSP関連コンテンツのアーカイブ作成をまとめて取り上げています。</p>
-		<p>ファイル構成の「<a href="manual_install.html">インストール</a>」のページも合わせてお読みください。</p>
+		<p>此处将介绍如何制作用于分发的文件（压缩包）的步骤。</p>
+		<p>不仅限于人格，还汇总介绍了附加Shell、Balloon以及其他与伪春菜/SSP相关的内容的归档制作方法。</p>
+		<p>请同时阅读文件结构中的「<a href="manual_install.html">安装</a>」页面。</p>
 	</div>
 	<div class="passage">
-		<p>なおこのページでは、「ゴースト（やシェルやバルーン）の作り方」そのものの解説は行いませんので注意してください。</p>
-		<p>既にその辺りは済んだ段階を前提とした解説となっています。</p>
+		<p>请注意，本页面并不讲解「如何制作人格（以及Shell或Balloon）」本身的方法。</p>
+		<p>本说明以您已事先完成相关准备工作为前提。</p>
 	</div>
 </section>
 <nav>
-	<h1>目次</h1>
+	<h1>目录</h1>
 	<ol>
-		<li><a href="#chapter1">ファイルの準備</a></li>
-		<li><a href="#chapter2">初期updates2.dauの作成</a></li>
-		<li><a href="#chapter3">install.txtの準備</a></li>
-		<li><a href="#chapter4">アーカイブ化</a></li>
+		<li><a href="#chapter1">文件准备</a></li>
+		<li><a href="#chapter2">创建初始updates2.dau</a></li>
+		<li><a href="#chapter3">准备install.txt</a></li>
+		<li><a href="#chapter4">归档</a></li>
 	</ol>
 	<ol class="ex">
-		<li><a href="#chapterEX1">developer_options.txtについて</a></li>
-		<li><a href="#chapterEX2">ゴースト配布系自動化システム(GDM)について</a></li>
-		<li><a href="#chapterEX3">refreshinstallについて</a></li>
-		<li><a href="#chapterEX4">バルーンなどの同梱配布について</a></li>
-		<li><a href="#chapterEX5">ゴーストへの追加ファイルについて</a></li>
-		<li><a href="#chapterEX6">複数インストール用パッケージについて</a></li>
-		<li><a href="#chapterEX7">initial_install.narによるサイレントインストールについて</a></li>
+		<li><a href="#chapterEX1">关于developer_options.txt</a></li>
+		<li><a href="#chapterEX2">关于人格分发自动化系统（GDM）</a></li>
+		<li><a href="#chapterEX3">关于refreshinstall</a></li>
+		<li><a href="#chapterEX4">关于Balloon等的随附派发</a></li>
+		<li><a href="#chapterEX5">关于添加到人格的文件</a></li>
+		<li><a href="#chapterEX6">关于多实例安装的软件包</a></li>
+		<li><a href="#chapterEX7">关于通过initial_install.nar进行的静默安装</a></li>
 	</ol>
 </nav>
 <section id="chapter1" class="ordered">
-	<h1>ファイルの準備</h1>
+	<h1>文件准备</h1>
 	<div class="passage">
-		<p>まずはアーカイブに含める内容（ゴーストならそのゴーストを構成するファイル一式）を用意します。</p>
-		<p>もしベースウェア<a href="#note1" class="note" id="note1-symbol">※</a>にインストールされている内容を直接編集して開発している場合は、それそのものではなくて、その内容を丸ごと別の場所にコピーしたものを配布用のファイルとして用意したうえで以下の作業をするとよいでしょう。</p>
-		<p>どんなファイルが必要なのかについては、ページ左のメニューの「ファイル構成」のカテゴリーにある、「<a href="manual_directory.html">全体の構成</a>」や、「<a href="manual_ghost.html">ゴースト</a>」「<a href="manual_shell.html">シェル</a>」などそれぞれのページを参考に。</p>
+		<p>首先准备好要包含在归档中的内容（如果是人格，则是构成该人格的全部文件）。</p>
+		<p>如果您的开发工作是直接编辑并修改已安装在基础软件<a href="#note1" class="note" id="note1-symbol">※</a>中的内容，那么最好不要直接使用原版，而是将整个内容完整地复制到其他位置，作为用于发布的文件后再进行以下操作。</p>
+		<p>关于需要哪些文件，请参考页面左侧菜单中“文件构成”类别下的“<a href="manual_directory.html">整体结构</a>”、以及“<a href="manual_ghost.html">人格</a>”“<a href="manual_shell.html">Shell</a>”等各个页面。</p>
 	</div>
 	<div class="passage">
-		<p><em class="filename">install.txt</em>、<em class="filename">updates2.dau</em>、<em class="filename">developer_options.txt</em>といったファイルについては、このページで追々用意していきますので今は無くて大丈夫です。</p>
+		<p><em class="filename">install.txt</em>、<em class="filename">updates2.dau</em>、<em class="filename">developer_options.txt</em>等文件，将陆续在本页面提供，目前暂时没有也无妨。</p>
 	</div>
 	<div class="passage">
-		<p>それからユーザにとっては不要なファイルを除去しましょう。例えばこんなものです。</p>
+		<p>此外，还应删除对用户而言不必要的文件。例如如下这些：</p>
 		<ul>
-			<li>各種SHIORIなどのセーブデータファイル(初期値の設定に必要等の場合は別)</li>
-			<li>全てのprofileフォルダ(ghost、shell内両方にできる。SSPでは自動除去)</li>
-			<li>開発用ツール（里々に付属のさとりて、れしば等）</li>
-			<li>（MATERIAのみ）ディレクトリ直下のprofile.txt</li>
-			<li>desktop.iniなどのウィンドウズが生成する設定ファイル（SSPではある程度自動除去）</li>
-			<li>その他開発用辞書ファイル、設定ファイル、ログファイルなど</li>
+			<li>各类SHIORI等的存档数据文件（如需用于初始值设定等情况则另当别论）</li>
+			<li>所有profile文件夹（可在ghost和shell中同时存在。SSP会自动删除）</li>
+			<li>开发工具（附带在里々中的さとりて、れしば等）</li>
+			<li>（仅限MATERIA）目录直下的profile.txt</li>
+			<li>desktop.ini等由Windows生成的配置文件（SSP会在一定程度上自动删除）</li>
+			<li>其他开发用词典文件、配置文件、日志文件等</li>
 		</ul>
 	</div>
 	<div class="passage">
-		<p>SSPの場合、<em class="filename">developer_options.txt</em>を設定するとよいかもしれません。</p>
-		<p>詳しくは後述の「<a href="#chapterEX1">developer_options.txtについて</a>」を参照してください。</p>
+		<p>在SSP的情况下，最好设置一下<em class="filename">developer_options.txt</em>。</p>
+		<p>详情请参阅后文的「<a href="#chapterEX1">关于developer_options.txt</a>」。</p>
 	</div>
 </section>
 <section id="chapter2" class="ordered">
-	<h1>初期updates2.dauの作成</h1>
+	<h1>创建初始updates2.dau</h1>
 	<div class="passage">
-		<p>次にネットワーク更新用ファイル（<em class="filename">updates2.dau</em>）の初期ファイルを作成します。</p>
-		<p>これは、ネットワーク更新時にサーバ側とクライアント側でファイルの内容に違いがないかを調べる事で、破損・改竄などの異常を検出するためのしくみです。</p>
-		<p>従ってネットワーク更新機能に対応する予定のない場合や、そもそもネットワーク更新機能の無効な内容（<a href="#chapterEX5">ゴーストへの追加ファイル</a>など）の場合などには無視して先に進んで構いません。</p>
+		<p>接下来，我们将创建用于网络更新的初始文件（<em class="filename">updates2.dau</em>）。</p>
+		<p>这是一种通过在网络更新时检查服务器端与客户端文件内容是否一致，从而检测出损坏、篡改等异常情况的机制。</p>
+		<p>因此，对于暂无计划支持网络更新功能的情况，或者本身就是网络更新功能无效的内容（<a href="#chapterEX5">关于添加到人格的文件</a>等），都可以直接忽略并继续进行。</p>
 	</div>
 	<div class="passage">
-		<p>そもそも、実の所アーカイブにネットワーク更新用ファイルは必須ではありません。</p>
-		<p>しかし作成しておくと、最初のネットワーク更新時に、ベースウェアがユーザの手元でやらなければならない仕事が減ります。</p>
-		<p>アーカイブの内容ファイル数が多い場合には特に、作成しておく方が親切でしょう。</p>
+		<p>其实，归档中并不一定非得包含用于网络更新的文件。</p>
+		<p>不过，提前做好准备的话，在首次进行网络更新时，可以减少基础软件在用户端需要完成的工作量。</p>
+		<p>尤其是当归档中的文件数量较多时，事先做好准备会更加周到。</p>
 	</div>
 	<div class="passage">
-		<p>最初に、MATERIAやCROWで<em class="filename">updates2.dau</em>を作成する場合には、あらかじめ一番上のディレクトリ（例えばゴーストならghostフォルダ、shellフォルダ、readme.txtなどがある場所）に、<em class="filename">updates2.dau</em>と言う名前の空のテキストファイルを作っておく必要があります。</p>
-		<p>SSPでは自動的に作成されます。</p>
+		<p>首先，在MATERIA或CROW中创建<em class="filename">updates2.dau</em>需要事先在最上层的目录（例如人格中就是ghost文件夹、shell文件夹以及readme.txt等所在的位置）预先创建一个名为<em class="filename">updates2.dau</em>的空文本文件。</p>
+		<p>在SSP中会自动创建。</p>
 	</div>
 	<div class="passage">
-		<p>そしてベースウェアを起動し、<em class="filename">updates2.dau</em>や更新したいファイルの入ったフォルダを本体にD&amp;Dします。</p>
-		<p>この時MATERIAやCROWでは、<em class="filename">install.txt</em>が入っているとアーカイブの作成が優先されてしまい、<em class="filename">updates2.dau</em>が作成されないので含めないように気をつけてください。</p>
-		<p>SSPの場合は逆に、<em class="filename">install.txt</em>の作成を済ませてからフォルダをD&amp;Dすると、<em class="filename">updates2.dau</em>の作成とアーカイブ化をいっぺんに済ませる事もできます。</p>
+		<p>然后启动基础软件，将<em class="filename">updates2.dau</em>以及包含要更新文件的文件夹通过拖放的方式添加到主机中。</p>
+		<p>此时，在MATERIA或CROW中，如果存在<em class="filename">install.txt</em>，系统会优先生成归档文件，从而导致无法生成<em class="filename">updates2.dau</em>，请务必注意不要将其包含在内。</p>
+		<p>而在SSP的情况下，先完成<em class="filename">install.txt</em>的生成，再将文件夹拖放进去，也可以一次性完成<em class="filename">updates2.dau</em>的生成与归档。</p>
 	</div>
 	<div class="passage">
-		<p>D&amp;Dした後、フォルダに<em class="filename">updates2.dau</em>というファイルが作成され（存在し）、その中身に何ごとか書きこまれているはずです。</p>
-		<p><em class="filename">updates2.dau</em>は右クリックなどから、メモ帳などの普通のテキストエディタで開けますので、中身を確認してみてください（内容自体はわからなくとも構いません）。</p>
+		<p>进行拖动操作后，文件夹中会生成一个名<em class="filename">updates2.dau</em>的文件（如果该文件已存在），其内容中应该写入了一些数据。</p>
+		<p><em class="filename">updates2.dau</em>可以通过右键单击等方式，用记事本等普通文本编辑器打开，请查看其内容（即使看不懂具体内容也无妨）。</p>
 	</div>
 </section>
 <section id="chapter3" class="ordered">
-	<h1>install.txtの準備</h1>
+	<h1>准备install.txt</h1>
 	<div class="passage">
-		<p>続いて、インストール内容について記述・設定設定するためのファイルである<em class="filename">install.txt</em>を用意します。</p>
-		<p>一番上のディレクトリ（例えばゴーストならghostフォルダ、shellフォルダ、readme.txtなどがある場所）に、<em class="filename">install.txt</em>という名前のテキストファイルを用意し、内容に合わせて中身を書きます。</p>
+		<p>接下来，准备一个用于描述和设置安装内容的文件<em class="filename">install.txt</em>。</p>
+		<p>在最上层目录（例如人格所在的ghost文件夹、shell文件夹以及readme.txt等文件所在的位置）创建一个名为<em class="filename">install.txt</em>的文本文件，并根据需要填写相应的内容。</p>
 	</div>
 	<div class="passage">
-		<p>書きこむ内容については、配布したい内容がゴーストなのか、シェルなのかなどに応じて異なりますので、<a href="descript_install.html">Install/Update設定</a>のページを参照してください。凡例もそちらにあります。</p>
+		<p>关于要写入的内容，会因您希望分发的是人格还是 Shell 等而有所不同，请参阅“<a href="descript_install.html">Install/Update设置</a>”页面。相关说明也在该页面中。</p>
 	</div>
 </section>
 <section id="chapter4" class="ordered">
-	<h1>アーカイブ化</h1>
+	<h1>归档</h1>
 	<div class="passage">
-		<p>いよいよアーカイブ化の段階に入りますが、ここまで来ればやる事はもうあまり残っていません。</p>
-		<p>なぜならベースウェアは、<em class="filename">install.txt</em>の入ったフォルダをD&amp;Dされると、それをアーカイブ化する機能を備えているからです。</p>
-		<p>従って、やる事と言えば今まで準備してきたフォルダを丸ごとベースウェア（で起動中のゴースト）にD&amp;Dすることだけです。</p>
+		<p>终于进入归档阶段了，但走到这一步，要做的事情已经不多了。</p>
+		<p>这是因为Baseware具备一项功能：当您将包含<em class="filename">install.txt</em>的文件夹通过拖放操作导入时，它会自动对其进行归档。</p>
+		<p>因此，您需要做的就只是把此前准备好的整个文件夹，直接拖放到基础软件（正在运行的人格）上即可。</p>
 	</div>
 	<div class="passage">
-		<p>これで「[フォルダ名].nar<a href="#note2" class="note" id="note2-symbol">※</a>」というファイルができたかと思います。これが配布用アーカイブファイルになります。</p>
-		<p>あとはこのnarファイルをサーバやアップローダにアップロードすれば、無事公開開始です。</p>
+		<p>至此，应该已经生成了名为“[文件夹名].nar<a href="#note2" class="note" id="note2-symbol">※</a>”的文件。这便是用于分发的归档文件。</p>
+		<p>接下来只需将这个nar文件上传到服务器或上传工具，即可顺利开始公开。</p>
 	</div>
 </section>
 <section id="chapterEX1" class="ordered ex">
-	<h1>developer_options.txtについて</h1>
+	<h1>关于developer_options.txt</h1>
 	<div class="passage">
-		<p>SSPによるアーカイブや<em class="filename">updates2.dau</em>の作成時に、一番上の階層（アーカイブ作成時にinstall.txtが置かれる場所）に<em class="filename">developer_options.txt</em>というファイルを用意することで、対象にするファイルを設定できます。</p>
-		<p>書き方の説明や例は<a href="descript_install.html#developer_options.txt">Install/Update設定のページのdeveloper_options.txtについての節</a>をご覧ください。</p>
+		<p>在使用SSP进行归档或创建<em class="filename">updates2.dau</em>时，通过在最上层目录（即归档时放置install.txt的目录）中准备名为<em class="filename">developer_options.txt</em>的文件，即可设定要处理的文件。</p>
+		<p>有关编写方法的说明及示例，请参阅<a href="descript_install.html#developer_options.txt">Install/Update设置</a>页面中关于developer_options.txt的部分。</p>
 	</div>
 	<div class="passage">
-		なおこのファイルはあくまでSSPでアーカイブや<em class="filename">updates2.dau</em>を作成する時に働くので、後述の<a href="chapterEX2">ゴースト配布系自動化システム</a>や、他のベースウェアでそれらを作成する場合には無効である事に注意してください。
+		需要注意的是，此文件仅在SSP中用于生成归档及<em class="filename">updates2.dau</em>时发挥作用，因此在下文所述的<a href="chapterEX2">人格分发自动化系统</a>或其他基础软件中使用时将无效。
 	</div>
 </section>
 <section id="chapterEX2" class="ordered ex">
-	<h1>ゴースト配布系自動化システム(GDM)について</h1>
+	<h1>关于人格分发自动化系统（GDM）</h1>
 	<div class="passage">
-		<p>ゴースト配布系自動化システム(GDM)は<em class="filename">updates2.dau</em>、ゴーストのアーカイブ化、そしてサーバへのアップロードまでを一括で行ってくれる支援ツールです。</p>
-		<p>導入してきちんと設定してしまえば、このページに書いてある内容の大部分が不要になるでしょう。</p>
+		<p>人格分发自动化系统（GDM）是一个能够一次性完成<em class="filename">updates2.dau</em>、人格归档以及上传至服务器等操作的辅助工具。</p>
+		<p>只要正确导入并进行设置，本页面所写内容的大部分都将变得不再必要。</p>
 	</div>
 	<div class="passage">
-		<p>現在は下記の通り「整備班」で配布されています。</p>
-		<p><a href="http://ms.shillest.net/#TOOL">ゴースト配布系自動化システム</a></p>
+		<p>目前正按下述方式在“整備班”进行分发。</p>
+		<p><a href="http://ms.shillest.net/#TOOL">人格分发自动化系统</a></p>
 	</div>
 	<div class="passage">
-		<p>また詳しい導入・設定の解説は以下のサイトを参考にしてください（「1」の内容は不要）。</p>
-		<p><a href="http://navy.nm.land.to/post/jidouhaihu.html">ゴースト配布系自動化システム(GDM)のつかいかた</a></p>
+		<p>有关详细的部署与配置说明，请参考以下网站（其中“1”的内容无需参考）。</p>
+		<p><a href="http://navy.nm.land.to/post/jidouhaihu.html">人格分发自动化系统（GDM）的使用方法</a></p>
 	</div>
 	<div class="passage">
-		<p>名前にこそ「ゴースト」とありますが、実際にはシェルやバルーンその他あらゆるもののアーカイブ・ネットワーク更新用ファイルのアップロードに使えます。</p>
-		<p>また複数の対象（ゴースト1,ゴースト2,シェル1,シェル2,シェル3,バルーン,...といったように）について、アーカイブ作成・ネットワーク更新などの操作ごとに設定を保存しておけて、その時々でしたい操作だけを選んで一括実行できます。</p>
-		<p>多くのコンテンツを管理している場合にはとても助かります。</p>
+		<p>虽然名字里有“人格”，但实际上它可用于上传各种类型的归档文件和网络更新文件，包括Shell、Balloon文件等。</p>
+		<p>此外，对于多个目标（如人格1、人格2、Shell1、Shell2、Shell3、Balloon等），在执行归档创建、网络更新等操作时，可以保存相应的设置，从而只需选择当时需要执行的操作，即可批量执行。</p>
+		<p>在管理大量内容时，这会非常有帮助。</p>
 	</div>
 	<div class="passage">
-		<p>最初の導入や設定は少しやる事が多く大変ですが、一度済ませてしまえば後はワンクリックで、複数コンテンツのネットワーク更新・アーカイブ更新を済ませてくれるのは非常に楽です。</p>
-		<p>それだけではなく、<em class="filename">updates2.dau</em>作成後にファイルを弄ってしまったり、FTP通信をアスキーモードに設定してアップロードしたりといったミスによるmd5不一致エラーを完全に防いでくれます。</p>
-		<p>もちろん適切な設定によって、不要ファイルの混入防止などにも大いに役立てることができます。</p>
+		<p>最初的导入和设置工作量较大、较为繁琐，但只要完成一次，之后只需一键即可同时完成多个内容的网络更新与归档更新，非常省心。</p>
+		<p>不仅如此，<em class="filename">updates2.dau</em>在生成后，还能彻底避免因误操作文件或在FTP上传时将传输模式设为ASCII而导致的md5校验不一致错误。</p>
+		<p>当然，通过适当的设置，也能在很大程度上防止不必要的文件混入。</p>
 	</div>
 	<div class="passage">
-		<p>なお先述の<a href="#chapterEX1">developer_options.txt</a>は、SSPの機能でnarや<em class="filename">updates2.dau</em>を作成する場合にはたらく設定ファイルですので、GDMを使って作成する場合には関係ないことに注意してください。</p>
-		<p>といってもGDMはそれ自体の機能としてアップロードするファイル/しないファイルの設定ができますので、本来不要です。</p>
+		<p>另外，前面提到的<a href="#chapterEX1">developer_options.txt</a>是用于SSP功能生成nar或<em class="filename">updates2.dau</em>时生效的配置文件，因此请注意，使用GDM进行生成时与此无关。</p>
+		<p>不过，GDM本身就有设置哪些文件可以上传、哪些文件不能上传的功能，因此原本是不需要的。</p>
 	</div>
 </section>
 <section id="chapterEX3" class="ordered ex">
-	<h1>refreshinstallについて</h1>
+	<h1>关于refreshinstall</h1>
 	<div class="passage">
-		<p>install.txtに下記の記述が含まれていると、特殊なインストールになります。</p>
+		<p>如果install.txt中包含以下内容，则会进行特殊安装。</p>
 		<pre class="exmp-descript2"><code>refresh,1</code></pre>
 	</div>
 	<div class="passage">
-		<p>この指定があった場合、インストールされるフォルダにすでにファイルがあると、上書きするのではなく全て削除してからインストールされるようになります。</p>
-		<p>フォルダ・ファイル構成を変えるなどして、上書きされると不要なファイルが残ってしまう場合などに使います。</p>
+		<p>如果设置了此选项，当安装目标文件夹中已存在文件时，将不会进行覆盖，而是先删除所有文件后再进行安装。</p>
+		<p>当您修改了文件夹或文件结构，导致覆盖后可能会残留不需要的文件时，可使用此选项。</p>
 	</div>
 	<div class="passage">
-		<p>しかしリフレッシュインストールでは、<em>セーブデータ等も消えてしまう</em>点に注意が必要です。</p>
-		<p>リフレッシュインストールの際に残しておきたいファイルは以下のようにして指定できます。</p>
+		<p>但请注意，执行刷新安装时，<em>存档数据等也会被清除</em>。</p>
+		<p>在执行刷新安装时，可按如下方式指定需要保留的文件。</p>
 		<pre class="exmp-descript2"><code>refreshundeletemask,save1.txt:save2.txt</code></pre>
-		<p>詳しい書式など、<a href="descript_install.html">Install/Update設定</a>のページもご覧ください。</p>
+		<p>有关详细格式等，请参阅<a href="descript_install.html">Install/Update设定</a>页面。</p>
 	</div>
 </section>
 <section id="chapterEX4" class="ordered ex">
-	<h1>バルーンなどの同梱配布について</h1>
+	<h1>关于Balloon等的随附分发</h1>
 	<div class="passage">
-		<p>install.txtへの記述とファイルの構成によって、ゴーストにバルーンを同梱して配布することができます。</p>
-		<p>またSSPの場合、バルーンの他にもプラグインとヘッドラインについて同梱する事ができ、さらにゴーストに対してでなくシェルにそれらを同梱することも可能です。</p>
+		<p>通过在install.txt中的描述以及文件的结构，可以将Balloon与人格一同打包分发。</p>
+		<p>此外，在SSP的情况下，除了Balloon之外，还可以将PLUGIN和HEADLINE一并打包；而且，这些内容不仅可以与人格一起打包，也可以直接打包到Shell中。</p>
 	</div>
 	<div class="passage">
-		<p>以下ではゴーストにバルーンを同梱する例を考えてみましょう。</p>
-		<p>ファイル構成はこのようになります。</p>
+		<p>下面我们将以向Ghost打包Balloon为例进行说明。</p>
+		<p>文件结构如下所示。</p>
 
 <pre>
 +-(myghost)
 　　<em class="filename">+-install.txt</em>
-　　<em class="filename">+-developer_options.txt (SSPのみ)</em>
+　　<em class="filename">+-developer_options.txt (仅SSP)</em>
 　　+-ghost
 　　+-shell
 　　+-(myballoon)
@@ -212,118 +212,120 @@
 </pre>
 	</div>
 	<div class="passage">
-		<p>この時install.txtを以下のように書けば、ゴーストと同時にバルーンのインストールができます。</p>
+		<p>此时若将install.txt按如下方式编写，即可在安装人格的同时一并安装Balloon。</p>
 <pre class="exmp-descript2">charset,Shift_JIS
 type,ghost
-name,ゴースト名
-directory,myghost（※ゴーストのフォルダ名。英数）
-<em>balloon.directory,myballoon</em>（※バルーンのフォルダ名。英数）
+name,人格名
+directory,myghost（※人格的文件夹名。英文和数字）
+<em>balloon.directory,myballoon</em>（※Balloon的文件夹名。英文和数字）
 </pre>
-		<p>この場合balloon側にinstall.txtは不要です<br>※あっても無視されます。単独配布を見越して入れておいても構いません。</p>
+		<p>在这种情况下，Balloon端无需放置install.txt文件<br>※即使存在该文件也会被忽略。为便于单独分发，也可事先放入其中。</p>
 	</div>
 	<div class="passage">
-		<p>また、もし設置後のバルーンフォルダ名と、配布時のフォルダ名が異なる場合は以下のようにします。</p>
+		<p>此外，如果安装后的Balloon文件夹名称与分发时的文件夹名称不同，请按如下方式操作。</p>
 <pre class="exmp-descript2">charset,Shift_JIS
 type,ghost
-name,ゴースト名
-directory,myghost（※ゴーストのフォルダ名。英数）
-<em>balloon.directory,hoge_balloon</em>（※インストール後のバルーンフォルダ名。英数）
-<em>balloon.source.directory,myballoon</em>（※アーカイブ内のバルーンフォルダ名。英数）
+name,人格名
+directory,myghost（※人格的文件夹名。英文和数字）
+<em>balloon.directory,hoge_balloon</em>（※安装后的Balloon的文件夹名。英文和数字）
+<em>balloon.source.directory,myballoon</em>（※压缩包内的Balloon的文件夹名。英文和数字）
 </pre>
-		<p>これで上例のmyballoonというバルーンのフォルダは、<br>実際のインストール後にはhoge_balloonというフォルダ名になります。</p>
+		<p>这样一来，上述示例中名为myballoon的Balloon文件夹将会在实际安装后，其文件夹名称将变为hoge_balloon。</p>
 	</div>
 	<div class="passage">
-		<p>同梱するファイルについてのrefreshの設定は以下のようにします。</p>
+		<p>关于同梱文件的refresh设置如下：</p>
 		<pre class="exmp-descript2"><code>balloon.refresh,1<br>balloon.refreshundeletemask,hoge.png:huga.txt:...</code></pre>
 	</div>
 	<div class="passage">
-		<p>バルーン以外について同梱にする場合（SSPのみ可）には、「balloon.directory」「balloon.source.directiory」「balloon.refresh」などの「balloon」部分を、それぞれ同梱したい内容、すなわち</p>
+		<p>若要将除Balloon以外的内容一并打包（仅限SSP），请将“balloon”部分，如“balloon.directory”、“balloon.source.directiory”、“balloon.refresh”等，分别替换为希望一同打包的内容，即</p>
 		<ul>
 			<li>headline</li>
 			<li>plugin</li>
 			<li>calendar.skin</li>
 			<li>calendar.plugin</li>
 		</ul>
-		<p>のいずれかに変更した上で、上例のバルーンと同様にファイルを同梱してください。</p>
+		<p>请将其修改为上述任一名称后，再按照前述示例中的方式将文件一同打包。
+
+</p>
 	</div>
 </section>
 <section id="chapterEX5" class="ordered ex">
-	<h1>ゴーストへの追加ファイルについて</h1>
+	<h1>关于添加到人格的文件</h1>
 	<div class="passage">
-		<p>ゴーストへの追加ファイル（supplement）のアーカイブを作りたい場合は、ゴースト本来のフォルダ構造はそのまま、追加したいファイルだけを含めてアーカイブにします。</p>
-		<p>例えばghost/masterに「dic_supplement.txt」というファイルを追加したいなら、以下のようになります。</p>
+		<p>如果要为Ghost制作附加文件（supplement）的压缩包，只需保留Ghost原有的文件夹结构，仅将需要添加的文件打包即可。</p>
+		<p>例如，若想在ghost/master目录下添加名为“dic_supplement.txt”的文件，操作如下。</p>
 		<pre>
 +-(mysupplement)
 　　<em class="filename">+-install.txt</em>
-　　<em class="filename">+-developer_options.txt (SSPのみ)</em>
+　　<em class="filename">+-developer_options.txt (仅SSP)</em>
 　　+-ghost
 　　　　+-master
 　　　　　　+-dic_supplement.txt
 </pre>
 	</div>
 	<div class="passage">
-		<p>この時のinstall.txtの内容はこのようになります。</p>
+		<p>此时的install.txt内容如下。</p>
 <pre class="exmp-descript2">
 charset,Shift_JIS
-name,追加トークパッチ
+name,追加对话补丁
 type,supplement
-accept,対象ゴーストの本体側名
+accept,目标人格的本体侧名
 </pre>
 	</div>
 </section>
 <section id="chapterEX6" class="ordered ex">
-	<h1>複数インストール用パッケージについて</h1>
+	<h1>关于多实例安装的软件包</h1>
 	<div class="passage">
-		<p>この方法はSSP専用となっています。</p>
-		<p>以下のようなファイル構成でアーカイブを作ると、複数の内容を同時にインストールするためのパッケージを作る事ができます。</p>
+		<p>方法仅适用于SSP。</p>
+		<p>按照如下文件结构创建归档文件，即可生成用于同时安装多个内容的软件包。</p>
 		<pre>
 +-(mypackage)
 　　<em class="filename">+-install.txt</em> (package用)
 　　+-(myghost1)
 　　　　+<em class="filename">-install.txt</em> (myghost1用)
-　　　　<em class="filename">+-developer_options.txt</em> (SSPのみ)
+　　　　<em class="filename">+-developer_options.txt</em> (仅SSP)
 　　　　+-ghost
 　　　　+-shell
 　　　　:
 　　+-(myghost2)</em>
 　　　　<em class="filename">+-install.txt</em> (myghost2用)
-　　　　<em class="filename">+-developer_options.txt</em> (SSPのみ)
+　　　　<em class="filename">+-developer_options.txt</em> (仅SSP)
 　　　　+-ghost
 　　　　+-shell
 　　　　:
 </pre>
 	</div>
 	<div class="passage">
-		<p>フォルダにpackage用の<em class="filename">install.txt</em>を用意して、そのフォルダの中にそれぞれの内容をいれます。</p>
-		<p>それぞれの内容は<em>個別のinstall.txt</em>を持った、単独でもアーカイブにできるような通常のインストール構造です。</p>
-		<p>いくつもの内容をフォルダで「梱包」して、箱書きとしてpackage用の<em class="filename">install.txt</em>を別に付ける、と考えると解りやすいかもしれません。</p>
+		<p>在文件夹中准备用于package的<em class="filename">install.txt</em>，并将各自的内容放入该文件夹中。</p>
+		<p>每个内容都是<em>单独的install.txt</em>，具备独立打包成压缩包的常规安装结构。</p>
+		<p>可以将多个内容以文件夹的形式“打包”，并作为包装说明另行附上用于package的<em class="filename">install.txt</em>，这样理解起来可能更直观。</p>
 	</div>
 	<div class="passage">
-		<p>最上位フォルダにあるpackage用のinstall.txtは以下のように書きます。</p>
+		<p>位于最上层文件夹中的package专用install.txt文件应按如下方式编写。</p>
 <pre class="exmp-descript2">
 charset,Shift_JIS
 type,package
-name,パッケージ名
+name,软件包名
 </pre>
 	</div>
 	<div class="passage">
-		<p>個々のinstall.txtは通常通りに記述します（<a href="descript_install.html">Install/Update設定</a>など参照）。</p>
-		<p>なお<a href="#chapterEX1">developer_options.txt</a>を使う場合も、最上位のフォルダにではなく<em>それぞれの内容側に用意する</em>点に注意してください。</p>
+		<p>各个install.txt文件仍按常规方式编写（请参阅<a href="descript_install.html">Install/Update设定</a>等）。</p>
+		<p>另外使用<a href="#chapterEX1">developer_options.txt</a>时也请注意不要放在最上层的文件夹中，<em>而应分别放置在各自的内容目录下</em>。</p>
 	</div>
 	<div class="passage">
-		<p>上例のファイル構成はゴーストを二つ同梱している例ですが、もちろん実際にはゴーストに限らずアーカイブとして有効なあらゆる内容を含む事ができます。</p>
-		<p>ただし、type,shellやtype,supplementのようなacceptを指定する内容で、指定先がバラバラのものを一緒にしてしまわないように注意してください。</p>
+		<p>上述文件结构示例中包含了两个人格文件，但当然，在实际应用中，除了人格之外，还可以包含任何作为归档有效的内容。</p>
+		<p>但请注意，不要将诸如 type,shell 或 type,supplement 等带有 accept 参数、且指定目标各不相同的内容混为一谈。</p>
 	</div>
 </section>
 <section id="chapterEX7" class="ordered ex">
-	<h1>initial_install.narによるサイレントインストールについて</h1>
+	<h1>关于通过initial_install.nar进行的静默安装</h1>
 	<div class="passage">
-		<p>ssp.exeと同じフォルダに<em class="filename">initial_install.nar</em>というファイル名のnarファイルを配置した状態でSSPを起動すると、起動時にそのnarファイルが自動的にサイレント（確認ダイアログなし）で上書きインストールされる。</p>
-		<p>インストール完了後、<em class="filename">initial_install.nar</em>は自動的に削除される。</p>
+		<p>在与 ssp.exe 同一文件夹中放置名为 <em class="filename">initial_install.nar</em>的 nar 文件，并以该状态启动 SSP 时，程序将在启动时自动以静默方式（无确认对话框）对该 nar 文件进行覆盖安装。</p>
+		<p>安装完成后，<em class="filename">initial_install.nar</em>将被自动删除。</p>
 	</div>
 	<div class="passage">
-		<p>この機能は主に開発者向けのもので、SSPの配布パッケージにゴーストなどを同梱して配布したい場合に便利である。</p>
-		<p>例えばSSP本体と一緒に特定のゴーストを同梱した配布パッケージを作りたい場合、ssp.exeと同じ場所に<em class="filename">initial_install.nar</em>を置いておくだけで、ユーザが初回起動した際に自動的にゴーストがインストールされる。</p>
+		<p>此功能主要面向开发者，当您希望在SSP的分发包中附带人格等组件进行发布时非常方便。</p>
+		<p>例如，如果您想制作一个将特定的Ghost与SSP主程序一同打包发布的安装包，只需将<em class="filename">initial_install.nar</em>文件放置于与ssp.exe相同的目录下，用户首次启动时即可自动完成Ghost的安装。</p>
 	</div>
 	<ul class="supported-baseware">
 		<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /> 2.7.52</li>
@@ -331,13 +333,13 @@ name,パッケージ名
 </section>
 <aside class="passage hint">
 	<dl>
-		<dt id="note1"><a href="#note1-symbol">※1 ベースウェア</a></dt>
+		<dt id="note1"><a href="#note1-symbol">※1 基础软件</a></dt>
 		<dd>
-			SSP、MATERIA（本家伺か）、CROWなどの、ゴーストを動かす土台となるソフトウェアのこと。
+			指用于驱动人格的底层软件，如SSP、MATERIA（本家伺か）、CROW等。
 		</dd>
 		<dt id="note2"><a href="#note2-symbol">※2 nar</a></dt>
 		<dd>
-			Nanika ARchiveの略。「Nanika」は、伺かの旧称の一つである「何か」のこと。読みは「なー」。
+			Nanika ARchive的简称。“Nanika”是伺か的旧称之一，意为“何か”，读作“なー”。
 		</dd>
 	</dl>
 </aside>

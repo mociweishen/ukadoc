@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="zh">
 <head>
 <meta charset="utf-8" />
 <meta name="robots" content="INDEX,FOLLOW">
 <meta name="author" content="UKADOC Project">
 <meta name="keywords" content="ゴースト,install,インストール">
-<title>UKADOC Project インストール</title>
+<title>UKADOC Project 安装</title>
 <link rel="stylesheet" href="base.css">
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 </head>
@@ -25,65 +25,65 @@
 
 
 <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-<h1>インストール</h1>
+<h1>安装</h1>
 <section>
 	<div class="passage">
-		<p>配布用アーカイブの作成方法自体は「<a href="dev_nar.html">配布用ファイルの作成</a>」のページを参照。</p>
+		<p>关于制作分发用压缩包的方法，请参阅“<a href="dev_nar.html">制作分发文件</a>”页面。</p>
 	</div>
 	<div class="passage">
-		<p>ゴーストは一般的に<em class="filename">nar</em>という拡張子のアーカイブで配布される（なー。Nanika ARchive）。</p>
-		<p>narはzipの拡張子を変えただけのもので、実体はzipなので、サーバによってはzipで配布する場合もある。</p>
-		<p>lzhでも解凍DLLがあればインストール可能ではあるがよほどの理由が無い場合は使用しない。</p>
-		<p>SSPではcabや自己解凍exeでも一応インストール可能。</p>
+		<p>Ghost通常以<em class="filename">nar</em>为扩展名的压缩包进行分发（也就是Nanika ARchive）。</p>
+		<p>nar只是将zip的扩展名改了一下，其本质仍是zip格式，因此在某些服务器上也可能以zip格式分发。</p>
+		<p>虽然使用lzh格式且具备解压DLL的情况下也能安装，但除非有特别充分的理由，否则不建议使用。</p>
+		<p>在SSP中，即使使用cab文件或自解压exe文件，也基本可以完成安装。</p>
 	</div>
 	<div class="passage">
-		<p>アーカイブは解凍して手動でインストールすることもできるが、<em class="filename">install.txt</em>が適切に用意されていれば、D&amp;Dなどの手段でインストーラ機能が働き、自動的にインストールできる。</p>
+		<p>虽然也可以解压归档后手动安装，但如果已妥善准备了<em class="filename">install.txt</em>文件，通过拖放等方式即可触发安装程序功能，实现自动安装。</p>
 	</div>
 	<div class="passage">
-		<p>narはinstall.txtを含んだゴーストフォルダをベースウェア（SSP）本体にD&amp;Dすることによって作成可能。</p>
-		<p>手動でzip圧縮しリネームしたものと同等だが、その場合フォルダの階層を深くしてしまわないように注意。</p>
+		<p>可通过将包含install.txt的Ghost文件夹拖放到基础软件（SSP）主程序中来创建nar。</p>
+		<p>这与手动压缩并重命名的zip文件效果相当，但此时需注意不要使文件夹层级过深。</p>
 	</div>
 	<div class="passage">
-		<p>ゴーストを配布する際にゴーストとシェルのフォルダにあるprofileフォルダや、セーブデータ等を含めないように注意すること。</p>
-		<p>ネットワーク更新でも同じことがいえる。</p>
-		<p>SSPでは、その制御のために<em class="filename">developer_options.txt</em>が用意されている。</p>
+		<p>在分发人格时，请注意不要将人格与Shell文件夹中的profile文件夹以及存档数据等一并包含在内</p>
+		<p>网络更新也同样适用。</p>
+		<p>在SSP中，为了实现这一控制，提供了<em class="filename">developer_options.txt</em>。</p>
 	</div>
 	<div class="passage">
 		<dl>
-			<dt>標準的なゴーストの場合</dt>
+			<dt>对于标准的人格</dt>
 			<dd>
 <pre>
 +-(myghost)
 　　+-ghost
 　　+-shell
 　　<em class="filename">+-install.txt</em>
-　　<em class="filename">+-developer_options.txt</em> (SSPのみ)
+　　<em class="filename">+-developer_options.txt</em> (仅限SSP)
 　　+-readme.txt
 　　+-thumbnail.png
 　　:
 　　:
 </pre>
 				<div class="passage hint">
-					<p><em>supplement</em>の場合、上記の内容の<em>フォルダ構造はそのまま</em>、追加するファイルのみ含めた状態でアーカイブ化する。</p>
-					<p>例えばdic_supplement.txtというファイルをghost/master/に追加したいなら</p>
+					<p><em>supplement</em>的情况下，上述内容的の<em>文件夹结构保持不变</em>，仅将要添加的文件打包成压缩包。</p>
+					<p>例如，如果想将dic_supplement.txt这个文件添加到ghost/master/目录下</p>
 <pre>
 +-(mysupplement)
 　　<em class="filename">+-install.txt</em>
-　　<em class="filename">+-developer_options.txt</em> (SSPのみ)
+　　<em class="filename">+-developer_options.txt</em> (仅限SSP)
 　　+-ghost
 　　　　+-master
 　　　　　　+-dic_supplement.txt
 </pre>
-					<p>となる。</p>
+					<p>则会变成这样。</p>
 				</div>
 			</dd>
 
-			<dt>標準的な追加シェルの場合</dt>
+			<dt>对于标准的Shell</dt>
 			<dd>
 <pre>
 +-(additional_shell)
 　　<em class="filename">+-install.txt</em>
-　　<em class="filename">+-developer_options.txt</em> (SSPのみ)
+　　<em class="filename">+-developer_options.txt</em> (仅限SSP)
 　　+-descript.txt
 　　+-readme.txt
 　　+-thumbnail.png
@@ -94,12 +94,12 @@
 </pre>
 			</dd>
 
-			<dt>標準的なバルーンの場合</dt>
+			<dt>对于标准的Balloon</dt>
 			<dd>
 <pre>
 +-(myballoon)
 　　<em class="filename">+-install.txt</em>
-　　<em class="filename">+-developer_options.txt</em> (SSPのみ)
+　　<em class="filename">+-developer_options.txt</em> (仅限SSP)
 　　+-descript.txt
 　　+-balloonc*.png
 　　+-balloons*.png
@@ -109,12 +109,12 @@
 </pre>
 			</dd>
 
-			<dt>ゴーストにバルーンなどを同梱する場合</dt>
+			<dt>若将气球等物品与人格一同包装时</dt>
 			<dd>
 <pre>
 +-(myghost)
 　　<em class="filename">+-install.txt</em>
-　　<em class="filename">+-developer_options.txt</em> (SSPのみ)
+　　<em class="filename">+-developer_options.txt</em> (仅限SSP)
 　　+-ghost
 　　+-shell
 　　+-(myballoon)
@@ -123,36 +123,36 @@
 　　　　:
 　　　　:
 </pre>
-				<p>プラグインなどでも同様（シェルを同梱する場合はこうせずに普通にshellフォルダ以下に置けばよい）。</p>
-				<p>また、同梱される側（上例のバルーン）にはinstall.txt不要。あっても無視される。</p>
+				<p>插件等也是如此（如果要随附Shell，不必这样做，直接将其放置在shell文件夹下即可）。</p>
+				<p>另外，作为随附方（如上述Balloon）无需提供install.txt文件，即使存在也会被忽略。</p>
 			</dd>
 
-			<dt>(SSP専用)複数インストール用パッケージ</dt>
+			<dt>SSP专用）多实例安装包</dt>
 			<dd>
 <pre>
 +-(mypackage)
 　　<em class="filename">+-install.txt</em> (package用)
 　　+-(myghost1)
 　　　　<em class="filename">+-install.txt</em> (myghost1用)
-　　　　<em class="filename">+-developer_options.txt</em> (SSPのみ)
+　　　　<em class="filename">+-developer_options.txt</em> (仅限SSP)
 　　　　+-ghost
 　　　　+-shell
 　　　　:
 　　+-(myghost2)
 　　　　<em class="filename">+-install.txt</em> (myghost2用)
-　　　　<em class="filename">+-developer_options.txt</em> (SSPのみ)
+　　　　<em class="filename">+-developer_options.txt</em> (仅限SSP)
 　　　　+-ghost
 　　　　+-shell
 　　　　:
 </pre>
-			<p>パッケージ用および個別の内容用それぞれに、別のinstall.txtが必要な点に注意。</p>
-			<p>ghostに限らず単体のアーカイブにできるあらゆるものを同梱可能だが、shellやsupplementなど特定の対象があるものは、異なる対象のものを混ぜないように注意。</p>
+			<p>请注意，用于打包的文件与单独的内容文件各自需要单独的install.txt文件。</p>
+			<p>不仅限于ghost，任何可单独打包的文件都可以一并包含；但针对shell、supplement等特定类型的文件，应注意不要混入其他不同类型的文件。</p>
 			</dd>
 		</dl>
 	</div>
 
 	<div class="passage">
-		その他、ヘッドラインセンサ、プラグイン単体配布なども同様に、その一番上のディレクトリにinstall.txtを置く。
+		此外，对于头条传感器、插件单独分发等情况，也请在最上层目录中放置install.txt文件。
 	</div>
 </section>
 <section>
@@ -160,19 +160,19 @@
 		<dl class="component">
 			<dt><a href="descript_install.html">install.txt</a></dt>
 			<dd>
-				<p>インストール設定を記載するテキスト。</p>
-				<p>このファイルがなければD&amp;Dなどによる自動インストール機能は動作しない。</p>
-				<p>アーカイブの内容種別、アーカイブ名称、ディレクトリ名などを設定する。</p>
-				<p>詳細は<a href="descript_install.html" title="install.txt">リンク先</a>を参照。</p>
+				<p>用于记载安装设置的文本。</p>
+				<p>若无此文件，则基于拖放等的自动安装功能将无法运行。</p>
+				<p>用于设定归档内容类型、归档名称、目录名等信息。</p>
+				<p>详情请参阅<a href="descript_install.html" title="install.txt">链接页面</a>。</p>
 			</dd>
 
 			<dt><a href="descript_install.html#developer_options.txt">developer_options.txt</a></dt>
 			<dd>
-				<p>SSPのみ。省略可。</p>
-				<p>install.txtと同じ場所に配置する。</p>
-				<p>ただし複数インストール用パッケージの場合、最上位のinstall.txtではなく、各コンテンツのinstall.txtのある場所に用意する点に注意。</p>
-				<p>SSPでnarを作る場合に、対象に含めないファイルなどを設定するためのファイル。</p>
-				<p>書式など詳しくは<a href="descript_install.html#developer_options.txt" title="developer_options.txt">リンク先</a>を参照。</p>
+				<p>仅限SSP。可省略。</p>
+				<p>与install.txt置于同一目录。</p>
+				<p>不过，对于用于多重安装的软件包，请注意不要使用最顶层的install.txt文件，而应将其放置在各个内容对应的install.txt所在位置。</p>
+				<p>在SSP中制作nar时，用于设置不包含在目标中的文件等信息的配置文件。</p>
+				<p>有关格式等详情，请参阅<a href="descript_install.html#developer_options.txt" title="developer_options.txt">链接页面</a>。</p>
 			</dd>
 		</dl>
 	</div>

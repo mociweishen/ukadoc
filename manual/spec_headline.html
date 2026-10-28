@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="zh">
 <head>
 <meta charset="utf-8" />
 <meta name="robots" content="INDEX,FOLLOW">
@@ -15,7 +15,7 @@
 		<table>
 			<tbody>
 				<tr>
-					<th>トップページへ戻る</th>
+					<th>返回首页</th>
 					<td colspan="2">
 						<ul>
 							<li><a href="http://ssp.shillest.net/ukadoc/manual/index.html">INDEX</a></li>
@@ -25,7 +25,7 @@
 			</tbody>
 			<tbody>
 				<tr>
-					<th rowspan="6">設定ファイル</th>
+					<th rowspan="6">设定文件</th>
 					<th>Ghost</th>
 					<td>
 						<ul>
@@ -81,24 +81,24 @@
 			</tbody>
 			<tbody>
 				<tr>
-					<th>さくらスクリプト</th>
+					<th>Sakura脚本</th>
 					<td colspan="2">
 						<ul>
-							<li><a href="./list_sakura_script.html">Sakura Script</a></li>
-							<li><a href="./list_propertysystem.html">Property System</a></li>
+							<li><a href="./list_sakura_script.html">Sakura脚本</a></li>
+							<li><a href="./list_propertysystem.html">属性系统</a></li>
 						</ul>
 					</td>
 				</tr>
 			</tbody>
 			<tbody>
 				<tr>
-					<th rowspan="2">イベント</th>
+					<th rowspan="2">事件</th>
 					<th>SHIORI</th>
 					<td>
 						<ul>
-							<li><a href="./list_shiori_event.html">SHIORI Event</a></li>
-							<li><a href="./list_shiori_event_ex.html">SHIORI Event（外部）</a></li>
-							<li><a href="./list_shiori_resource.html">SHIORI Resource</a></li>
+							<li><a href="./list_shiori_event.html">SHIORI事件</a></li>
+							<li><a href="./list_shiori_event_ex.html">SHIORI事件（外部）</a></li>
+							<li><a href="./list_shiori_resource.html">SHIORI资源</a></li>
 						</ul>
 					</td>
 				</tr>
@@ -106,26 +106,26 @@
 					<th>PLUGIN</th>
 					<td>
 						<ul>
-							<li><a href="./list_plugin_event.html">PLUGIN Event</a></li>
+							<li><a href="./list_plugin_event.html">PLUGIN事件</a></li>
 						</ul>
 					</td>
 				</tr>
 			</tbody>
 			<tbody>
 				<tr>
-					<th>規格</th>
+					<th>规格</th>
 					<td colspan="2">
 						<ul>
 							<li><a href="./spec_shiori3.html">SHIORI/3.0</a></li>
 							<li><a href="./spec_sstp.html">SSTP/1.x</a></li>
-							<li><a href="http://www.boreas.dti.ne.jp/~sdn/saori.html">SAORI/1.0</a>（外部サイト）</li>
+							<li><a href="http://www.boreas.dti.ne.jp/~sdn/saori.html">SAORI/1.0</a>（外部链接）</li>
 							<li><a href="./spec_saori_ex.html">SAORI over DirectSSTP</a></li>
 							<li><a href="./spec_plugin.html">PLUGIN/2.0</a></li>
 							<li><a href="./spec_headline.html">HEADLINE/2.0</a></li>
 							<li><a href="./spec_dll.html">DLL</a></li>
 							<li><a href="./spec_fmo_mutex.html">FMO/MUTEX</a></li>
-							<li><a href="./spec_update_file.html">更新定義ファイル</a></li>
-							<li><a href="./spec_web.html">Web関連</a></li>
+							<li><a href="./spec_update_file.html">更新定义文件</a></li>
+							<li><a href="./spec_web.html">Web关联</a></li>
 						</ul>
 					</td>
 				</tr>
@@ -137,40 +137,40 @@
 		<section class="navigation-category">
 			<h1>HEADLINE/2.0</h1>
 			<ul>
-				<li><a href="#chapter0">前書</a></li>
-				<li><a href="#chapter1">ヘッドラインの実体</a></li>
+				<li><a href="#chapter0">前书</a></li>
+				<li><a href="#chapter1">头条正文</a></li>
 				<li><a href="#chapter2">DLL</a></li>
-				<li><a href="#chapter3">request - response 1: version取得</a></li>
-				<li><a href="#chapter4">request - response 2: ヘッドライン取得</a></li>
+				<li><a href="#chapter3">请求-响应 1：获取版本</a></li>
+				<li><a href="#chapter4">请求-响应 2：获取头条</a></li>
 				<li><a href="#chapter5">desctipt.txt</a></li>
-				<li><a href="#chapter6">補足</a></li>
+				<li><a href="#chapter6">补充</a></li>
 			</ul>
 		</section>
 	</section>
 	<div class="text">
 		<div class="caption">
-			<p>最終変更：<time>2013-08-07</time></p>
+			<p>最后修改：<time>2013-08-07</time></p>
 		</div>
 		<div class="caption">
-			<p>参考：<a href="http://usada.sakura.vg/contents/headlinesenser.html">HEADLINE/1.1</a>（外部サイト）</p>
+			<p>参考：<a href="http://usada.sakura.vg/contents/headlinesenser.html">HEADLINE/1.1</a>（外部网站）</p>
 		</div>
 		<section id="chapter0">
-			<h1>前書</h1>
-			<p>HEADLINE/2.0は、旧来仕様（1.1）の改訂版です。現在SSPのみ実装。</p>
-			<p>主な変更は文字コード指定の追加です。</p>
+			<h1>前书</h1>
+			<p>HEADLINE/2.0是旧有规范（1.1）的修订版。目前仅在SSP中实现。</p>
+			<p>主要变更在于新增了字符编码的指定。</p>
 		</section>
 		<section id="chapter1">
-			<h1>ヘッドラインの実体</h1>
-			<p>設定ファイル「descript.txt」とexecute 関数をエクスポートするdllファイルの2つが必要です。</p>
+			<h1>头条正文</h1>
+			<p>需要两个文件：配置文件“descript.txt”和用于导出 execute 函数的 DLL 文件。</p>
 		</section>
 		<section id="chapter2">
 			<h1>DLL</h1>
-			<p><a href="spec_dll.html">DLLのページ</a>を参照してください。</p>
+			<p>请参阅<a href="spec_dll.html">DLL页面</a>。</p>
 		</section>
 		<section id="chapter3">
-			<h1>request - response 1: version取得</h1>
+			<h1>请求-响应 1：获取版本</h1>
 			<section>
-				<h1>request例</h1>
+				<h1>request示例</h1>
 <pre><code><!--
 -->GET Version HEADLINE/2.0
 Charset: UTF-8
@@ -178,16 +178,16 @@ Sender: SSP
 </code></pre>
 			</section>
 			<section>
-				<h1>requestヘッダ詳細</h1>
+				<h1>request头部详情</h1>
 				<dl>
 					<dt>Charset</dt>
-					<dd>文字コード</dd>
+					<dd>字符编码</dd>
 					<dt>Sender</dt>
-					<dd>イベント送信元</dd>
+					<dd>事件发送方</dd>
 				</dl>
 			</section>
 			<section>
-				<h1>response例</h1>
+				<h1>response示例</h1>
 <pre><code><!--
 -->HEADLINE/2.0 200 OK
 Charset: UTF-8
@@ -195,19 +195,19 @@ Value: HeadlineModule 1.1
 </code></pre>
 			</section>
 			<section>
-				<h1>responseヘッダ詳細</h1>
+				<h1>response头部详情</h1>
 				<dl>
 					<dt>Charset</dt>
-					<dd>[省略可]文字コード。省略した場合は呼び出し側指定のもの。</dd>
+					<dd>[可省略]字符编码。省略时采用调用方指定的编码。</dd>
 					<dt>Value</dt>
-					<dd>[省略可]バージョン文字列</dd>
+					<dd>[可省略]版本字符串</dd>
 				</dl>
 			</section>
 		</section>
 		<section id="chapter4">
-			<h1>request - response 2: ヘッドライン取得</h1>
+			<h1>请求-响应 2：获取标题</h1>
 			<section>
-				<h1>request例</h1>
+				<h1>request示例</h1>
 <pre><code><!--
 -->GET Headline HEADLINE/2.0
 Charset: UTF-8
@@ -217,64 +217,64 @@ Path: C:\SSP\temp\ad9326dc37cb86a9.html
 </code></pre>
 			</section>
 			<section>
-				<h1>requestヘッダ詳細</h1>
+				<h1>request头部详情</h1>
 				<dl>
 					<dt>Charset</dt>
-					<dd>文字コード</dd>
+					<dd>字符编码</dd>
 					<dt>Sender</dt>
-					<dd>イベント送信元</dd>
+					<dd>事件发送方</dd>
 					<dt>Option</dt>
-					<dd>[省略可]応答で解析可能なオプション。カンマ区切りで列挙。<br />現在urlのみ。responseのHeadlineヘッダの項参照。</dd>
+					<dd>[可省略]响应中可解析的选项，以逗号分隔列举。<br />目前仅支持url。请参阅response的Headline头部项。</dd>
 					<dt>Path</dt>
-					<dd>ヘッドライン解析対象ファイルパス（フルパス）。</dd>
+					<dd>标题解析的目标文件路径（完整路径）。</dd>
 				</dl>
 			</section>
 			<section>
-				<h1>response例</h1>
+				<h1>response示例</h1>
 <pre><code><!--
 -->HEADLINE/2.0 200 OK
 Charset: UTF-8
-Headline: ほげほげ1
-Headline: ほげほげ2
-Headline: ほげほげ3
-Headline: ほげほげ4
-Headline: ほげほげ5
+Headline: 巴拉巴拉1
+Headline: 巴拉巴拉2
+Headline: 巴拉巴拉3
+Headline: 巴拉巴拉4
+Headline: 巴拉巴拉5
 </code></pre>
 			</section>
 			<section>
-				<h1>responseヘッダ詳細</h1>
+				<h1>response头部详细</h1>
 				<dl>
 					<dt>Charset</dt>
-					<dd>[省略可]文字コード。省略した場合は呼び出し側指定のもの。</dd>
+					<dd>[可省略]字符编码。省略时采用调用方指定的编码。</dd>
 					<dt>RequestCharset</dt>
-					<dd>[省略可]次の呼び出し時に希望する文字コード。省略した場合はCharset。</dd>
+					<dd>[可省略]下次调用时希望使用的字符编码。若省略，则使用Charset。</dd>
 					<dt>Headline</dt>
-					<dd>ヘッドラインの内容。<br />呼び出し時にOption: urlというふうに、Optionヘッダにurlが入っていた場合、URL拡張に対応しています。<br />その場合は、バイト値1区切りで、 内容[1]URL という形式で応答すると、ゴーストにURLも通知され、ゴースト側が対応していれば項目をクリックするとその詳細にジャンプ、等ができるかもしれません。<br />尚、返却するのはさくらスクリプトの断片ではなく、タグは使えません。単なるプレーンテキストを返却します。</dd>
+					<dd>标题的内容。<br />当调用时，若Option头部中包含类似“Option: url”的内容，则已支持URL扩展。<br />在这种情况下，以字节为单位逐段返回，响应格式为“内容[1]URL”，这样人格也能接收到URL；如果人格端也支持相应功能，点击该条目后即可跳转至详细页面等操作。<br />此外，返回的并非Sakura脚本的片段，且不能使用标签，仅返回纯文本。</dd>
 				</dl>
 			</section>
 		</section>
 		<section id="chapter5">
 			<h1>descript.txt</h1>
-			<p><a href="descript_headline.html">Headline設定のページ</a>を参照してください。</p>
+			<p>请参阅<a href="descript_headline.html">Headline设定页面</a>。</p>
 		</section>
 		<section id="chapter6">
 			<h1>SHIORI Event</h1>
-			<p>いずれも詳細は<a href="list_shiori_event.html">SHIORI Eventのページ</a>を参照してください。</p>
+			<p>有关详情请参阅<a href="list_shiori_event.html">SHIORI Event页面</a>。</p>
 			<dl>
 				<dt><a href="list_shiori_event.html#OnHeadlinesenseBegin">OnHeadlinesenseBegin</a></dt>
-				<dd>ヘッドラインセンス開始時。</dd>
+				<dd>头条感知开始时。</dd>
 				<dt><a href="list_shiori_event.html#OnHeadlinesense.OnFind">OnHeadlinesense.OnFind</a></dt>
-				<dd>読みあげる内容があった時。</dd>
+				<dd>当有需要朗读的内容时。</dd>
 				<dt><a href="list_shiori_event.html#OnHeadlinesenseComplete">OnHeadlinesenseComplete</a></dt>
-				<dd>ヘッドラインセンス正常終了時。</dd>
+				<dd>头条感知正常结束时。</dd>
 				<dt><a href="list_shiori_event.html#OnHeadlinesenseFailure">OnHeadlinesenseFailure</a></dt>
-				<dd>ヘッドラインセンス失敗時。</dd>
+				<dd>头条感知失败时。</dd>
 			</dl>
 		</section>
 		<section id="chapter7">
-			<h1>補足</h1>
-			<p>GET Headlineは2回呼ばれます。1回目は古いファイルに対して、2回目は新しいファイルに対してです。ただし古->新の順番は実装によっては順番が逆になる可能性がありますので、順番に依存するような処理は組んではいけません。</p>
-			<p>デバッグ中など、常に表示したい場合（no updateにならない）は、descript.txtにalwaysdisplay,1と書いてみてください（デバッグ終了後に必ず消す事）。</p>
+			<h1>补充</h1>
+			<p>GET Headline会被调用两次。第一次针对旧文件，第二次针对新文件。但请注意，从旧到新的顺序在某些实现中可能会颠倒，因此请勿编写依赖于特定顺序的处理逻辑。</p>
+			<p>在调试等情况下，若希望始终显示（不出现“no update”提示），请在 descript.txt 中写入 alwaysdisplay,1（调试结束后务必删除）。</p>
 		</section>
 	</div>
 </body>

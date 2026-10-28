@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="zh">
 <head>
 <meta charset="utf-8" />
 <meta name="robots" content="INDEX,FOLLOW">
 <meta name="author" content="UKADOC Project">
 <meta name="keywords" content="ukadoc,SHIORI Event">
-<title>UKADOC Project 補足: SHIORI Eventとは</title>
+<title>UKADOC Project 补充: SHIORI Event是什么</title>
 <link rel="stylesheet" href="base.css">
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 </head>
@@ -25,98 +25,115 @@
 
 
 <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-<h1>補足: SHIORI Eventとは</h1>
+<h1>补充: SHIORI Event是什么</h1>
 <section>
-	<h1>このページについて</h1>
+	<h1>关于本页面</h1>
 	<div class="passage">
-		<p>このページでは、「SHIORI Event」について概説しています。</p>
-		<p>以下の記事はSHIORI/3.0のきちんとした仕様書<em>ではなく</em>、その考え方を理解するための大まかな手引きにすぎません。</p>
+		<p>本页面概述了“SHIORI Event”。</p>
+		<p>以下文章<em>并非</em>SHIORI/3.0的正式规格说明书，而仅是帮助理解其设计理念的概要指南。</p>
 	</div>
 	<div class="passage">
-		<p>なお個々のSHIORI Eventについての解説は、「<a href="list_shiori_event.html">SHIORI Event</a>」のページにある一覧から参照してください。</p>
+		<p>此外，关于各个SHIORI Event的说明，请参阅“<a href="list_shiori_event.html">SHIORI Event</a>”页面上的列表。</p>
 	</div>
 </section>
 <nav>
-	<h1>目次</h1>
+	<h1>目录</h1>
 	<ul>
-		<li><a href="#chapter1">SHIORI Event（栞イベント）とは</a></li>
-		<li><a href="#chapter2">Reference（リファレンス）</a></li>
-		<li><a href="#chapter3">GETコマンドとNOTIFYコマンド</a></li>
+		<li><a href="#chapter1">SHIORI Event（栞事件）是什么</a></li>
+		<li><a href="#chapter2">Reference（引用/参数）</a></li>
+		<li><a href="#chapter3">GET命令与NOTIFY命令</a></li>
 	</ul>
 </nav>
 <section id="chapter1">
-	<h1>SHIORI Event（栞イベント）とは</h1>
+	<h1>SHIORI Event（栞事件）是什么</h1>
+	<pre>               *解释性模型</pre>
 	<figure id="model_shiori-event">
-		<a href="image/shiori-event.jpg"><img src="image/shiori-event.jpg" width="493" height="283"  alt="ゴーストは、ベースウェアとゴースト(SHIORI)のやりとりの結果動いている"></a>
-		<figcaption>起動からゴーストが動くまで</figcaption>
+		<a href="image/shiori-event.jpg"><img src="image/shiori-event.jpg" width="493" height="283"  alt="人格是基于基础软件与人格（SHIORI）之间交互的结果而运行的。"></a>
+		<figcaption>从启动到人格开始行动<br />
+		① 启动
+		② 启动后发送 "OnBoot" 事件
+		③ 找到 OnBoot 中编写的脚本<br />
+		⑥ 显示出来
+		⑤ 执行脚本
+		④ 找到后传到基础软件里</figcaption>
 	</figure>
 	<div class="passage">
-		<p>そもそもゴーストが動く（喋る、表情を変える、etc.）とはどういうことでしょうか。</p>
-		<p>大雑把に言えば、それは<em>ベースウェア</em>（MATERIA、CROW、SSPなど）と<em>SHIORI</em>（ゴーストのコアとなる部品）の連携によって実現される機能です。</p>
-		<p>SHIORI Eventは、その現場においてベースウェアとSHIORIがそれぞれどんな役割を果たしているのか、その中身を理解するための重要なキーワードになります。</p>
+		<p>那么，所谓人格的行动（说话、改变表情等），究竟是什么意思呢？</p>
+		<p>粗略地说，那是<em>基础软件</em>（MATERIA、CROW、SSP等）与<em>SHIORI</em>（构成人格核心的部件）协调运作所实现的功能。</p>
+		<p> 是理解在实际运行环境中基础软件与 SHIORI 各自承担何种角色的重要关键词。</p>
 	</div>
 	<div class="passage">
-		<p>ゴーストの動作において、最初に働くのはベースウェアです。</p>
-		<p>ベースウェアが第一に果たす大きな仕事は、<em>ゴーストが喋ったり動いたりするタイミング</em>を作る事です。</p>
-		<p>べースウェアは時間やマウス入力などの様々な状態を監視し、特定の変化（例えば１秒や１分と言う時間の経過、あるいはマウスカーソルがゴーストに触れた、など）をきっかけにして、ゴースト（のコアであるSHIORI）に対して知らせを発行します。</p>
-		<p>この知らせの事を、<em>SHIORI Event</em>と呼んでいます。</p>
+		<p>在人格的行动中，最先发挥作用的是基础软件。</p>
+		<p>基础软件首要承担的一项重要任务是<em>为人格的言行与行动创造时机</em>。</p>
+		<p>基础软件会监控时间、鼠标输入等多种状态，并在检测到特定变化时（例如经过1秒或1分钟，或者鼠标光标触碰到人格等），向人格（其核心为SHIORI）发出通知。</p>
+		<p>我们把这条消息称为<em>SHIORI Event</em>。</p>
 	</div>
 	<div class="passage">
-		<p>一方のSHIORIの仕事はここから始まります。SHIORIはSHIORI Eventを受け取ると、自らの辞書と呼ばれるファイルの内容を利用するなどして、<em>ゴーストの動作指示を作ります</em>（この動作指示の事をさくらスクリプトと言います）。</p>
-		<p>そしてSHIORIがその動作指示を<em>ベースウェアに送り返す</em>と、それを受け取ったベースウェアは動作指示の内容を読み取って、ゴーストの動きを表現することになります。</p>
-		<p>このようにして、ゴーストはSHIORI Eventがおきるたびに、実際にユーザのモニタの中で動いているのです。</p>
+		<p>作为另一方的SHIORI的工作就从这里开始了。SHIORI在接收到SHIORI Event后，会利用自己称为“词典”的文件中的内容等，<em>生成人格的动作指令</em>（种动作指令被称为樱脚本）。</p>
+		<p>然后SHIORI将该动作指令<em>发送回基础软件</em>，接收到指令的基础软件便会读取动作指令的内容，从而表现出人格的动作。</p>
+		<p>就这样，每当SHIORI Event发生时，人格都会在用户的显示器中真实地活动着。</p>
 	</div>
 	<div class="passage">
-		<p>また逆に言えば、<em>SHIORIはSHIORI Eventを受け取るまでゴーストを動かすことはできません</em>。原則としてあらゆるゴーストの動作はSHIORI Eventにおいて行われるもので、受動的なものなのです。</p>
-		<p>例え一見そのように見えなくとも、例えば多くのゴーストが備える「ランダムトーク」「AIトーク」と呼ばれる機能は、多くのSHIORIではそれを、毎秒発行される<a href="list_shiori_event.html#OnSecondChange" target="_top">OnSecondChange</a>の処理において実装している事に注意してください（このあたりはあくまでSHIORIごとの実装なので、詳細はSHIORIごとのドキュメントを参照する必要があります）。</p>
+		<p>反过来讲，<em>SHIORI在收到SHIORI Event之前无法驱动人格</em>。原则上，所有人格的行动都由SHIORI Event来触发，属于被动性的。</p>
+		<p>即使表面上看似并非如此，例如许多人格所具备的“随机对话”或“AI对话”功能，在许多SHIORI中都是通过每秒触发的<a href="list_shiori_event.html#OnSecondChange" target="_top">OnSecondChange</a>事件处理中实现的（这一点终究只是各个SHIORI各自的实现方式，因此需要参考各个SHIORI的文档以了解详情）。</p>
 	</div>
 </section>
 <section id="chapter2">
-	<h1>Reference（リファレンス）</h1>
+	<h1>Reference（引用/参数）</h1>
 	<div class="passage">
-		<p>多くのSHIORI Eventでは、SHIORI EventのID（名前・種類）と共に、関連する情報が<em>Reference</em>という形で通知されます。</p>
-		<p>一例として、ゴーストがクリックされた時に発行される<a href="list_shiori_event.html#OnMouseClick" target="_top">OnMouseClick</a>というIDの場合を見てみると、どのスコープ（本体側、相方側、三人目...）がクリックされたのか、そのスコープのどの当たり判定がクリックされたのか、どのボタン（右、左、ホイール...）でクリックされたのか、といった情報がReferenceとして通知されています。</p>
+		<p>在许多SHIORI活动中，除了SHIORI活动的ID（名称或类型）之外，相关的信息还会以<em>Reference</em>的形式予以通知。</p>
+		<p>以一个例子来说，当人格被点击时会触发的<a href="list_shiori_event.html#OnMouseClick" target="_top">OnMouseClick</a>这个ID为例，系统会通过Reference通知以下信息：是哪个作用域（本体侧、搭档侧、第三人……）被点击的，该作用域中的哪个碰撞检测区域被点击了，以及是用哪个按钮（右键、左键、滚轮……）进行的点击。</p>
 	</div>
 	<div class="passage">
-		<p>例えばSHIORIは、Referenceをゴーストの動きに変化をつけることに使えるでしょう。</p>
-		<p>OnMouseClickの例で言うならば、多くのゴーストはどのスコープのどの部位をクリックされたかに応じて、実行する機能やトークを変化させています。</p>
+		<p>例如SHIORI就可以将Reference用于为人格的动作增添变化。。</p>
+		<p>以OnMouseClick的示例为例，许多人格会根据被点击的范围和部位，改变其执行的功能或发出的语音。</p>
 	</div>
 	<div class="passage">
-		<p><em>全てのReferenceには0から始まる通し番号が与えられ</em>、同じIDのSHIORI Eventが持つReferenceは、基本的に<em>常に同じ番号に同じ内容が対応する</em>ようになっています。</p>
-		<p>このことは、<a href="list_shiori_event.html">SHIORI Eventの一覧ページ</a>の各IDの節にある、IDに伴って通知されるReferenceのリストを見れば解りやすいかもしれません。</p>
+		<p><em>所有Reference都被赋予了从0开始的连续编号</em>，而具有相同ID的SHIORI Event所拥有的Reference，基本上<em>总是对应着相同编号且内容一致的引用</em>。</p>
+		<p>这一点，通过查看<a href="list_shiori_event.html">SHIORI Event列表页面</a>中各ID条目下的、随ID一同发出的Reference列表，或许会更容易理解。</p>
 	</div>
 	<div class="passage">
-		<p>しかしIDによっては、Referenceの数が不定の場合もあります。</p>
-		<p>例えばSHIORI Eventの一覧ページで、<a href="list_shiori_event.html#installedghostname" target="_top">installedghostname</a>と言うSHIORI EventのReferenceをみると、「Reference*」といった形で番号が明記されていません。</p>
-		<p>installedghostnameは、起動直後などに発生し、そのベースウェアにインストールされているゴースト名を全て教えてくれるSHIORI Eventです。インストールされているゴースト数は当然ユーザによってまちまちですから、従ってReferenceも不定数となっているのです。</p>
-		<p>Referenceの総数が不定であっても、全てのReferenceは0から始まる通し番号付きで表されるという原則は変わりません。</p>
+		<p>然而，根据不同的ID，引用的数量有时可能是不确定的。</p>
+		<p>例如在SHIORI Event的列表页面上，查看名为<a href="list_shiori_event.html#installedghostname" target="_top">installedghostname</a>的SHIORI Event的Reference时，会发现并未以“Reference*”等形式标明编号。</p>
+		<p>installedghostname是一个SHIORI Event，它会在启动后立即触发，用于告知用户当前基础软件中已安装的所有人格名称。由于已安装的人格数量因用户而异，因此Reference的数量也自然是不确定的。</p>
+		<p>尽管Reference的总数不确定，但所有Reference都遵循一个原则：均以从0开始的连续编号进行标识，这一规则并未改变。</p>
 	</div>
 </section>
 <section id="chapter3">
-	<h1>GETコマンドとNOTIFYコマンド</h1>
+	<h1>GET命令与NOTIFY命令</h1>
+	<pre>带有回邮信封的是 GET       没有的则是 NOTIFY</pre>
 	<figure id="model_shiori-command">
-		<a href="image/shiori-command.png"><img src="image/shiori-command.png" width="539" height="266"  alt="全てのSHIORI Eventは、返送封筒付きの「GETコマンド」とそれがない「NOTIFYコマンド」の2種類いずれかの梱包でSHIORIの元へ届く。"></a>
-		<figcaption>SHIORI Eventを郵便に例えるなら……</figcaption>
+		<a href="image/shiori-command.png"><img src="image/shiori-command.png" width="539" height="266"  alt="所有的SHIORI Event，都是以两种包装形式之一送到SHIORI手中的：一种是带有回信信封的“GET命令”，另一种是不带回信信封的“NOTIFY命令”。"></a>
+		<pre>^对包裹进行分类的规格</pre>
+		<figcaption>如果把SHIORI活动比作邮政的话……<br />
+		① 基础软件会用GET包装或NOTIFY包装发货事件<br />
+		② 人格的栞收到包裹并拆开<br />
+		③ 按照分类标准整理里面的文件并执行<br />
+		④ 如果有需要返送的内容（Script），就放进回邮信封寄回给基础软件<br />
+		⑤ 基础软件执行收到的返送Script<br />
+
+		※NOTIFY没有附带回邮信封，所以即使想寄回给基础软件，也会被忽视
+		</figcaption>
 	</figure>
 	<div class="passage">
-		<p>実は全てのSHIORI Eventは、IDが様々あるだけではなく、発行自体に二つの異なった形・目的があります。</p>
+		<p>其实，所有的SHIORI事件不仅ID各不相同，其发布本身也具有两种不同的形式与目的。</p>
 	</div>
 	<div class="passage">
-		<p>一つが、ここまででも述べてきた、ゴーストの動くタイミングとしてのSHIORI Eventの発行です。</p>
-		<p>これは<em>GETコマンド</em>と呼ばれ、その名の通りベースウェアがSHIORIから動作指示（さくらスクリプト）などの内容を受け取る（get）ためのSHIORI Eventの発行です。</p>
+		<p>其中一种，就是如前所述的、作为人格行动时机的SHIORI Event的发布。</p>
+		<p>这被称为<em>GET命令</em>，顾名思义，是基础软件为了从SHIORI接收（get）动作指令（樱花脚本）等内容而发出的SHIORI Event。</p>
 	</div>
 	<div class="passage">
-		<p>もう一つの<em>NOTIFY（ノーティファイ）コマンド</em>は少し特殊で、NOTIFYコマンドで発行されたSHIORI Eventでは、ゴーストは動く事ができません。</p>
-		<p>なぜなら、NOTIFYコマンドのSHIORI Eventに対してSHIORIが何かの動作指示を送り返したとしても、ベースウェアはこれを無視することになっているからです。</p>
+		<p>另一个<em>NOTIFY（通知）命令</em>有些特殊，因为在NOTIFY命令发出的SHIORI事件中，人格无法行动。</p>
+		<p>这是因为，即使SHIORI针对NOTIFY命令的SHIORI Event发回了某种动作指令，基础软件也会将其忽略。</p>
 	</div>
 	<div class="passage">
-		<p>NOTIFYコマンドの目的は、SHIORIに対して情報（Reference）を知らせる（notify）ことにあります。</p>
-		<p>SHIORIは受け取った情報をそのSHIORI Eventで使うというよりは、今後のゴーストの動作のために役立てる事ができます。</p>
-		<p>先述の<a href="list_shiori_event.html#installedghostname">installedghostname</a>は、NOTIFYコマンドで発行されるIDの典型です。SHIORIはそのReferenceから、ユーザの環境にどんなゴーストがインストールされているかを知る事ができます。ゴーストはその情報を元に、例えば「特定のゴーストがインストールされているなら、そのゴーストを呼び出すための項目をメニューに表示する」といった仕掛けを作る事ができるでしょう。</p>
+		<p>NOTIFY命令的目的是向SHIORI通知（notify）相关信息（Reference）。</p>
+		<p>SHIORI并不一定会在接收到的信息中直接使用该SHIORI Event，而是可以将其用于今后的人格行为。</p>
+		<p>前述的<a href="list_shiori_event.html#installedghostname">installedghostname</a>是NOTIFY命令所发出的ID的典型示例。SHIORI可通过该Reference，获知用户环境中已安装了哪些人格。基于这些信息，人格便可构建相应的机制，例如“若检测到特定的人格已被安装，则在菜单中显示用于调用该人格的选项”。</p>
 	</div>
 	<div class="passage">
-		<p>注意を要する点ですが、二つのコマンドの存在は、SHIORI EventのID全体が二つの「グループ」に分けられる<em>ということを意味しません</em>。</p>
-		<p>何故なら、原則として<em>全てのIDのSHIORI EventがNOTIFY、GETのいずれでも発行される</em>可能性があるからです。コマンドの種類とIDの種類はあくまでも独立したもので、本質的には依存関係にありません（しかしながら現実の実装を眺めてみたときには、一定の傾向や規則が認められます。そうした詳細については<a href="list_shiori_event.html">SHIORI Eventの一覧ページ</a>のそれぞれの節を参照してください）。</p>
+		<p>需要注意的是，这两个命令的存在<em>并不意味着</em>SHIORI Event的整个ID会被划分为两个“组”。</p>
+		<p>这是因为，原则上<em>所有ID的SHIORI Event都可能以NOTIFY或GET的形式被发出</em>。命令的种类与ID的种类本质上是相互独立的，并不存在实质性的依赖关系（然而，在考察实际实现时，仍可观察到一些特定的趋势与规则。有关这些细节，请参阅<a href="list_shiori_event.html">SHIORI事件列表页面中</a>的各相应章节）。</p>
 	</div>
 </section>
 <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->

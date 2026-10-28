@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="zh">
 <head>
 <meta charset="utf-8" />
 <meta name="robots" content="INDEX,FOLLOW">
 <meta name="author" content="UKADOC Project">
 <meta name="keywords" content="ukadoc,伺か">
-<title>UKADOC Project Shell設定 - surfacetable.txt</title>
+<title>UKADOC Project Shell设定 - surfacetable.txt</title>
 <link rel="stylesheet" href="list.css" />
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 </head>
 <body>
-	<h1 id="page-title">Shell設定 - surfacetable.txt</h1>
+	<h1 id="page-title">Shell设定 - surfacetable.txt</h1>
 	<nav class="menu-header">
 		<table>
 			<tbody>
 				<tr>
-					<th>トップページへ戻る</th>
+					<th>返回首页</th>
 					<td colspan="2">
 						<ul>
 							<li><a href="http://ssp.shillest.net/ukadoc/manual/index.html">INDEX</a></li>
@@ -25,7 +25,7 @@
 			</tbody>
 			<tbody>
 				<tr>
-					<th rowspan="6">設定ファイル</th>
+					<th rowspan="6">设定文件</th>
 					<th>Ghost</th>
 					<td>
 						<ul>
@@ -81,24 +81,24 @@
 			</tbody>
 			<tbody>
 				<tr>
-					<th>さくらスクリプト</th>
+					<th>Sakura脚本</th>
 					<td colspan="2">
 						<ul>
-							<li><a href="./list_sakura_script.html">Sakura Script</a></li>
-							<li><a href="./list_propertysystem.html">Property System</a></li>
+							<li><a href="./list_sakura_script.html">Sakura脚本</a></li>
+							<li><a href="./list_propertysystem.html">属性系统</a></li>
 						</ul>
 					</td>
 				</tr>
 			</tbody>
 			<tbody>
 				<tr>
-					<th rowspan="2">イベント</th>
+					<th rowspan="2">事件</th>
 					<th>SHIORI</th>
 					<td>
 						<ul>
-							<li><a href="./list_shiori_event.html">SHIORI Event</a></li>
-							<li><a href="./list_shiori_event_ex.html">SHIORI Event（外部）</a></li>
-							<li><a href="./list_shiori_resource.html">SHIORI Resource</a></li>
+							<li><a href="./list_shiori_event.html">SHIORI事件</a></li>
+							<li><a href="./list_shiori_event_ex.html">SHIORI事件（外部）</a></li>
+							<li><a href="./list_shiori_resource.html">SHIORI资源</a></li>
 						</ul>
 					</td>
 				</tr>
@@ -106,26 +106,26 @@
 					<th>PLUGIN</th>
 					<td>
 						<ul>
-							<li><a href="./list_plugin_event.html">PLUGIN Event</a></li>
+							<li><a href="./list_plugin_event.html">PLUGIN事件</a></li>
 						</ul>
 					</td>
 				</tr>
 			</tbody>
 			<tbody>
 				<tr>
-					<th>規格</th>
+					<th>规格</th>
 					<td colspan="2">
 						<ul>
 							<li><a href="./spec_shiori3.html">SHIORI/3.0</a></li>
 							<li><a href="./spec_sstp.html">SSTP/1.x</a></li>
-							<li><a href="http://www.boreas.dti.ne.jp/~sdn/saori.html">SAORI/1.0</a>（外部サイト）</li>
+							<li><a href="http://www.boreas.dti.ne.jp/~sdn/saori.html">SAORI/1.0</a>（外部链接）</li>
 							<li><a href="./spec_saori_ex.html">SAORI over DirectSSTP</a></li>
 							<li><a href="./spec_plugin.html">PLUGIN/2.0</a></li>
 							<li><a href="./spec_headline.html">HEADLINE/2.0</a></li>
 							<li><a href="./spec_dll.html">DLL</a></li>
 							<li><a href="./spec_fmo_mutex.html">FMO/MUTEX</a></li>
-							<li><a href="./spec_update_file.html">更新定義ファイル</a></li>
-							<li><a href="./spec_web.html">Web関連</a></li>
+							<li><a href="./spec_update_file.html">更新定义文件</a></li>
+							<li><a href="./spec_web.html">Web关联</a></li>
 						</ul>
 					</td>
 				</tr>
@@ -142,12 +142,12 @@
 		<section class="navigation-category">
 			<h1>surfacetable.txt</h1>
 			<ul>
-				<li><a href="#charset,文字コード">charset,文字コード</a></li>
-				<li><a href="#version,数値">version,数値</a></li>
-				<li><a href="#option,オプション1,オプション2,...">option,オプション1,オプション2,...</a></li>
-				<li><a href="#group,グループ名">group,グループ名</a></li>
-				<li><a href="#scope,数値">scope,数値</a></li>
-				<li><a href="#サーフェスID,名前">サーフェスID,名前</a></li>
+				<li><a href="#charset,字符编码">charset,字符编码</a></li>
+				<li><a href="#version,数值">version,数值 </a></li>
+				<li><a href="#option,选项1,选项2,...">option,选项1,选项2,...  </a></li>
+				<li><a href="#group,组名">group,组名 </a></li>
+				<li><a href="#scope,数值">scope,数值 </a></li>
+				<li><a href="#表面ID,名称">表面ID,名称 </a></li>
 			</ul>
 		</section>
 	</section>
@@ -156,89 +156,89 @@
 			<h1>surfacetable.txt</h1>
 			<section>
 				<h1>概要</h1>
-				<p>SSP開発用パレットの「サーフィステスト」機能や、そのほかのシェル作成支援ユーティリティでの利用を目的としたサーフェス内容の定義ファイル。</p>
+				<p>用于SSP开发人员界面中的“surface 测试”功能，以及旨在配合其他的壳体创建辅助工具使用的表面内容定义文件。</p>
 			</section>
 			<section>
-				<h1>基本の書式</h1>
-				<p>記載例</p>
-<pre><code>charset,Shift_JIS
+				<h1>基本的格式</h1>
+				<p>示例</p>
+<pre><code>charset,UTF-8
 version,1
 option,DisableNoDefineSurfaces
 
-//==========パーツ==========
+//==========零件==========
 group,__disabled
 {
 	19,__parts
 }
 
-//==========クー==========
+//==========空==========
 group,[空]平日
 {
 	scope,0
 	
 	0,素
-	1,照れ
+	1,害羞
 	3,不安
-	4,はぅー
+	4,嗯~
 	5,笑
 }
 </code></pre>
-				<p>// から始まる行はコメントとみなされ、完全に無視される。</p>
-				<p>半角スペースおよびタブによるインデントが可能。</p>
+				<p>以//开头的行被视为注释，将被完全忽略。</p>
+				<p>可使用半角空格和制表符进行缩进。</p>
 			</section>
 		</section>
 		<section class="category">
 			<h1>surfacetable.txt</h1>
-			<dl id="charset,文字コード">
-				<dt class="entry">charset,文字コード</dt>
+			<dl id="charset,字符编码">
+				<dt class="entry">charset,字符编码</dt>
 				<dd class="entry">
-					<p>表示する文字コード。記載は必ずファイルの一行目に。</p>
+					<p>要显示的字符编码。务必写在文件的第一行。</p>
 					<p class="default">Shift_JIS</p>
 				</dd>
 			</dl>
-			<dl id="version,数値">
-				<dt class="entry">version,数値</dt>
+			<dl id="version,数值">
+				<dt class="entry">version,数值</dt>
 				<dd class="entry">
-					<p>surfacetable.txtの書式のバージョン。現在のところ常に1でよい。</p>
+					<p>surfacetable.txt的格式版本。目前始终为1即可。</p>
 					<p class="default">1</p>
 				</dd>
 			</dl>
-			<dl id="option,オプション1,オプション2,...">
-				<dt class="entry">option,オプション1,オプション2,...</dt>
+			<dl id="option,选项1,选项2,...">
+				<dt class="entry">option,选项1,选项2,...</dt>
 				<dd class="entry">
-					<p>オプション指定。カンマ区切りで複数列挙できる。<br>現在のところ指定できるのは「DisableNoDefineSurfaces」のみで、surfaces.txt等での定義がなく、surfacetable.txt内でも明示されていないサーフェスについて無視する。</p>
-					<p class="default">挙動なし</p>
+					<p>可选参数。可用逗号分隔，支持多列列举。<br>目前仅支持指定“DisableNoDefineSurfaces”，即忽略那些既未在surfaces.txt等文件中定义、也未在surfacetable.txt中明确列出的表面。</p>
+					<p class="default">无任何行为</p>
 				</dd>
 			</dl>
-			<dl id="group,グループ名">
-				<dt class="entry">group,グループ名</dt>
+			<dl id="group,组名">
+				<dt class="entry">group,组名</dt>
 				<dd class="entry">
 					<p>
-						後述の<a href="#サーフェスID,名前">サーフェス名</a>定義行をまとめたグループに識別上の名前を与える。
-						<br>すぐ下に「{」のみの行を続け、「}」のみの行で閉じる。
-						<br>グループ名を「__disabled」とした場合、そのグループ内のサーフェスは使用されていないことを示す（SSPのサーフェステストではリストに表示されなくなる）。
+						为下文所述的<a href="#表面ID,名称">表面名称</a>定义行所组成的组别赋予一个识别名称。
+						<br>紧接下方，连续写上只有“{”的行，并用只有“}”的行闭合。
+						<br>若将组名设为“__disabled”，则表示该组内的表面未被使用（在SSP的surface测试中将不再显示于列表中）。
 					</p>
-					<p class="default">挙動なし</p>
+					<p class="default">无任何行为</p>
 				</dd>
 			</dl>
-			<dl id="scope,数値">
-				<dt class="entry">scope,数値</dt>
+			<dl id="scope,数值">
+				<dt class="entry">scope,数值</dt>
 				<dd class="entry">
-					<p>そのグループのサーフェスが主に属するスコープの番号。<br>グループ内に一つ記載する。<br>本体側なら0、相方側なら1など。</p>
-					<p class="default">挙動なし</p>
+					<p>该组的曲面主要所属范围的编号。<br>在组内仅填写一项。<br>本体侧为0，搭档侧为1等。</p>
+					<p class="default">无任何行为</p>
 				</dd>
 			</dl>
-			<dl id="サーフェスID,名前">
-				<dt class="entry">サーフェスID,名前</dt>
+			<dl id="表面ID,名称">
+				<dt class="entry">表面ID,名称</dt>
 				<dd class="entry">
 					<p>
-						サーフェスIDに対して識別上の名前を与える。
-						<br>普通グループ内に記載する。
-						<br>グループ内で最初に書かれたものは、そのグループでの標準的なサーフェスとみなされる（scope,0なら0、scope,1なら10といったような）。
-						<br>名前を「__parts」とした場合、そのサーフェスは主にアニメーションや着せ替えなどのパーツとして用いられるものである事を示す（SSPのサーフェステストでは名前が無指定であるように扱われる）。
-						<br>名前を省略した場合、名前が未定義であることを明示できる。SSPのサーフィステストでは<a href="descript_shell_surfaces.html#caption_standarddef">特定サーフェス</a>のみ未指定でも初期値が与えられるため、そういったサーフェスについて指定を解除したい場合に利用する。
+						为表面ID赋予一个用于识别的名称。
+						<br>通常应将其写入普通组内。
+						<br>在组内最先被写入的内容，将被视为该组的标准表面（例如，scope,0表示0，scope,1表示10等）。
+						<br>若将名称设为“__parts”，则表明该表面主要用于作为动画、换装等的部件（在SSP的surface测试中，该名称被视为未指定）。
+						<br>在省略名称的情况下，可以明确表示该名称尚未定义。在SSP的表面测试中仅针对<a href="descript_shell_surfaces.html#caption_standarddef">特定表面</a>即使未指定也会赋予初始值，因此当希望取消对这类表面的指定时可加以使用。
 					</p>
-					<p class="default">挙動なし/SSPのサーフィステストでは、特定のサーフェスのみ<a href="descript_shell_surfaces.html#caption_standarddef">標準的なサーフェス定義</a>。</p>
+					<p class="default">无任何行为/在SSP的urface测试中，仅针对特定表面<a href="descript_shell_surfaces.html#caption_standarddef">标准表面定义</a>。</p>
 				</dd>
 			</dl>
 		</section>

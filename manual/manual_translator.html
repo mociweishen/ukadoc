@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="zh">
 <head>
 <meta charset="utf-8" />
 <meta name="robots" content="INDEX,FOLLOW">
 <meta name="author" content="UKADOC Project">
 <meta name="keywords" content="伺か,makoto,トランスレータ">
-<title>UKADOC Project トランスレータ</title>
+<title>UKADOC Project 翻译器</title>
 <link rel="stylesheet" href="base.css">
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 </head>
@@ -25,14 +25,14 @@
 
 
 <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-<h1>トランスレータ</h1>
+<h1>翻译器</h1>
 <section>
 	<div class="passage">
-		<p>トランスレータのことをゴーストではMAKOTOと称する。</p>
-		<p>ゴースト側・シェル側の両方に配置できる（CROWはゴースト側のみ）。</p>
+		<p>在人格中，翻译器被称为MAKOTO。</p>
+		<p>既可放置于人格端，也可放置于Shell端（CROW仅限人格端）</p>
 	</div>
 	<div class="passage">
-		<p>ゴースト側で使用する場合はmaster直下に<em class="filename">makoto.dll</em>がある必要がある。</p>
+		<p>在Ghost端使用时，必须在master目录下放置<em class="filename">makoto.dll</em>。</p>
 <pre>
 +-(myghost)
 　　+-ghost
@@ -45,11 +45,11 @@
 </pre>
 	</div>
 	<div class="passage">
-		<p>シェル側で使用する場合は各シェルのフォルダ直下にmakoto.dllがある必要がある。</p>
+		<p>在Shell端使用时，必须在各Shell的文件夹下放置makoto.dll。</p>
 <pre>
 +-(myghost)
 　　+-shell
-　　　　+-master(またはadditional_shell)
+　　　　+-master(或additional_shell)
 　　　　　　<em class="filename">+-makoto.dll</em>
 　　　　　　+-descript.txt
 　　　　　　+-surface*.png
@@ -62,17 +62,17 @@
 </section>
 <section>
 	<div class="passage">
-		<p>SHIORIが作成したスクリプトに対し、フィルタとして働き文字列を置き換えるための仕組み。</p>
-		<p>ゴースト側とシェル側療法にある場合、先にゴースト側のトランスレートが行われてから、続けてシェル側のトランスレートが行われる。</p>
-		<p>トランスレートのタイミングはバルーンに表示される直前。</p>
-		<p>SHIORI同様MAKOTOとして使用できるファイルは多数あり、詳しい使い方はそれぞれのドキュメントを参照する必要がある。</p>
+		<p>一种针对SHIORI所创建的脚本，作为过滤器来实现字符串替换的机制。</p>
+		<p>如果人格端和Shell端两边都有，那就先处理人格端那边的翻译，再处理Shell端这边的。</p>
+		<p>翻译的触发时机是在Balloon显示之前。</p>
+		<p>与SHIORI类似，作为MAKOTO使用的文件也有许多种，具体的使用方法需参考各自的文档。</p>
 	</div>
 	<div class="passage">
-		<p>過去、SHIORIのなかった時代にトークに変化を与えるために使用されていたが、今はそのような役割は主にSHIORIが担う。</p>
-		<p>現在では、シェルによって口調を変化させるなどの仕掛けに利用される事がある。</p>
+		<p>过去，在还没有SHIORI的时代，曾被用于为对话增添变化，但如今这一角色主要由SHIORI来承担。</p>
+		<p>如今，它有时也被用于通过Shell来改变语调等巧妙的设计。</p>
 	</div>
 	<div class="passage">
-		<p>SHIORI EventのOnTranslateでもトランスレートが可能（＝SHIORIはゴースト側のMAKOTOを兼ねる）。</p>
+		<p>在SHIORI Event的OnTranslate事件中也可以进行翻译（即SHIORI同时兼任了人格一方的MAKOTO）。</p>
 		<p>もしMAKOTOとSHIORIの両方でトランスレートをする場合の処理順序は、SHIORI→MAKOTO。</p>
 	</div>
 </section>

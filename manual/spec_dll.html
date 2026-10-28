@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="zh">
 <head>
 <meta charset="utf-8" />
 <meta name="robots" content="INDEX,FOLLOW">
@@ -16,7 +16,7 @@
 		<table>
 			<tbody>
 				<tr>
-					<th>トップページへ戻る</th>
+					<th>返回首页</th>
 					<td colspan="2">
 						<ul>
 							<li><a href="http://ssp.shillest.net/ukadoc/manual/index.html">INDEX</a></li>
@@ -26,7 +26,7 @@
 			</tbody>
 			<tbody>
 				<tr>
-					<th rowspan="6">設定ファイル</th>
+					<th rowspan="6">设定文件</th>
 					<th>Ghost</th>
 					<td>
 						<ul>
@@ -82,24 +82,24 @@
 			</tbody>
 			<tbody>
 				<tr>
-					<th>さくらスクリプト</th>
+					<th>Sakura脚本</th>
 					<td colspan="2">
 						<ul>
-							<li><a href="./list_sakura_script.html">Sakura Script</a></li>
-							<li><a href="./list_propertysystem.html">Property System</a></li>
+							<li><a href="./list_sakura_script.html">Sakura脚本</a></li>
+							<li><a href="./list_propertysystem.html">属性系统</a></li>
 						</ul>
 					</td>
 				</tr>
 			</tbody>
 			<tbody>
 				<tr>
-					<th rowspan="2">イベント</th>
+					<th rowspan="2">事件</th>
 					<th>SHIORI</th>
 					<td>
 						<ul>
-							<li><a href="./list_shiori_event.html">SHIORI Event</a></li>
-							<li><a href="./list_shiori_event_ex.html">SHIORI Event（外部）</a></li>
-							<li><a href="./list_shiori_resource.html">SHIORI Resource</a></li>
+							<li><a href="./list_shiori_event.html">SHIORI事件</a></li>
+							<li><a href="./list_shiori_event_ex.html">SHIORI事件（外部）</a></li>
+							<li><a href="./list_shiori_resource.html">SHIORI资源</a></li>
 						</ul>
 					</td>
 				</tr>
@@ -107,26 +107,26 @@
 					<th>PLUGIN</th>
 					<td>
 						<ul>
-							<li><a href="./list_plugin_event.html">PLUGIN Event</a></li>
+							<li><a href="./list_plugin_event.html">PLUGIN事件</a></li>
 						</ul>
 					</td>
 				</tr>
 			</tbody>
 			<tbody>
 				<tr>
-					<th>規格</th>
+					<th>规格</th>
 					<td colspan="2">
 						<ul>
 							<li><a href="./spec_shiori3.html">SHIORI/3.0</a></li>
 							<li><a href="./spec_sstp.html">SSTP/1.x</a></li>
-							<li><a href="http://www.boreas.dti.ne.jp/~sdn/saori.html">SAORI/1.0</a>（外部サイト）</li>
+							<li><a href="http://www.boreas.dti.ne.jp/~sdn/saori.html">SAORI/1.0</a>（外部链接）</li>
 							<li><a href="./spec_saori_ex.html">SAORI over DirectSSTP</a></li>
 							<li><a href="./spec_plugin.html">PLUGIN/2.0</a></li>
 							<li><a href="./spec_headline.html">HEADLINE/2.0</a></li>
 							<li><a href="./spec_dll.html">DLL</a></li>
 							<li><a href="./spec_fmo_mutex.html">FMO/MUTEX</a></li>
-							<li><a href="./spec_update_file.html">更新定義ファイル</a></li>
-							<li><a href="./spec_web.html">Web関連</a></li>
+							<li><a href="./spec_update_file.html">更新定义文件</a></li>
+							<li><a href="./spec_web.html">Web关联</a></li>
 						</ul>
 					</td>
 				</tr>
@@ -134,119 +134,119 @@
 		</table>
 	</nav>
 	<section class="navigation-bar">
-		<h1>DLL共通仕様</h1>
+		<h1>DLL通用规范</h1>
 		<section class="navigation-category">
-			<h1>DLL共通仕様</h1>
+			<h1>DLL通用规范</h1>
 			<ul>
-				<li><a href="#memory">メモリ管理</a></li>
+				<li><a href="#memory">内存管理</a></li>
 				<li><a href="#request">request</a></li>
-				<li><a href="#load">ライフサイクル関数</a></li>
+				<li><a href="#load">生命周期函数</a></li>
 			</ul>
 		</section>
 	</section>
 	<div class="text">
 		<section id="chapter0">
-			<h1>DLL共通仕様</h1>
-			<p>本仕様は、SHIORI、SAORI、その他の伺かシステムで使用されるDLLモジュールの共通インターフェースを定義するものである。</p>
+			<h1>DLL通用规范</h1>
+			<p>本规范定义了SHIORI、SAORI及其他伪春菜系统所使用的DLL模块的通用接口。</p>
 		</section>
 
 		<section id="memory">
-			<h1>メモリ管理</h1>
-			<p>引数／戻り値の受け渡しは全て Windows の Global Memory を使用して行う。具体的には以下の手順で処理を行う：</p>
+			<h1>内存管理</h1>
+			<p>所有参数与返回值的传递均通过Windows的Global Memory (全局内存)进行。具体而言，按照以下步骤处理：</p>
 			<ul>
-				<li>ベースウェアは GlobalAlloc() に GMEM_FIXED フラグを指定してメモリを確保し、データを書き込む</li>
-				<li>モジュールは受け取った HGLOBAL を (char*) にキャストして直接データにアクセスする</li>
-				<li>モジュールは len パラメータを参照してデータ長を取得し、必要なデータを読み込む</li>
-				<li>モジュールは GlobalFree() でメモリを解放する</li>
-				<li>処理結果を返す場合、モジュールは新たに GlobalAlloc() で GMEM_FIXED 指定のメモリを確保する</li>
-				<li>モジュールは確保したメモリに結果を書き込み、len に新しいデータ長を設定する</li>
-				<li>ベースウェアは返却されたメモリハンドルを使用後に GlobalFree() で解放する</li>
+				<li>基础软件使用GlobalAlloc()函数并指定GMEM_FIXED标志来申请内存，然后将数据写入其中</li>
+				<li>模块将接收到的HGLOBAL强制转换为(char*)，并直接访问数据</li>
+				<li>模块通过引用 len 参数获取数据长度，并读取所需数据</li>
+				<li>模块使用 GlobalFree() 释放内存</li>
+				<li>在返回处理结果时，模块会通过GlobalAlloc()函数新申请一块指定为GMEM_FIXED类型的内存</li>
+				<li>模块将结果写入所分配的内存，并在len中设置新的数据长度</li>
+				<li>基础软件会在使用完返回的内存句柄后，通过 GlobalFree() 来释放它。</li>
 			</ul>
 			<p>注意点：</p>
 			<ul>
-				<li>GMEM_FIXED フラグ使用時は GlobalLock()/GlobalUnlock() が不要である</li>
-				<li>HGLOBAL を (char*) にキャストすることで直接メモリアクセスが可能である</li>
-				<li>渡されたメモリはNULL終端が保証されていないため、必ずlenパラメータを参照してアクセス範囲を制限する</li>
-				<li>戻り値用のメモリは、ベースウェアの実装に依存せず堅牢な動作を保証するため、lenより1バイト多く確保してゼロ終端することが望ましい</li>
+				<li>使用GMEM_FIXED标志时，无需调用GlobalLock()/GlobalUnlock()函数</li>
+				<li>可通过将 HGLOBAL 强制转换为 (char*) 来直接访问内存</li>
+				<li>由于传入的内存不保证以NULL结尾，因此务必通过len参数来限制访问范围</li>
+				<li>为返回值分配的内存应比len多预留1字节并进行零终止，以确保在任何基础软件实现下都能稳定运行</li>
 			</ul>
 		</section>
 
 		<section class="category" id="request">
-			<h1>request関数</h1>
+			<h1>request 函数</h1>
 
 			<pre><code>extern "C" __declspec(dllexport) HGLOBAL __cdecl request(HGLOBAL h, long *len);</code></pre>
-			<p>全てのリクエストは request という唯一の関数で行われる。request関数は伺かモジュールの主要なインターフェースであり、ベースウェアからの全ての要求を処理する。</p>
-			<p>リクエストデータの形式はHTTPやSSTPのヘッダ形式を参考に設計されており、以下の規則に従う：
+			<p>所有请求均通过唯一的request函数进行。request函数是伪春菜模块的主要接口，负责处理来自基板的所有请求。</p>
+			<p>请求数据的格式参考了HTTP和SSTP的头部格式设计，并遵循以下规则：
 
 			<ul>
-			<li>全ての行はCR+LF（0x0D, 0x0A）で区切られる</li>
-			<li>1行目にはコマンド名とプロトコルバージョンを記載する</li>
-			<li>2行目以降は「ヘッダ名: 値」の形式で任意の数のヘッダが続く</li>
-			<li>ヘッダ部の終端はCR+LFを2つ連続して配置（空行の追加）することで示す</li>
-			<li>文字エンコーディングはヘッダで指定された方式（一般的にはUTF-8かデフォルトのOEM codepage）に従う</li>
+			<li>所有行均以CR+LF（0x0D, 0x0A）分隔</li>
+			<li>第一行应写明命令名称和协议版本</li>
+			<li>从第二行起，可按“头部名：值”的格式添加任意数量的头部</li>
+			<li>通过连续放置两个CR+LF来表示头字段部分的结束（即空行）</li>
+			<li>字符编码遵从头部指定的方式（通常为UTF-8或默认的OEM代码页）</li>
 			</ul></p>
 		</section>
 
 		<section class="category" id="load">
-			<h1>ライフサイクル関数</h1>
+			<h1>生命周期函数</h1>
 
-			<p>DLLロード時およびアンロード時に以下の関数がコールされる。</p>
+			<p>在DLL加载和卸载时，以下函数会被调用。</p>
 
 			<section>
-				<h1>loadu関数</h1>
+				<h1>loadu函数</h1>
 
 				<pre><code>extern "C" __declspec(dllexport) BOOL __cdecl loadu(HGLOBAL h, long len);</code></pre>
 
-				<p>モジュールの初期化を行う関数。<br>
-				第1引数のグローバルメモリにはモジュールのディレクトリパスが<em>UTF-8エンコーディング</em>で格納される。</p>
+				<p>用于执行模块初始化的函数。<br>
+				第一个参数的全局内存中存储的是模块的目录路径，采用。<em>UTF-8编码</em>。</p>
 
-				<p>SSP 2.6.92 (2025/1/16) より実装された。それより前はloadのみの実装である。</p>
+				<p>自SSP 2.6.92（2025年1月16日）起已实现。在此之前仅支持load功能。</p>
 				
-				<p>処理内容の例：</p>
+				<p>处理内容示例：</p>
 				<ul>
-					<li>渡されたパスをカレントディレクトリとして、必要なデータファイルを読み込む</li>
-					<li>モジュールの動作に必要なリソースを初期化する</li>
-					<li>必要に応じてログファイルやデータベースの初期化を行う</li>
+					<li>将传入的路径设为当前目录，并读取所需的数据文件。</li>
+					<li>初始化模块运行所需的资源</li>
+					<li>根据需要对日志文件和数据库进行初始化</li>
 				</ul>
 
 				<p>注意点：</p>
 				<ul>
-					<li>文字列データが不要な場合でも、渡されたグローバルメモリは必ず解放する</li>
-					<li>初期化に成功した場合は TRUE を、失敗した場合は FALSE を返却する</li>
-					<li>本関数はベースウェアによって優先的に使用される</li>
+					<li>即使字符串数据不再需要，也必须释放所分配的全局内存</li>
+					<li>初始化成功时返回 TRUE，失败时返回 FALSE</li>
+					<li>本函数由基础软件优先调用</li>
 				</ul>
 			</dd>
 			
 			<section>
-				<h1>load関数</h1>
+				<h1>load函数</h1>
 
 				<pre><code>extern "C" __declspec(dllexport) BOOL __cdecl load(HGLOBAL h, long len);</code></pre>
 
-				<p>loadu関数の従来版。<br>
-				第1引数のモジュールディレクトリパスがデフォルトのOEM codepage（日本語環境ではCP932）でエンコードされている以外は、loadu関数と同じ仕様。</p>
+				<p>loadu 函数的旧版本。<br>
+				除非第一个参数的模块目录路径是以默认的OEM代码页（在日语环境下为CP932）编码的，否则其行为与loadu函数相同。</p>
 				
 				<p>注意点：</p>
 				<ul>
-					<li>loadu関数が実装されていない場合のフォールバック先として使用される</li>
-					<li>互換性確保のため、loadとloaduの両方を実装し、loaduで初期化済の時にloadも呼ばれた場合は無視するのが望ましい</li>
-					<li>Unicode対応のためには、受け取ったパスを適切にワイド文字列に変換する必要がある</li>
+					<li>用作loadu函数未实现时的回退方案</li>
+					<li>为确保兼容性，应同时实现load和loadu两个函数；当已通过loadu完成初始化时，若又调用了load，则宜予以忽略。</li>
+					<li>为支持Unicode，需将接收到的路径正确转换为宽字符字符串</li>
 				</ul>
 			</section>
 
 			<section>
-				<h1>unload関数</h1>
+				<h1>unload函数</h1>
 				
 				<pre><code>extern "C" __declspec(dllexport) BOOL __cdecl unload();</code></pre>
 
-				<p>モジュールの終了処理を行う関数。モジュールのアンロード時にベースウェアから呼び出される。</p>
-				<p>実装すべき処理：</p>
+				<p>用于执行模块终止处理的函数。在卸载模块时由基础软件调用。</p>
+				<p>应实现的处理：</p>
 				<ul>
-					<li>CreateFile 等で開いたファイルハンドルを解放する</li>
-					<li>CreateMutex 等で作成した同期オブジェクトを解放する</li>
-					<li>CreateThread 等で作成したスレッドの終了を待機し、後処理を行う</li>
-					<li>その他、モジュールが確保した全てのシステムリソースを解放する</li>
+					<li>释放通过CreateFile等打开的文件句柄</li>
+					<li>释放通过CreateMutex等创建的同步对象</li>
+					<li>等待通过 CreateThread 等创建的线程结束，并执行后续处理</li>
+					<li>此外，释放模块所申请的所有系统资源</li>
 				</ul>
-				<p>戻り値は現在は使用されていないが、将来の拡張性を考慮して TRUE を返却することが望ましい。</p>
+				<p>返回值目前尚未使用，但出于对未来扩展性的考虑，建议返回 TRUE。</p>
 			</section>
 		</section>
 	</div>

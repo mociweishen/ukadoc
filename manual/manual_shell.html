@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="zh">
 <head>
 <meta charset="utf-8" />
 <meta name="robots" content="INDEX,FOLLOW">
 <meta name="author" content="UKADOC Project">
 <meta name="keywords" content="ukadoc,伺か,シェル">
-<title>UKADOC Project シェル</title>
+<title>UKADOC Project Shell</title>
 <link rel="stylesheet" href="base.css">
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 </head>
@@ -25,10 +25,10 @@
 
 
 <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-<h1>シェル</h1>
+<h1>Shell</h1>
 <section>
 	<div class="passage">
-		<p>シェルフォルダのファイルは以下の通り。</p>
+		<p>Shell文件夹中的文件如下。</p>
 	</div>
 	<div class="passage">
 <pre>
@@ -42,16 +42,16 @@
 　　　　　　<em class="filename">+-(element).png</em>
 　　　　　　<em class="filename">+-(element).pna</em>
 　　　　　　<em class="filename">+-surfaces.txt</em>
-　　　　　　<em class="filename">+-surfaces**.txt</em> （SSPのみ）
-　　　　　　<em class="filename">+-alias.txt</em>（旧仕様）
+　　　　　　<em class="filename">+-surfaces**.txt</em> （仅限SSP）
+　　　　　　<em class="filename">+-alias.txt</em>（旧规格）
 　　　　　　<em class="filename">+-thumbnail.png</em>
 　　　　　　<em class="filename">+-makoto.dll</em>
-　　　　　　<em class="filename">+-surfacetable.txt</em> (SSPのみ)
+　　　　　　<em class="filename">+-surfacetable.txt</em> (仅限SSP)
 　　　　　　+-menu_background.png
 　　　　　　+-menu_foreground.png
 　　　　　　+-menu_sidebar.png
 </pre>
-		<p>※menu_background.png、menu_foreground.png、menu_sidebar.pngについては「<a href="manual_owner_draw_menu.html">オーナードローメニュー</a>」のページへ。</p>
+		<p>※关于menu_background.png、menu_foreground.png、menu_sidebar.png，请参阅「<a href="manual_owner_draw_menu.html">所有者下拉菜单</a>」页面。</p>
 	</div>
 </section>
 <section>
@@ -59,15 +59,15 @@
 		<dl class="component"
 			<dt><a href="descript_shell.html">descript.txt</a></dt>
 			<dd>
-				<p>シェルを識別し、基本的な設定を行うためのファイル。</p>
-				<p>テキスト内の記載事項は<a href="descript_shell.html">リンク先</a>を参照。</p>
+				<p>用于识别Shell并进行基本设置的文件。</p>
+				<p>文本中的各项说明请参阅<a href="descript_shell.html">链接页面</a>。</p>
 			</dd>
 
 			<dt>readme.txt</dt>
 			<dd>
-				<p>シェル製作者が配布元などを記載するためのもの。</p>
-				<p>省略可能だが、用意しておくと、インストール時やベースウェアのメニューなどから参照できる。</p>
-				<p>特にゴースト作者とシェル作者が異なるような場合には、なるべく用意される事が望ましい。</p>
+				<p>供Shell作者注明发布渠道等内容之用。</p>
+				<p>可以省略，但若事先准备好，便可在安装时或通过基础软件的菜单等进行查阅。</p>
+				<p>尤其在人格作者与Shell作者不一致的情况下，建议尽可能予以准备。</p>
 			</dd>
 		</dl>
 	</div>
@@ -78,34 +78,34 @@
 			<dt>surface*.png</dt>
 			<dd>
 				<div class="passage">
-					<p>サーフェスファイル。</p>
-					<p>デスクトップに表示される絵。</p>
-					<p>画像サイズ、色数に制限は無い。</p>
-					<p>ファイル形式はPNG<a href="#note1" class="note" id="note1-symbol">※</a>。</p>
+					<p>表面文件。</p>
+					<p>显示在桌面上的图像。</p>
+					<p>图像尺寸和颜色数均无限制。</p>
+					<p>文件格式为PNG<a href="#note1" class="note" id="note1-symbol">※</a>。</p>
 				</div>
 				<div class="passage">
-					<p>画像左上の1ドット(座標0,0)と同色の領域は透過色（抜き色）とされ、表示上透過される。</p>
+					<p>图像左上角的1个像素点（坐标0,0）与该像素同色的区域被视为透明色（抠图色），在显示时将被透明处理。</p>
 				</div>
 				<div class="passage">
-					<p>サーフェスの番号は<a href="descript_shell_surfaces.html#caption_standarddef">ある程度の標準的な割り振り</a>があるものの、基本的には自由。</p>
-					<p>ただし、surface0とsurface10は必須（SSPの場合推奨だが必須ではない）とされる。</p>
-					<p>そのためたとえキャラクター一人のゴーストであっても、surface10.pngとして単色塗りつぶしの画像を用意するなどの必要がある。
+					<p>表面的编号<a href="descript_shell_surfaces.html#caption_standarddef">虽有一定的标准分配</a>，但基本上可以自由设定。</p>
+					<p>不过，surface0和surface10是必需的（在SSP模式下建议使用，但并非强制要求）。</p>
+					<p>因此，即使只是一个角色的人格，也需要准备一张名为surface10.png的纯色填充图像等。
 				</div>
 				<div class="passage">
-					<p>サーフェス番号はベースウェアがMATERIA（embryo、本家の伺か）なら0～8192まで。</p>
-					<p>その他のベースウェアは制限なし。</p>
+					<p>如果基础软件是MATERIA（embryo、本家の伺か），则表面编号范围为0至8192。</p>
+					<p>其他基础材质无限制。</p>
 				</div>
 				<div class="passage">
-					<p>SSP 2.7.38以降では、surface*.pngにアニメGIF/APNG/WebPアニメを指定すると、SERIKO定義を書かなくてもアニメーションする。</p>
+					<p>在SSP 2.7.38及更高版本中，若将动画GIF/APNG/WebP动画指定为surface*.png文件，则无需编写SERIKO定义即可实现动画效果。</p>
 				</div>
 			</dd>
 
 			<dt>surface*.pna</dt>
 			<dd>
 				<div class="passage">
-					<p>サーフェスのアルファチャンネル定義ファイル。</p>
-					<p>グレースケール（黒：透明←→不透明：白）のpng画像の拡張子部分pnaにリネームしたもの。</p>
-					<p>サーフェス番号と同じ番号のpnaファイルを置くことによってサーフェスの半透明化ができる。</p>
+					<p>表面的阿尔法通道定义文件。</p>
+					<p>灰度（黑色：透明←→不透明：白色）PNG图像的扩展名部分重命名为pna。</p>
+					<p>通过放置与表面编号相同的pna文件，可以实现该表面的半透明效果。</p>
 				</div>
 				<div class="passage">
 					<table class="exmp-surface">
@@ -121,30 +121,30 @@
 							<td></td>
 							<td>surface0.pna</td>
 							<td></td>
-							<td>デスクトップの表示</td>
+							<td>桌面显示</td>
 						</tr>
 					</table>
 				</div>
 				<div class="passage">
-					<p>透過が完全でない場所は当たり判定が発生する。</p>
-					<p>またWindows9xや非常に古いグラフィックボードなど、非対応環境ではpnaは無視される。</p>
+					<p>在不完全透明的地方会产生碰撞检测。</p>
+					<p>此外，在Windows 9x以及非常老旧的显卡等不支持的环境下，pna会被忽略。</p>
 				</div>
 				<div class="passage">
-					<p>なおSSPでは、<a href="descript_shell.html#seriko.use_self_alpha,%E5%80%A4">設定</a>によりpng自体のアルファチャンネル（透明度情報）を使用するようにもできる。</p>
+					<p>此外，在SSP中，通过<a href="descript_shell.html#seriko.use_self_alpha,%E5%80%A4">设定</a>还可以使PNG文件本身使用其Alpha通道（透明度信息）。</p>
 				</div>
 			</dd>
 
 			<dt>(element).png</dt>
 			<dd>
-				<p><a href="descript_shell_surfaces.html#element*,%E3%83%91%E3%82%BF%E3%83%BC%E3%83%B3%E5%AE%9A%E7%BE%A9,%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E5%90%8D,X%E5%BA%A7%E6%A8%99,Y%E5%BA%A7%E6%A8%99">element</a>仕様によって、任意名のPNG画像<a href="#note1" class="note" id="note2-symbol">※</a>をパーツとして合成し、一つのsurfaceとして扱う事ができる。そのためのパーツ用画像。</p>
-				<p>※(element)の部分を好きな名前に読み換えてよい。何枚でも使用可能で、当然なくてもよい。</p>
-				<p>SSP 2.7.38以降では、surfaces.txtのelement定義にアニメGIF/APNG/WebPアニメを指定すると、SERIKO定義を書かなくてもアニメーションする。</p>
-				<p>詳しくは後述の「surfaces.txt」も参照。</p>
+				<p><a href="descript_shell_surfaces.html#element*,%E3%83%91%E3%82%BF%E3%83%BC%E3%83%B3%E5%AE%9A%E7%BE%A9,%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E5%90%8D,X%E5%BA%A7%E6%A8%99,Y%E5%BA%A7%E6%A8%99">element</a>根据规格，可将任意名称的PNG图像<a href="#note1" class="note" id="note2-symbol">※</a>作为部件进行合成，并将其视为一个独立的surface。这是用于此目的的部件专用图像。</p>
+				<p>※可以将（element）部分替换为任意名称。可使用任意数量，当然也可以不使用。</p>
+				<p>在SSP 2.7.38及更高版本中，若在surfaces.txt的element定义中指定动画GIF/APNG/WebP动画，则无需另行编写SERIKO定义即可实现动画播放。</p>
+				<p>详情请参阅后文的“surfaces.txt”。</p>
 			</dd>
 
 			<dt>(element).pna</dt>
 			<dd>
-				<p>各element合成用パーツ画像ごとのpna。</p>
+				<p>各element合成用的部件图像对应的pna。</p>
 			</dd>
 		</dl>
 	</div>
@@ -155,28 +155,28 @@
 			<dt><a href="descript_shell_surfaces.html">surfaces.txt</a></dt>
 			<dd>
 				<div class="passage">
-					<p>サーフェスのID割り当て、レイヤー合成、アニメーション、当たり判定などを定義するファイル。</p>
-					<p>定義内容については<a href="descript_shell.html">surfaces.txt</a>参照。</p>
+					<p>用于定义表面ID分配、图层合成、动画以及碰撞检测等信息的文件。</p>
+					<p>有关定义内容，请参阅<a href="descript_shell.html">surfaces.txt</a>。</p>
 				</div>
 				<div class="passage">
-					<p>アニメーション、着せ替えについては<a href="manual_animation.html">アニメーション</a>を参照。</p>
+					<p>关于动画和换装，请参阅<a href="manual_animation.html">动画</a>。</p>
 				</div>
 			</dd>
 
 			<dt><a href="descript_shell_surfaces.html">surfaces**.txt</a></dt>
 			<dd>
-				<p>SSP専用。</p>
-				<p>**には任意の文字列を与えてよい。</p>
-				<p>2.01系以降でsurfaces2.txtの名前に対応し、任意の文字列がつけられるようになったのは2.2.57以降。</p>
-				<p>機能は<em class="filename">surfaces.txt</em>と同じ。</p>
-				<p>互換性を維持しつつSSP専用の機能を使うためのもの。</p>
-				<p>このファイルは省略可能。必要な部分のみを追記する形でも問題ない。</p>
+				<p>SSP专用。</p>
+				<p>**可以赋予任意字符串。</p>
+				<p>自2.01系列起，surfaces2.txt的文件名已支持附加任意字符串，这一功能自2.2.57版本开始生效。</p>
+				<p>功能与<em class="filename">surfaces.txt</em>相同。</p>
+				<p>用于在保持兼容性的同时使用SSP专用功能。</p>
+				<p>此文件为可选项，仅追加必要部分亦无妨。</p>
 			</dd>
 
 			<dt><a href="descript_shell_surfaces.html#caption_aliastxt">alias.txt</a></dt>
 			<dd>
-				<p>旧仕様。sakura(kero).aliasブレスを記述するためのテキストファイル。</p>
-				<p>現在はsurfaces.txtに機能が統合されている。</p>
+				<p>旧规格。用于描述sakura(kero).alias的呼吸效果的文本文件。</p>
+				<p>目前该功能已整合至surfaces.txt中。</p>
 			</dd>
 		</dl>
 	</div>
@@ -186,25 +186,25 @@
 		<dl class="component">
 			<dt>thumbnail.png</dt>
 			<dd>
-				<p>メニューツリーでシェルの選択時に表示されるサムネイル。</p>
-				<p>使用可能な画像形式はpngもしくはjpg。</p>
-				<p>pngをpnrにリネームすると画像左上の1ドット(座標0,0)と同色が透過される。</p>
-				<p>このファイルは省略可能。</p>
+				<p>在菜单树中选择Shell时显示的缩略图。</p>
+				<p>支持的图像格式为png或jpg。</p>
+				<p>将png重命名为pnr后，图像左上角的1个像素（坐标0,0）及其同色部分将被透明化。</p>
+				<p>此文件可省略。</p>
 			</dd>
 
 			<dt><a href="manual_translator.html">makoto.dll</a></dt>
 			<dd>
-				<p>トランスレート機能を使うためのもの。</p>
-				<p><a href="manual_ghost.html">ゴースト側</a>に用意できるものと同じ。詳しくは<a href="manual_translator.html">リンク先</a>を参照。</p>
-				<p>このファイルは省略可能。</p>
+				<p>用于使用翻译功能。</p>
+				<p>与<a href="manual_ghost.html">人格端</a>的相同。详情请参阅<a href="manual_translator.html">链接页面</a>。</p>
+				<p>此文件可省略。</p>
 			</dd>
 
 			<dt><a href="descript_shell_surfacetable.html">surfacetable.txt</a></dt>
 			<dd>
-				<p>SSP専用。</p>
-				<p>SSP開発用パレットの「サーフィステスト」機能や、そのほかのシェル作成支援ユーティリティでの利用を目的としたサーフェス内容の定義ファイル。</p>
-				<p>詳しくは<a href="descript_shell_surfacetable.html">リンク先</a>を参照。</p>
-				<p>このファイルは省略可能。</p>
+				<p>仅限SSP。</p>
+				<p>用于SSP开发工具中的“Surface 测试”功能，以及其它用于辅助创建Shell的实用程序的曲面定义文件。</p>
+				<p>详情请参阅<a href="descript_shell_surfacetable.html">链接页面</a>。</p>
+				<p>此文件可省略。</p>
 			</dd>
 		</dl>
 	</div>
@@ -213,9 +213,9 @@
 	<dl>
 		<dt id="note1"><a href="#note1-symbol">※1</a>,<a href="#note2-symbol">※2</a></dt>
 		<dd>
-			<p>SSPでは暗号化PNG(DAP/DDP/DFP/DGP)・GIF（非アニメ）・JPEG・BMPも使用可能だが、<em>非推奨</em>。</p>
-			<p>過去互換の為読み込みは可能だが、今後追加される機能や仕様についてPNG以外の形式がサポートされる保証はない。</p>
-			<p>また現時点でも、PNG以外の全形式で透明度仕様（pnaおよび<a href="descript_shell.html#seriko.use_self_alpha,%E5%80%A4">seriko.use_self_alpha</a>）が利用不可であるし、JPEGについては圧縮によって色がずれやすいため透過色と相性が悪いという弊害もある。</p>
+			<p>在SSP中，加密PNG（DAP/DDP/DFP/DGP）、GIF（非动画）、JPEG、BMP等格式也可使用，<em>但不推荐</em>。</p>
+			<p>出于向后兼容的考虑，目前仍可读取，但今后新增的功能或规格并不保证会支持PNG以外的格式。</p>
+			<p>此外，即使在当前阶段，除PNG外的所有格式均不支持透明度相关设置（pna以及<a href="descript_shell.html#seriko.use_self_alpha,值">seriko.use_self_alpha</a>），而且JPEG由于压缩可能导致色彩偏差，与透明色的兼容性也较差。</p>
 		</dd>
 	</dl>
 </aside>

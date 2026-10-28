@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="zh">
 <head>
 <meta charset="utf-8" />
 <meta name="robots" content="INDEX,FOLLOW">
 <meta name="author" content="UKADOC Project">
 <meta name="keywords" content="伺か,更新,ネットワーク">
-<title>UKADOC Project ネットワーク</title>
+<title>UKADOC Project 网络更新</title>
 <link rel="stylesheet" href="base.css">
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 </head>
@@ -25,15 +25,15 @@
 
 
 <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-<h1>ネットワーク更新</h1>
+<h1>网络更新</h1>
 <section>
 	<div class="passage">
-		<p>ネットワーク更新のための設定などは「<a href="dev_update.html">ネットワーク更新への対応</a>」のページを参照。</p>
-		<p>ネットワーク更新に関係するファイルの配置は以下の通り。</p>
+		<p>有关网络更新的设置等，请参阅“<a href="dev_update.html">应对网络更新</a>”页面。</p>
+		<p>与网络更新相关的文件放置如下。</p>
 	</div>
 	<div class="passage">
 		<dl>
-			<dt>ゴーストの場合</dt>
+			<dt>对于人格而言</dt>
 			<dd>
 <pre>
 +-(myghost)
@@ -42,15 +42,15 @@
 　　<em class="filename">+-updates2.dau</em>
 　　<em class="filename">+-updates.txt</em>
 　　<em class="filename">+-delete.txt</em>
-　　<em class="filename">+-delete1.txt</em> (SSPのみ・delete[数字].txtを認識可)
-　　<em class="filename">+-developer_options.txt</em> (SSPのみ)
+　　<em class="filename">+-delete1.txt</em> (仅SSP可识别 delete[数字].txt)
+　　<em class="filename">+-developer_options.txt</em> (仅限SSP)
 　　+-readme.txt
 　　+-thumbnail.png
 </pre>
 			</dd>
 
 
-			<dt>(SSPのみ)追加シェルをネットワーク更新に対応させる場合</dt>
+			<dt>（仅限SSP）若要使附加Shell支持网络更新</dt>
 			<dd>
 <pre>
 +-(myshell)
@@ -59,7 +59,7 @@
 　　<em class="filename">+-updates2.dau</em>
 　　<em class="filename">+-updates.txt</em>
 　　<em class="filename">+-delete.txt</em>
-　　<em class="filename">+-delete1.txt</em> (SSPのみ・delete[数字].txtを認識可)
+　　<em class="filename">+-delete1.txt</em> (仅SSP可识别 delete[数字].txt)
 　　<em class="filename">+-developer_options.txt</em>
 　　+-readme.txt
 　　+-thumbnail.png
@@ -67,14 +67,14 @@
 			</dd>
 
 
-			<dt>(SSPのみ)バルーンをネットワーク更新に対応させる場合</dt>
+			<dt>（仅限SSP）将气球支持网络更新时</dt>
 			<dd>
 <pre>
 +-(myballoon)
 　　<em class="filename">+-updates2.dau</em>
 　　<em class="filename">+-updates.txt</em>
 　　<em class="filename">+-delete.txt</em>
-　　<em class="filename">+-delete1.txt</em> (SSPのみ・delete[数字].txtを認識可)
+　　<em class="filename">+-delete1.txt</em> (仅SSP可识别 delete[数字].txt)
 　　<em class="filename">+-developer_options.txt</em>
 　　+-descript.txt
 　　+-balloons*s.txt
@@ -85,7 +85,7 @@
 　　:
 　　:
 </pre>
-				<p>他、プラグイン、ヘッドラインなども同様に、そのフォルダ内に設置すればよい。</p>
+				<p>至于其他内容，比如插件（plugin）和头条（headline）等，同样只需将它们放入相应的文件夹中即可。</p>
 			</dd>
 		</dl>
 	</div>
@@ -96,19 +96,19 @@
 			<dt>updates2.dau</dt>
 			<dd>
 				<div class="passage">
-					<p>更新対象とするファイルのMD5ハッシュ値などが列挙されたファイル。</p>
-					<p>ネットワーク更新で、サーバにあるファイルと実際にダウンロードされたファイルの間で、ファイルが破損・改竄などされていないかを検出する目的で用いられる。</p>
+					<p>列出了待更新文件的MD5哈希值等信息的文件。</p>
+					<p>用于在网络更新过程中，检测服务器上的文件与实际下载的文件之间是否发生损坏或篡改等情况。</p>
 				</div>
 				<div class="passage">
-					<p>普通ベースウェアの機能を用いるなどして作成するもので、人が編集する必要はない。</p>
-					<p>作成手順などは「<a href="dev_update.html">ネットワーク更新への対応</a>」のページを参照</p>
+					<p>通常通过使用基础软件的功能等方式生成，无需人工编辑。</p>
+					<p>有关制作步骤等，请参阅“<a href="dev_update.html">应对网络更新</a>”页面</p>
 				</div>
 			</dd>
 
 			<dt>updates.txt</dt>
 			<dd>
-				<p>updates2.dauとほぼ同じ意味を果たすもの。どちらか一方があればよい（両方あっても問題ない）。</p>
-				<p>書式が多少異なるほか、拡張子制限でdauがアップロードできない等の問題を回避できる。</p>
+				<p>与updates2.dau几乎具有相同的作用。二者任选其一即可（同时存在也无妨）。</p>
+				<p>除了格式略有不同外，还可避免因文件扩展名限制而导致dau无法上传等问题。</p>
 			</dd>
 		</dl>
 	</div>
@@ -118,19 +118,19 @@
 		<dl class="component">
 			<dt><a href="descript_install.html#delete.txt">delete.txt</a></dt>
 			<dd>
-				<p>ファイルの削除設定ファイル。</p>
-				<p>サーバ上でupdates2.dauと同じ位置に配置する。</p>
-				<p>不要になったファイルが肥大するのを防ぐなどの目的で使う。</p>
-				<p>書式など詳しくは<a href="descript_install.html#delete.txt" title="delete.txt">リンク先</a>を参照。</p>
+				<p>文件的删除设置文件。</p>
+				<p>在服务器上将其放置于与updates2.dau相同的位置。</p>
+				<p>用于防止不再需要的文件不断膨胀等目的。</p>
+				<p>有关格式等详细信息，请参阅<a href="descript_install.html#delete.txt" title="delete.txt">链接页面</a>。</p>
 			</dd>
 
 			<dt><a href="descript_install.html#developer_options.txt">developer_options.txt</a></dt>
 			<dd>
-				<p>SSPのみ。</p>
-				<p>updates2.dauを作成したい位置（一番上のディレクトリ）に配置する。</p>
-				<p>SSPでupdates2.dau（updates.txt）を作る場合に、対象に含めないファイルなどを指定するためのファイル。</p>
-				<p>サーバ上にアップロードする必要はない（自身を除外ファイルに指定するなどで可能）が、あっても害はないので、ユーザが再度narにしなおすなどの状況を考えつつ自由に。</p>
-				<p>書式など詳しくは<a href="descript_install.html#developer_options.txt" title="developer_options.txt">リンク先</a>を参照。</p>
+				<p>仅限SSP。</p>
+				<p>将其放置在您想要创建 updates2.dau 的位置（即最上层的目录）中。</p>
+				<p>在SSP中生成updates2.dau（updates.txt）时，用于指定不纳入处理范围的文件等的配置文件。</p>
+				<p>无需将其上传至服务器（可通过将自身设为排除文件等方式实现），但即便上传也无妨，因此请根据用户可能需要重新进行nar操作等情况，灵活处理。</p>
+				<p>有关格式等详细信息，请参阅<a href="descript_install.html#developer_options.txt" title="developer_options.txt">链接页面</a>。</p>
 			</dd>
 		</dl>
 	</div>

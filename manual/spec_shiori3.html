@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="zh">
 <head>
 <meta charset="utf-8" />
 <meta name="robots" content="INDEX,FOLLOW">
@@ -15,7 +15,7 @@
 		<table>
 			<tbody>
 				<tr>
-					<th>トップページへ戻る</th>
+					<th>返回首页</th>
 					<td colspan="2">
 						<ul>
 							<li><a href="http://ssp.shillest.net/ukadoc/manual/index.html">INDEX</a></li>
@@ -25,7 +25,7 @@
 			</tbody>
 			<tbody>
 				<tr>
-					<th rowspan="6">設定ファイル</th>
+					<th rowspan="6">设定文件</th>
 					<th>Ghost</th>
 					<td>
 						<ul>
@@ -81,24 +81,24 @@
 			</tbody>
 			<tbody>
 				<tr>
-					<th>さくらスクリプト</th>
+					<th>Sakura脚本</th>
 					<td colspan="2">
 						<ul>
-							<li><a href="./list_sakura_script.html">Sakura Script</a></li>
-							<li><a href="./list_propertysystem.html">Property System</a></li>
+							<li><a href="./list_sakura_script.html">Sakura脚本</a></li>
+							<li><a href="./list_propertysystem.html">属性系统</a></li>
 						</ul>
 					</td>
 				</tr>
 			</tbody>
 			<tbody>
 				<tr>
-					<th rowspan="2">イベント</th>
+					<th rowspan="2">事件</th>
 					<th>SHIORI</th>
 					<td>
 						<ul>
-							<li><a href="./list_shiori_event.html">SHIORI Event</a></li>
-							<li><a href="./list_shiori_event_ex.html">SHIORI Event（外部）</a></li>
-							<li><a href="./list_shiori_resource.html">SHIORI Resource</a></li>
+							<li><a href="./list_shiori_event.html">SHIORI事件</a></li>
+							<li><a href="./list_shiori_event_ex.html">SHIORI事件（外部）</a></li>
+							<li><a href="./list_shiori_resource.html">SHIORI资源</a></li>
 						</ul>
 					</td>
 				</tr>
@@ -106,26 +106,26 @@
 					<th>PLUGIN</th>
 					<td>
 						<ul>
-							<li><a href="./list_plugin_event.html">PLUGIN Event</a></li>
+							<li><a href="./list_plugin_event.html">PLUGIN事件</a></li>
 						</ul>
 					</td>
 				</tr>
 			</tbody>
 			<tbody>
 				<tr>
-					<th>規格</th>
+					<th>规格</th>
 					<td colspan="2">
 						<ul>
 							<li><a href="./spec_shiori3.html">SHIORI/3.0</a></li>
 							<li><a href="./spec_sstp.html">SSTP/1.x</a></li>
-							<li><a href="http://www.boreas.dti.ne.jp/~sdn/saori.html">SAORI/1.0</a>（外部サイト）</li>
+							<li><a href="http://www.boreas.dti.ne.jp/~sdn/saori.html">SAORI/1.0</a>（外部链接）</li>
 							<li><a href="./spec_saori_ex.html">SAORI over DirectSSTP</a></li>
 							<li><a href="./spec_plugin.html">PLUGIN/2.0</a></li>
 							<li><a href="./spec_headline.html">HEADLINE/2.0</a></li>
 							<li><a href="./spec_dll.html">DLL</a></li>
 							<li><a href="./spec_fmo_mutex.html">FMO/MUTEX</a></li>
-							<li><a href="./spec_update_file.html">更新定義ファイル</a></li>
-							<li><a href="./spec_web.html">Web関連</a></li>
+							<li><a href="./spec_update_file.html">更新定义文件</a></li>
+							<li><a href="./spec_web.html">Web关联</a></li>
 						</ul>
 					</td>
 				</tr>
@@ -137,7 +137,7 @@
 		<section class="navigation-category">
 			<h1>SHIORI/3.0</h1>
 			<ul>
-				<li><a href="#capability">実装対応状況の検知</a></li>
+				<li><a href="#capability">实现对应状态的检测</a></li>
 				<li><a href="#request">request</a></li>
 				<li><a href="#response">response</a></li>
 			</ul>
@@ -146,20 +146,20 @@
 	<div class="categories">
 		<section class="category caption introduction" id="chapter0">
 			<h1>SHIORI/3.0</h1>
-			<p>参考：<a href="http://usada.sakura.vg/contents/specification2.html#shioriprotocol">SHIORI/3.0</a>（外部サイト） <a href="http://usada.sakura.vg/contents/shiori.html">SHIORI/2.x</a>（外部サイト）</p>
+			<p>参考：<a href="http://usada.sakura.vg/contents/specification2.html#shioriprotocol">SHIORI/3.0</a>（外部网站） <a href="http://usada.sakura.vg/contents/shiori.html">SHIORI/2.x</a>（外部网站）</p>
 		</section>
 		
 		<section class="category" id="capability">
-			<h1>実装対応状況の検知</h1>
+			<h1>实现对应状态的检测</h1>
 			<section class="caption">
-				<p>拡張ヘッダの実装対応状況については、<a href="./list_shiori_event.html#capability">ID: capability</a>でSHIORI実行の初期に通知される。</p>
+				<p>关于扩展头部的实现支持情况，会在SHIORI执行初期通过<a href="./list_shiori_event.html#capability">ID: capability</a>进行通知。</p>
 			</section>
 		</section>
 		
 		<section class="category" id="request">
-			<h1>request</h1>
+			<h1>request 请求</h1>
 			<section class="caption">
-			<h1>サンプル</h1>
+			<h1>示例</h1>
 <pre><!--
 -->GET SHIORI/3.0
 Charset: UTF-8
@@ -172,132 +172,132 @@ BaseID: OnBoot
 Reference0: 1
 
 </pre>
-			<p>※改行コードはCR+LF。
-			<br />※最後は空行（前行の終端と合わせて(CR+LF)x2）で終わること。</p>
+			<p>※换行符为CR+LF。
+			<br />※最后必须以空行结束（与前一行末尾一起构成(CR+LF)x2）。</p>
 			</section>
 			<dl>
-				<dt class="entry">メソッド</dt>
+				<dt class="entry">方法</dt>
 				<dd class="entry">
 				<dl class="property">
 					<dt>GET</dt>
-					<dd>レスポンスのValueヘッダでなにかしらを返すことを前提としているメソッド。</dd>
+					<dd>以在响应的Value头部返回某些内容为前提的方法。</dd>
 					<dt>NOTIFY</dt>
-					<dd>何も値を返さないことを前提としているメソッド。レスポンスのValueヘッダは無視される。<br>
-					主に何かしらのモードの制約で「喋れない」状態の時や、起動直後の状態通知イベントに使用される。<br>
-					同じID(イベント名)でGET/NOTIFYの両方とも使われる場合があるので注意。</dd>
+					<dd>以不返回任何值为前提的方法。响应的Value头部将被忽略。<br>
+					主要用于因某种模式限制而处于“无法说话”状态时，或在刚启动后的状态通知事件中使用。<br>
+					请注意，同一个ID（事件名）有时会同时用于GET和NOTIFY。</dd>
 				</dl>				</dd>
 				
-				<dt class="entry">Charset</dt>
-				<dd class="entry"><p>文字コード。最初の行、または少なくとも文字コードがASCII範囲以外の行の前が望ましい。</p></dd>
+				<dt class="entry">Charset 字符集</dt>
+				<dd class="entry"><p>字符代码。最好在第一行或至少字符代码在ASCII范围以外的行之前。</p></dd>
 				
-				<dt class="entry">Sender</dt>
-				<dd class="entry"><p>イベント送信元。</p></dd>
+				<dt class="entry">Sender 发送者</dt>
+				<dd class="entry"><p>事件发送方。</p></dd>
 				
-				<dt class="entry">SenderType [SSP 2.5.05～拡張]</dt>
+				<dt class="entry">SenderType 发送方类型[SSP 2.5.05～扩展]</dt>
 				<dd class="entry">
-				<p>イベント送信元の属性。下記の通り。複数ある場合はカンマでつなげたもの。<br>
-				ID: OnTranslateについては、トランスレート元のイベントの属性を引き継ぐ。</p>
+				<p>事件发送方的属性。如下所示。如有多个，请用逗号连接。<br>
+				对于ID：OnTranslate，将继承翻译源事件的属性。</p>
 				<dl class="property">
 					<dt>internal</dt>
-					<dd>アプリケーション内部からのイベント。 </dd>
+					<dd>来自应用程序内部的事件。 </dd>
 					<dt>external</dt>
-					<dd>アプリケーション外部からのイベント。 </dd>
+					<dd>来自应用程序外部的事件。 </dd>
 					<dt>sakuraapi</dt>
-					<dd>Sakura APIによって起こされたイベント。 </dd>
-					<dt>embed</dt>
-					<dd>\![embed]タグによって起こされたイベント。 </dd>
-					<dt>raise</dt>
-					<dd>\![raise]タグによって起こされたイベント。 </dd>
+					<dd>由Sakura API触发的事件。 </dd>
+					<dt>embed 嵌入</dt>
+					<dd>由\![embed]标签触发的事件。 </dd>
+					<dt>raise 引发</dt>
+					<dd>由\![raise]标签触发的事件。 </dd>
 					<dt>property</dt>
-					<dd>プロパティシステムの参照命令の結果起こされたイベント。 </dd>
+					<dd>由属性系统引用指令触发的事件。 </dd>
 					<dt>plugin</dt>
-					<dd>プラグインによって起こされたイベント。 </dd>
+					<dd>由插件触发的事件。 </dd>
 					<dt>sstp</dt>
-					<dd>SSTPによって起こされたイベント。 </dd>
+					<dd>SSTP所引发的事件。 </dd>
 					<dt>communicate</dt>
-					<dd>コミュニケート仕様によって起こされたイベント。</dd>
+					<dd>由通信规范所引发的事件。 </dd>
 				</dl>
 				</dd>
 				
-				<dt class="entry">SecurityLevel</dt>
+				<dt class="entry">SecurityLevel 安全级别</dt>
 				<dd class="entry">
-				<p>スクリプト実行時のセキュリティレベル。下記のいずれか。
-				<br />ID: OnTranslateについては、トランスレート元のイベントの属性を引き継ぐ。
-				<br />できるだけ最初のほうの行で通知される。少なくともIDヘッダより前に現れる。</p>
+				<p>脚本执行时的安全级别。以下之一。
+				<br />对于ID：OnTranslate，将继承翻译源事件的属性。
+				<br />尽可能在最前面的几行中发出通知。至少应在ID头部之前出现。</p>
 				<dl class="property">
 					<dt>local</dt>
-					<dd>実行中の端末内からの通知。</dd>
+					<dd>来自正在运行的终端的通知。</dd>
 					<dt>external</dt>
-					<dd>実行中端末の外部からの通知。</dd>
+					<dd>运行中终端外部发出的通知。</dd>
 				</dl>
-				<p>externalの場合は実行中マシンの外部からの通知なので、セキュリティ的に取り扱いに注意を要する。<br>
-				SenderTypeのinternal/externalとは別の概念であり、アプリケーション外から発生したイベントであっても、安全とみなして良いものはlocal判定となるので、SenderTypeがexternalでもSecurityLevelがlocalとなる場合がある。</p>
+				<p>在external的情况下，由于是来自执行中机器的外部的通知，所以在安全性上需要注意处理。<br>
+				SenderType中的internal/external是一个与之不同的概念；即使事件是由应用程序外部触发的，只要被认定为安全，仍会被判定为local。因此，即便SenderType为external，SecurityLevel也可能为local。</p>
 				</dd>
 
-				<dt class="entry">SecurityOrigin [SSP拡張]</dt>
+				<dt class="entry">SecurityOrigin 安全来源[SSP扩展]</dt>
 				<dd class="entry">
-				<p>送信元サーバを示すURL風の文字列。以下の形式となる。<a href="https://developer.mozilla.org/ja/docs/Web/HTTP/Headers/Origin">HTTPヘッダのOrigin</a>と考え方は同じ。
+				<p>用于指示发送方服务器的类似URL的字符串。格式如下。与<a href="https://developer.mozilla.org/ja/docs/Web/HTTP/Headers/Origin">HTTP头部的Origin字段</a>的原理相同。
 				<br />SecurityOrigin: null
 				<br />SecurityOrigin: &lt;scheme&gt;://&lt;hostname&gt;
 				<br />SecurityOrigin: &lt;scheme&gt;://&lt;hostname&gt;:&lt;port&gt;
-				<br />scheme は通常、http,https,sstpのいずれか。hostnameは送信元サーバ名かIP。portは返信受付可能なポート。
-				<br />SSTPなどでヘッダが指定されていない、そもそも送信元の概念がないなど、情報なしの場合はnullとなる。
-				<br />SSTP仕様のSecurityOriginも参照すること。
+				<br />scheme通常为http、https或sstp之一。hostname为发送方服务器的域名或IP地址，port为可接收响应的端口。
+				<br />在SSTP等协议中，若未指定头部，或根本不存在发送源的概念等情况下，无信息时将返回null。
+				<br />同时请参考SSTP规范中的SecurityOrigin。
 				</p>
 				</dd>				
 
-				<dt class="entry">Status [SSP拡張]</dt>
+				<dt class="entry">Status 状态[SSP扩展]</dt>
 				<dd class="entry">
-				<p>ゴーストの実行状態。下記の通り。複数ある場合はカンマでつなげたもの。</p>
+				<p>人格的运行状态。如下所示。若有多个，则以逗号分隔。</p>
 				<dl class="property">
 					<dt>talking</dt>
-					<dd>喋っている途中 </dd>
+					<dd>正在说话中 </dd>
 					<dt>choosing</dt>
-					<dd>選択肢表示中 </dd>
+					<dd>选项显示中 </dd>
 					<dt>minimizing</dt>
-					<dd>最小化中 </dd>
-					<dt>induction</dt>
-					<dd>\![enter,inductionmode]中 </dd>
-					<dt>passive</dt>
-					<dd>\![enter,passivemode]中 </dd>
+					<dd>正在最小化中 </dd>
+					<dt>induction 归纳</dt>
+					<dd>在\![enter,inductionmode]中 </dd>
+					<dt>passive 被动</dt>
+					<dd>在\![enter,passivemode]中 </dd>
 					<dt>timecritical</dt>
-					<dd>タイムクリティカルセクション(\t)中 </dd>
-					<dt>nouserbreak</dt>
-					<dd>\![enter,nouserbreak]中 </dd>
+					<dd>在时间关键区段(\t)中 </dd>
+					<dt>nouserbreak<br />不允许换行</dt>
+					<dd>在\![enter,nouserbreak]中<br /><br /> </dd>
 					<dt>online</dt>
-					<dd>ネットワーク通信中 </dd>
-					<dt>opening(種類)</dt>
-					<dd>入力ボックス等が開いている。<br>
-					複数種類が開いている場合は/区切りで列挙される。<br>
-					"dialog"はファイル選択・カラーピッカー等。<br>
-					例：opening(communicate/input/teach/dialog)</dd>
-					<dt>balloon(ID群)</dt>
-					<dd>バルーンが表示状態。<br>
-					キャラクターID=バルーンID の形式で列挙される。<br>
-					複数開いている場合は/区切りで列挙される。<br>
-					例：balloon(0=2/1=0) で、\0が大きいバルーン、\1が通常のバルーンを表示中の意。
+					<dd>正在进行网络通信 </dd>
+					<dt>opening(类型)</dt>
+					<dd>输入框等已打开。<br>
+					若同时打开了多种类型，则以“/”分隔并列举。<br>
+					“dialog”指文件选择、颜色拾取等。<br>
+					例如：opening(communicate/input/teach/dialog)</dd>
+					<dt>balloon(ID列表)</dt>
+					<dd>气球处于显示状态。<br>
+					以“角色ID=气球ID”的形式列举。<br>
+					若同时开启多个，则以“/”分隔列举。<br>
+					例如：balloon(0=2/1=0) 表示\0为大型气球，\1为普通气球。
 					</dd>
 				</dl>
 				</dd>
 				<dt class="entry">ID</dt>
-				<dd class="entry"><p>イベント名、またはテキストリソースの識別子。</p></dd>
+				<dd class="entry"><p>事件名或文本资源的标识符。</p></dd>
 				
-				<dt class="entry">BaseID [SSP拡張]</dt>
-				<dd class="entry"><p>互換可能な基本のイベント名。<br>
-				例：OnFirstBootはOnBootと互換で、かつOnFirstBootはOnBootの亜種なので、OnFirstBootのBaseIDにはOnBootが入る。</p></dd>
+				<dt class="entry">BaseID [SSP扩展]</dt>
+				<dd class="entry"><p>可兼容的基本事件名。<br>
+				例如：OnFirstBoot与OnBoot兼容，且OnFirstBoot是OnBoot的子类型，因此OnFirstBoot的BaseID中会包含OnBoot。</p></dd>
 				
 				<dt class="entry">Reference*</dt>
-				<dd class="entry"><p>イベントに付随する追加情報群。Referenceの後には数字が入る。入れられる行数は制限なし（メモリが許す限り）</p></dd>
+				<dd class="entry"><p>与事件相关的附加信息集合。Reference后可接数字。可输入的行数无限制（只要内存允许）</p></dd>
 				
-				<dt class="entry">X-SSTP-PassThru-(任意の文字列) [SSP 2.5.05～拡張]</dt>
-				<dd class="entry"><p>SSTPからイベント通知が来た場合に限り、SSTPのリクエストヘッダ内で"X-SSTP-PassThru-"ではじまるものがそのまま通知される。<br>
-				SSTP以外の時は追加されない。</p></dd>
+				<dt class="entry">X-SSTP-PassThru-(任意字符串) [SSP 2.5.05～扩展]</dt>
+				<dd class="entry"><p>仅当从SSTP收到事件通知时，SSTP请求头中以"X-SSTP-PassThru-"开头的字段才会原样被通知。<br>
+				在非SSTP情况下则不会被添加。</p></dd>
 			</dl>
 		</section>
 		<section class="category" id="response">
-			<h1>response</h1>
+			<h1>response 响应</h1>
 			<section class="caption">
-				<h1>サンプル</h1>
+				<h1>示例</h1>
 <pre><!--
 -->SHIORI/3.0 200 OK
 Charset: UTF-8
@@ -305,53 +305,53 @@ Sender: AYA
 Value: \1\s[10]\0\s[0]\e
 
 </pre>
-				<p>※改行コードはCR+LF。
-				<br />※最後は空行（前行の終端と合わせて(CR+LF)x2）で終わること。</p>
+				<p>※换行符为CR+LF。
+				<br />※最后必须以空行结束（与前一行末尾一起构成(CR+LF)x2）。</p>
 			</section>
 
 			<dl>
-				<dt class="entry">ステータスコード</dt>
+				<dt class="entry">状态码</dt>
 				<dd class="entry">
 				<p>HTTPと同じく、200番台が成功、ほかはなにかしらの失敗（エラー）を示す。<br>
 				現在主に使用されているのは下記の通り。</p>
 				<dl class="property">
 					<dt>200</dt>
-					<dd>200 OK<br>成功、返り値(Value)あり。</dd>
+					<dd>200 OK<br>成功，有返回值（Value）。</dd>
 					
 					<dt>204</dt>
-					<dd>204 No Content<br>成功、返り値なし。</dd>
+					<dd>204 No Content<br>成功，无返回值。</dd>
 					
 					<dt>311</dt>
-					<dd>311 Not Enough<br>ID: OnTeach (SHIORI/2系のTEACHメソッド)において、さらなる追加情報を必要とすることを示す。<br>
-					入力ボックスを再度開いてユーザーに問い合わせ、入力完了後に入力文字列を含むReferenceを追加する。</dd>
+					<dd>311 Not Enough<br>在ID:OnTeach（SHIORI/2系的TEACH方法）中，表示需要进一步的追加信息。<br>
+					再次打开输入框并向用户进行询问，待用户输入完成后，添加包含输入字符串的Reference。</dd>
 					
 					<dt>312</dt>
-					<dd>312 Advice<br>ID: OnTeach (SHIORI/2系のTEACHメソッド)において、直近で入力された文字列が解釈不能のため破棄すべきことを示す。<br>
-					一番最後のReferenceを破棄し、入力ボックスを再度開いてユーザーに問い合わせ、入力完了後に入力文字列を含むReferenceを追加する。</dd>
+					<dd>312 Advice<br>ID：在OnTeach（SHIORI/2系的TEACH方法）中，表示最近输入的字符串因无法解析而应被丢弃。<br>
+					首先销毁最后一个Reference，然后重新打开输入框并询问用户，待用户输入完成后，再添加包含该输入字符串的Reference。</dd>
 					
 					<dt>400</dt>
-					<dd>400 Bad Request<br>リクエスト文字列が解釈不能だった。</dd>
+					<dd>400 Bad Request<br>请求字符串无法解析。</dd>
 					
 					<dt>500</dt>
-					<dd>500 Internal Server Error<br>SHIORI内部でなにかしらのエラーが起き、レスポンスを返せなかった。</dd>
+					<dd>500 Internal Server Error<br>SHIORI 内部发生了某种错误，无法返回响应。</dd>
 				</dl>
 				</dd>
-				<dt class="entry">Charset</dt>
-				<dd class="entry"><p>文字コード。最初の行、または少なくとも文字コードがASCII範囲以外の行の前が望ましい。</p></dd>
+				<dt class="entry">Charset 字符集</dt>
+				<dd class="entry"><p>字符代码。最好在第一行或至少字符代码在ASCII范围以外的行之前。</p></dd>
 				
-				<dt class="entry">Sender</dt>
-				<dd class="entry"><p>送り主。通常はSHIORIの名前。</p></dd>
+				<dt class="entry">Sender 发送者</dt>
+				<dd class="entry"><p>发送者。通常为 SHIORI 的名称。</p></dd>
 				
-				<dt class="entry">Value</dt>
-				<dd class="entry"><p>喋りたいスクリプト。</p></dd>
+				<dt class="entry">Value 值</dt>
+				<dd class="entry"><p>想要表达的脚本内容。</p></dd>
 				
-				<dt class="entry">ValueNotify [SSP拡張 2.5.35]</dt>
-				<dd class="entry"><p><em>[実験的機能]</em>
-				<br />リクエストメソッドがNOTIFYの場合でもSakuraScriptを実行するための拡張機能。
-				<br />このヘッダでSakuraScriptを返すと、即時実行される。GETの場合はValueヘッダのスクリプトを実行する前に実行される。
-				<br />実行できるタグは極めて限られ、他のタグやその他文字列は全て無視される。
-				<br /><del>メソッドがNOTIFYでない時や、Valueヘッダがすでにある時は無視される。</del> 2.6.76で制限廃止
-				<br />現在実行できるタグは以下の通り：</p>
+				<dt class="entry">ValueNotify [SSP扩展 2.5.35]</dt>
+				<dd class="entry"><p><em>[实验性功能]</em>
+				<br />即使请求方法为NOTIFY，也用于执行Sakura脚本的扩展功能。
+				<br />当通过此头部返回Sakura脚本时，将立即执行。而在GET请求中，则会在执行Value头部中的脚本之前先执行。
+				<br />可执行的标签极为有限，其他标签及任何其他字符串均将被忽略。
+				<br /><del>当方法不是NOTIFY，或Value头部已存在时，该头部将被忽略。</del> 在2.6.76版本中已取消此限制
+				<br />当前可执行的标签如下：</p>
 				<ul>
 				<li>\![sound]</li>
 				<li>\![set,trayicon]</li>
@@ -369,67 +369,67 @@ Value: \1\s[10]\0\s[0]\e
 				</ul>
 				</dd>
 
-				<dt class="entry">SecurityLevel [SSP拡張]</dt>
+				<dt class="entry">SecurityLevel 安全级别[SSP扩展]</dt>
 				<dd class="entry">
-				<p>下記のいずれか。</p>
+				<p>以下任一选项。</p>
 				<dl class="property">
 					<dt>local</dt>
-					<dd>実行中の端末内からのスクリプト相当のセキュリティレベル。</dd>
+					<dd>相当于在当前设备内部运行的脚本的安全级别。</dd>
 					<dt>external</dt>
-					<dd>実行中の端末の外部からのスクリプト相当のセキュリティレベル。</dd>
+					<dd>相当于从当前设备外部运行的脚本的安全级别。</dd>
 				</dl>
-				<p>喋りたいスクリプトのSecurityLevel。externalだと一部のスクリプトがセキュリティ機能により実行不能になる。</p></dd>
+				<p>想要运行的脚本的SecurityLevel。当设置为external时，部分脚本会因安全机制而无法执行。</p></dd>
 				
-				<dt class="entry">Marker [SSP拡張]</dt>
-				<dd class="entry"><p>バルーンマーカー(バルーン下側の追加情報)に表示したい文字列。</p></dd>
+				<dt class="entry">Marker 标记[SSP扩展]</dt>
+				<dd class="entry"><p>要在balloon标记（balloon下方的附加信息）中显示的字符串。</p></dd>
 				
-				<dt class="entry">ErrorLevel [SSP拡張]</dt>
-				<dd class="entry"><p>SHIORI内部で起きたエラーのレベル。下記のいずれか。複数のエラーを表現したい時はバイト値1で区切る。</p>
+				<dt class="entry">ErrorLevel [SSP扩展]</dt>
+				<dd class="entry"><p>SHIORI内部发生的错误级别。取值如下之一。若需表示多个错误，请以字节值1分隔。</p>
 				<dl class="property">
 					<dt>info</dt>
-					<dd>情報。エラーではない。</dd>
+					<dd>信息。不属于错误。</dd>
 					<dt>notice</dt>
-					<dd>通知。エラーとは言い難いものの修正すべき記述など。</dd>
+					<dd>通知。虽难称之为错误，但应予修正的表述等。</dd>
 					<dt>warning</dt>
-					<dd>警告。記述ミスなどがあり、処理は停止していないが対処したほうがいいもの。</dd>
+					<dd>警告。存在书写错误等情况，处理尚未停止，但建议予以纠正。</dd>
 					<dt>error</dt>
-					<dd>通常のエラー。記述ミスなどで何か処理が停止して再開できない。</dd>
+					<dd>常规错误。由于拼写错误等原因，某些处理被中断且无法恢复。</dd>
 					<dt>critical</dt>
-					<dd>致命的エラー。errorより酷く、すぐに何かしら対処をしたほうが良いもの。</dd>
+					<dd>致命错误。比error更严重，应立即采取相应措施。</dd>
 				</dl>				
-				<p>このヘッダがある場合は、ユーザーになにかしらのエラーが起きたことが通知される。<br>
-				通知されるレベルはユーザーが設定変更可能。通常はerror以上。<br>
-				SSPの場合はエラーログに記録され、エラーアイコンが通知領域に出る。</p></dd>
+				<p>如果存在此头部，则会通知用户发生了某种错误。<br>
+				可由用户自行设置通知级别，通常为error及以上。<br>
+				对于SSP而言，错误会被记录到错误日志中，并且错误图标会显示在通知区域。</p></dd>
 				
-				<dt class="entry">ErrorDescription [SSP拡張]</dt>
-				<dd class="entry"><p>SHIORI内部で起きたエラーの詳細情報。ErrorLevelがある場合のみ有効。<br>
-				複数のエラーを表現したい時はバイト値1で区切る。<br>
-				ErrorLevelとErrorDescriptionの要素数は必ず同じでないといけない。</p></dd>
+				<dt class="entry">ErrorDescription 错误描述[SSP扩展]</dt>
+				<dd class="entry"><p>SHIORI内部发生的错误的详细信息。仅在存在ErrorLevel时有效。<br>
+				当需要表示多个错误时，以字节值1作为分隔符。<br>
+				ErrorLevel与ErrorDescription的元素数量必须相同。</p></dd>
 				
-				<dt class="entry">BalloonOffset [SSP拡張]</dt>
-				<dd class="entry"><p>バルーンのオフセット値(X,Y)。</p></dd>
+				<dt class="entry">BalloonOffset [SSP扩展]</dt>
+				<dd class="entry"><p>气球的偏移值（X,Y）。</p></dd>
 				
 				<dt class="entry">Reference0</dt>
-				<dd class="entry"><p>コミュニケートを送りたい場合、ゴーストの\0側の名前。</p></dd>
+				<dd class="entry"><p>若要发送通信，请填写人格\0侧的名称。</p></dd>
 				
 				<dt class="entry">Reference1～</dt>
-				<dd class="entry"><p>コミュニケートの追加情報。<br>
-				レスポンスのReference1＝SSTP CommunicateのReference0＝受け手のOnCommunicateのReference2<br>
-				互換性の問題で以上のようにずれてしまうことに注意。</p></dd>
+				<dd class="entry"><p>通信的附加信息。<br>
+				响应中的Reference1＝SSTP Communicate的Reference0＝接收方的OnCommunicate的Reference2<br>
+				请注意，由于兼容性问题，可能会出现如上所示的偏差。</p></dd>
 				
-				<dt class="entry">Age [SSP拡張]</dt>
-				<dd class="entry"><p>コミュニケートの世代数。初回はゼロ。やりとりを重ねるたびに+1。<br>
-				SSP拡張だが、実質はSHIORI/2.x互換処理。</p></dd>
+				<dt class="entry">Age [SSP扩展]</dt>
+				<dd class="entry"><p>沟通的代数。首次为零，每进行一次互动则加1。<br>
+				虽然是SSP扩展，但实质上是SHIORI/2.x的兼容处理。</p></dd>
 				
-				<dt class="entry">MarkerSend [SSP拡張]</dt>
-				<dd class="entry"><p>コミュニケート中に「相手側に」表示したいバルーンマーカー文字列。<br>
-				SSTPのMarkerヘッダとして送信される。</p></dd>
+				<dt class="entry">MarkerSend [SSP扩展]</dt>
+				<dd class="entry"><p>在通信过程中希望“显示在对方一侧”的气泡标记字符串。<br>
+				作为SSTP的Marker头进行发送。</p></dd>
 				
-				<dt class="entry">X-SSTP-PassThru-(任意の文字列) [SSP 2.5.03～拡張]</dt>
-				<dd class="entry"><p>SSTPからイベント通知が来た場合のレスポンスに限り、このヘッダがSSTPのレスポンスにそのまま追加される。<br>
-				SSTP以外の時は無視される。<br>
-				複数のヘッダを指定可能だが、複数返したい場合はヘッダ名を変えること。<br>
-				（旧ヘッダ名：X-SSTP-Return- は廃止予定）</p></dd>
+				<dt class="entry">X-SSTP-PassThru-(任意字符串) [SSP 2.5.03～扩展]</dt>
+				<dd class="entry"><p>仅在SSTP收到事件通知时，此头部才会原封不动地附加到SSTP的响应中。<br>
+				其他情况下将被忽略。<br>
+				可指定多个头部，但若需返回多个头部，请更改头部名称。<br>
+				（旧头部名：X-SSTP-Return- 将予定废止）</p></dd>
 			</dl>
 		</section>
 	</div>

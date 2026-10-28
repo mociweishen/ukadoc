@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="zh">
 <head>
 <meta charset="utf-8" />
 <meta name="robots" content="INDEX,FOLLOW">
 <meta name="author" content="UKADOC Project">
 <meta name="keywords" content="ukadoc,伺か,ゴースト">
-<title>UKADOC Project ゴースト</title>
+<title>UKADOC Project 人格</title>
 <link rel="stylesheet" href="base.css">
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 </head>
@@ -25,10 +25,10 @@
 
 
 <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-<h1>ゴースト</h1>
+<h1>人格</h1>
 <section>
 	<div class="passage">
-		<p>masterゴーストフォルダのファイルは以下の通り。</p>
+		<p>master人格文件夹中的文件如下。</p>
 	</div>
 	<div class="passage">
 <pre>
@@ -39,8 +39,8 @@
 　　　　　　<em class="filename">+-shiori.dll</em>
 　　　　　　<em class="filename">+-(saori).dll</em>
 　　　　　　<em class="filename">+-makoto.dll</em>
-　　　　　　<em class="filename">+-updates2.dau</em> （旧仕様）
-　　　　　　<em class="filename">+-updates.txt</em> （旧仕様）
+　　　　　　<em class="filename">+-updates2.dau</em> （旧规格）
+　　　　　　<em class="filename">+-updates.txt</em> （旧规格）
 　　　　　　<em class="filename">+-*.ico</em>
 　　　　　　<em class="filename">+-*.cur</em>
 　　　　　　<em class="filename">+-thumbnail.png</em>
@@ -54,9 +54,9 @@
 		<dl class="component">
 			<dt><a href="descript_ghost.html">descript.txt</a></dt>
 			<dd>
-				<p>ゴーストを識別するためのファイル。</p>
-				<p>これがないと本体に認識されない。</p>
-				<p>テキスト内の記載事項など詳細は<a href="descript_ghost.html">リンク先</a>を参照。</p>
+				<p>用于识别人格的文件。</p>
+				<p>没有它，本体将无法识别。</p>
+				<p>文本中所列事项等详细信息，请参阅<a href="descript_ghost.html">链接页面</a>。</p>
 			</dd>
 		</dl>
 	</div>
@@ -67,9 +67,9 @@
 			<dt><a href="manual_update.html">updates2.dau</a></dt>
 			<dt><a href="manual_update.html">updates.txt</a></dt>
 			<dd>
-				<p>更新情報が記載されたファイル。</p>
-				<p>この位置にあるのは旧仕様で、基本的にルート（(myghost)直下）にのみあればよい。</p>
-				<p>詳しくは<a href="manual_update.html">リンク先</a>参照</p>
+				<p>记载更新信息的文件。</p>
+				<p>此位置为旧规格，原则上只需位于根目录（(myghost)直下）即可。</p>
+				<p>详情请参阅<a href="manual_update.html">链接页面</a></p>
 			</dd>
 		</dl>
 	</div>
@@ -80,29 +80,29 @@
 			<dt>shiori.dll</dt>
 			<dd>
 				<div class="passage">
-					<p>ゴーストのコア。ほぼ必須。</p>
-					<p>汎用SHIORIが多く出ているので通常はそれを使用する。</p>
-					<p>ベースウェア（SSPなど）から送信されてくる<a href="list_shiori_event.html">SHIORI Event</a>（<a href="memo_shiorievent.html">補足説明</a>）を受けて、ゴーストの動作指示である<a href="list_sakura_script.html">さくらスクリプト</a>を構築してベースウェアに返却する役割を果たす。</p>
+					<p>人格的核心。几乎必不可少。</p>
+					<p>由于通用SHIORI较多，通常使用它。</p>
+					<p>根据从基础软件（如SSP等）发送而来的<a href="list_shiori_event.html">SHIORI Event</a>（<a href="memo_shiorievent.html">补充说明</a>），构建用于指示人格行为的<a href="list_sakura_script.html">樱花脚本</a>，并将其返回给基础软件。</p>
 				</div>
 				<div class="passage">
-					<p>実際のトークの書き方など、ゴーストの中核部分の作り方は、SHIORIによって全く異なるので、各SHIORI側のドキュメントを参照。</p>
+					<p>关于实际对话的编写方法等，人格核心部分的具体实现方式在不同的SHIORI中差异巨大，请参阅各SHIORI对应的文档。</p>
 				</div>
 			</dd>
 
 			<dt><a href="manual_shiori_saori.html">(saori).dll</a></dt>
 			<dd>
-				<p>SHIORIの機能拡張モジュール。</p>
-				<p>基本的にはshiori.dllと同じ階層に置く。</p>
-				<p>ただしSHIORIから呼び出す際に相対パスを指定することもできる。</p>
-				<p>使用手順はSHIORI次第なので、SHIORI側のドキュメントを参照。</p>
-				<p>このファイルは省略可能。</p>
+				<p>SHIORI的功能扩展模块。</p>
+				<p>原则上应与shiori.dll置于同一目录下。</p>
+				<p>不过，在从SHIORI调用时，也可以指定相对路径。</p>
+				<p>使用步骤取决于SHIORI，请参考SHIORI端的文档。</p>
+				<p>此文件可省略。</p>
 			</dd>
 
 			<dt><a href="manual_translator.html">makoto.dll</a></dt>
 			<dd>
-				<p>トランスレート用のDLL。</p>
-				<p>詳しくは<a href="manual_translator.html">リンク先</a>参照。<a href="manual_shell.html">シェル側</a>にも設置可能。</p>
-				<p>このファイルは省略可能。</p>
+				<p>用于翻译的DLL。</p>
+				<p>详情请参阅<a href="manual_translator.html">链接页面</a>。也可安装在<a href="manual_shell.html">Shell端</a>。</p>
+				<p>此文件可省略。</p>
 			</dd>
 		</dl>
 	</div>
@@ -112,39 +112,40 @@
 		<dl class="component">
 			<dt>*.ico</dt>
 			<dd>
-				<p>アイコンファイル。</p>
-				<p>32×32と16×16を使用することができる。</p>
-				<p>アイコン化した時やゴーストエクスプローラなどで表示される。</p>
-				<p>このファイルは省略可能。省略時はデフォルトアイコンが使用される。</p>
+				<p>图标文件。</p>
+				<p>可以使用32×32和16×16两种尺寸。</p>
+				<p>在图标化时或通过人格资源管理器等工具显示。</p>
+				<p>此文件可省略。省略时将使用默认图标。</p>
 			</dd>
 
 			<dt>*.cur</dt>
 			<dd>
-				<p>カーソルファイル。</p>
-				<p>ゴーストに乗ったカーソルが指定されたカーソルになる。</p>
-				<p>このファイルは省略可能。省略時は普段のカーソルのまま。</p>
+				<p>光标文件。</p>
+				<p>当鼠标悬停于人格之上时，光标将变为指定的光标。</p>
+				<p>此文件可省略。省略时仍使用常规光标。</p>
 			</dd>
 
 			<dt>thumbnail.png</dt>
 			<dd>
-				<p>メニューツリーでゴーストの選択時に表示されるサムネイル。</p>
-				<p>使用可能な画像形式はpngもしくはjpg。</p>
-				<p>pngをpnrにリネームすると画像左上の1ドット(座標0,0)と同色が透過される。</p>
-				<p>このファイルは省略可能。</p>
+				<p>在菜单树中选择人格时显示的缩略图。</p>
+				<p>可用的图像格式为png或jpg。</p>
+				<p>将png文件重命名为pnr时，图像左上角的1个像素点（坐标0,0）及其同色部分将被透明化。</p>
+				<p>此文件可省略。</p>
 			</dd>
 			
 			<dt>ai0.png / ai0_dark.png</dt>
 			<dd>
-				<p><a href="descript_ghost.html#shiori.logo.file,ファイル名">AIグラフの説明</a>参照。</p>
-				<p>このファイルは省略可能。</p>
+				<p>请参阅<a href="descript_ghost.html#shiori.logo.file,文件名">AI图表的说明</a>。</p>
+				<p>此文件可省略。</p>
 			</dd>
 		</dl>
 	</div>
 </section>
 <section>
 	<div class="passage">
-		この他、「辞書」と呼ばれる文字列のリソースファイルなど、SHIORI（など）がdll外部にいくつかのファイルを備えることが一般的である（むしろゴースト製作者はそういったファイルを中心的に編集する場合も多い）。
-		<br>そうしたものの詳細については、利用する各SHIORIのドキュメントを参照すること。
+		此外，SHIORI（等）通常会在dll外部配备若干文件，例如被称为“字典”的字符串资源文件（事实上，人格制作者往往也会以这类文件为主要编辑对象）。
+
+		<br>有关这些内容的详细信息，请查阅所使用的各款SHIORI的相关文档。
 	</div>
 </section>
 <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->

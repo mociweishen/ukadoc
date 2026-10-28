@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="zh">
 <head>
 <meta charset="utf-8" />
 <meta name="robots" content="INDEX,FOLLOW">
 <meta name="author" content="UKADOC Project">
 <meta name="keywords" content="ukadoc,伺か">
-<title>UKADOC Project 更新定義ファイル</title>
+<title>UKADOC Project 更新定义文件</title>
 <link rel="stylesheet" href="list.css" />
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 </head>
 <body>
-	<h1 id="page-title">更新定義ファイル</h1>
+	<h1 id="page-title">更新定义文件</h1>
 	<nav class="menu-header">
 		<table>
 			<tbody>
 				<tr>
-					<th>トップページへ戻る</th>
+					<th>返回首页</th>
 					<td colspan="2">
 						<ul>
 							<li><a href="http://ssp.shillest.net/ukadoc/manual/index.html">INDEX</a></li>
@@ -25,7 +25,7 @@
 			</tbody>
 			<tbody>
 				<tr>
-					<th rowspan="6">設定ファイル</th>
+					<th rowspan="6">设定文件</th>
 					<th>Ghost</th>
 					<td>
 						<ul>
@@ -81,24 +81,24 @@
 			</tbody>
 			<tbody>
 				<tr>
-					<th>さくらスクリプト</th>
+					<th>Sakura脚本</th>
 					<td colspan="2">
 						<ul>
-							<li><a href="./list_sakura_script.html">Sakura Script</a></li>
-							<li><a href="./list_propertysystem.html">Property System</a></li>
+							<li><a href="./list_sakura_script.html">Sakura脚本</a></li>
+							<li><a href="./list_propertysystem.html">属性系统</a></li>
 						</ul>
 					</td>
 				</tr>
 			</tbody>
 			<tbody>
 				<tr>
-					<th rowspan="2">イベント</th>
+					<th rowspan="2">事件</th>
 					<th>SHIORI</th>
 					<td>
 						<ul>
-							<li><a href="./list_shiori_event.html">SHIORI Event</a></li>
-							<li><a href="./list_shiori_event_ex.html">SHIORI Event（外部）</a></li>
-							<li><a href="./list_shiori_resource.html">SHIORI Resource</a></li>
+							<li><a href="./list_shiori_event.html">SHIORI事件</a></li>
+							<li><a href="./list_shiori_event_ex.html">SHIORI事件（外部）</a></li>
+							<li><a href="./list_shiori_resource.html">SHIORI资源</a></li>
 						</ul>
 					</td>
 				</tr>
@@ -106,26 +106,26 @@
 					<th>PLUGIN</th>
 					<td>
 						<ul>
-							<li><a href="./list_plugin_event.html">PLUGIN Event</a></li>
+							<li><a href="./list_plugin_event.html">PLUGIN事件</a></li>
 						</ul>
 					</td>
 				</tr>
 			</tbody>
 			<tbody>
 				<tr>
-					<th>規格</th>
+					<th>规格</th>
 					<td colspan="2">
 						<ul>
 							<li><a href="./spec_shiori3.html">SHIORI/3.0</a></li>
 							<li><a href="./spec_sstp.html">SSTP/1.x</a></li>
-							<li><a href="http://www.boreas.dti.ne.jp/~sdn/saori.html">SAORI/1.0</a>（外部サイト）</li>
+							<li><a href="http://www.boreas.dti.ne.jp/~sdn/saori.html">SAORI/1.0</a>（外部链接）</li>
 							<li><a href="./spec_saori_ex.html">SAORI over DirectSSTP</a></li>
 							<li><a href="./spec_plugin.html">PLUGIN/2.0</a></li>
 							<li><a href="./spec_headline.html">HEADLINE/2.0</a></li>
 							<li><a href="./spec_dll.html">DLL</a></li>
 							<li><a href="./spec_fmo_mutex.html">FMO/MUTEX</a></li>
-							<li><a href="./spec_update_file.html">更新定義ファイル</a></li>
-							<li><a href="./spec_web.html">Web関連</a></li>
+							<li><a href="./spec_update_file.html">更新定义文件</a></li>
+							<li><a href="./spec_web.html">Web关联</a></li>
 						</ul>
 					</td>
 				</tr>
@@ -133,118 +133,118 @@
 		</table>
 	</nav>
 	<section class="navigation-bar">
-		<h1>更新定義ファイル</h1>
+		<h1>更新定义文件</h1>
 		<section class="navigation-category">
-			<h1>更新定義ファイル</h1>
+			<h1>更新定义文件</h1>
 			<ul>
 				<li><a href="#overview">概要</a></li>
-				<li><a href="#updates2dau">updates2.dau (Version 2)</a></li>
-				<li><a href="#updatestxt">updates.txt (Version 3)</a></li>
-				<li><a href="#fields">フィールド詳細</a></li>
-				<li><a href="#path-handling">パスの扱い</a></li>
-				<li><a href="#generation">生成処理</a></li>
+				<li><a href="#updates2dau">updates2.dau (版本2)</a></li>
+				<li><a href="#updatestxt">updates.txt (版本3)</a></li>
+				<li><a href="#fields">字段详细信息</a></li>
+				<li><a href="#path-handling">路径处理</a></li>
+				<li><a href="#generation">生成处理</a></li>
 			</ul>
 		</section>
 	</section>
 	<div class="categories">
 		<section class="category caption introduction" id="overview">
 			<h1>概要</h1>
-			<p>ゴースト更新システム（ネットワーク更新）で使用される更新定義ファイルの仕様である。
-			<br />更新定義ファイルにはゴーストを構成するファイルの一覧とそのハッシュ値が記録されており、ベースウェアはこれをサーバから取得してローカルのファイルと比較し、差分更新を行う。</p>
-			<p>現在有効な形式は以下の2種類である。旧形式のupdates.dau (Version 1) は廃止済みのため省略する。</p>
+			<p>这是用于人格更新系统（网络更新）的更新定义文件的规范。
+			<br />更新定义文件中记录了构成人格的文件列表及其哈希值，基础软件会从服务器获取该列表，并与本地文件进行比对，从而执行差异更新。</p>
+			<p>目前有效的格式仅有以下两种。旧格式updates.dau（版本1）已废弃，故予以省略。</p>
 			<dl>
-				<dt>updates2.dau (Version 2)</dt>
-				<dd>バイト値1区切りのバイナリ寄りの形式。</dd>
-				<dt>updates.txt (Version 3)</dt>
-				<dd>バイト値1区切りだが行プレフィックスを持つテキスト形式。</dd>
+				<dt>updates2.dau (版本2)</dt>
+				<dd>以字节值分隔的、偏向二进制的格式。</dd>
+				<dt>updates.txt (版本3)</dt>
+				<dd>以字节值分隔，但带有行前缀的文本格式。</dd>
 			</dl>
 		</section>
 
 		<section class="category" id="updates2dau">
-			<h1>updates2.dau (Version 2)</h1>
-			<p>バイト値1をフィールド区切りとし、各行をCRLFで終端する形式である。</p>
+			<h1>updates2.dau (版本2)</h1>
+			<p>以单个字节值作为字段分隔符，每行以CRLF结尾的格式。</p>
 
 			<section>
 				<dl>
-					<dt class="entry">文字コード</dt>
-					<dd class="entry"><p>デフォルトはOSデフォルトのcharset。先頭エントリの末尾に <code>charset=文字コード名</code> フィールドを付加することで指定できる。</p></dd>
+					<dt class="entry">字符编码</dt>
+					<dd class="entry"><p>默认使用操作系统默认的字符集。可以通过在首条条目的末尾附加 <code>charset=字符编码名</code> 字段来指定。</p></dd>
 
-					<dt class="entry">行フォーマット</dt>
-					<dd class="entry"><p>各行は以下の形式である。</p>
-<pre><code>ファイルパス<span style="color:#c04000">\x01</span>MD5ハッシュ<span style="color:#c04000">\x01</span>拡張フィールド1<span style="color:#c04000">\x01</span>拡張フィールド2<span style="color:#c04000">\x01</span>...</code></pre>
-						<p><code style="color:#c04000">\x01</code> はバイト値1を示す。改行はCRLF。</p>
+					<dt class="entry">行格式</dt>
+					<dd class="entry"><p>每行采用以下格式</p>
+<pre><code>文件路径<span style="color:#c04000">\x01</span>MD5哈希值<span style="color:#c04000">\x01</span>扩展字段1<span style="color:#c04000">\x01</span>扩展字段2<span style="color:#c04000">\x01</span>...</code></pre>
+						<p><code style="color:#c04000">\x01</code> 表示字节值1。换行符为CRLF。</p>
 					</dd>
 				</dl>
 			</section>
 
 			<section class="caption">
-				<h1>サンプル</h1>
+				<h1>示例</h1>
 <pre><code><!--
 -->ghost/master/descript.txt<span style="color:#c04000">\x01</span>a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4<span style="color:#c04000">\x01</span>size=1234<span style="color:#c04000">\x01</span>date=2024-01-15T12:34:56<span style="color:#c04000">\x01</span>charset=Shift_JIS<span style="color:#c04000">\x01</span>
 ghost/master/shiori.dll<span style="color:#c04000">\x01</span>f6e5d4c3b2a1f6e5d4c3b2a1f6e5d4c3<span style="color:#c04000">\x01</span>size=65536<span style="color:#c04000">\x01</span>date=2024-01-15T12:34:56<span style="color:#c04000">\x01</span>
 shell/master/surface0.png<span style="color:#c04000">\x01</span>deadbeefdeadbeefdeadbeefdeadbeef<span style="color:#c04000">\x01</span>size=32768<span style="color:#c04000">\x01</span>date=2024-01-15T12:34:56<span style="color:#c04000">\x01</span>
 </code></pre>
-				<p>※ <code style="color:#c04000">\x01</code> は実際にはバイト値1である。<code>charset=</code> は先頭エントリの末尾にのみ付加される。</p>
+				<p>※ <code style="color:#c04000">\x01</code> 实际对应字节值 1。而<code>charset=</code> 仅附加在首条条目的末尾。</p>
 			</section>
 		</section>
 
 		<section class="category" id="updatestxt">
-			<h1>updates.txt (Version 3)</h1>
-			<p>updates2.dauと同じバイト値1区切りだが、各行に行種別プレフィックスを持つテキスト形式である。</p>
+			<h1>updates.txt (版本3)</h1>
+			<p>与updates2.dau具有相同的字节值分隔，但每行都采用带有行类型前缀的文本格式。</p>
 
 			<section>
 				<dl>
-					<dt class="entry">行種別</dt>
+					<dt class="entry">行类型</dt>
 					<dd class="entry">
-						<p>各行は行頭のプレフィックスにより種別が決まる。<code>file,</code> でも <code>charset,</code> でもない行は無視される。</p>
+						<p>各行根据行首前缀来确定类型。不以<code>file,</code> 或 <code>charset,</code> 开头的行将被忽略。</p>
 						<dl class="property">
-							<dt>charset,文字コード名</dt>
-							<dd>以降の行の文字コードを指定する。ファイル先頭付近に記述する。</dd>
-							<dt>file,データ群...</dt>
-							<dd><code>file,</code> プレフィックスの後の内容はupdates2.dauと同一フォーマットである。</dd>
+							<dt>charset,字符编码名</dt>
+							<dd>指定后续各行的字符编码。请在文件开头附近进行描述。</dd>
+							<dt>file,数据集...</dt>
+							<dd><code>file,</code> 前缀之后的内容与updates2.dau采用相同的格式。</dd>
 						</dl>
 					</dd>
 				</dl>
 			</section>
 
 			<section class="caption">
-				<h1>サンプル</h1>
+				<h1>示例</h1>
 <pre><code><!--
 -->charset,Shift_JIS
 file,ghost/master/descript.txt<span style="color:#c04000">\x01</span>a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4<span style="color:#c04000">\x01</span>size=1234<span style="color:#c04000">\x01</span>date=2024-01-15T12:34:56<span style="color:#c04000">\x01</span>
 file,ghost/master/shiori.dll<span style="color:#c04000">\x01</span>f6e5d4c3b2a1f6e5d4c3b2a1f6e5d4c3<span style="color:#c04000">\x01</span>size=65536<span style="color:#c04000">\x01</span>date=2024-01-15T12:34:56<span style="color:#c04000">\x01</span>
 file,shell/master/surface0.png<span style="color:#c04000">\x01</span>deadbeefdeadbeefdeadbeefdeadbeef<span style="color:#c04000">\x01</span>size=32768<span style="color:#c04000">\x01</span>date=2024-01-15T12:34:56<span style="color:#c04000">\x01</span>
 </code></pre>
-				<p>※ <code style="color:#c04000">\x01</code> は実際にはバイト値1である。</p>
+				<p>※ <code style="color:#c04000">\x01</code> 实际上是一个字节值1。</p>
 			</section>
 		</section>
 
 		<section class="category" id="fields">
-			<h1>フィールド詳細</h1>
-			<p>updates2.dauおよびupdates.txtの <code>file,</code> 行で共通のフィールド定義である。</p>
+			<h1>字段详细信息</h1>
+			<p>updates2.dau和updates.txt的 <code>file,</code> 行中是共通的字段定义。</p>
 
 			<section>
 				<dl>
-					<dt class="entry">必須フィールド</dt>
+					<dt class="entry">必填字段</dt>
 					<dd class="entry">
 						<dl class="property">
-							<dt>ファイルパス (位置[0])</dt>
-							<dd>更新対象ファイルの相対パス。スラッシュ (<code>/</code>) 区切り。</dd>
-							<dt>MD5ハッシュ (位置[1])</dt>
-							<dd>ファイル内容のMD5ハッシュ。32文字の16進数文字列。</dd>
+							<dt>文件路径 (位置[0])</dt>
+							<dd>更新对象文件的相对路径。以斜杠 (<code>/</code>) 分隔。</dd>
+							<dt>MD5哈希值 (位置[1])</dt>
+							<dd>文件内容的MD5哈希值。32位十六进制字符串。</dd>
 						</dl>
 					</dd>
 
-					<dt class="entry">拡張フィールド (位置[2]以降)</dt>
+					<dt class="entry">扩展字段 (位置[2]之后)</dt>
 					<dd class="entry">
-						<p><code>key=value</code> 形式で記述する。すべて省略可能。</p>
+						<p><code>键=值</code> 格式描述。全部可省略。</p>
 						<dl class="property">
-							<dt>size=数値</dt>
-							<dd>ファイルサイズ（バイト単位）。</dd>
-							<dt>date=文字列</dt>
-							<dd>ISO 8601形式の日時文字列。例: <code>2024-01-15T12:34:56</code></dd>
-							<dt>charset=文字列</dt>
-							<dd>文字コード名。updates2.dauの先頭エントリの末尾にのみ付加される。文字コード判定のみに使われ、定義ファイルとしての読み込み時は無視される。</dd>
+							<dt>size=数值</dt>
+							<dd>文件大小（以字节为单位）。</dd>
+							<dt>date=字符串</dt>
+							<dd>ISO 8601格式的日期时间字符串。例如: <code>2024-01-15T12:34:56</code></dd>
+							<dt>charset=字符串</dt>
+							<dd>文字编码名。仅附加于updates2.dau文件首条记录的末尾。仅用于字符编码判定，作为定义文件读取时会被忽略。</dd>
 						</dl>
 					</dd>
 				</dl>
@@ -252,20 +252,20 @@ file,shell/master/surface0.png<span style="color:#c04000">\x01</span>deadbeefdea
 		</section>
 
 		<section class="category" id="path-handling">
-			<h1>パスの扱い</h1>
+			<h1>路径处理</h1>
 
 			<section>
 				<dl>
-					<dt class="entry">URLエンコード</dt>
-					<dd class="entry"><p>全エントリがパーセントエンコード済みの場合はデコードして使用する。そうでない場合はURL側のみエンコードされる。</p></dd>
+					<dt class="entry">URL编码</dt>
+					<dd class="entry"><p>如果所有条目均已进行百分号编码，则对其进行解码后使用。否则，仅对URL部分进行编码。</p></dd>
 
-					<dt class="entry">セキュリティチェック</dt>
+					<dt class="entry">安全检查</dt>
 					<dd class="entry">
-						<p>以下の条件に該当するエントリは無効として扱われる。</p>
+						<p>符合以下条件的条目被视为无效。</p>
 						<ul class="description">
-							<li>MD5がない。</li>
-							<li>末尾が <code>/</code> または <code>\</code>（ディレクトリエントリ）。</li>
-							<li><code>..\</code> や <code>../</code> を含む（ディレクトリトラバーサル防止）。</li>
+							<li>没有MD5。</li>
+							<li>末尾为 <code>/</code> 或 <code>\</code>（目录条目）。</li>
+							<li>包含<code>..\</code> 或 <code>../</code> （用于防止目录遍历攻击）。</li>
 						</ul>
 					</dd>
 				</dl>
@@ -273,23 +273,23 @@ file,shell/master/surface0.png<span style="color:#c04000">\x01</span>deadbeefdea
 		</section>
 
 		<section class="category" id="generation">
-			<h1>生成処理</h1>
-			<p>SSPの「更新ファイル作成」機能などにより、ゴーストのファイル一覧からupdates2.dau / updates.txtを生成できる。</p>
+			<h1>生成处理</h1>
+			<p>借助SSP的“更新文件创建”功能等，可从人格的文件列表中生成updates2.dau / updates.txt。</p>
 
 			<section>
 				<dl>
-					<dt class="entry">ファイル走査</dt>
+					<dt class="entry">文件扫描</dt>
 					<dd class="entry">
-						<p>ディレクトリを再帰的に走査する。以下のファイルは除外される。</p>
+						<p>递归遍历目录。以下文件将被排除。</p>
 						<ul class="description">
-							<li>隠しファイル (<code>FILE_ATTRIBUTE_HIDDEN</code>)</li>
-							<li><a href="./descript_install.html#developer_options.txt">developer_options.txt</a> の <code>noupdate</code> で指定されたファイル</li>
-							<li>.gitignore形式のフィルタファイルで除外されたファイル</li>
+							<li>隐藏文件 (<code>FILE_ATTRIBUTE_HIDDEN</code>)</li>
+							<li><a href="./descript_install.html#developer_options.txt">developer_options.txt</a> 中的 <code>noupdate</code> 所指定的文件</li>
+							<li>被.gitignore格式的过滤文件排除的文件</li>
 						</ul>
 					</dd>
 
-					<dt class="entry">ghost\masterへのコピー</dt>
-					<dd class="entry"><p>ディレクトリ直下に <code>ghost\master</code> フォルダが存在する場合、生成した更新ファイルをそこにもコピーする。</p></dd>
+					<dt class="entry">复制到ghost\master</dt>
+					<dd class="entry"><p>如果目录根下存在 <code>ghost\master</code> 文件夹，则将生成的更新文件也复制到其中。</p></dd>
 				</dl>
 			</section>
 		</section>

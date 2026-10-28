@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="zh">
 <head>
 <meta charset="utf-8" />
 <meta name="robots" content="INDEX,FOLLOW">
@@ -10,12 +10,11 @@
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 </head>
 <body>
-	<h1 id="page-title">FMO/Mutex</h1>
 	<nav class="menu-header">
 		<table>
 			<tbody>
 				<tr>
-					<th>トップページへ戻る</th>
+					<th>返回首页</th>
 					<td colspan="2">
 						<ul>
 							<li><a href="http://ssp.shillest.net/ukadoc/manual/index.html">INDEX</a></li>
@@ -25,7 +24,7 @@
 			</tbody>
 			<tbody>
 				<tr>
-					<th rowspan="6">設定ファイル</th>
+					<th rowspan="6">设定文件</th>
 					<th>Ghost</th>
 					<td>
 						<ul>
@@ -81,24 +80,24 @@
 			</tbody>
 			<tbody>
 				<tr>
-					<th>さくらスクリプト</th>
+					<th>Sakura脚本</th>
 					<td colspan="2">
 						<ul>
-							<li><a href="./list_sakura_script.html">Sakura Script</a></li>
-							<li><a href="./list_propertysystem.html">Property System</a></li>
+							<li><a href="./list_sakura_script.html">Sakura脚本</a></li>
+							<li><a href="./list_propertysystem.html">属性系统</a></li>
 						</ul>
 					</td>
 				</tr>
 			</tbody>
 			<tbody>
 				<tr>
-					<th rowspan="2">イベント</th>
+					<th rowspan="2">事件</th>
 					<th>SHIORI</th>
 					<td>
 						<ul>
-							<li><a href="./list_shiori_event.html">SHIORI Event</a></li>
-							<li><a href="./list_shiori_event_ex.html">SHIORI Event（外部）</a></li>
-							<li><a href="./list_shiori_resource.html">SHIORI Resource</a></li>
+							<li><a href="./list_shiori_event.html">SHIORI事件</a></li>
+							<li><a href="./list_shiori_event_ex.html">SHIORI事件（外部）</a></li>
+							<li><a href="./list_shiori_resource.html">SHIORI资源</a></li>
 						</ul>
 					</td>
 				</tr>
@@ -106,26 +105,26 @@
 					<th>PLUGIN</th>
 					<td>
 						<ul>
-							<li><a href="./list_plugin_event.html">PLUGIN Event</a></li>
+							<li><a href="./list_plugin_event.html">PLUGIN事件</a></li>
 						</ul>
 					</td>
 				</tr>
 			</tbody>
 			<tbody>
 				<tr>
-					<th>規格</th>
+					<th>规格</th>
 					<td colspan="2">
 						<ul>
 							<li><a href="./spec_shiori3.html">SHIORI/3.0</a></li>
 							<li><a href="./spec_sstp.html">SSTP/1.x</a></li>
-							<li><a href="http://www.boreas.dti.ne.jp/~sdn/saori.html">SAORI/1.0</a>（外部サイト）</li>
+							<li><a href="http://www.boreas.dti.ne.jp/~sdn/saori.html">SAORI/1.0</a>（外部链接）</li>
 							<li><a href="./spec_saori_ex.html">SAORI over DirectSSTP</a></li>
 							<li><a href="./spec_plugin.html">PLUGIN/2.0</a></li>
 							<li><a href="./spec_headline.html">HEADLINE/2.0</a></li>
 							<li><a href="./spec_dll.html">DLL</a></li>
 							<li><a href="./spec_fmo_mutex.html">FMO/MUTEX</a></li>
-							<li><a href="./spec_update_file.html">更新定義ファイル</a></li>
-							<li><a href="./spec_web.html">Web関連</a></li>
+							<li><a href="./spec_update_file.html">更新定义文件</a></li>
+							<li><a href="./spec_web.html">Web关联</a></li>
 						</ul>
 					</td>
 				</tr>
@@ -146,65 +145,65 @@
 	<div class="categories">
 		<section class="category caption introduction" id="chapter0">
 			<h1>FMO/Mutex</h1>
-			<p>参考：<a href="http://usada.sakura.vg/contents/objects.html">メモリオブジェクト</a>（外部サイト）</p>
-			<p>現在のところ本仕様はWindowsの仕様に大きく依存しており、他OSでの実装を想定していません。
-			<br />共有メモリ・Mutex自体は他OSにも存在するため、別途仕様を規定することが望ましいと思われます。
-			<br />もし仕様が決定した場合は別途掲載を考えておりますので、<a href="https://github.com/ponapalt/ukadoc">Ukadoc Project</a>までご連絡ください。</p>
+			<p>参考：<a href="http://usada.sakura.vg/contents/objects.html">内存对象</a>（外部链接）</p>
+			<p>目前，本规范在很大程度上依赖于Windows的实现，尚未考虑在其他操作系统上的部署。
+			<br />由于共享内存和Mutex本身在其他操作系统中也普遍存在，因此建议另行制定相关规范。
+			<br />一旦规范确定，我们将另行发布相关信息，请通过<a href="https://github.com/ponapalt/ukadoc">Ukadoc Project</a>与我们联系。</p>
 		</section>
 		<section class="category" id="mutex">
-			<h1>Mutex</h1>
-			<p>ベースウェアが起動中であることを示すため、SSPは"ssp"、MateriaとCROWは"sakura"という名前のMutexを保持しています。
-			<br />この名前つきMutexの存在を確認することで、起動中かどうかをローコストに判定できます。
-			<br />Mutex自体の状態は決められておらず、シグナル状態か否かの確認は不要です。</p>
+			<h1>Mutex 互斥量</h1>
+			<p>为表明基础软件正在运行，SSP持有名为"ssp"的互斥量，而Materia和CROW则持有名为"sakura"的互斥量。
+			<br />通过确认该命名互斥量的存在，可以低成本地判断系统是否处于启动状态。
+			<br />Mutex自身的状态并未固定，无需检查其是否处于信号状态。</p>
 
 			<section class="caption">
-				<h1>存在確認のみのコード例(C++)</h1>
+				<h1>仅用于判断是否存在时的代码示例（C++）</h1>
 <pre><code><!--
 -->HANDLE hmutex = OpenMutex(MUTEX_ALL_ACCESS,FALSE,"ssp");
 if ( hmutex ) {
-  // いる
+  // 存在
   CloseHandle(hmutex);
 }
 else {
-  //いない
+  //不存在
 }
 </code></pre>
 			</section>
 		</section>
 		<section class="category" id="fmo">
-			<h1>FMO (File Mapping Object)</h1>
-			<p>すべてのベースウェアは起動中に名前つきファイルマッピングオブジェクト(FMO)を保持しています。
-			<br />このプロセス間共有メモリを読み取ることで、起動中のゴーストを比較的低コストで取得できます。
-			<br />書き込み中の不完全な情報の読み取りを避けるため、排他制御は<a href="#fmo-mutex">FMO用Mutex</a>で行っています。あわせて確認してください。</p>
+			<h1>FMO (File Mapping Object 文件映射对象)</h1>
+			<p>所有基础软件在运行时都持有命名的文件映射对象（FMO）。
+			<br />通过读取这种进程间共享内存，可以以相对较低的成本获取正在运行的人格进程。
+			<br />为避免读取到写入过程中的不完整信息，已采用<a href="#fmo-mutex">FMO用Mutex</a>进行互斥控制。请一并确认。</p>
 			
 			<section>
 				<dl>
-					<dt class="entry">FMOの名前と文字コード</dt>
-					<dd class="entry"><p>Sakura : OS依存、日本語OS上はShift JIS
-					<br />SakuraUnicode : UTF-8固定 [SSP 2.5.26以降～]</p></dd>
+					<dt class="entry">FMO的名称与字符编码</dt>
+					<dd class="entry"><p>Sakura：依赖操作系统，在日语操作系统下为Shift JIS
+					<br />SakuraUnicode : 固定使用UTF-8 [SSP 2.5.26之后～]</p></dd>
 					
-					<dt class="entry">FMOのサイズ</dt>
-					<dd class="entry"><p>最初の4バイト(0～3バイト目)は確保されているFMOのサイズを示します。
-					<br />これは書き込まれている情報の長さではなく、あくまでもFMO自体の確保サイズを示す固定値です。
-					<br />値は現在のところリトルエンディアンで0x00010000、つまり64KB固定になります。
-					<br />他プログラムとの互換性確保のため、現在のところサイズ変更は考慮されていません。</p></dd>
+					<dt class="entry">FMO的大小</dt>
+					<dd class="entry"><p>前4个字节（第0至第3字节）表示已分配的FMO大小。
+					<br />こ这并非所写入信息的长度，而只是FMO本身所分配的固定大小。
+					<br />目前该值采用小端序，为0x00010000，即固定64KB。
+					<br />为确保与其它程序的兼容性，目前暂不考虑调整该大小。</p></dd>
 					
-					<dt class="entry">データ本体</dt>
-					<dd class="entry"><p>4バイト目以降はFMOのデータ本体になります。これは以下のフォーマットになります。
-					<br />(32バイトの識別ID).(キー名)[\1]値[\r\n]
-					<br />[\1]はバイト値1、[\r\n]はCR+LF(改行)になります。
-					<br />このフォーマットを複数行繰り返す形になります。</p></dd>
+					<dt class="entry">数据主体</dt>
+					<dd class="entry"><p>从第4字节开始即为FMO的数据主体，其格式如下。
+					<br />(32字节的识别ID).(键名)[\1]值[\r\n]
+					<br />\1]表示字节值1，[\r\n]表示CR+LF（换行）。
+					<br />该格式将按多行重复。</p></dd>
 					
-					<dt class="entry">データ終端</dt>
-					<dd class="entry"><p>データ終端はC言語文字列と同じバイト値0になります。
-					<br />ゆえに、データ本体で使用可能な最大サイズは65531バイト(65536 - 4 - 1)になります。
-					<br />FMOに書き込む必要がある場合、サイズの限界を超えそうな場合は、不完全な情報の書き込みにならないよう留意してください。
-					<br />サイズを超えそうな場合は1組分のデータを丸々書き込まないようにするのが望ましく、それが無理な場合でも1行の途中で終わらないようにしてください。</p>
+					<dt class="entry">数据结束</dt>
+					<dd class="entry"><p>数据结束符与C语言字符串相同，均为字节值0。
+					<br />因此，数据主体所能使用的最大尺寸为65531字节（65536 - 4 - 1）。
+					<br />F如果需要向FMO写入数据，且可能超出大小限制时，请注意避免写入不完整的信息。
+					<br />当预计会超出大小限制时，最好避免一次性写入整组数据；即使无法做到，也请确保不会在某一行的中间位置中断。</p>
 					</dd>
 				</dl>
 			</section>
 			<section class="caption">
-				<h1>データ本体の例</h1>
+				<h1>数据主体的示例</h1>
 			
 <pre><code><!--
 -->ssp_fmo_header_00004468_000f0dea.path[\1]D:\ssp\
@@ -230,41 +229,42 @@ ssp_fmo_header_00004468_00120da6.ghostpath[\1]D:\ssp\ghost\emily4\
 			
 			<section>
 				<dl>
-					<dt class="entry">32バイトの識別ID</dt>
-					<dd class="entry"><p>ゴースト1組分を示すユニークな識別IDです。少なくともFMO内では他と重複しない文字列を選ぶ必要があります。
-					<br />何かユニークな情報を組み合わせてMD5ハッシュを取ったり、HWND(ウインドウハンドル)を組み合わせたりしている場合が多いです。
-					<br />Materiaでの規格上は長さは規定されていませんが、互換性のため32バイト固定長とすべきです。</p></dd>
-					<dt class="entry">キー名・値</dt>
-					<dd class="entry"><p>情報の種類を示すキーと情報本体です。以下の通りです。</p>
+					<dt class="entry">32字节的识别ID</dt>
+					<dd class="entry"><p>用于标识一组人格的唯一识别ID。至少在FMO内部，必须选择与其他ID不重复的字符串。
+					<br />通常会将某些唯一信息进行组合后计算MD5哈希值，或者结合HWND（窗口句柄）来生成。
+					<br />在Materia规范中并未规定长度，但为保证兼容性，应采用固定长度32字节。</p></dd>
+					<dt class="entry">键名·值</dt>
+					<dd class="entry"><p>用于指示信息类型的键与信息主体。具体如下。</p>
 						<dl class="property">
 							<dt>path</dt>
-							<dd>起動しているベースウェアのルートフォルダのフルパス。</dd>
+							<dd>正在运行的基软件的根目录完整路径。</dd>
 							<dt>hwnd</dt>
-							<dd>メインとなるウインドウのウインドウハンドル。10進表記。</dd>
+							<dd>主窗口的窗口句柄。采用十进制表示。</dd>
 							<dt>name</dt>
-							<dd>descript.txtのsakura.nameと同じもの。</dd>
+							<dd>与descript.txt中的sakura.name相同。</dd>
 							<dt>keroname</dt>
-							<dd>descript.txtのkero.nameと同じもの。</dd>
+							<dd>与descript.txt中的kero.name相同。</dd>
 							<dt>sakura.surface</dt>
-							<dd>\0側で現在表示しているサーフィスID。10進表記。</dd>
+							<dd>\0侧当前显示的表面ID，十进制表示。</dd>
 							<dt>kero.surface</dt>
-							<dd>\1側で現在表示しているサーフィスID。10進表記。</dd>
+							<dd>\1侧当前显示的表面ID，十进制表示。</dd>
 							<dt>kerohwnd</dt>
-							<dd>\1側ウインドウのウインドウハンドル。10進表記。[SSPのみ]</dd>
+							<dd>\\1侧窗口的窗口句柄。十进制表示。[仅限SSP]</dd>
 							<dt>hwndlist</dt>
-							<dd>現在使用しているウインドウハンドルをすべてカンマ区切りで列挙。10進表記。[SSPのみ]</dd>
+							<dd>以逗号分隔列出当前正在使用的所有窗口句柄。采用十进制表示。[仅限SSP]</dd>
 							<dt>ghostpath</dt>
-							<dd>起動中ゴーストのフルパス。[SSPのみ]</dd>
+							<dd>启动中人格的完整路径。[仅限SSP]</dd>
 							<dt>fullname</dt>
-							<dd>起動中ゴーストのdescript.txtのnameエントリ。[SSP 2.5.58～]</dd>
+							<dd>启动中的Ghost的descript.txt文件中的name条目。[SSP 2.5.58之后]</dd>
 							<dt>modulestate</dt>
-							<dd>起動中のゴーストに読み込まれているモジュール群の状態を示すカンマ区切りの文字列。[SSP 2.5.79～]
-							<br />shiori:running SHIORIがロードされている(ロードされていない場合は文字列自体が存在しない)
-							<br />makoto-ghost:running ゴースト側のMAKOTOがロードされている
-							<br />makoto-shell:running シェル側のMAKOTOがロードされている
-							<br />compatible:running 互換モードに切り替わりscript.txtなどがロードされている
-							<br />SSPと各種モジュール群の間の通信に異常がある場合は、runningの代わりにcriticalが入る
-							<br />例： ssp_fmo_header_00004468_00120da6.modulestate[\1]shiori:running,makoto-ghost:running\r\n</dd>
+							<dd>由正在运行的人格加载的模块组状态，以逗号分隔的字符串。[SSP 2.5.79～]
+							<br />shiori:running SHIORI已加载（未加载时该字符串本身不存在）
+							<br />makoto-ghost:running 人格端的MAKOTO已加载
+							<br />makoto-shell:running Shell端的MAKOTO已加载
+							<br />compatible:running  已切换至兼容模式，且script.txt等文件已加载
+
+							<br />当SSP与各模块组之间的通信出现异常时，将用critical替代running
+							<br />示例： ssp_fmo_header_00004468_00120da6.modulestate[\1]shiori:running,makoto-ghost:running\r\n</dd>
 						</dl>
 					</dd>
 				</dl>
@@ -274,28 +274,28 @@ ssp_fmo_header_00004468_00120da6.ghostpath[\1]D:\ssp\ghost\emily4\
 		<section class="category" id="fmo-mutex">
 			<h1>FMO用Mutex</h1>
 			
-			<p>FMO自体に排他制御の仕組みはないため、書き込み・読み取りの衝突を避けるために、別途Mutexを保持しています。
-			<br />FMO名+"FMO"という名前になり、例えば以下のようになります。
+			<p>FMO本身不具备互斥机制，因此为避免读写冲突，需另行持有Mutex。
+			<br />FMO的名称将变为“FMO名+FMO”，例如如下所示。
 			<br />FMO = Sakura : Mutex = SakuraFMO
 			<br />FMO = SakuraUnicode : Mutex = SakuraUnicodeFMO
-			<br />こちらはシグナル状態・非シグナル状態の判定が重要になります。
-			<br />読み書きを行う際は、必ずWaitForSingleObjectや同等の待機関数を使い所有権を取得し、終わったらReleaseMutexで所有権を開放してください。</p>
+			<br />此处信号状态与非信号状态的判定至关重要。
+			<br />进行读写操作时，务必使用WaitForSingleObject或同等的等待函数获取所有权，操作结束后再通过ReleaseMutex释放所有权。</p>
 			
-			<p>旧いベースウェア等でFMO用Mutexに対応していない場合があるので、Mutexの取得に失敗してもエラーにはしないでください。
-			<br />ただしこの場合は、不完全な書き込み中のFMOを取得する可能性を考慮して、できるだけ安全に処理できるコードを書くよう留意してください。</p>
+			<p>由于旧版基础软件等可能不支持FMO用互斥锁，因此即使获取互斥锁失败，也请不要将其视为错误。
+			<br />不过在这种情况下，请务必注意编写尽可能安全的代码，以避免在不完全写入时获取到FMO。</p>
         
 			<section class="caption">
-				<h1>FMOを読み書きするコード例(C++)</h1>
+				<h1>用于读写FMO的C++代码示例</h1>
 <pre><code><!--
--->//ベースウェア等の保持すべきアプリは代わりにCreateMutexを使う
+-->//基础软件等需要保持的应用程序，改用CreateMutex
 HANDLE hMutex = OpenMutex(MUTEX_ALL_ACCESS,FALSE,"SakuraFMO");
 
-//FMO用Mutexに対応していないベースウェアもあるので、見つからなかったら単にスキップ
+//有些基础软件不支持FMO用Mutex，所以如果没找到就简单地跳过
 bool isWaitSuccess = true;
 
 if ( hMutex ) {
 
-    //INFINITEで待機すると永遠に待ち続けてGUIが止まるので適宜工夫すること
+    //如果用INFINITE等待的话会永远等下去导致GUI卡死，请根据情况适当调整
     DWORD result = WaitForSingleObject(hMutex,INFINITE);
     
     if ( result != WAIT_OBJECT_0 ) {
@@ -305,7 +305,7 @@ if ( hMutex ) {
 
 if ( isWaitSuccess ) {
 
-    //保持すべきアプリは代わりにCreateMutexを使う
+    //需要保持的应用程序改用CreateMutex
     HANDLE hFMO = OpenFileMapping(FILE_MAP_ALL_ACCESS,FALSE,"Sakura");
 
     if ( hFMO ) {
@@ -314,23 +314,23 @@ if ( isWaitSuccess ) {
 
         if ( pDataStart ) {
 
-            //頭の4バイトはFMO最大サイズ。
-            //文字列終端（C言語文字列のゼロ終端）とは異なるので注意。
+            //开头的4字节是FMO最大尺寸。
+            // 注意这与字符串终止符（C语言字符串的零终止）不同。
             unsigned long length = *reinterpret_cast&lt;unsigned long*&gt;(pDataStart);
 
             char *pData = pDataStart;
             pData += 4;
 
             //****************************************
-            //ここでpDataとlengthをつかってなにかやる
+            //在这里使用pData和length进行某种处理
             //****************************************
 
-            //MapViewOfFileの解除
+            //解除MapViewOfFile的映射
             UnmapViewOfFile(pDataStart);
         }
             
-        //FMOハンドルを開放
-        //ベースウェア等の保持すべきアプリは開放せず持ち続けること
+        //释放FMO句柄
+        //基础软件等需要保持的应用程序不要释放，要持续持有
         CloseHandle(hFMO);
     }
 }
@@ -338,12 +338,12 @@ if ( isWaitSuccess ) {
 if ( hMutex ) {
     if ( isWaitSuccess ) {
     
-        //WaitForSingleObjectでMutexが非シグナル状態になるので、シグナル状態に戻す(Release)
+        //WaitForSingleObject会使Mutex变为非信号状态，所以要恢复到信号状态（Release）
         ReleaseMutex(hMutex);
     }
 
-    //最後にMutexのハンドルも要らないので開放
-    //ベースウェア等の保持すべきアプリは開放せず持ち続けること
+    //最后也不需要Mutex的句柄了，所以释放
+    //基础软件等需要保持的应用程序不要释放，要持续持有
     CloseHandle(hMutex);
 }
 

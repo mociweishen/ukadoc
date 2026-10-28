@@ -1,22 +1,22 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="zh">
 <head>
 <meta charset="utf-8" />
 <meta name="robots" content="INDEX,FOLLOW">
 <meta name="author" content="UKADOC Project">
 <meta name="keywords" content="ukadoc,伺か">
-<title>UKADOC Project SHIORI Eventリスト（外部）</title>
+<title>UKADOC Project SHIORI Event列表（外部）</title>
 <link rel="stylesheet" href="list.css" />
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 <script src="ghost_status.js"></script>
 </head>
 <body>
-	<h1 id="page-title">SHIORI Eventリスト（外部）</h1>
+	<h1 id="page-title">SHIORI Event列表（外部）</h1>
 	<nav class="menu-header">
 		<table>
 			<tbody>
 				<tr>
-					<th>トップページへ戻る</th>
+					<th>返回首页</th>
 					<td colspan="2">
 						<ul>
 							<li><a href="http://ssp.shillest.net/ukadoc/manual/index.html">INDEX</a></li>
@@ -26,7 +26,7 @@
 			</tbody>
 			<tbody>
 				<tr>
-					<th rowspan="6">設定ファイル</th>
+					<th rowspan="6">设定文件</th>
 					<th>Ghost</th>
 					<td>
 						<ul>
@@ -82,24 +82,24 @@
 			</tbody>
 			<tbody>
 				<tr>
-					<th>さくらスクリプト</th>
+					<th>Sakura脚本</th>
 					<td colspan="2">
 						<ul>
-							<li><a href="./list_sakura_script.html">Sakura Script</a></li>
-							<li><a href="./list_propertysystem.html">Property System</a></li>
+							<li><a href="./list_sakura_script.html">Sakura脚本</a></li>
+							<li><a href="./list_propertysystem.html">属性系统</a></li>
 						</ul>
 					</td>
 				</tr>
 			</tbody>
 			<tbody>
 				<tr>
-					<th rowspan="2">イベント</th>
+					<th rowspan="2">事件</th>
 					<th>SHIORI</th>
 					<td>
 						<ul>
-							<li><a href="./list_shiori_event.html">SHIORI Event</a></li>
-							<li><a href="./list_shiori_event_ex.html">SHIORI Event（外部）</a></li>
-							<li><a href="./list_shiori_resource.html">SHIORI Resource</a></li>
+							<li><a href="./list_shiori_event.html">SHIORI事件</a></li>
+							<li><a href="./list_shiori_event_ex.html">SHIORI事件（外部）</a></li>
+							<li><a href="./list_shiori_resource.html">SHIORI资源</a></li>
 						</ul>
 					</td>
 				</tr>
@@ -107,26 +107,26 @@
 					<th>PLUGIN</th>
 					<td>
 						<ul>
-							<li><a href="./list_plugin_event.html">PLUGIN Event</a></li>
+							<li><a href="./list_plugin_event.html">PLUGIN事件</a></li>
 						</ul>
 					</td>
 				</tr>
 			</tbody>
 			<tbody>
 				<tr>
-					<th>規格</th>
+					<th>规格</th>
 					<td colspan="2">
 						<ul>
 							<li><a href="./spec_shiori3.html">SHIORI/3.0</a></li>
 							<li><a href="./spec_sstp.html">SSTP/1.x</a></li>
-							<li><a href="http://www.boreas.dti.ne.jp/~sdn/saori.html">SAORI/1.0</a>（外部サイト）</li>
+							<li><a href="http://www.boreas.dti.ne.jp/~sdn/saori.html">SAORI/1.0</a>（外部链接）</li>
 							<li><a href="./spec_saori_ex.html">SAORI over DirectSSTP</a></li>
 							<li><a href="./spec_plugin.html">PLUGIN/2.0</a></li>
 							<li><a href="./spec_headline.html">HEADLINE/2.0</a></li>
 							<li><a href="./spec_dll.html">DLL</a></li>
 							<li><a href="./spec_fmo_mutex.html">FMO/MUTEX</a></li>
-							<li><a href="./spec_update_file.html">更新定義ファイル</a></li>
-							<li><a href="./spec_web.html">Web関連</a></li>
+							<li><a href="./spec_update_file.html">更新定义文件</a></li>
+							<li><a href="./spec_web.html">Web关联</a></li>
 						</ul>
 					</td>
 				</tr>
@@ -139,57 +139,57 @@
 			<h1>Ghost Status</h1>
 			<!-- 一个列表用于显示和选择ghost -->
 			<div id="ghost_select">
-				<p>ゴーストを選択してください：</p>
+				<p>请选择人格：</p>
 				<select id="ghost_list_content" onchange="reload_button()"></select>
 				<!-- reloadボタン -->
-				<button id="ghost_reload_button" onclick="reload_button()">リロード</button>
+				<button id="ghost_reload_button" onclick="reload_button()">重载</button>
 			</div>
 			<div id="supported_text_event_Has_Event_reminder" style="display: none;">
-				<p>あなたのゴーストは以下のイベントをサポートする必要があります：</p>
+				<p>你的幽灵必须支持以下事件：</p>
 				<a href="https://github.com/YAYA-shiori/yaya-dic/blob/acef2e384cd5a03eda8873cf82ca10bd720c8138/yaya_base/shiori3.dic#L1972L1989">Has_Event</a>
 			</div>
 			<div id="supported_graph" style="display: none;">
 				<p>support: <meter id="supported_graph_content" min="0" max="0" value="0"></meter><span id="supported_ratio">0/0</span></p>
 			</div>
 			<div id="supported_text_event_Get_Supported_Events_reminder" style="display: none;">
-				<p>イベントの統計速度が遅い場合は？</p>
-				<a href="https://github.com/YAYA-shiori/yaya-dic/blob/acef2e384cd5a03eda8873cf82ca10bd720c8138/yaya_base/shiori3.dic#L1990L2025">Get_Supported_Events</a>イベントをサポートして、速度を向上させることができます。
+				<p>如果事件统计速度慢，该怎么办？</p>
+				<a href="https://github.com/YAYA-shiori/yaya-dic/blob/acef2e384cd5a03eda8873cf82ca10bd720c8138/yaya_base/shiori3.dic#L1990L2025">Get_Supported_Events</a>通过启用事件支持，可以加快速度。
 			</div>
 		</section>
 		<section class="navigation-category ghost">
-			<h1>ゴースト間汎用イベント</h1>
+			<h1>人格间通用事件</h1>
 			<ul>
 				<li><a href="#OnRequestValues">OnRequestValues</a></li>
 				<li><a href="#OnGetValues">OnGetValues</a></li>
 			</ul>
 		</section>
 		<section class="navigation-category ghost">
-			<h1>ゴースト「ぬるぽ いんたーはい」</h1>
+			<h1>人格「ぬるぽ いんたーはい」</h1>
 			<ul>
 				<li><a href="#OnTalkRequest">OnTalkRequest</a></li>
 			</ul>
 		</section>
 		<section class="navigation-category ghost">
-			<h1>ゴースト「The Hand」</h1>
+			<h1>人格「The Hand」</h1>
 			<ul>
 				<li><a href="#OnHandActivate">OnHandActivate</a></li>
 			</ul>
 		</section>
 		<section class="navigation-category ghost">
-			<h1>ゴースト「ごーすとじてん」</h1>
+			<h1>人格「ごーすとじてん」</h1>
 			<ul>
 				<li><a href="#OnJitenBattle">OnJitenBattle</a></li>
 				<li><a href="#OnJitenTagBattle">OnJitenTagBattle</a></li>
 			</ul>
 		</section>
 		<section class="navigation-category ghost">
-			<h1>ゴースト「マギルトリエ」</h1>
+			<h1>人格「マギルトリエ」</h1>
 			<ul>
 				<li><a href="#OnMglBattle">OnMglBattle</a></li>
 			</ul>
 		</section>
 		<section class="navigation-category ghost">
-			<h1>ゴースト「カレー家族／沙紀と右近」</h1>
+			<h1>人格「カレー家族／沙紀と右近」</h1>
 			<ul>
 				<li><a href="#Send60stair_Call">Send60stair_Call</a></li>
 				<li><a href="#Send60stair_Start">Send60stair_Start</a></li>
@@ -204,59 +204,59 @@
 			</ul>
 		</section>
 		<section class="navigation-category ghost">
-			<h1>ゴースト「奏でる日常の音色」</h1>
+			<h1>人格「奏でる日常の音色」</h1>
 			<ul>
 				<li><a href="#OnKanadeTeaPartyInfomationRequest">OnKanadeTeaPartyInfomationRequest</a></li>
-				<li><a href="#可変名の返信イベント">可変名の返信イベント</a></li>
+				<li><a href="#可变名称的回复事件">可变名称的回复事件</a></li>
 				<li><a href="#OnKanadeTeaParty">OnKanadeTeaParty</a></li>
 				<li><a href="#OnKanadeTeaPartyEnd">OnKanadeTeaPartyEnd</a></li>
 			</ul>
 		</section>
 		<section class="navigation-category ghost">
-			<h1>ゴースト「卓上誘技」</h1>
+			<h1>人格「卓上誘技」</h1>
 			<ul>
 				<li><a href="#OnPoker">OnPoker</a></li>
 				<li><a href="#OnPokerNotify">OnPokerNotify</a></li>
 			</ul>
 		</section>
 		<section class="navigation-category ghost">
-			<h1>ゴースト「フォーリナー」サプリメント「march of phantasma」</h1>
+			<h1>人格「フォーリナー」补充包「march of phantasma」</h1>
 			<ul>
 				<li><a href="#OnMopClear">OnMopClear</a></li>
 			</ul>
 		</section>
 		<section class="navigation-category ghost">
-			<h1>ゴースト「Needle」</h1>
+			<h1>人格「Needle」</h1>
 			<ul>
 				<li><a href="#OnNeedlePoke">OnNeedlePoke</a></li>
 			</ul>
 		</section>
 		<section class="navigation-category ghost">
-			<h1>ゴースト「Hydrate」</h1>
+			<h1>人格「Hydrate」</h1>
 			<ul>
 				<li><a href="#OnHydrateStatsNotify">OnHydrateStatsNotify</a></li>
 			</ul>
 		</section>
 		<section class="navigation-category plugin">
-			<h1>プラグイン「バーチャルビールかけ（BeerShower）」</h1>
+			<h1>插件「バーチャルビールかけ（BeerShower）」</h1>
 			<ul>
 				<li><a href="#OnBeerShower">OnBeerShower</a></li>
 			</ul>
 		</section>
 		<section class="navigation-category plugin">
-			<h1>プラグイン「バーチャル道頓堀（TOMBORI）」</h1>
+			<h1>插件「バーチャル道頓堀（TOMBORI）」</h1>
 			<ul>
 				<li><a href="#OnDive">OnDive</a></li>
 			</ul>
 		</section>
 		<section class="navigation-category plugin">
-			<h1>プラグイン「実体化（HitThunder）」</h1>
+			<h1>插件「実体化（HitThunder）」</h1>
 			<ul>
 				<li><a href="#OnHitThunder">OnHitThunder</a></li>
 			</ul>
 		</section>
 		<section class="navigation-category plugin">
-			<h1>プラグイン「スタンプ帳」</h1>
+			<h1>插件「スタンプ帳」</h1>
 			<ul>
 				<li><a href="#OnStampInfo">OnStampInfo</a></li>
 				<li><a href="#OnStampAdd">OnStampAdd</a></li>
@@ -264,7 +264,7 @@
 			</ul>
 		</section>
 		<section class="navigation-category plugin">
-			<h1>プラグイン「芋スコープ」</h1>
+			<h1>插件「芋スコープ」</h1>
 			<ul>
 				<li><a href="#OnPotatoReturn">OnPotatoReturn</a></li>
 				<li><a href="#OnPotatoFileNotFound">OnPotatoFileNotFound</a></li>
@@ -272,14 +272,14 @@
 			</ul>
 		</section>
 		<section class="navigation-category plugin">
-			<h1>プラグイン「CrystalDiskInfo Event PLUGIN」</h1>
+			<h1>插件「CrystalDiskInfo Event PLUGIN」</h1>
 			<ul>
 				<li><a href="#OnCrystalDiskInfoEvent">OnCrystalDiskInfoEvent</a></li>
 				<li><a href="#OnCrystalDiskInfoClear">OnCrystalDiskInfoClear</a></li>
 			</ul>
 		</section>
 		<section class="navigation-category plugin">
-			<h1>プラグイン「Weather Station」</h1>
+			<h1>插件「Weather Station」</h1>
 			<ul>
 				<li><a href="#OnWeatherStation.Weather">OnWeatherStation.Weather</a></li>
 				<li><a href="#OnWeatherStation.Astro">OnWeatherStation.Astro</a></li>
@@ -290,7 +290,7 @@
 			</ul>
 		</section>
 		<section class="navigation-category plugin">
-			<h1>プラグイン「Spectre」</h1>
+			<h1>插件「Spectre」</h1>
 			<ul>
 				<li><a href="#OnSpectrePlugin.Surface">OnSpectrePlugin.Surface</a></li>
 				<li><a href="#OnSpectrePlugin.ConfirmCalibration">OnSpectrePlugin.ConfirmCalibration</a></li>
@@ -304,7 +304,7 @@
 			</ul>
 		</section>
 		<section class="navigation-category application">
-			<h1>アプリ「きのこ」</h1>
+			<h1>应用「きのこ」</h1>
 			<ul>
 				<li><a href="#OnKinokoObjectCreate">OnKinokoObjectCreate</a></li>
 				<li><a href="#OnKinokoObjectDestroy">OnKinokoObjectDestroy</a></li>
@@ -318,7 +318,7 @@
 			</ul>
 		</section>
 		<section class="navigation-category application">
-			<h1>アプリ「猫どりふ」</h1>
+			<h1>应用「猫どりふ」</h1>
 			<ul>
 				<li><a href="#OnNekodorifObjectEmerge">OnNekodorifObjectEmerge</a></li>
 				<li><a href="#OnNekodorifObjectHit">OnNekodorifObjectHit</a></li>
@@ -328,19 +328,19 @@
 			</ul>
 		</section>
 		<section class="navigation-category application">
-			<h1>アプリ「YunaSoft SexyFont Plug-in」</h1>
+			<h1>应用「YunaSoft SexyFont Plug-in」</h1>
 			<ul>
 				<li><a href="#OnMusicPlay">OnMusicPlay</a></li>
 			</ul>
 		</section>
 		<section class="navigation-category application">
-			<h1>アプリ「艦隊時計」</h1>
+			<h1>应用「艦隊時計」</h1>
 			<ul>
 				<li><a href="#OnFleetClockComplete">OnFleetClockComplete</a></li>
 			</ul>
 		</section>
 		<section class="navigation-category application">
-			<h1>アプリ「Elona omake_MMA」</h1>
+			<h1>应用「Elona omake_MMA」</h1>
 			<ul>
 				<li><a href="#OnElonaOmakeMMAEventNewGame">OnElonaOmakeMMAEventNewGame</a></li>
 				<li><a href="#OnElonaOmakeMMAEventGameLoad">OnElonaOmakeMMAEventGameLoad</a></li>
@@ -406,20 +406,20 @@
 			</ul>
 		</section>
 		<section class="navigation-category application">
-			<h1>麻雀通信イベント</h1>
+			<h1>麻雀通信事件</h1>
 			<ul>
 				<li><a href="#OnMahjong">OnMahjong</a></li>
 				<li><a href="#OnMahjongResponse">OnMahjongResponse</a></li>
 			</ul>
 		</section>
 		<section class="navigation-category application">
-			<h1>Nostr通知イベント</h1>
+			<h1>Nostr通知事件</h1>
 			<ul>
 				<li><a href="#OnNostr">OnNostr</a></li>
 			</ul>
 		</section>
 		<section class="navigation-category application">
-			<h1>アプリ「さとりすと」</h1>
+			<h1>应用「さとりすと」</h1>
 			<ul>
 				<li><a href="#OnSatolistBoot">OnSatolistBoot</a></li>
 				<li><a href="#OnSatolistGhostOpened">OnSatolistGhostOpened</a></li>
@@ -430,7 +430,7 @@
 			</ul>
 		</section>
 		<section class="navigation-category application">
-			<h1>GoogleChrome拡張「とうらぶえくすてんしょん」</h1>
+			<h1>GoogleChrome扩展「とうらぶえくすてんしょん」</h1>
 			<ul>
 				<li><a href="#OnTourabuConquestStart">OnTourabuConquestStart</a></li>
 				<li><a href="#OnTourabuConquestEnd">OnTourabuConquestEnd</a></li>
@@ -439,7 +439,7 @@
 			</ul>
 		</section>
 		<section class="navigation-category application">
-			<h1>ゴースト開発用の対話型exe「ゴースト・ターミナル」</h1>
+			<h1>人格开发用对话型exe「ゴースト・ターミナル」</h1>
 			<ul>
 				<li><a href="#ShioriEcho.Begin">ShioriEcho.Begin</a></li>
 				<li><a href="#ShioriEcho.End">ShioriEcho.End</a></li>
@@ -457,7 +457,7 @@
 			</ul>
 		</section>
 		<section class="navigation-category application">
-			<h1>アプリ「Elin」</h1>
+			<h1>应用「Elin」</h1>
 			<ul>
 				<li><a href="#OnElinAllyCondition">OnElinAllyCondition</a></li>
 				<li><a href="#OnElinAllyDead">OnElinAllyDead</a></li>
@@ -471,13 +471,13 @@
 			</ul>
 		</section>
 		<section class="navigation-category application">
-			<h1>Music player通知イベント</h1>
+			<h1>Music player通知事件</h1>
 			<ul>
 				<li><a href="#OnMusicPlayer.SongInfo">OnMusicPlayer.SongInfo</a></li>
 			</ul>
 		</section>
 		<section class="navigation-category other">
-			<h1>外部アプリ汎用イベント</h1>
+			<h1>外部应用通用事件</h1>
 			<ul>
 				<li><a href="#OnApplicationBoot">OnApplicationBoot</a></li>
 				<li><a href="#OnApplicationClose">OnApplicationClose</a></li>
@@ -497,35 +497,35 @@
 	</section>
 	<div class="categories">
 		<section class="caption">
-			<p>以下には、ベースウェア外部のアプリケーションがSSTPによって発信するものや、ゴーストやプラグインが他のゴーストに対して発行するものなど、<em>発行者が外部にあるイベント</em>および、それらのイベントの<em>受信者が返却するイベント</em>が含まれます。</p>
-			<p>そうしたイベントの発行者に対してこのページは非公式なドキュメントに過ぎず、記載後のそれぞれの更新などで、情報が不正確になっている場合があります。詳しくはそれぞれ公式の説明をあたるようにしてください。</p>
-			<p>未記載のイベントをご存知の方は是非<a href="http://ssp.shillest.net/bts/?project=misc&action=top">ご報告ください</a>。記載させていただきます。</p>
+			<p>以下包括：基础软件以外的应用程序通过SSTP发送的事件，以及由人格或插件向其他人格发出的事件等，也就是<em>发送方位于外部的事件</em>，以及这些事件的<em>接收方所返回的事件</em>。</p>
+			<p>对于这些事件的发行者来说，此页面只是一个非官方文档，信息可能不准确，例如每次发布后的更新。详细请参照各自的官方说明。</p>
+			<p>如您知晓尚未收录的活动，请务必<a href="http://ssp.shillest.net/bts/?project=misc&action=top">予以报告</a>，我们将予以补充收录。</p>
 		</section>
 		<section class="caption">
-			<p><em class="specsign">[NOTIFY]</em>の表示があるイベントは、必ずNOTIFYコマンドで通知されます。<br />NOTIFYコマンドで通知されたイベントにスクリプトを返却しても一切無視されます。</p>
-			<p>特に表示がないイベントは、状況によってNOTIFY、GETのいずれでも通知される可能性があります。</p>
+			<p><em class="specsign">[NOTIFY]</em>标记的活动，将必定通过NOTIFY命令进行通知。<br />即使将脚本返回给通过NOTIFY命令通知的事件，也会被完全忽略。</p>
+			<p>未特别显示的事件，根据具体情况，可能会以NOTIFY或GET方式之一进行通知。</p>
 		</section>
 		<section class="caption">
-			<h1>関連するさくらスクリプト</h1>
+			<h1>相关樱花脚本</h1>
 			<ul>
-				<li><a href="list_sakura_script.html#_!_raiseother,%E3%82%B4%E3%83%BC%E3%82%B9%E3%83%88%E5%90%8D,%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E5%90%8D,r0,r1,r2..._">\![raiseother]</a></li>
-				<li><a href="list_sakura_script.html#_!_notifyother,%E3%82%B4%E3%83%BC%E3%82%B9%E3%83%88%E5%90%8D,%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E5%90%8D,r0,r1,r2..._">\![notifyother]</a></li>
-				<li><a href="list_sakura_script.html#_!_timerraiseother,%E6%99%82%E9%96%93,%E7%B9%B0%E3%82%8A%E8%BF%94%E3%81%99%E3%81%8B%E5%90%A6%E3%81%8B,%E3%82%B4%E3%83%BC%E3%82%B9%E3%83%88%E5%90%8D,%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E5%90%8D,r0,r1,r2..._">\![timerraiseother]</a></li>
-				<li><a href="list_sakura_script.html#_!_raiseplugin,%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3%E3%81%AEID%E3%81%BE%E3%81%9F%E3%81%AF%E5%90%8D%E5%89%8D,%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E5%90%8D,r0,r1,r2..._">\![raiseplugin]</a></li>
-				<li><a href="list_sakura_script.html#_!_notifyplugin,%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3%E3%81%AEID%E3%81%BE%E3%81%9F%E3%81%AF%E5%90%8D%E5%89%8D,%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E5%90%8D,r0,r1,r2..._">\![notifyplugin]</a></li>
+				<li><a href="list_sakura_script.html#_!_raiseother,人格名,事件名,r0,r1,r2..._">\![raiseother]</a></li>
+				<li><a href="list_sakura_script.html#_!_notifyother,人格名,事件名,r0,r1,r2..._">\![notifyother]</a></li>
+				<li><a href="list_sakura_script.html#_!_timerraiseother,时间,是否重复,人格名,事件名,r0,r1,r2..._">\![timerraiseother]</a></li>
+				<li><a href="list_sakura_script.html#_!_raiseplugin,插件的ID或名称,事件名,r0,r1,r2..._">\![raiseplugin]</a></li>
+				<li><a href="list_sakura_script.html#_!_notifyplugin,插件的ID或名称,事件名,r0,r1,r2..._">\![notifyplugin]</a></li>
 			</ul>
 		</section>
 		<section class="category ghost">
-			<h1>ゴースト間汎用イベント</h1>
+			<h1>人格间通用事件</h1>
 			<dl id="OnRequestValues">
 				<dt class="entry">OnRequestValues</dt>
 				<dd class="entry">
-					<p>他ゴーストが任意に送信した際に発生。<br />このイベントが送られた時、\[raiseother]でOnGetValuesイベントを送信する必要がある。</p>
+					<p>当其他人格主动发信时触发。<br />收到此事件时，必须通过\[raiseother]发送OnGetValues事件。</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>送信したゴースト名。</dd>
+						<dd>已发信的人格名。</dd>
 						<dt>Reference1</dt>
-						<dd>要求する変数名(key)。Reference2以降も同様に要求する変数がある限り続く。</dd>
+						<dd>请求的变量名（key）。Reference2 以后同理，只要还有请求的变量就继续。</dd>
 					</dl>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -535,12 +535,12 @@
 			<dl id="OnGetValues">
 				<dt class="entry">OnGetValues</dt>
 				<dd class="entry">
-					<p>OnRequestValuesを受けた際に返すべきイベント。</p>
+					<p>在接收到OnRequestValues时应返回的事件。</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>送信するゴースト名。</dd>
+						<dd>要回信的人格名。</dd>
 						<dt>Reference1</dt>
-						<dd>key=value(keyはOnRequestValuesで受け取った変数名、valueはその値)。Reference2以降も同様に要求された変数がある限り続く。存在しない変数は返さない。OnRequestValuesで送られた順序に依存しない。</dd>
+						<dd>key=value（key是在OnRequestValues中接收到的变量名，value是其值）。Reference2以后同理，只要还有被请求的变量就继续。不存在的变量不返回。不依赖于OnRequestValues中发送的顺序。</dd>
 					</dl>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -548,32 +548,32 @@
 				</dd>
 			</dl>
 			<div class="caption">
-				<h1>要求されるプロパティ名一覧</h1>
+				<h1>要求属性名列表</h1>
 				<ul>
-					<li>キャラクター名</li>
-					<li>世代</li>
-					<li>年齢層</li>
-					<li>性別</li>
-					<li>種族</li>
-					<li>種族タイプ</li>
-					<li>行動タイプ</li>
-					<li>プロフィール</li>
-					<li>カード画像パス</li>
-					<li>LIFE</li>
-					<li>STR</li>
-					<li>DEX</li>
-					<li>AGL</li>
-					<li>MIN</li>
-					<li>INT</li>
-					<li>SEN</li>
-					<li>NOB</li>
+					<li>キャラクター名(角色名)</li>
+					<li>世代(世代)</li>
+					<li>年齢層(年龄层)</li>
+					<li>性別(性别)</li>
+					<li>種族(种族)</li>
+					<li>種族タイプ(种族类型)</li>
+					<li>行動タイプ(行动类型)</li>
+					<li>プロフィー(ル档案)</li>
+					<li>カード画像パス(卡牌图片路径)</li>
+					<li>LIFE(生命)</li>
+					<li>STR(力量)</li>
+					<li>DEX(敏捷)</li>
+					<li>AGL(灵敏)</li>
+					<li>MIN(精神)</li>
+					<li>INT(智力)</li>
+					<li>SEN(感知)</li>
+					<li>NOB(声望)</li>
 				</ul>
 			</div>
 		</section>
 		<section class="category ghost">
-			<h1>ゴースト「ぬるぽ いんたーはい」</h1>
+			<h1>人格「ぬるぽ いんたーはい」</h1>
 			<ul class="caption link">
-				<li>公開元：閉鎖</li>
+				<li>公开源：关闭</li>
 			</ul>
 			<ul class="supported-baseware">
 				<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -581,14 +581,14 @@
 			<dl id="OnTalkRequest">
 				<dt class="entry">OnTalkRequest</dt>
 				<dd class="entry">
-					<p>ぬるぽ　いんたーはいからトークを求められた際に発生。</p>
+					<p>当ぬるぽ被要求进行内部对话时触发。</p>
 				</dd>
 			</dl>
 		</section>
 		<section class="category ghost">
-			<h1>ゴースト「The Hand」</h1>
+			<h1>人格「The Hand」</h1>
 			<ul class="caption link">
-				<li>公開元：<a href="http://ukiya.sakura.ne.jp/">http://ukiya.sakura.ne.jp/</a></li>
+				<li>公开源：<a href="http://ukiya.sakura.ne.jp/">http://ukiya.sakura.ne.jp/</a></li>
 			</ul>
 			<ul class="supported-baseware">
 				<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -596,27 +596,27 @@
 			<dl id="OnHandActivate">
 				<dt class="entry">OnHandActivate</dt>
 				<dd class="entry">
-					<p>The Handが他ゴーストを触りに行くまたは触り終わった際に発生。<br />触っている間、Sender:The Handでゴーストに(OnMouseMove|OnMouseDoubleClick|OnMouseWheel)イベントを送る。</p>
+					<p>The Hand在触碰其他人格或触碰结束后触发。<br />在触碰期间，通过Sender:The Hand向人格发送(OnMouseMove|OnMouseDoubleClick|OnMouseWheel)事件。</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>通常触り開始：NormalStart<br />通常触り終了：NormalEnd<br />必殺技開始：SuperStart<br />必殺技途中：SuperContinue<br />必殺技終了：SuperEnd<br />必殺技途中でホーミング発動：SuperHoming</dd>
+						<dd>普通触碰开始：NormalStart<br />普通触碰结束：NormalEnd<br />必杀技开始：SuperStart<br />必杀技进行中：SuperContinue<br />必杀技结束：SuperEnd<br />必杀技进行中时启动追踪：SuperHoming</dd>
 						<dt>Reference1</dt>
-						<dd>当たり判定名。<br />停止された場合はescaped。<br />必殺技の場合は1～4。</dd>
+						<dd>碰撞判定名称。<br />若被停止则为escaped。<br />必杀技时为1～4。</dd>
 						<dt>Reference2</dt>
-						<dd>相手に起きるイベント。<br />通常時：(OnMouseMove|OnMouseDoubleClick|OnMouseWheel)<br />必殺技中：触った回数<br />必殺技終了時：(MAX触り回数|escaped|nocollision|attacked|deleted)</dd>
+						<dd>对手触发的事件。<br />通常时：(OnMouseMove|OnMouseDoubleClick|OnMouseWheel)<br />必杀技中：触碰次数<br />必杀技结束时：(MAX触碰次数|escaped|nocollision|attacked|deleted)</dd>
 						<dt>Reference3</dt>
-						<dd>触りに行く際のスクリプト。<br />必殺技中は当たり判定名。</dd>
+						<dd>触碰时的脚本。<br />必杀技期间的碰撞判定名称。</dd>
 						<dt>Reference4</dt>
-						<dd>シェル番号。</dd>
+						<dd>外壳编号。</dd>
 					</dl>
 				</dd>
 			</dl>
 		</section>
 		<section class="category ghost">
-			<h1>ゴースト「ごーすとじてん」</h1>
+			<h1>人格「ごーすとじてん」</h1>
 			<ul class="caption link">
-				<li>公開元：<a href="https://github.com/nikolat/ghostbook">https://github.com/nikolat/ghostbook</a></li>
-				<li>関連：<a href="http://spoon.if.land.to/wiki/index.php?%A4%B4%A1%BC%A4%B9%A4%C8%A4%B8%A4%C6%A4%F3">http://spoon.if.land.to/wiki/index.php?%A4%B4%A1%BC%A4%B9%A4%C8%A4%B8%A4%C6%A4%F3</a></li>
+				<li>公开源：<a href="https://github.com/nikolat/ghostbook">https://github.com/nikolat/ghostbook</a></li>
+				<li>相关：<a href="http://spoon.if.land.to/wiki/index.php?%A4%B4%A1%BC%A4%B9%A4%C8%A4%B8%A4%C6%A4%F3">http://spoon.if.land.to/wiki/index.php?%A4%B4%A1%BC%A4%B9%A4%C8%A4%B8%A4%C6%A4%F3</a></li>
 			</ul>
 			<ul class="supported-baseware">
 				<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -624,22 +624,22 @@
 			<dl id="OnJitenBattle">
 				<dt class="entry">OnJitenBattle</dt>
 				<dd class="entry">
-					<p>ゴーストが行う模擬戦の毎ターン発生。</p>
+					<p>人格进行的模拟战斗的每回合都会触发。</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>送信したゴーストの\0名。</dd>
+						<dd>已发信的人格的\0名。</dd>
 						<dt>Reference1</dt>
-						<dd>攻撃側キャラクタ名。</dd>
+						<dd>攻击方角色名。</dd>
 						<dt>Reference2</dt>
-						<dd>防御側キャラクタ名。</dd>
+						<dd>防御方角色名。</dd>
 						<dt>Reference3</dt>
-						<dd>戦闘結果。<br />開始時：模擬戦闘開始<br />行動時：(物理攻撃成功|物理攻撃失敗|物理攻撃回避|物理攻撃ミス|精神攻撃成功|精神攻撃失敗|精神攻撃回避|精神攻撃ミス)</dd>
+						<dd>战斗结果。<br />开始时：模擬戦闘開始<br />行动时：(物理攻撃成功|物理攻撃失敗|物理攻撃回避|物理攻撃ミス(物理攻击失误)|精神攻撃成功|精神攻撃失敗|精神攻撃回避|精神攻撃ミス(精神攻击失误))</dd>
 						<dt>Reference4</dt>
-						<dd>ダメージ。</dd>
+						<dd>伤害。</dd>
 						<dt>Reference5</dt>
-						<dd>攻撃側キャラクタLIFE。</dd>
+						<dd>攻击方角色生命值E。</dd>
 						<dt>Reference6</dt>
-						<dd>防御側キャラクタLIFE。</dd>
+						<dd>防御方角色生命值。</dd>
 						<dt>Reference7</dt>
 						<dd>Normal</dd>
 					</dl>
@@ -648,22 +648,22 @@
 			<dl id="OnJitenTagBattle">
 				<dt class="entry">OnJitenTagBattle</dt>
 				<dd class="entry">
-					<p>ゴーストが行う模擬戦の毎ターン発生。</p>
+					<p>人格进行的模拟战斗的每回合都会触发。</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>送信したゴーストの\0名。</dd>
+						<dd>已发信的人格的\0名。</dd>
 						<dt>Reference1</dt>
-						<dd>攻撃側キャラクタ名。</dd>
+						<dd>攻击方角色名。</dd>
 						<dt>Reference2</dt>
-						<dd>防御側キャラクタ名。</dd>
+						<dd>防御方角色名。</dd>
 						<dt>Reference3</dt>
-						<dd>戦闘結果。<br />開始時：模擬戦闘開始<br />行動時：(物理攻撃成功|物理攻撃失敗|物理攻撃回避|物理攻撃ミス|精神攻撃成功|精神攻撃失敗|精神攻撃回避|精神攻撃ミス)</dd>
+						<dd>战斗结果。<br />开始时：模擬戦闘開始<br />行动时：(物理攻撃成功|物理攻撃失敗|物理攻撃回避|物理攻撃ミス(物理攻击失误)|精神攻撃成功|精神攻撃失敗|精神攻撃回避|精神攻撃ミス(精神攻击失误))</dd>
 						<dt>Reference4</dt>
-						<dd>ダメージ。</dd>
+						<dd>伤害。</dd>
 						<dt>Reference5</dt>
-						<dd>攻撃側キャラクタLIFE。</dd>
+						<dd>攻击方角色生命值E。</dd>
 						<dt>Reference6</dt>
-						<dd>防御側キャラクタLIFE。</dd>
+						<dd>防御方角色生命值。</dd>
 						<dt>Reference7</dt>
 						<dd>Tag</dd>
 					</dl>
@@ -671,9 +671,9 @@
 			</dl>
 		</section>
 		<section class="category ghost">
-			<h1>ゴースト「マギルトリエ」</h1>
+			<h1>人格「マギルトリエ」</h1>
 			<ul class="caption link">
-				<li>公開元：閉鎖</li>
+				<li>公开源：关闭</li>
 			</ul>
 			<ul class="supported-baseware">
 				<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -681,24 +681,24 @@
 			<dl id="OnMglBattle">
 				<dt class="entry">OnMglBattle</dt>
 				<dd class="entry">
-					<p>マギルトリエが行うバーチャルバトルの結果ごとに発生。</p>
+					<p>每次由マギルトリエ进行的虚拟战斗结束后都会触发。</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>バージョン情報。</dd>
+						<dd>版本信息。</dd>
 						<dt>Reference2</dt>
-						<dd>送信元ゴースト。</dd>
+						<dd>送信方人格。</dd>
 						<dt>Reference3</dt>
-						<dd>Mglイベント名。</dd>
+						<dd>Mgl事件名。</dd>
 						<dt>Reference*</dt>
-						<dd>Mglイベントに対する内容。</dd>
+						<dd>Mgl事件的相关内容。</dd>
 					</dl>
 				</dd>
 			</dl>
 		</section>
 		<section class="category ghost">
-			<h1>ゴースト「カレー家族／沙紀と右近」</h1>
+			<h1>人格「カレー家族／沙紀と右近」</h1>
 			<ul class="caption link">
-				<li>公開元：<a href="http://curryfamily.me.land.to/ghost_saki.html">http://curryfamily.me.land.to/ghost_saki.html</a></li>
+				<li>公开源：<a href="http://curryfamily.me.land.to/ghost_saki.html">http://curryfamily.me.land.to/ghost_saki.html</a></li>
 			</ul>
 			<ul class="supported-baseware">
 				<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -706,13 +706,13 @@
 			<dl id="Send60stair_Call">
 				<dt class="entry">Send60stair_Call</dt>
 				<dd class="entry">
-					<p>カレー家族／沙紀と右近が同時起動しているゴーストをゲームに誘う際に発生。</p>
+					<p>与 カレー家族／沙紀と右近 同时启动的人格在被邀请进入游戏时触发。</p>
 				</dd>
 			</dl>
 			<dl id="Send60stair_Start">
 				<dt class="entry">Send60stair_Start</dt>
 				<dd class="entry">
-					<p>カレー家族／沙紀と右近がゲームを開始する際に発生。</p>
+					<p>カレー家族／沙紀と右近 开始游戏时触发。</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -721,100 +721,100 @@
 			<dl id="Send60stair_YourTurnStart">
 				<dt class="entry">Send60stair_YourTurnStart</dt>
 				<dd class="entry">
-					<p>カレー家族／沙紀と右近が行うゲーム中に自ゴーストの順番が来た際に発生。</p>
+					<p>カレー家族／沙紀と右近 进行游戏时，轮到己方人格行动时触发。</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>現在位置。</dd>
+						<dd>当前位置。</dd>
 						<dt>Reference1</dt>
-						<dd>マーキング位置。</dd>
+						<dd>标记位置。</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="Send60stair_Marking">
 				<dt class="entry">Send60stair_Marking</dt>
 				<dd class="entry">
-					<p>カレー家族／沙紀と右近が行うゲーム中にマーキングした際に発生。</p>
+					<p>カレー家族／沙紀と右近 进行游戏时，完成标记后触发。</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>マーキング位置。</dd>
+						<dd>标记位置。</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="Send60stair_DiceRoll">
 				<dt class="entry">Send60stair_DiceRoll</dt>
 				<dd class="entry">
-					<p>カレー家族／沙紀と右近が行うゲーム中にゴーストがサイコロを振り、ドボンでない際に発生。</p>
+					<p>カレー家族／沙紀と右近 进行的游戏过程中，幽灵掷骰子，且未出现“咚”的一声时触发。</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>第一サイコロの出目。</dd>
+						<dd>第一个骰子的点数。</dd>
 						<dt>Reference1</dt>
-						<dd>第二サイコロの出目。</dd>
+						<dd>第二个骰子的点数。</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="Send60stair_Dobon">
 				<dt class="entry">Send60stair_Dobon</dt>
 				<dd class="entry">
-					<p>カレー家族／沙紀と右近が行うゲーム中に参加ゴーストのいずれかがドボンした際に発生。</p>
+					<p>カレー家族／沙紀と右近 进行游戏时，若参与的人格之一“Dobon”时触发。</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>ドボンしたゴースト名。</dd>
+						<dd>Dobon的人格名称。</dd>
 						<dt>Reference1</dt>
-						<dd>ドボンしたゴーストの現在位置。</dd>
+						<dd>Dobon的人格の当前位置。</dd>
 						<dt>Reference2</dt>
-						<dd>ドボンしたゴーストのマーキング位置。</dd>
+						<dd>Dobon的人格の标记位置。</dd>
 						<dt>Reference3</dt>
-						<dd>サイコロの出目。</dd>
+						<dd>骰子的点数。</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="Send60stair_YourTurnEnd">
 				<dt class="entry">Send60stair_YourTurnEnd</dt>
 				<dd class="entry">
-					<p>カレー家族／沙紀と右近が行うゲーム中に自ゴーストのターンが終了した際に発生。</p>
+					<p>カレー家族／沙紀と右近 进行游戏时，当己方人格的回合结束时触发。</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>現在位置。</dd>
+						<dd>当前位置。</dd>
 						<dt>Reference1</dt>
-						<dd>マーキング位置。</dd>
+						<dd>标记位置。</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="Send60stair_Goal">
 				<dt class="entry">Send60stair_Goal</dt>
 				<dd class="entry">
-					<p>カレー家族／沙紀と右近が行うゲーム中にいずれかのゴーストがゴールした際に発生。</p>
+					<p>カレー家族／沙紀と右近 在游戏过程中，当任意一个人格到达终点时触发。</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>優勝したゴースト名。</dd>
+						<dd>获胜的人格名称。</dd>
 						<dt>Reference1</dt>
-						<dd>順位。</dd>
+						<dd>排名。</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="Send60stair_GameEnd">
 				<dt class="entry">Send60stair_GameEnd</dt>
 				<dd class="entry">
-					<p>カレー家族／沙紀と右近が行うゲーム終了時、順位を表示した後に発生。</p>
+					<p>カレー家族／沙紀と右近 进行的游戏结束时，在显示排名之后触发。</p>
 				</dd>
 			</dl>
 			<dl id="Send60stair_GetStatus">
 				<dt class="entry">Send60stair_GetStatus</dt>
 				<dd class="entry">
-					<p>\[raiseother]で沙紀に送信するべきイベント。</p>
+					<p>应通过\[raiseother]发信给沙紀的事件。</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>送信するゴーストの\0名。</dd>
+						<dd>要发信的人格的\0名。</dd>
 						<dt>Reference1</dt>
-						<dd>大胆さ。(0～60)</dd>
+						<dd>大胆程度。(0～60)</dd>
 					</dl>
 				</dd>
 			</dl>
 		</section>
 		<section class="category ghost">
-			<h1>ゴースト「奏でる日常の音色」</h1>
+			<h1>人格「奏でる日常の音色」</h1>
 			<ul class="caption link">
-				<li>公開元：<a href="http://ukananachi.blog98.fc2.com/">http://ukananachi.blog98.fc2.com/</a></li>
+				<li>公开源：<a href="http://ukananachi.blog98.fc2.com/">http://ukananachi.blog98.fc2.com/</a></li>
 			</ul>
 			<ul class="supported-baseware">
 				<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -822,83 +822,83 @@
 			<dl id="OnKanadeTeaPartyInfomationRequest">
 				<dt class="entry">OnKanadeTeaPartyInfomationRequest</dt>
 				<dd class="entry">
-					<p>お茶会開始前に、奏でる日常の音色から各ゴーストに通知されるイベント。<br />お茶会に参加するゴーストはこのイベントで直ちに、<br /><code>\![raiseother,かなで,<a href="#可変名の返信イベント">返信イベント名</a>,ゴーストの対応するお茶会バージョン番号,ゴーストの本体側名,<a href="#caption_kanade">※お茶会バージョンへの対応情報</a>]</code><br />のさくらスクリプトを実行する必要がある。<br />イベント内での、このスクリプトの実行以外のトークは非推奨。</p>
+					<p>在茶会开始前，由 奏でる日常の音色向各人格发送的通知事件。<br />お茶参加茶会的人格需在此事件中立即执行<br /><code>\![raiseother,かなで,<a href="#可变名称的回复事件">返信事件名</a>,人格对应的茶会版本号,人格本体侧名称,<a href="#caption_kanade">※茶会版本对应信息</a>]</code><br />这条樱花脚本。<br />在此事件中，除执行该脚本以外的对话均不推荐。</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>お茶会バージョン番号。</dd>
+						<dd>茶会版本号。</dd>
 						<dt>Reference1</dt>
-						<dd>返信イベントの送信先ゴースト本体側名（「かなで」に固定）。</dd>
+						<dd>返信事件的发送目标人格本体侧名称（固定为“かなで”）。</dd>
 						<dt>Reference2</dt>
-						<dd>返信イベント名。</dd>
+						<dd>返信事件名。</dd>
 					</dl>
 				</dd>
 			</dl>
-			<dl id="可変名の返信イベント">
-				<dt class="entry">可変名の返信イベント</dt>
+			<dl id="可变名称的回复事件">
+				<dt class="entry">可变名称的回复事件</dt>
 				<dd class="entry">
-					<p>OnKanadeTeaPartyInfomationRequestを受信したゴーストが、<em>奏でる日常の音色に対して</em>raiseotherで<em>通知する</em>イベント。<br />イベント名はOnKanadeTeaPartyInfomationRequestのreference2で通知されている。</p>
+					<p>收到OnKanadeTeaPartyInfomationRequest的幽灵，通过raiseother<em>向 奏でる日常の音色 通知</em>的事件。<br />事件名由 OnKanadeTeaPartyInfomationRequest的reference2通知。</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>ゴーストの対応するお茶会バージョン番号</dd>
+						<dd>人格对应的茶会版本号</dd>
 						<dt>Reference1</dt>
-						<dd>ゴーストの本体側名</dd>
+						<dd>人格本体侧名称名</dd>
 						<dt>Reference2</dt>
-						<dd><a href="#caption_kanade">※お茶会バージョンへの対応情報</a></dd>
+						<dd><a href="#caption_kanade">※茶会版本支持信息</a></dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnKanadeTeaParty">
 				<dt class="entry">OnKanadeTeaParty</dt>
 				<dd class="entry">
-					<p>お茶会本体イベント。お茶会開始時に通知される。</p>
+					<p>茶会主体活动。在茶会开始时会通知。</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>Reference1以降の組み合わせが実装されたお茶会のバージョン。</dd>
+						<dd>已实现Reference1及后续组合的茶会版本。</dd>
 						<dt>Reference1</dt>
-						<dd>お飲み物。</dd>
+						<dd>饮品。</dd>
 						<dt>Reference2</dt>
-						<dd>お菓子</dd>
+						<dd>点心</dd>
 						<dt>Reference*</dt>
-						<dd>Reference3以降は拡張情報。</dd>
+						<dd>Reference3及以后为扩展信息。</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnKanadeTeaPartyEnd">
 				<dt class="entry">OnKanadeTeaPartyEnd</dt>
 				<dd class="entry">
-					<p>お茶会終了イベント。奏でる日常の音色が、お茶会終了トークをした後に通知される。</p>
+					<p>茶会结束事件。奏でる日常の音色 将在茶会结束对话后通知。</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>実行されたお茶会のバージョン。</dd>
+						<dd>已执行的茶会版本。</dd>
 					</dl>
 				</dd>
 			</dl>
 			<div class="caption" id="caption_kanade">
-				<p>※お茶会バージョンへの対応情報</p>
+				<p>※关于茶会版本的支持信息</p>
 				<dl>
-					<dt>対応</dt>
+					<dt>対応(支持)</dt>
 					<dd>
-						「奏でる日常の音色」のバージョンよりもゴーストのバージョンが高いまたは同じなため、この「奏でる日常の音色」が提供するお茶会イベントに完全に対応しています。
+						由于人格的版本高于或等同于“奏でる日常の音色”的版本，因此完全支持“奏でる日常の音色”所提供的茶会事件。
 					</dd>
-					<dt>非対応</dt>
+					<dt>非対応(不支持)</dt>
 					<dd>
-						「奏でる日常の音色」のバージョンよりもゴーストのバージョンが低いため、ゴーストのバージョンよりも高いバージョンのお茶会イベントは処理することができません。
+						由于人格的版本低于“奏でる日常の音色”的版本，因此无法处理高于人格版本的茶会事件。
 					</dd>
-					<dt>自動対応</dt>
+					<dt>自動対応(自动支持)</dt>
 					<dd>
-						「奏でる日常の音色」のバージョンよりもゴーストのバージョンが低いですが、ゴーストのバージョンよりも高いバージョンのお茶会イベントについて、単語を当てはめたりなどトークの内容を変化させて自動的に対応することができます。
+						虽然人格的版本低于“奏でる日常の音色”的版本，但对于高于人格版本的茶会事件，可以通过套用词语等方式改变对话内容来自动支持。
 					</dd>
-					<dt>固定対応</dt>
+					<dt>固定対応(固定支持)</dt>
 					<dd>
-						「奏でる日常の音色」が提供するお茶会の内容によって対応は変化しません。返答イベントのReference0はゴーストの制作者が確認しているお茶会バージョンです。この対応情報を返送したゴーストについては、お茶会の内容選択を考慮しません。
+						“奏でる日常の音色”所提供的茶会内容不会影响支持方式。回复事件的Reference0为人格制作者所确认的茶会版本。对于已回复此支持信息的人格，将不再考虑茶会内容的选择。
 					</dd>
 				</dl>
 			</div>
 		</section>
 		<section class="category ghost">
-			<h1>ゴースト「卓上誘技」</h1>
+			<h1>人格「卓上誘技」</h1>
 			<ul class="caption link">
-				<li>公開元：<a href="https://tatakinov.github.io/">https://tatakinov.github.io/</a></li>
+				<li>公开源：<a href="https://tatakinov.github.io/">https://tatakinov.github.io/</a></li>
 			</ul>
 			<ul class="supported-baseware">
 				<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -906,28 +906,28 @@
 			<dl id="OnPoker">
 				<dt class="entry">OnPoker</dt>
 				<dd class="entry">
-					<p>応答が必要なイベント。応答方法はraiseotherかnotifyotherを使う。</p>
+					<p>需要响应的事件。响应方式可使用 raiseother 或 notifyother。</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>プロトコルバージョン(POKER/1.0)</dd>
+						<dd>协议版本（POKER/1.0）</dd>
 						<dt>Reference1</dt>
-						<dd>サーバーゴースト名</dd>
+						<dd>服务器人格名</dd>
 						<dt>Reference2</dt>
-						<dd>サーバーのイベント名</dd>
+						<dd>服务器事件名</dd>
 					</dl>
 					<section id="reference_OnPoker">
-						<h1>POKER/1.0におけるReference3以降の追加情報</h1>
+						<h1>在POKER/1.0中，Reference3及之后的附加信息</h1>
 						<dl class="reference">
 							<dt>Reference3</dt>
-							<dd>hello（参加申請をする。断られることもある。）</dd>
+							<dd>hello（提交加入申请。可能会被拒绝。）</dd>
 						</dl>
 						<dl class="reference">
 							<dt>Reference3</dt>
-							<dd>action（Reference4以降に使用可能なアクションが入っている。）</dd>
+							<dd>action（包含Reference4之后可用的动作。）</dd>
 							<dt>Reference*</dt>
-							<dd>使用可能なアクションはbet,raise,allin,check,call,foldの6つの内のいくつか。<br />
-								返答しない場合は自動的にfoldになるので注意。<br />
-								bet/raiseする場合はレイズ額も送る必要がある。</dd>
+							<dd>可用的操作包括bet(下注)、raise(加注)、allin(全下)、check(过牌)、call(跟注)、fold(弃牌)这六种中的若干种。<br />
+								如果不回答的话，会自动变成fold，所以要注意。<br />
+								在进行bet/raise时，还需要发送加注额。</dd>
 						</dl>
 					</section>
 				</dd>
@@ -935,10 +935,10 @@
 			<dl id="OnPokerNotify">
 				<dt class="entry">OnPokerNotify</dt>
 				<dd class="entry">
-					<p>応答する必要の無いイベント。</p>
+					<p>无需响应的事件。</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>プロトコルバージョン(POKER/1.0)</dd>
+						<dd>协议版本（POKER/1.0）</dd>
 					</dl>
 					<section id="reference_OnPokerNotify">
 						<h1>POKER/1.0におけるReference1以降の追加情報</h1>
@@ -946,88 +946,88 @@
 							<dt>Reference1</dt>
 							<dd>game_start</dd>
 							<dt>Reference*</dt>
-							<dd>参加できたゴースト名</dd>
+							<dd>可参加的人格名称</dd>
 						</dl>
 						<dl class="reference">
 							<dt>Reference1</dt>
 							<dd>round_start</dd>
 							<dt>Reference2</dt>
-							<dd>ブラインドの金額</dd>
+							<dd>盲注金额</dd>
 							<dt>Reference*</dt>
-							<dd>ゴースト名(バイト値1)スタック</dd>
+							<dd>人格名称（字节值1）筹码</dd>
 						</dl>
 						<dl class="reference">
 							<dt>Reference1</dt>
 							<dd>hand</dd>
 							<dt>Reference2</dt>
-							<dd>配られたカードの情報</dd>
+							<dd>发到的牌的信息</dd>
 							<dt>Reference3</dt>
-							<dd>配られたカードの情報<br />
-								スートは頭文字(S,H,C,D)の4つのいずれか、その後に数字が続く。<br />
+							<dd>发到的牌的信息<br />
+								花色为四个之一，分别以字母（S,H,C,D）开头，后面紧跟数字。<br />
 								例:<br />
 								Reference2: S1<br />
 								Reference3: H12<br />
-								この形式はFLIPでも一緒。
+								这种格式在FLIP中也相同。
 							</dd>
 						</dl>
 						<dl class="reference">
 							<dt>Reference1</dt>
 							<dd>flip</dd>
 							<dt>Reference2</dt>
-							<dd>現在のポット</dd>
+							<dd>当前底池</dd>
 							<dt>Reference*</dt>
-							<dd>コミュニティカードの情報<br />
-								プリフロップならReference3以降は存在しない</dd>
+							<dd>公共牌信息<br />
+								如果是翻前，则Reference3及以后的选项不存在</dd>
 						</dl>
 						<dl class="reference">
 							<dt>Reference1</dt>
 							<dd>blind_bet</dd>
 							<dt>Reference2</dt>
-							<dd>強制ベットの金額<br />
-								SBやBBでの強制ベットをしたことが通知される。</dd>
+							<dd>强制下注金额<br />
+								在小盲注或大盲注位置进行强制下注时，会收到通知。</dd>
 						</dl>
 						<dl class="reference">
 							<dt>Reference1</dt>
-							<dd>bet（アクションを行ったプレイヤーとベット周りの情報。）</dd>
+							<dd>bet（进行操作的玩家及下注相关的信息。）</dd>
 							<dt>Reference2</dt>
-							<dd>現在のベット総額</dd>
+							<dd>当前总下注额</dd>
 							<dt>Reference3</dt>
-							<dd>現在のベット額</dd>
+							<dd>当前下注额</dd>
 							<dt>Reference4</dt>
-							<dd>アクションを行ったプレイヤーのゴースト名</dd>
+							<dd>进行操作的玩家的幽灵名</dd>
 							<dt>Reference5</dt>
-							<dd>行ったアクション</dd>
+							<dd>所进行的操作</dd>
 						</dl>
 						<dl class="reference">
 							<dt>Reference1</dt>
-							<dd>show_down（ショーダウン時のカード情報が送られてくる。）</dd>
+							<dd>show_down（在摊牌时会发送卡牌信息。）</dd>
 							<dt>Reference*</dt>
-							<dd>ゴースト名(バイト値1)1枚目のカード(バイト値1)2枚目のカード</dd>
+							<dd>人格名（字节值1）第一张卡牌（字节值1）第二张卡牌</dd>
 						</dl>
 						<dl class="reference">
 							<dt>Reference1</dt>
-							<dd>round_result（そのラウンドの勝者、および参加者の残りスタックの情報。）</dd>
+							<dd>round_result（该回合的胜者，以及参与者的剩余牌堆信息。）</dd>
 							<dt>Reference2</dt>
-							<dd>現在のラウンドの勝者がバイト値1区切りで入っている。</dd>
+							<dd>当前回合的胜者以字节值1为分隔符依次列出。</dd>
 							<dt>Reference*</dt>
-							<dd>ゴースト名(バイト値1)スタック<br />
-								基本的に勝者は1人だが2人以上になるケースもある。<br />
-								また、スタックが0になったのはここでしか通知しないため注意。</dd>
+							<dd>人格名（字节值1）筹码<br />
+								原则上胜者为1人，但也可能出现2人或以上的情况。<br />
+								此外，只有在此处才会通知筹码已归零，请注意。</dd>
 						</dl>
 						<dl class="reference">
 							<dt>Reference1</dt>
 							<dd>game_result</dd>
 							<dt>Reference2</dt>
-							<dd>ゲームの勝者のゴースト名</dd>
+							<dd>游戏胜者的人格名称</dd>
 						</dl>
 					</section>
 				</dd>
 			</dl>
 		</section>
 		<section class="category ghost">
-			<h1>ゴースト「フォーリナー」サプリメント「march of phantasma」</h1>
+			<h1>人格「フォーリナー」补充包「march of phantasma」</h1>
 			<ul class="caption link">
-				<li>公開元：<a href="http://rakudaya.sakura.tv/mop/beta.html">http://rakudaya.sakura.tv/mop/beta.html</a></li>
+				<li>公开源：<a href="http://rakudaya.sakura.tv/mop/beta.html">http://rakudaya.sakura.tv/mop/beta.html</a></li>
 			</ul>
 			<ul class="supported-baseware">
 				<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -1035,20 +1035,20 @@
 			<dl id="OnMopClear">
 				<dt class="entry">OnMopClear</dt>
 				<dd class="entry">
-					<p>マップクリア時に通知。</p>
+					<p>地图清除时的通知。</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>クリア時のメンバーをバイト値1区切り（固有ユニットのみ）。</dd>
+						<dd>清除时的成员以字节值1为单位分隔（仅限特殊单位）。</dd>
 						<dt>Reference1</dt>
-						<dd>クリアしたマップ名。</dd>
+						<dd>已通关的地图名称。</dd>
 					</dl>
 				</dd>
 			</dl>
 		</section>
 		<section class="category ghost">
-			<h1>ゴースト「Needle」</h1>
+			<h1>人格「Needle」</h1>
 			<ul class="caption link">
-				<li>公開元：<a href="https://ukagaka.zichqec.com/ghost/needle">https://ukagaka.zichqec.com/ghost/needle</a></li>
+				<li>公开源：<a href="https://ukagaka.zichqec.com/ghost/needle">https://ukagaka.zichqec.com/ghost/needle</a></li>
 			</ul>
 			<ul class="supported-baseware">
 				<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -1056,20 +1056,20 @@
 			<dl id="OnNeedlePoke">
 				<dt class="entry">OnNeedlePoke</dt>
 				<dd class="entry">
-					<p>Occurs when Needle "pokes" another ghost (by overlapping them). If Needle is overlapping multiple scopes simultaneously, the event will be sent once for each scope.</p>
+					<p>当Needle“戳”到另一只幽灵时触发（通过与其重叠实现）。如果Needle同时与多个范围重叠，该事件将为每个范围各发送一次。</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>The ID of the scope that was poked. 0 for the main character, 1 for the side character, 2 and onwards for additional characters.</dd>
+						<dd>被触发的范围ID。主角色为0，配角为1，后续角色从2开始。</dd>
 						<dt>Reference1</dt>
-						<dd>The name of the shell Needle is currently using.</dd>
+						<dd>Needle当前正在使用的Shell名称。</dd>
 					</dl>
 				</dd>
 			</dl>
 		</section>
 		<section class="category ghost">
-			<h1>ゴースト「Hydrate」</h1>
+			<h1>人格「Hydrate」</h1>
 			<ul class="caption link">
-				<li>公開元：<a href="https://ukagaka.zichqec.com/ghost/hydrate">https://ukagaka.zichqec.com/ghost/hydrate</a></li>
+				<li>公开源：<a href="https://ukagaka.zichqec.com/ghost/hydrate">https://ukagaka.zichqec.com/ghost/hydrate</a></li>
 			</ul>
 			<ul class="supported-baseware">
 				<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -1077,38 +1077,38 @@
 			<dl id="OnHydrateStatsNotify">
 				<dt class="entry">OnHydrateStatsNotify</dt>
 				<dd class="entry">
-					<p>Notifies information about Hydrate's current state and the user's hydration stats.</p>
+					<p>通知有关Hydrate当前状态及用户补水数据的信息。</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>The name of the shell Hydrate is currently using.</dd>
+						<dd>Hydrate 当前正在使用的 Shell 的名称。</dd>
 						<dt>Reference1</dt>
-						<dd>A list of the current dressups. This is a 2-dimensional array, where each dressup is delimited by 0xFDEF, and the category and part name of each dressup is delimited by 0x01. (Example: "Glass shape[0x01]Tall[0xFDEF]Drink[0x01]Tea")</dd>
+						<dd>当前装扮列表。这是一个二维数组，其中每个装扮以0xFDEF分隔，而每个装扮的类别和部件名称则以0x01分隔。（例如：“玻璃形状[0x01]高[0xFDEF]饮品[0x01]茶”）</dd>
 						<dt>Reference2</dt>
-						<dd>The current X scaling of the shell (as a percentage).</dd>
+						<dd>当前Shell的 X 缩放比例（以百分比表示）。</dd>
 						<dt>Reference3</dt>
-						<dd>The current Y scaling of the shell (as a percentage).</dd>
+						<dd>当前Shell的 Y 缩放比例（以百分比表示）。</dd>
 						<dt>Reference4</dt>
-						<dd>The number of drinks today.</dd>
+						<dd>今日饮水次数。</dd>
 						<dt>Reference5</dt>
-						<dd>The number of drinks in total.</dd>
+						<dd>总饮水次数。</dd>
 						<dt>Reference6</dt>
-						<dd>The current drink streak (number of drinks in a row).</dd>
+						<dd>当前饮水连击（连续饮水次数）。</dd>
 						<dt>Reference7</dt>
-						<dd>The highest ever drink streak (number of drinks in a row).</dd>
+						<dd>历史最高饮水连击（连续饮水次数）。</dd>
 						<dt>Reference8</dt>
-						<dd>The number of extra sips taken today.</dd>
+						<dd>今天额外喝的口数。</dd>
 						<dt>Reference9</dt>
-						<dd>The number of extra sips in total.</dd>
+						<dd>累计额外喝的口数。</dd>
 						<dt>Reference10</dt>
-						<dd>Whether Hydrate is minimized or not. 1 if true, 0 otherwise.</dd>
+						<dd>是否已将Hydrate降至最低。为1表示是，否则为0。</dd>
 					</dl>
 				</dd>
 			</dl>
 		</section>
 		<section class="category plugin">
-			<h1>プラグイン「バーチャルビールかけ（BeerShower）」</h1>
+			<h1>插件「バーチャルビールかけ（BeerShower）」</h1>
 			<ul class="caption link">
-				<li>公開元：<a href="http://ssp.shillest.net/">http://ssp.shillest.net/</a></li>
+				<li>公开源：<a href="http://ssp.shillest.net/">http://ssp.shillest.net/</a></li>
 			</ul>
 			<ul class="supported-baseware">
 				<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -1116,14 +1116,14 @@
 			<dl id="OnBeerShower">
 				<dt class="entry">OnBeerShower</dt>
 				<dd class="entry">
-					<p>プラグインが実行された際に発生。</p>
+					<p>在插件执行时触发。</p>
 				</dd>
 			</dl>
 		</section>
 		<section class="category plugin">
-			<h1>プラグイン「バーチャル道頓堀（TOMBORI）」</h1>
+			<h1>插件「バーチャル道頓堀（TOMBORI）」</h1>
 			<ul class="caption link">
-				<li>公開元：<a href="http://ssp.shillest.net/">http://ssp.shillest.net/</a></li>
+				<li>公开源：<a href="http://ssp.shillest.net/">http://ssp.shillest.net/</a></li>
 			</ul>
 			<ul class="supported-baseware">
 				<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -1131,18 +1131,18 @@
 			<dl id="OnDive">
 				<dt class="entry">OnDive</dt>
 				<dd class="entry">
-					<p>プラグインが実行された際に発生。</p>
+					<p>在插件执行时触发。</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>飛び込む先（道頓堀）</dd>
+						<dd>跳入的地点（道頓堀）</dd>
 					</dl>
 				</dd>
 			</dl>
 		</section>
 		<section class="category plugin">
-			<h1>プラグイン「実体化（HitThunder）」</h1>
+			<h1>插件「実体化（HitThunder）」</h1>
 			<ul class="caption link">
-				<li>公開元：<a href="http://ssp.shillest.net/">http://ssp.shillest.net/</a></li>
+				<li>公开源：<a href="http://ssp.shillest.net/">http://ssp.shillest.net/</a></li>
 			</ul>
 			<ul class="supported-baseware">
 				<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -1150,14 +1150,14 @@
 			<dl id="OnHitThunder">
 				<dt class="entry">OnHitThunder</dt>
 				<dd class="entry">
-					<p>プラグインが実行された際に発生。</p>
+					<p>在插件执行时触发。</p>
 				</dd>
 			</dl>
 		</section>
 		<section class="category plugin">
-			<h1>プラグイン「スタンプ帳」</h1>
+			<h1>插件「スタンプ帳」</h1>
 			<ul class="caption link">
-				<li>公開元：<a href="http://navy.nm.land.to/post/">http://navy.nm.land.to/post/</a></li>
+				<li>公开源：<a href="http://navy.nm.land.to/post/">http://navy.nm.land.to/post/</a></li>
 			</ul>
 			<ul class="supported-baseware">
 				<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -1165,46 +1165,46 @@
 			<dl id="OnStampInfo">
 				<dt class="entry">OnStampInfo</dt>
 				<dd class="entry">
-					<p>スタンプに関する情報を通知するイベント。<br />ゴースト起動時、プラグインのロード・アンロードおよびOnStampInfoCallを送信した任意のタイミングで発生。</p>
+					<p>通知与印章相关的信息的事件。<br />在人格启动时，可在插件加载、卸载以及任意时刻发送OnStampInfoCall时触发。</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>スタンプ総数。</dd>
+						<dd>印章总数。</dd>
 						<dt>Reference1</dt>
-						<dd>当該ゴーストのスタンプが存在するか否か。あれば1、なければ0。<br />複数ゴースト起動していると信用性が薄くなるので、確実に知りたい場合はOnStampInfoCallによって当イベントを能動的に発生させる事が推奨される。</dd>
+						<dd>该人格是否存在印章。存在则为1，不存在则为0。<br />如果同时启动了多个人格，通知的可信度会变低，所以如果想准确知道，推荐通过OnStampInfoCall主动触发本事件。</dd>
 						<dt>Reference2</dt>
-						<dd>プラグインのパス。</dd>
+						<dd>插件的路径。</dd>
 						<dt>Reference3</dt>
-						<dd>全スタンプ情報。ゴースト名・スタンプ画像ファイル名・スタンプのタイトル・スタンプのコメント・スタンプを押した時刻がバイト値１区切りで、それがスタンプの数だけ各セットバイト値２区切りで入っている。</dd>
+						<dd>全部印章信息。人格名、印章图像文件名、印章标题、印章评论、按下印章的时刻以字节值1分隔，并且按印章数量重复这些内容，每个集合之间以字节值2分隔。</dd>
 						<dt>Reference4</dt>
-						<dd>このプラグインが動いていれば1、さもなくば0。</dd>
+						<dd>如果此插件正在运行则为1，否则为0。</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnStampAdd">
 				<dt class="entry">OnStampAdd</dt>
 				<dd class="entry">
-					<p>スタンプを押すためにraisepluginでスタンプ帳へ送信するイベント。</p>
+					<p>用于通过raiseplugin向印章簿发送消息的事件，以触发印章操作。</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>スタンプの画像ファイルのパス。</dd>
+						<dd>印章图像文件的路径。</dd>
 						<dt>Reference1</dt>
-						<dd>スタンプのタイトル。<br />さくらスクリプトを含まない文字列（除去される）を指定。<br />省略可。</dd>
+						<dd>图章标题。<br />指定不含樱花脚本的字符串（将被移除）。<br />可省略。</dd>
 						<dt>Reference2</dt>
-						<dd>スタンプのコメント。<br />さくらスクリプトを含まない文字列（除去される）を指定。<br />&lt;br&gt;（&lt;BR&gt;、＜br＞、＜BR＞）で改行可能。<br />省略可。</dd>
+						<dd>印章评论。<br />指定不含樱花脚本的字符串（将被移除）。<br />&lt;br&gt;（&lt;BR&gt;、＜br＞、＜BR＞）可用于换行。<br />可省略。</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnStampInfoCall">
 				<dt class="entry">OnStampInfoCall</dt>
 				<dd class="entry">
-					<p>OnStampInfoをゴースト側から任意のタイミングで発生させたい場合に、raisepluginでスタンプ帳へ送信するイベント。</p>
+					<p>当希望从人格端在任意时机触发OnStampInfo时，可通过raiseplugin向印章簿发送的事件。</p>
 				</dd>
 			</dl>
 		</section>
 		<section class="category plugin">
-			<h1>プラグイン「芋スコープ」</h1>
+			<h1>插件「芋スコープ」</h1>
 			<ul class="caption link">
-				<li>公開元：<a href="http://rakudaya.sakura.tv/htc.html">http://rakudaya.sakura.tv/htc.html</a></li>
+				<li>公开源：<a href="http://rakudaya.sakura.tv/htc.html">http://rakudaya.sakura.tv/htc.html</a></li>
 			</ul>
 			<ul class="supported-baseware">
 				<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -1212,37 +1212,37 @@
 			<dl id="OnPotatoReturn">
 				<dt class="entry">OnPotatoReturn</dt>
 				<dd class="entry">
-					<p>フォルダ指定が正常で、セーブファイルが無事に見つかった場合に発生。</p>
+					<p>当文件夹指定正常且存档文件成功找到时触发。</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>要求した変数名をカンマ区切りで繋いだもの（&lt;変数1&gt;,&lt;変数2&gt;...）</dd>
+						<dd>以逗号分隔连接所请求的变量名（&lt;变量1&gt;,&lt;变量2&gt;...）</dd>
 						<dt>Reference*</dt>
-						<dd>1以降、各変数の値</dd>
+						<dd>从1开始，各变量的值</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnPotatoFileNotFound">
 				<dt class="entry">OnPotatoFileNotFound</dt>
 				<dd class="entry">
-					<p>フォルダ指定は正常だがセーブファイルが見つからなかった場合に発生。</p>
+					<p>当文件夹指定正常但未找到保存文件时触发。</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>要求した変数名をカンマ区切りで繋いだもの（&lt;変数1&gt;,&lt;変数2&gt;...）</dd>
+						<dd>以逗号分隔连接所请求的变量名（&lt;变量1&gt;,&lt;变量2&gt;...）</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnPotatoError">
 				<dt class="entry">OnPotatoError</dt>
 				<dd class="entry">
-					<p>フォルダ指定が間違っている、又は動作対象外のSHIORIだった場合に発生。</p>
+					<p>当文件夹指定错误，或目标对象为不受支持的SHIORI时触发。</p>
 				</dd>
 			</dl>
 		</section>
 		<section class="category plugin">
-			<h1>プラグイン「CrystalDiskInfo Event PLUGIN」</h1>
+			<h1>插件「CrystalDiskInfo Event PLUGIN」</h1>
 			<ul class="caption link">
-				<li>公開元：<a href="http://ssp.shillest.net/">http://ssp.shillest.net/</a></li>
-				<li>関連：<a href="https://crystalmark.info/ja/software/crystaldiskinfo/">https://crystalmark.info/ja/software/crystaldiskinfo/</a></li>
+				<li>公开源：<a href="http://ssp.shillest.net/">http://ssp.shillest.net/</a></li>
+				<li>相关：<a href="https://crystalmark.info/ja/software/crystaldiskinfo/">https://crystalmark.info/ja/software/crystaldiskinfo/</a></li>
 			</ul>
 			<ul class="supported-baseware">
 				<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -1250,26 +1250,26 @@
 			<dl id="OnCrystalDiskInfoEvent">
 				<dt class="entry">OnCrystalDiskInfoEvent</dt>
 				<dd class="entry">
-					<p>ゴースト起動時に情報がある場合/情報が更新されたに発生。</p>
+					<p>在人格启动时，当存在相关信息或信息已更新时触发。</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>ディスク群全体のステータス（＝最も悪いものの情報）と、更新日付。<br />カンマ区切りで、「(Good|Caution|Bad|Unknown),YYYY,NN,DD,HH,MM,SS」のように入る。</dd>
+						<dd>整个磁盘群的状态（＝其中状态最差的那个的信息）以及更新日期。<br />以逗号分隔，按“(Good|Caution|Bad|Unknown),YYYY,NN,DD,HH,MM,SS”这样的形式填入。</dd>
 						<dt>Reference*</dt>
-						<dd>ディスク個別ステータス。<br />カンマ区切りで、マシン名,存在するディスク,全体のステータス,容量,摂氏温度,温度警告</dd>
+						<dd>单个磁盘的状态。<br />以逗号分隔，依次为机器名、存在的磁盘、整体状态、容量、摄氏温度、温度警告</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnCrystalDiskInfoClear">
 				<dt class="entry">OnCrystalDiskInfoClear</dt>
 				<dd class="entry">
-					<p>今まで情報があったのに消えてしまった場合に発生。<br />CrystalDiskInfoが終了した場合など。</p>
+					<p>当原本存在信息却突然消失时触发。<br />例如CrystalDiskInfo已退出时。</p>
 				</dd>
 			</dl>
 		</section>
 		<section class="category plugin">
-			<h1>プラグイン「Weather Station」</h1>
+			<h1>插件「Weather Station」</h1>
 			<ul class="caption link">
-				<li>公開元：<a href="https://ukagaka.zichqec.com/plugin/weather_station">https://ukagaka.zichqec.com/plugin/weather_station</a></li>
+				<li>公开源：<a href="https://ukagaka.zichqec.com/plugin/weather_station">https://ukagaka.zichqec.com/plugin/weather_station</a></li>
 			</ul>
 			<ul class="supported-baseware">
 				<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -1277,160 +1277,161 @@
 			<dl id="OnWeatherStation.Weather">
 				<dt class="entry">OnWeatherStation.Weather</dt>
 				<dd class="entry">
-					<p>Sends information about the current weather conditions to all open ghosts. This event occurs every hour, every time another ghost boots, and any time any ghost requests it with \![raiseplugin].</p>
+					<p>将当前天气状况信息发送给所有已激活的人格。此事件每小时触发一次，每次有其他人格启动时也会触发，以及任何人格通过\![raiseplugin]请求时也会触发。</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>Weather condition. <a href="#caption_weather_station_conditions">※See below</a> for a list of possible weather conditions.</dd>
+						<dd>天气状况。 <a href="#caption_weather_station_conditions">※请参阅下方</a> 以获取可能的天气状况列表。</dd>
 						<dt>Reference1</dt>
-						<dd>Weather condition icon filename. To be used with weatherapi's <a href="https://cdn.weatherapi.com/weather.zip">weather icon pack</a>.</dd>
+						<dd>天气状况图标文件名。用于weatherapi的<a href="https://cdn.weatherapi.com/weather.zip">天气图标包</a>。</dd>
 						<dt>Reference2</dt>
-						<dd>Weather condition code. <a href="#caption_weather_station_conditions">※See below</a> for a list of possible weather condition codes.</dd>
+						<dd>天气状况代码。<a href="#caption_weather_station_conditions">※请参阅下方</a> 以获取可能的天气状况代码列表。</dd>
 						<dt>Reference3</dt>
-						<dd>If it is daytime or not. 1 if the sun is up, 0 if the sun is down.</dd>
+						<dd>是否为白天。太阳升起时为1，太阳落下时为0。</dd>
 						<dt>Reference4</dt>
-						<dd>Temperature in Fahrenheit.</dd>
+						<dd>华氏温度。</dd>
 						<dt>Reference5</dt>
-						<dd>Temperature in Celsius.</dd>
+						<dd>摄氏温度</dd>
 						<dt>Reference6</dt>
-						<dd>"Feels like" temperature in Fahrenheit.</dd>
+						<dd>华氏温度下的“体感温度”。</dd>
 						<dt>Reference7</dt>
-						<dd>"Feels like" temperature in Celsius.</dd>
+						<dd>摄氏温度下的“体感温度”。</dd>
 						<dt>Reference8</dt>
-						<dd>Humidity as a percentage.</dd>
+						<dd>湿度，以百分比表示。</dd>
 						<dt>Reference9</dt>
-						<dd>Wind speed in miles per hour.</dd>
+						<dd>风速，单位为英里/小时。</dd>
 						<dt>Reference10</dt>
-						<dd>Wind speed in kilometers per hour.</dd>
+						<dd>风速，单位为公里每小时。</dd>
 						<dt>Reference11</dt>
-						<dd>Wind direction as a 16 point compass. (e.g.: NNE for north/northeast.)</dd>
+						<dd>风向，以16点罗盘表示。（例如：NNE表示北北东。）</dd>
 						<dt>Reference12</dt>
-						<dd>Wind direction in degrees.</dd>
+						<dd>风向，单位为度。</dd>
 						<dt>Reference13</dt>
-						<dd>Wind gust speed in miles per hour.</dd>
+						<dd>阵风风速，单位为英里/小时。</dd>
 						<dt>Reference14</dt>
-						<dd>Wind gust speed in kilometers per hour.</dd>
+						<dd>阵风风速，单位为公里/小时。</dd>
 						<dt>Reference15</dt>
-						<dd>Precipitation in inches.</dd>
+						<dd>降水量，单位：英寸。</dd>
 						<dt>Reference16</dt>
-						<dd>Precipitation in millimeters.</dd>
+						<dd>降水量，单位：毫米。</dd>
 						<dt>Reference17</dt>
-						<dd>Cloud cover as a percentage.</dd>
+						<dd>云量，单位：百分比。</dd>
 						<dt>Reference18</dt>
-						<dd>"Will it rain today". 1 for yes, 0 for no. Same information as the "Will it rain today" in OnWeatherStation.Forecast.Day.</dd>
+						<dd>“今天会下雨吗”。1表示会，0表示不会。与OnWeatherStation.Forecast.Day中的“今天会下雨吗”信息相同。</dd>
 						<dt>Reference19</dt>
-						<dd>Chance of rain today, as a percentage. Same information as the chance of rain in OnWeatherStation.Forecast.Day.</dd>
+						<dd>今日降雨概率，以百分比表示。与OnWeatherStation.Forecast.Day中的降雨概率信息相同。</dd>
 						<dt>Reference20</dt>
-						<dd>"Will it snow today". 1 for yes, 0 for no. Same information as the "Will it snow today" in OnWeatherStation.Forecast.Day.</dd>
+						<dd>“今天会下雪吗”。1表示会，0表示不会。与OnWeatherStation.Forecast.Day中的“今天会下雪吗”信息相同。</dd>
 						<dt>Reference21</dt>
-						<dd>Chance of snow today, as a percentage. Same information as the chance of snow in OnWeatherStation.Forecast.Day.</dd>
+						<dd>今日降雪概率，以百分比表示。与OnWeatherStation.Forecast.Day中的降雪概率信息相同。</dd>
 						<dt>Reference22</dt>
-						<dd>Visibility in miles.</dd>
+						<dd>能见度，单位：英里。</dd>
 						<dt>Reference23</dt>
-						<dd>Visibility in kilometers.</dd>
+						<dd>能见度，单位：公里。</dd>
 						<dt>Reference24</dt>
-						<dd>Pressure in inches.</dd>
+						<dd>气压，单位：英寸汞柱。</dd>
 						<dt>Reference25</dt>
-						<dd>Pressure in millibars.</dd>
+						<dd>气压，单位：毫巴。</dd>
 						<dt>Reference26</dt>
-						<dd>UV index.</dd>
+						<dd>紫外线指数。</dd>
 						<dt>Reference27</dt>
-						<dd>CO (Carbon Monoxide) in μg/m3 (Micrograms per cubic meter).</dd>
+						<dd>CO（一氧化碳）浓度，单位：μg/m³（微克/立方米）。</dd>
 						<dt>Reference28</dt>
-						<dd>O3 (Ozone) in μg/m3 (Micrograms per cubic meter).</dd>
+						<dd>O₃（臭氧）浓度，单位：μg/m³（微克/立方米）。</dd>
 						<dt>Reference29</dt>
-						<dd>NO2 (Nitrogen Dioxide) in μg/m3 (Micrograms per cubic meter).</dd>
+						<dd>NO₂（二氧化氮）浓度，单位：μg/m³（微克/立方米）。</dd>
 						<dt>Reference30</dt>
-						<dd>SO2 (Sulfur Dioxide) in μg/m3 (Micrograms per cubic meter).</dd>
+						<dd>SO₂（二氧化硫）浓度，单位：μg/m³（微克/立方米）。</dd>
 						<dt>Reference31</dt>
-						<dd>PM2.5 (Particulate Matter smaller than 2.5 microns in diameter) in μg/m3 (Micrograms per cubic meter).</dd>
+						<dd>PM2.5（直径小于2.5微米的颗粒物）浓度，单位：μg/m³（微克/立方米）。</dd>
 						<dt>Reference32</dt>
-						<dd>PM10 (Particulate Matter smaller than 10 microns in diameter) in μg/m3 (Micrograms per cubic meter).</dd>
+						<dd>PM10（直径小于10微米的颗粒物）浓度，单位：μg/m³（微克/立方米）。</dd>
 						<dt>Reference33</dt>
-						<dd>US EPA index. 1 means Good, 2 means Moderate, 3 means Unhealthy for sensitive group, 4 means Unhealthy, 5 means Very unhealthy, 6 means Hazardous.</dd>
+						<dd>国环保署指数。1表示良好，2表示中等，3表示对敏感人群不健康，4表示不健康，5表示非常不健康，6表示危险。</dd>
 						<dt>Reference34</dt>
-						<dd>UK Defra Index. <a href="#caption_weather_station_uk_defra_index">※See details</a> below.</dd>
+						<dd>英国Defra指数。 <a href="#caption_weather_station_uk_defra_index">※详情请见下方</a>。</dd>
 						<dt>Reference35</dt>
-						<dd>The user's choice of units (Imperial or Metric).</dd>
+						<dd>用户选择的单位制（英制或公制）。</dd>
 						<dt>Reference36</dt>
-						<dd>The time the plugin last updated the weather data, in seconds since EPOCH (1970/1/1 00:00:00).</dd>
+						<dd>插件上次更新天气数据的时间，以自EPOCH（1970年1月1日00:00:00）以来的秒数表示。</dd>
 						<dt>Reference37</dt>
-						<dd>The current version number of the plugin.</dd>
+						<dd>插件的当前版本号。</dd>
 						<dt>Reference38</dt>
-						<dd>&lt;Deprecated&gt;</dd>
+						<dd>&lt;已弃用&gt;</dd>
 						<dt>Reference39</dt>
-						<dd>&lt;Deprecated&gt;</dd>
+						<dd>&lt;已弃用&gt;</dd>
 						<dt>Reference40</dt>
-						<dd>&lt;Deprecated&gt;</dd>
+						<dd>&lt;已弃用&gt;</dd>
 						<dt>Reference41</dt>
-						<dd>&lt;Deprecated&gt;</dd>
+						<dd>&lt;已弃用&gt;</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnWeatherStation.Astro">
 				<dt class="entry">OnWeatherStation.Astro</dt>
 				<dd class="entry">
-					<p>Sends information about the sun and moon to all open ghosts. Must be called with \![raiseplugin]. An additional argument can be sent to specify which day's data should be sent. 0 for today, 1 for tomorrow, 2 for the day after tomorrow. If no argument is given, it will default to today.</p>
+					<p>向所有已打开的人格发送有关太阳和月亮的信息。必须使用 \![raiseplugin] 调用。还可额外传入一个参数，用于指定发送哪一天的数据：0 表示今天，1 表示明天，2 表示后天。若未提供参数，则默认为今天。</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>The day the following information is for. 0 for today, 1 for tomorrow, 2 for the day after tomorrow.</dd>
+						<dd>以下信息所对应的日期。0 表示今天，1 表示明天，2 表示后天。</dd>
 						<dt>Reference1</dt>
-						<dd>Sunrise time, given as 12 hour time with the format ##:## *M</dd>
+						<dd>日出时间，以12小时制表示，格式为##:## *M</dd>
 						<dt>Reference2</dt>
-						<dd>Sunset time, given as 12 hour time with the format ##:## *M</dd>
+						<dd>日落时间，以12小时制表示，格式为##:## *M</dd>
 						<dt>Reference3</dt>
-						<dd>Moonrise time, given as 12 hour time with the format ##:## *M</dd>
+						<dd>月出时间，以12小时制表示，格式为##:## *M</dd>
 						<dt>Reference4</dt>
-						<dd>Moonset time, given as 12 hour time with the format ##:## *M</dd>
+						<dd>月落时间，以12小时制表示，格式为##:## *M</dd>
 						<dt>Reference5</dt>
-						<dd>Sunrise time, given as 24 hour time with the format ##:##</dd>
+						<dd>日出时间，以24小时制表示，格式为##:##</dd>
 						<dt>Reference6</dt>
-						<dd>Sunset time, given as 24 hour time with the format ##:##</dd>
+						<dd>日落时间，以24小时制表示，格式为##:##</dd>
 						<dt>Reference7</dt>
-						<dd>Moonrise time, given as 24 hour time with the format ##:##</dd>
+						<dd>月出时间，以24小时制表示，格式为##:##</dd>
 						<dt>Reference8</dt>
-						<dd>Moonset time, given as 24 hour time with the format ##:##</dd>
+						<dd>月落时间，以24小时制表示，格式为##:##</dd>
 						<dt>Reference9</dt>
-						<dd>Moon phase as a string. Can be "New Moon", "Waxing Crescent". "First Quarter", "Waxing Gibbous", "Full Moon", "Waning Gibbous", "Last Quarter", or "Waning Crescent".</dd>
+						<dd>月相（以字符串表示）。可以是 "New Moon"（新月）、"Waxing Crescent"（蛾眉月）、"First Quarter"（上弦月）、"Waxing Gibbous"（盈凸月）、"Full Moon"（满月）、"Waning Gibbous"（亏凸月）、"Last Quarter"（下弦月）或 "Waning Crescent"（残月）。</dd>
 						<dt>Reference10</dt>
-						<dd>Moon phase number. Numbers correspond to the following phases.
+						<dd>月相的数字编号。数字对应以下各相。
 						<ul>
-							<li>0 - New Moon</li>
-							<li>1 - Waxing Crescent</li>
-							<li>2 - First Quarter</li>
-							<li>3 - Waxing Gibbous</li>
-							<li>4 - Full Moon</li>
-							<li>5 - Waning Gibbous</li>
-							<li>6 - Last Quarter</li>
-							<li>7 - Waning Crescent</li>
+							<li>0 - New Moon（新月）</li>
+							<li>1 - Waxing Crescent（蛾眉月）</li>
+							<li>2 - First Quarter（上弦月）</li>
+							<li>3 - Waxing Gibbous（盈凸月）</li>
+							<li>4 - Full Moon（满月）</li>
+							<li>5 - Waning Gibbous（亏凸月）</li>
+							<li>6 - Last Quarter（下弦月）</li>
+							<li>7 - Waning Crescent（残月）</li>
 						</ul>
 						</dd>
 						<dt>Reference11</dt>
-						<dd>Moon illumination as a percentage.</dd>
+						<dd>月球照度，以百分比表示。</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnWeatherStation.Alerts">
 				<dt class="entry">OnWeatherStation.Alerts</dt>
 				<dd class="entry">
-					<p>Sends information about weather alerts to all open ghosts. Must be called with \![raiseplugin]. Will return nothing if there are no alerts.</p>
+					<p>向所有已打开的人格发送天气警报信息。必须使用\![raiseplugin]调用。如果没有警报，则不返回任何内容。</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>An array containing information for a weather alert. Some elements may not be filled. Elements are separated by a 1 byte value.
+						<dd>一个包含天气预警信息的数组。部分元素可能未填写。各元素之间以1字节值分隔。
 						<ul>
 							<!--I have no idea what a lot of these mean! If anyone else knows please feel free to detail it.-->
-							<li>[0] - Headline</li>
-							<li>[1] - Type of alert</li>
-							<li>[2] - Severity</li>
-							<li>[3] - Urgency</li>
-							<li>[4] - Areas covered</li>
-							<li>[5] - Category</li>
-							<li>[6] - Certainty</li>
-							<li>[7] - Event</li>
-							<li>[8] - Note</li>
-							<li>[9] - Effective time</li>
-							<li>[10] - Expires time</li>
-							<li>[11] - Description</li>
-							<li>[12] - Instructions</li>
+							<!--这些里面好多我都不懂是什么意思！如果有别人知道，欢迎随时详细说明一下。-->
+							<li>[0] - Headline(标题)</li>
+							<li>[1] - Type of alert(警报类型)</li>
+							<li>[2] - Severity(严重程度)</li>
+							<li>[3] - Urgency(紧急程度)</li>
+							<li>[4] - Areas covered(覆盖区域)</li>
+							<li>[5] - Category(类别)</li>
+							<li>[6] - Certainty(确定性)</li>
+							<li>[7] - Event(事件)</li>
+							<li>[8] - Note(备注)</li>
+							<li>[9] - Effective time(生效时间)</li>
+							<li>[10] - Expires time(失效时间)</li>
+							<li>[11] - Description(描述)</li>
+							<li>[12] - Instructions(指示)</li>
 						</ul>
 						</dd>
 					</dl>
@@ -1439,316 +1440,317 @@
 			<dl id="OnWeatherStation.Forecast.Day">
 				<dt class="entry">OnWeatherStation.Forecast.Day</dt>
 				<dd class="entry">
-					<p>Sends information about the overall forecast for a day to all open ghosts. Must be called with \![raiseplugin]. An additional argument can be sent to specify which day's data should be sent. 0 for today, 1 for tomorrow, 2 for the day after tomorrow. If no argument is given, it will default to today.</p>
+					<p>向所有处于打开状态的人格发送当天的总体预测信息。必须配合\![raiseplugin]调用。还可额外传入一个参数，用于指定要发送哪一天的数据：0 表示今天，1 表示明天，2 表示后天。如果未提供参数，将默认为今天。</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>The day the following information is for. 0 for today, 1 for tomorrow, 2 for the day after tomorrow.</dd>
+						<dd>以下信息所对应的日期。0 表示今天，1 表示明天，2 表示后天。</dd>
 						<dt>Reference1</dt>
-						<dd>Maximum temperature for the day, in Fahrenheit.</dd>
+						<dd>当日最高气温，单位：华氏度。</dd>
 						<dt>Reference2</dt>
-						<dd>Maximum temperature for the day, in Celsius.</dd>
+						<dd>当日最高气温，单位：摄氏度。</dd>
 						<dt>Reference3</dt>
-						<dd>Minimum temperature for the day, in Fahrenheit.</dd>
+						<dd>当日最低气温，单位：华氏度。</dd>
 						<dt>Reference4</dt>
-						<dd>Minimum temperature for the day, in Celsius.</dd>
+						<dd>当日最低气温，单位：摄氏度。</dd>
 						<dt>Reference5</dt>
-						<dd>Average temperature for the day, in Fahrenheit.</dd>
+						<dd>当日平均气温，单位：华氏度。</dd>
 						<dt>Reference6</dt>
-						<dd>Average temperature for the day, in Celsius.</dd>
+						<dd>当日平均气温，单位：摄氏度。</dd>
 						<dt>Reference7</dt>
-						<dd>Average humidity for the day, as a percentage.</dd>
+						<dd>当日平均湿度，单位：百分比。</dd>
 						<dt>Reference8</dt>
-						<dd>Maximum windspeed for the day, in mph.</dd>
+						<dd>当日最大风速，单位：英里/小时。</dd>
 						<dt>Reference9</dt>
-						<dd>Maximum windspeed for the day, in kph.</dd>
+						<dd>当日最大风速，单位：公里/小时。</dd>
 						<dt>Reference10</dt>
-						<dd>Total precipitation for the day, in inches.</dd>
+						<dd>当日总降水量，单位：英寸。</dd>
 						<dt>Reference11</dt>
-						<dd>Total precipitation for the day, in millimeters.</dd>
+						<dd>当日总降水量，单位为毫米。</dd>
 						<dt>Reference12</dt>
-						<dd>"Will it rain this day", 1 if yes, 0 if no.</dd>
+						<dd>“当天是否降雨”，是则为1，否则为0。</dd>
 						<dt>Reference13</dt>
-						<dd>Chance that it will rain this day, as a percentage.</dd>
+						<dd>当天降雨概率，以百分比表示。</dd>
 						<dt>Reference14</dt>
-						<dd>"Will it snow this day", 1 if yes, 0 if no.</dd>
+						<dd>"当天会下雪吗"，1表示会，0表示不会。</dd>
 						<dt>Reference15</dt>
-						<dd>Chance that it will snow this day, as a percentage.</dd>
+						<dd>当天降雪概率，以百分比表示。</dd>
 						<dt>Reference16</dt>
-						<dd>Average visiblity for the day, in miles.</dd>
+						<dd>当日平均能见度，单位：英里。</dd>
 						<dt>Reference17</dt>
-						<dd>Average visiblity for the day, in kilometers.</dd>
+						<dd>当日平均能见度，单位：公里。</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnWeatherStation.Forecast.Hourly">
 				<dt class="entry">OnWeatherStation.Forecast.Hourly</dt>
 				<dd class="entry">
-					<p>Sends information about the hour-by-hour forecast for a day to all open ghosts. Must be called with \![raiseplugin]. An additional argument can be sent to specify which day's data should be sent. 0 for today, 1 for tomorrow, 2 for the day after tomorrow. If no argument is given, it will default to today.</p>
+					<p>向所有已打开的人格发送某一天逐小时预报的相关信息。必须使用\![raiseplugin]调用。还可额外传入一个参数，用于指定要发送哪一天的数据：0表示今天，1表示明天，2表示后天。如果未提供参数，将默认为今天。</p>
 					<dl class="reference">
 						<dt>Reference0～23</dt>
-						<dd>A comma separated array containing forecast information. The number of the reference corresponds to the number of the hour the data is for, in 24 hour time (e.g.: reference0 is for 00:00/12AM, reference14 is for 14:00/2PM).
+						<dd>一个以逗号分隔的数组，包含预报信息。其中的编号对应数据所对应的小时数，采用24小时制（例如：reference0表示00:00/12AM，reference14表示14:00/2PM）。
 						<ul>
-							<li>[0] - Date and time the information is for.</li>
-							<li>[1] - "Is it daytime". 1 if the sun is up, 0 if the sun is down.</li>
-							<li>[2] - Temperature in Fahrenheit.</li>
-							<li>[3] - Temperature in Celsius.</li>
-							<li>[4] - "Feels like" temperature in Fahrenheit.</li>
-							<li>[5] - "Feels like" temperature in Celsius.</li>
-							<li>[6] - Humidity as a percentage.</li>
-							<li>[7] - Wind speed in miles per hour.</li>
-							<li>[8] - Wind speed in kilometers per hour.</li>
-							<li>[9] - Wind direction as a 16 point compass (e.g.: NNW for north/northwest).</li>
-							<li>[10] - Wind direction in degrees.</li>
-							<li>[11] - Wind gusts in miles per hour.</li>
-							<li>[12] - Wind gusts in kilometers per hour.</li>
-							<li>[13] - Precipitation in inches.</li>
-							<li>[14] - Precipitation in millimeters.</li>
-							<li>[15] - Cloud cover as a percentage.</li>
-							<li>[16] - "Will it rain", 1 if yes, 0 if no.</li>
-							<li>[17] - Chance of rain as a percentage.</li>
-							<li>[18] - "Will it snow", 1 if yes, 0 if no.</li>
-							<li>[19] - Chance of snow as a percentage.</li>
-							<li>[20] - Visibility in miles.</li>
-							<li>[21] - Visibility in kilometers.</li>
-							<li>[22] - Wind chill in Fahrenheit.</li>
-							<li>[23] - Wind chill in Celsius.</li>
-							<li>[24] - Heat index in Fahrenheit.</li>
-							<li>[25] - Heat index in Celsius.</li>
-							<li>[26] - Dew point in Fahrenheit.</li>
-							<li>[27] - Dew point in Celsius.</li>
-							<li>[28] - Pressure in inches.</li>
-							<li>[29] - Pressure in millibars.</li>
-							<li>[30] - UV index.</li>
+							<li>[0] - 信息所对应的时间日期。</li>
+							<li>[1] - "是否为白天"。太阳升起时为1，太阳落下时为0。</li>
+							<li>[2] - 华氏度。</li>
+							<li>[3] - 摄氏度。</li>
+							<li>[4] - 华氏度的“体感温度”。</li>
+							<li>[5] - 摄氏度下的“体感温度”。</li>
+							<li>[6] - 湿度，以百分比表示。</li>
+							<li>[7] - 风速，单位：英里/小时。</li>
+							<li>[8] - 风速，单位：公里/小时。</li>
+							<li>[9] - 风向，以16点罗盘表示（例如：NNW表示北北西方向）</li>
+							<li>[10] - 风向，单位：度。</li>
+							<li>[11] - 阵风风速，单位：英里/小时。</li>
+							<li>[12] - 阵风风速，单位：公里/小时。</li>
+							<li>[13] - 降水量，单位：英寸。</li>
+							<li>[14] - 降水量，单位：毫米。</li>
+							<li>[15] - 云量，单位：百分比。</li>
+							<li>[16] - “会下雨吗”，1表示会，0表示不会。</li>
+							<li>[17] - 降雨概率，单位：百分比。</li>
+							<li>[18] - “会下雪吗”，是则为1，否则为0。</li>
+							<li>[19] - 降雪概率，以百分比表示。</li>
+							<li>[20] - 能见度，单位：英里。</li>
+							<li>[21] - 能见度，单位：公里。</li>
+							<li>[22] - 风寒指数，单位：华氏度。</li>
+							<li>[23] - 风寒指数，单位：摄氏度。</li>
+							<li>[24] - 炎热指数，单位：华氏度。</li>
+							<li>[25] - 炎热指数，单位：摄氏度。</li>
+							<li>[26] - 露点，单位：华氏度。</li>
+							<li>[27] - 露点，单位：摄氏度。</li>
+							<li>[28] - 气压，单位：英寸汞柱。</li>
+							<li>[29] - 气压，单位：毫巴。</li>
+							<li>[30] - 紫外线指数。</li>
 						</ul>
 						</dd>
 						<dt>Reference24</dt>
-						<dd>The day the preceding information is for. 0 for today, 1 for tomorrow, 2 for the day after tomorrow.</dd>
+						<dd>上述信息所对应的日子。0表示今天，1表示明天，2表示后天。</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnWeatherStation.Error">
 				<dt class="entry">OnWeatherStation.Error</dt>
 				<dd class="entry">
-					<p>Sends error information to all open ghosts. This event is sent in place of the previous events if there is an error of any kind.</p>
+					<p>向所有已打开的人格发送错误信息。若发生任何类型的错误，此事件将替代之前的事件发送。</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>The error message. <a href="#caption_weather_station_errors">※See below</a> for possible error messages.</dd>
+						<dd>错误信息。 <a href="#caption_weather_station_errors">※请参阅下方</a>以了解可能的错误信息。</dd>
 						<dt>Reference1</dt>
-						<dd>A more descriptive error message, provided by weatherapi.com. <em>These error messages do not match the online documentation for weatherapi and should not be used for identifying errors.</em></dd>
+						<dd>由 weatherapi.com 提供的更具描述性的错误信息。<em>这些错误信息与 weatherapi 的在线文档不一致，不应用于识别错误。</em></dd>
 						<dt>Reference2</dt>
-						<dd>The error code, as listed on weatherapi.com's documentation.</dd>
+						<dd>错误代码，如weatherapi.com文档中所列。</dd>
 						<dt>Reference3</dt>
-						<dd>The time the plugin last attempted to update the weather data, in seconds since EPOCH (1970/1/1 00:00:00).</dd>
+						<dd>插件上次尝试更新天气数据的时间，以自EPOCH（1970年1月1日00:00:00）以来的秒数表示。</dd>
 						<dt>Reference4</dt>
-						<dd>The current version number of the plugin.</dd>
+						<dd>插件的当前版本号。</dd>
 						<dt>Reference5</dt>
-						<dd>1 if there is a plugin update available, 0 otherwise. If the user is offline, this will always be 0.</dd>
+						<dd>1 表示有可用的插件更新，否则为 0。如果用户处于离线状态，此值始终为 0。</dd>
 					</dl>
 				</dd>
 			</dl>
 			<div class="caption" id="caption_weather_station_conditions">
-				<h1>Weather Condition & Code List</h1>
-				<p>A list of conditions can be downloaded from <a href="https://www.weatherapi.com/docs/">weatherapi's documentation page</a>. This list is also available in other languages, but information from the plugin will always be sent in english.</p>
+				<h1>天气状况与代码列表</h1>
+				<p>状况列表可从<a href="https://www.weatherapi.com/docs/">weatherapi的文档页面</a>下载。该列表亦提供其他语言版本，但插件发送的信息始终以英文呈现。</p>
 				<dl>
 					<dt>1000</dt>
 					<dd>
 						Sunny (If the sun is down, it will be "Clear" instead.)
+						<br />Sunny 晴朗（如果太阳已落山，则显示为“Clear”）
 					</dd>
 					<dt>1003</dt>
 					<dd>
-						Partly cloudy
+						Partly cloudy 局部多云
 					</dd>
 					<dt>1006</dt>
 					<dd>
-						Cloudy
+						Cloudy 多云
 					</dd>
 					<dt>1009</dt>
 					<dd>
-						Overcast
+						Overcast 阴天
 					</dd>
 					<dt>1030</dt>
 					<dd>
-						Mist
+						Mist 薄雾
 					</dd>
 					<dt>1063</dt>
 					<dd>
-						Patchy rain possible
+						Patchy rain possible 附近局部降雨
 					</dd>
 					<dt>1066</dt>
 					<dd>
-						Patchy snow possible
+						Patchy snow possible 附近局部降雪
 					</dd>
 					<dt>1069</dt>
 					<dd>
-						Patchy sleet possible
+						Patchy sleet possible 附近局部雨夹雪
 					</dd>
 					<dt>1072</dt>
 					<dd>
-						Patchy freezing drizzle possible
+						Patchy freezing drizzle possible 附近局部冻雨毛毛雨
 					</dd>
 					<dt>1087</dt>
 					<dd>
-						Thundery outbreaks possible
+						Thundery outbreaks possible 附近有雷暴
 					</dd>
 					<dt>1114</dt>
 					<dd>
-						Blowing snow
+						Blowing snow 吹雪
 					</dd>
 					<dt>1117</dt>
 					<dd>
-						Blizzard
+						Blizzard 暴风雪
 					</dd>
 					<dt>1135</dt>
 					<dd>
-						Fog
+						Fog 大雾
 					</dd>
 					<dt>1147</dt>
 					<dd>
-						Freezing fog
+						Freezing fog 冻雾
 					</dd>
 					<dt>1150</dt>
 					<dd>
-						Patchy light drizzle
+						Patchy light drizzle 局部小毛毛雨
 					</dd>
 					<dt>1153</dt>
 					<dd>
-						Light drizzle
+						Light drizzle 小毛毛雨
 					</dd>
 					<dt>1168</dt>
 					<dd>
-						Freezing drizzle
+						Freezing drizzle 冻毛毛雨
 					</dd>
 					<dt>1171</dt>
 					<dd>
-						Heavy freezing drizzle
+						Heavy freezing drizzle 强冻毛毛雨
 					</dd>
 					<dt>1180</dt>
 					<dd>
-						Patchy light rain
+						Patchy light rain 局部小雨
 					</dd>
 					<dt>1183</dt>
 					<dd>
-						Light rain
+						Light rain 小雨
 					</dd>
 					<dt>1186</dt>
 					<dd>
-						Moderate rain at times
+						Moderate rain at times 有时中雨
 					</dd>
 					<dt>1189</dt>
 					<dd>
-						Moderate rain
+						Moderate rain 中雨
 					</dd>
 					<dt>1192</dt>
 					<dd>
-						Heavy rain at times
+						Heavy rain at times 有时大雨
 					</dd>
 					<dt>1195</dt>
 					<dd>
-						Heavy rain
+						Heavy rain 大雨
 					</dd>
 					<dt>1198</dt>
 					<dd>
-						Light freezing rain
+						Light freezing rain 小冻雨
 					</dd>
 					<dt>1201</dt>
 					<dd>
-						Moderate or heavy freezing rain
+						Moderate or heavy freezing rain 中到大冻雨
 					</dd>
 					<dt>1204</dt>
 					<dd>
-						Light sleet
+						Light sleet 小雨夹雪
 					</dd>
 					<dt>1207</dt>
 					<dd>
-						Moderate or heavy sleet
+						Moderate or heavy sleet 中到大雨夹雪
 					</dd>
 					<dt>1210</dt>
 					<dd>
-						Patchy light snow
+						Patchy light snow 局部小雪
 					</dd>
 					<dt>1213</dt>
 					<dd>
-						Light snow
+						Light snow 小雪
 					</dd>
 					<dt>1216</dt>
 					<dd>
-						Patchy moderate snow
+						Patchy moderate snow局部中雪
 					</dd>
 					<dt>1219</dt>
 					<dd>
-						Moderate snow
+						Moderate snow 中雪
 					</dd>
 					<dt>1222</dt>
 					<dd>
-						Patchy heavy snow
+						Patchy heavy snow 局部大雪
 					</dd>
 					<dt>1225</dt>
 					<dd>
-						Heavy snow
+						Heavy snow 大雪
 					</dd>
 					<dt>1237</dt>
 					<dd>
-						Ice pellets
+						Ice pellets 冰粒
 					</dd>
 					<dt>1240</dt>
 					<dd>
-						Light rain shower
+						Light rain shower 小阵雨
 					</dd>
 					<dt>1243</dt>
 					<dd>
-						Moderate or heavy rain shower
+						Moderate or heavy rain shower 中到大阵雨
 					</dd>
 					<dt>1246</dt>
 					<dd>
-						Torrential rain shower
+						Torrential rain shower 暴雨
 					</dd>
 					<dt>1249</dt>
 					<dd>
-						Light sleet showers
+						Light sleet showers 小雨夹雪阵
 					</dd>
 					<dt>1252</dt>
 					<dd>
-						Moderate or heavy sleet showers
+						Moderate or heavy sleet showers 中到大雨夹雪阵
 					</dd>
 					<dt>1255</dt>
 					<dd>
-						Light snow showers
+						Light snow showers 小阵雪
 					</dd>
 					<dt>1258</dt>
 					<dd>
-						Moderate or heavy snow showers
+						Moderate or heavy snow showers 中到大阵雪
 					</dd>
 					<dt>1261</dt>
 					<dd>
-						Light showers of ice pellets
+						Light showers of ice pellets 小冰粒阵
 					</dd>
 					<dt>1264</dt>
 					<dd>
-						Moderate or heavy showers of ice pellets
+						Moderate or heavy showers of ice pellets 中到大冰粒阵
 					</dd>
 					<dt>1273</dt>
 					<dd>
-						Patchy light rain with thunder
+						Patchy light rain with thunder 局部小雨伴雷暴
 					</dd>
 					<dt>1276</dt>
 					<dd>
-						Moderate or heavy rain with thunder
+						Moderate or heavy rain with thunder 中到大雨伴雷暴
 					</dd>
 					<dt>1279</dt>
 					<dd>
-						Patchy light snow with thunder
+						Patchy light snow with thunder 局部小雪伴雷暴
 					</dd>
 					<dt>1282</dt>
 					<dd>
-						Moderate or heavy snow with thunder
+						Moderate or heavy snow with thunder 中到大雪伴雷暴
 					</dd>
 				</dl>
 			</div>
 			<div class="caption" id="caption_weather_station_uk_defra_index">
-				<h1>UK Defra Index reference</h1>
+				<h1>英国Defra指数参考(pm2.5)</h1>
 				<table>
 					<tr>
-						<th>Index</th>
+						<th>指数</th>
 						<td>1</td>
 						<td>2</td>
 						<td>3</td>
@@ -1761,7 +1763,7 @@
 						<td>10</td>
 					</tr>
 					<tr>
-						<th>Band</th>
+						<th>等级</th>
 						<td>Low</td>
 						<td>Low</td>
 						<td>Low</td>
@@ -1789,43 +1791,43 @@
 				</table>
 			</div>
 			<div class="caption" id="caption_weather_station_errors">
-				<h1>Reason for Error</h1>
+				<h1>错误原因</h1>
 				<dl>
 					<dt>no_location</dt>
 					<dd>
-						The user has not added their location, or has removed it.
+						用户尚未添加其位置，或已将其移除。
 					</dd>
 					<dt>location_invalid</dt>
 					<dd>
-						The user's location is invalid and data cannot be gathered.
+						用户的地理位置无效，无法获取数据。
 					</dd>
 					<dt>api_quota_exceeded</dt>
 					<dd>
-						The 1 million free API calls per month has been exceeded.
+						每月100万次免费API调用已超出。
 					</dd>
 					<dt>api_key_disabled</dt>
 					<dd>
-						The API key has been disabled by the plugin developer. Please check if a plugin update is available to provide a new key.
+						API 密钥已被插件开发者禁用。请检查是否有可用的插件更新以获取新的密钥。
 					</dd>
 					<dt>api_internal_error</dt>
 					<dd>
-						The API responded with an internal error.
+						API 返回了内部错误。
 					</dd>
 					<dt>no_api_response</dt>
 					<dd>
-						The API did not respond, the SAORI used by the plugin failed to work, or the user is offline.
+						API 没有响应，插件使用的 SAORI 无法正常工作，或者用户已离线。
 					</dd>
 					<dt>other</dt>
 					<dd>
-						Any other error sent by the API. reference1 will have the error message provided by the API.
+						API 返回的其他任何错误。reference1 将包含 API 提供的错误信息。
 					</dd>
 				</dl>
 			</div>
 		</section>
 		<section class="category plugin">
-			<h1>プラグイン「Spectre」</h1>
+			<h1>插件「Spectre」</h1>
 			<ul class="caption link">
-				<li>公開元：<a href="https://ukagaka.zichqec.com/plugin/spectre">https://ukagaka.zichqec.com/plugin/spectre</a></li>
+				<li>公开源：<a href="https://ukagaka.zichqec.com/plugin/spectre">https://ukagaka.zichqec.com/plugin/spectre</a></li>
 			</ul>
 			<ul class="supported-baseware">
 				<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -1833,26 +1835,26 @@
 			<dl id="OnSpectrePlugin.Surface">
 				<dt class="entry">OnSpectrePlugin.Surface</dt>
 				<dd class="entry">
-					<p>Occurs during Spectre's dialogues to call for surface changes from the ghost that is currently being spoken to.<br />
-					Note that this event does not come directly from the plugin itself, but rather is called from the ghost side by embed tags within the dialogues.<br />
-					The expressions included are the <a href="descript_shell_surfaces.html#caption_standarddef">recommended expressions</a>, plus a few extra that are common in English ghosts.<br />
-					<em>Expressions which the ghost's shell cannot produce accurately should be ignored and not return a response</em>, as the plugin will use this information for its own purposes.</p>
+					<p>在人格的对话过程中触发，用于向当前正在交谈的人格请求表面变化。<br />
+					请注意，此事件并非直接由插件本身触发，而是由对话框中的嵌入标签在人格端调用的。<br />
+					所包含的表情是 <a href="descript_shell_surfaces.html#caption_standarddef">推荐表情</a>，外加一些在英语人格中常见的额外表情。<br />
+					<em>人格的外壳无法准确生成的表情应被忽略，且不应返回响应</em>，因为插件会将此信息用于其自身目的。</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>The expression being called for. May be one of the following values:
+						<dd>被调用的表情。可能取以下值之一：
 							<ul>
-								<li>normal …… usually surface0</li>
-								<li>embarrassed …… usually surface1</li>
-								<li>surprised …… usually surface2</li>
-								<li>anxious …… usually surface3</li>
-								<li>discouraged …… usually surface4</li>
-								<li>smile …… usually surface5</li>
-								<li>relieved …… usually surface6, also known as "contented"</li>
-								<li>angry …… usually surface7</li>
-								<li>sweat …… usually surface8, also known as "sweat smile" or "cold smile"</li>
-								<li>indignant …… usually surface9, also known as "embarrassed anger"</li>
-								<li>thinking …… common in some English ghosts, also known as "thoughtful" or "confused"</li>
-								<li>unamused …… common in some English ghosts, also known as "bored"</li>
+								<li>normal 正常 …… 通常为surface0</li>
+								<li>embarrassed 害羞 …… 通常为surface1</li>
+								<li>surprised 惊讶 …… 通常为surface2</li>
+								<li>anxious 不安 …… 通常为surface3</li>
+								<li>discouraged 气馁 …… 通常为surface4</li>
+								<li>smile 微笑 …… 通常为surface5</li>
+								<li>relieved 闭眼 …… 通常为surface6，也称为“contented”</li>
+								<li>angry 生气 …… 通常为surface7</li>
+								<li>sweat 苦笑 …… 通常为surface8，也被称为“sweat smile”或“cold smile”</li>
+								<li>indignant 羞怒 …… 通常为surface9，也称为“embarrassed anger”</li>
+								<li>thinking 思考 …… 常见于某些英文人格，也称为“thoughtful”或“confused”</li>
+								<li>unamused 无趣 …… 常见于某些英文人格，也称为“bored”</li>
 							</ul>
 						</dd>
 					</dl>
@@ -1861,19 +1863,19 @@
 			<dl id="OnSpectrePlugin.ConfirmCalibration">
 				<dt class="entry">OnSpectrePlugin.ConfirmCalibration</dt>
 				<dd class="entry">
-					<p>Occurs upon opening the plugin menu if this ghost is not yet "calibrated". Also occurs any time the user chooses to "racalibrate" this ghost.<br />
-					Returning a specific response completes a handshake that allows the ghost to complete the "calibration" step automatically.<br />
-					The required response is the following tag: <code>\![raiseplugin,Spectre,OnCustomCalibrationConfirm]</code><br />
-					Within this tag, references should be sent containing expression data. The references should be written the same as the ones received in the OnSpectrePlugin.Surface event, and may be written in any order.<br />
-					<em>By default, only expressions that the ghost does not provide should be sent.</em> The plugin assumes that any expressions not listed are present.<br />
-					For ghosts with few compatible expressions, an option may be used to invert this behavior, and make the plugin use only expressions that are listed.<br />
-					For ghosts with no compatible expressions, a special reference is provided.<br />
-					<em>Expressions which the ghost's shell cannot produce accurately should be listed as references in this tag</em> (or should be omitted, if using the inverted behavior), as the plugin will use this information for its own purposes.</p>
+					<p>当此人格尚未“校准”时，打开插件菜单时会触发。此外，每当用户选择对该人格进行“重新校准”时也会触发。<br />
+					返回特定的响应会完成一次握手，使人格能够自动完成“校准”步骤。<br />
+					所需的响应是以下标签：<code>\![raiseplugin,Spectre,OnCustomCalibrationConfirm]</code><br />
+					在此标签内，应发送包含表情数据的references。这些references的书写格式应与 OnSpectrePlugin.Surface 事件中接收到的references一致，且顺序不限。<br />
+					<em>默认情况下，仅应发送人格未提供的表情。</em>插件假定所有未列出的表情均已存在。<br />
+					对于那些兼容表情较少的人格，可以使用一个选项来反转这一行为，使插件仅使用列出的表情。<br />
+					对于那些没有任何兼容表情的人格，会提供一个特殊reference。<br />
+					<em>那些幽灵外壳无法准确生成的表情，应在此标签中以reference形式列出</em>（若采用反向行为，则应予以省略），因为插件会将这些信息用于自身用途。</p>
 					<dl>
 						<dt>--option=include</dt>
-						<dd>Only surfaces that are listed will be used. (Inverted behavior.)</dd>
+						<dd>仅使用列出的表面。（行为相反。）</dd>
 						<dt>__NO_EXPRESSIONS__</dt>
-						<dd>No expressions will be used. Must be sent as reference0.</dd>
+						<dd>将不使用任何表达式。必须作为reference0发送。</dd>
 					</dl>
 				</dd>
 			</dl>
@@ -1881,19 +1883,20 @@
 				<dt class="entry">OnSpectrePlugin.Possession</dt>
 				<dd class="entry">
 					<p>Occurs 15 seconds after Spectre displays a dialogue through this ghost.<br />
-					Note that this event does not come directly from the plugin itself, but rather is called from the ghost side by a timerraise tag placed at the end of dialogues.</p>
+					(在人格通过此人格显示对话后的15秒触发。(?))<br />
+					请注意，此事件并非直接由插件触发，而是由对话末尾放置的 timerraise 标签在人格端调用的。</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>The current "mood" of the character, based on the current dialogue pool. May be one of the following values:
+						<dd>基于当前对话池的角色“情绪”状态。可能取以下值之一：
 							<ul>
-								<li>dissociated …… A very sad and incoherent mood</li>
-								<li>miserable …… A sad or angry mood</li>
-								<li>cheerful …… A happy or relaxed mood</li>
+								<li>dissociated 解离 …… 一种非常悲伤且语无伦次的情绪</li>
+								<li>miserable 悲惨 …… 一种悲伤或愤怒的情绪</li>
+								<li>cheerful 愉快 …… 一种快乐或轻松的情绪</li>
 							</ul>
 						</dd>
 						<dt>Reference1</dt>
-						<dd>Whether the script that was played was a "spooky text" script, e.g., a script with special text effects to evoke a feeling of unease. 1 if true, 0 if false.<br />
-						Note that "spooky text" scripts are currently only played in situations where Reference0 is "dissociated".</dd>
+						<dd>所播放的脚本是否为“恐怖文本”脚本，例如带有特殊文本效果以营造不安氛围的脚本。若为真则为1，否则为0。<br />
+						请注意，“恐怖文本”脚本目前仅在Reference0处于“解离”状态时才会播放。</dd>
 					</dl>
 				</dd>
 			</dl>
@@ -1901,7 +1904,7 @@
 		<section class="category saori">
 			<h1>SAORI「httpc.dll」</h1>
 			<ul class="caption link">
-				<li>公開元：<a href="http://ukgk.s34.xrea.com/poskoma/#content_1_13">http://ukgk.s34.xrea.com/poskoma/#content_1_13</a></li>
+				<li>公开源：<a href="http://ukgk.s34.xrea.com/poskoma/#content_1_13">http://ukgk.s34.xrea.com/poskoma/#content_1_13</a></li>
 			</ul>
 			<ul class="supported-baseware">
 				<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
@@ -1911,22 +1914,22 @@
 			<dl id="OnHttpcNotify">
 				<dt class="entry">OnHttpcNotify</dt>
 				<dd class="entry">
-					<p>httpc.dllが提供する機能の非同期実行オプションでの実行後、同dllからDirectSSTPで送信される戻り値通知イベント。</p>
+					<p>在httpc.dll提供的功能的异步执行选项执行后，由该dll通过DirectSSTP发送的返回值通知事件。</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>呼び出し時に引数１で渡した識別子。</dd>
+						<dd>调用时作为参数1传递的标识符。</dd>
 						<dt>Reference1</dt>
-						<dd>空文字列</dd>
+						<dd>空字符串</dd>
 						<dt>Reference*</dt>
-						<dd>実行した機能の戻り値。</dd>
+						<dd>所执行功能的返回值。</dd>
 					</dl>
 				</dd>
 			</dl>
 		</section>
 		<section class="category application">
-			<h1>アプリ「きのこ」</h1>
+			<h1>应用「きのこ」</h1>
 			<ul class="caption link">
-				<li>公開元：<a href="http://koumei.la.coocan.jp/cbs/software/kinoko/">http://koumei.la.coocan.jp/cbs/software/kinoko/</a></li>
+				<li>公开源：<a href="http://koumei.la.coocan.jp/cbs/software/kinoko/">http://koumei.la.coocan.jp/cbs/software/kinoko/</a></li>
 			</ul>
 			<ul class="supported-baseware">
 				<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
@@ -1936,118 +1939,118 @@
 			<dl id="OnKinokoObjectCreate">
 				<dt class="entry">OnKinokoObjectCreate</dt>
 				<dd class="entry">
-					<p>きのこスキンが頭に生えた際に発生。</p>
+					<p>当蘑菇皮肤长在头上时触发。</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>そのきのこスキンの名前。</dd>
+						<dd>该蘑菇皮肤的名称。</dd>
 						<dt>Reference1</dt>
-						<dd>そのきのこスキンが主に対象とするゴースト名。複数ある場合カンマ区切り。</dd>
+						<dd>该蘑菇皮肤主要针对的人格名称。如有多个用逗号分隔。</dd>
 						<dt>Reference2</dt>
-						<dd>そのきのこスキンのカテゴリ。複数ある場合カンマ区切り。</dd>
+						<dd>该蘑菇皮肤的类别。如有多个用逗号分隔。</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnKinokoObjectDestroy">
 				<dt class="entry">OnKinokoObjectDestroy</dt>
 				<dd class="entry">
-					<p>きのこスキンが頭から消えた際に発生。</p>
+					<p>当蘑菇皮肤从头上消失时触发。</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>そのきのこスキンの名前。</dd>
+						<dd>该蘑菇皮肤的名称。</dd>
 						<dt>Reference1</dt>
-						<dd>そのきのこスキンが主に対象とするゴースト名。複数ある場合カンマ区切り。</dd>
+						<dd>该蘑菇皮肤主要针对的人格名称。如有多个用逗号分隔。</dd>
 						<dt>Reference2</dt>
-						<dd>そのきのこスキンのカテゴリ。複数ある場合カンマ区切り。</dd>
+						<dd>该蘑菇皮肤的类别。如有多个用逗号分隔。</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnKinokoObjectChanging">
 				<dt class="entry">OnKinokoObjectChanging</dt>
 				<dd class="entry">
-					<p>きのこスキンを切り替えようとしている際に発生。</p>
+					<p>在尝试切换蘑菇皮肤时触发。</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>切り替える直前のきのこスキンの名前。</dd>
+						<dd>即将切换前的蘑菇皮肤名称。</dd>
 						<dt>Reference1</dt>
-						<dd>切り替える直前のきのこスキンが主に対象とするゴースト名。複数ある場合カンマ区切り。</dd>
+						<dd>即将切换前的蘑菇皮肤主要针对的人格名称。如有多个用逗号分隔。</dd>
 						<dt>Reference2</dt>
-						<dd>切り替える直前のきのこスキンのカテゴリ。複数ある場合カンマ区切り。</dd>
+						<dd>即将切换前的蘑菇皮肤的类别。如有多个用逗号分隔。</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnKinokoObjectChanged">
 				<dt class="entry">OnKinokoObjectChanged</dt>
 				<dd class="entry">
-					<p>きのこスキンを切り替えた際に発生。</p>
+					<p>在切换蘑菇皮肤时触发。</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>切り替えた後のきのこスキンの名前。</dd>
+						<dd>切换后蘑菇皮肤的名称。</dd>
 						<dt>Reference1</dt>
-						<dd>切り替えた後のきのこスキンが主に対象とするゴースト名。複数ある場合カンマ区切り。</dd>
+						<dd>切换后的蘑菇皮肤主要针对的人格名称。如有多个用逗号分隔。</dd>
 						<dt>Reference2</dt>
-						<dd>切り替えた後のきのこスキンのカテゴリ。複数ある場合カンマ区切り。</dd>
+						<dd>切换后的蘑菇皮肤的类别。如有多个用逗号分隔。</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnKinokoObjectInstalled">
 				<dt class="entry">OnKinokoObjectInstalled</dt>
 				<dd class="entry">
-					<p>きのこスキンをドロップでインストールした際に発生。</p>
+					<p>在通过掉落方式安装蘑菇皮肤时触发。</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>インストールされたきのこスキンの名前。</dd>
+						<dd>已安装的蘑菇皮肤的名称。</dd>
 						<dt>Reference1</dt>
-						<dd>インストールされたきのこスキンが主に対象とするゴースト名。複数ある場合カンマ区切り。</dd>
+						<dd>已安装的蘑菇皮肤主要针对的人格名称。如有多个用逗号分隔。</dd>
 						<dt>Reference2</dt>
-						<dd>インストールされたきのこスキンのカテゴリ。複数ある場合カンマ区切り。</dd>
+						<dd>已安装的蘑菇皮肤的类别。如有多个用逗号分隔。</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnBatteryLow-kinoko">
 				<dt class="entry">OnBatteryLow</dt>
 				<dd class="entry">
-					<p>バッテリ残量が40％を切った際に発生。<br />SSPが通知するイベントに<a href="list_shiori_event.html#OnBatteryLow">同名の物</a>があるので注意。</p>
+					<p>当电池剩余电量低于40%时触发。<br />SSP发出的事件中存在<a href="list_shiori_event.html#OnBatteryLow">同名事件</a>，请注意。</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>パーセンテージの数値。</dd>
+						<dd>百分比数值。</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnBatteryCritical-kinoko">
 				<dt class="entry">OnBatteryCritical</dt>
 				<dd class="entry">
-					<p>バッテリ残量が20％を切った際に発生。<br />SSPが通知するイベントに<a href="list_shiori_event.html#OnBatteryCritical">同名の物</a>があるので注意。</p>
+					<p>当电池剩余电量低于20%时触发。<br />SSP发出的事件中存在<a href="list_shiori_event.html#OnBatteryCritical">同名事件</a>，请注意。</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>パーセンテージの数値。</dd>
+						<dd>百分比数值。</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnSysResourceLow">
 				<dt class="entry">OnSysResourceLow</dt>
 				<dd class="entry">
-					<p>システムリソースが50％を切った際に発生。</p>
+					<p>当系统资源低于50%时触发。</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>パーセンテージの数値。</dd>
+						<dd>百分比数值。</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnSysResourceCritical">
 				<dt class="entry">OnSysResourceCritical</dt>
 				<dd class="entry">
-					<p>システムリソースが30％を切った際に発生。</p>
+					<p>当系统资源低于30%时触发。</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>パーセンテージの数値。</dd>
+						<dd>百分比数值。</dd>
 					</dl>
 				</dd>
 			</dl>
 		</section>
 		<section class="category application">
-			<h1>アプリ「猫どりふ」</h1>
+			<h1>应用「猫どりふ」</h1>
 			<ul class="caption link">
-				<li>公開元：<a href="http://umeici.onjn.jp/">http://umeici.onjn.jp/</a></li>
+				<li>公开源：<a href="http://umeici.onjn.jp/">http://umeici.onjn.jp/</a></li>
 			</ul>
 			<ul class="supported-baseware">
 				<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
@@ -2057,99 +2060,99 @@
 			<dl id="OnNekodorifObjectEmerge">
 				<dt class="entry">OnNekodorifObjectEmerge</dt>
 				<dd class="entry">
-					<p>落下物が可視領域内に出現した際に発生。</p>
+					<p>当掉落物出现在可视区域内时触发。</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>落下物の名前。</dd>
+						<dd>掉落物的名称。</dd>
 						<dt>Reference1</dt>
-						<dd>落下物の対象ゴースト名。</dd>
+						<dd>掉落物所作用的人格名称。</dd>
 						<dt>Reference2</dt>
-						<dd>落下物のカテゴリ名。</dd>
+						<dd>掉落物的类别名称。</dd>
 						<dt>Reference3</dt>
-						<dd>きのこフラグ。きのこにあった場合は1、そうでなければ0。</dd>
+						<dd>蘑菇标志。若为蘑菇则为1，否则为0。</dd>
 						<dt>Reference4</dt>
-						<dd>落下物のターゲット名。</dd>
+						<dd>掉落物的目标名称。</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnNekodorifObjectHit">
 				<dt class="entry">OnNekodorifObjectHit</dt>
 				<dd class="entry">
-					<p>落下物がヒットした際に発生。</p>
+					<p>当掉落物发生碰撞时触发。</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>落下物の名前。</dd>
+						<dd>掉落物的名称。</dd>
 						<dt>Reference1</dt>
-						<dd>落下物の対象ゴースト名。</dd>
+						<dd>掉落物所作用的人格名称。</dd>
 						<dt>Reference2</dt>
-						<dd>落下物のカテゴリ名。</dd>
+						<dd>掉落物的类别名称。</dd>
 						<dt>Reference3</dt>
-						<dd>きのこフラグ。きのこにあった場合は1、そうでなければ0。</dd>
+						<dd>蘑菇标志。若为蘑菇则为1，否则为0。</dd>
 						<dt>Reference4</dt>
-						<dd>落下物のターゲット名。</dd>
+						<dd>掉落物的目标名称。</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnNekodorifObjectDrop">
 				<dt class="entry">OnNekodorifObjectDrop</dt>
 				<dd class="entry">
-					<p>落下物を再投下する際に発生。</p>
+					<p>在重新投下掉落物时触发。</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>落下物の名前。</dd>
+						<dd>掉落物的名称。</dd>
 						<dt>Reference1</dt>
-						<dd>落下物の対象ゴースト名。</dd>
+						<dd>掉落物所作用的人格名称。</dd>
 						<dt>Reference2</dt>
-						<dd>落下物のカテゴリ名。</dd>
+						<dd>掉落物的类别名称。</dd>
 						<dt>Reference3</dt>
-						<dd>きのこフラグ。きのこにあった場合は1、そうでなければ0。</dd>
+						<dd>蘑菇标志。若为蘑菇则为1，否则为0。</dd>
 						<dt>Reference4</dt>
-						<dd>落下物のターゲット名。</dd>
+						<dd>掉落物的目标名称。</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnNekodorifObjectVanish">
 				<dt class="entry">OnNekodorifObjectVanish</dt>
 				<dd class="entry">
-					<p>ヒットした落下物が可視領域内から消滅した際に発生。</p>
+					<p>当命中的掉落物从可视区域内消失时触发。</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>落下物の名前。</dd>
+						<dd>掉落物的名称。</dd>
 						<dt>Reference1</dt>
-						<dd>落下物の対象ゴースト名。</dd>
+						<dd>掉落物所作用的人格名称。</dd>
 						<dt>Reference2</dt>
-						<dd>落下物のカテゴリ名。</dd>
+						<dd>掉落物的类别名称。</dd>
 						<dt>Reference3</dt>
-						<dd>きのこフラグ。きのこにあった場合は1、そうでなければ0。</dd>
+						<dd>蘑菇标志。若为蘑菇则为1，否则为0。</dd>
 						<dt>Reference4</dt>
-						<dd>落下物のターゲット名。</dd>
+						<dd>掉落物的目标名称。</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnNekodorifObjectDodge">
 				<dt class="entry">OnNekodorifObjectDodge</dt>
 				<dd class="entry">
-					<p>ヒットしなかった落下物が可視領域内から消滅した際に発生。</p>
+					<p>当未命中的坠落物从可视区域内消失时触发。</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>落下物の名前。</dd>
+						<dd>掉落物的名称。</dd>
 						<dt>Reference1</dt>
-						<dd>落下物の対象ゴースト名。</dd>
+						<dd>掉落物所作用的人格名称。</dd>
 						<dt>Reference2</dt>
-						<dd>落下物のカテゴリ名。</dd>
+						<dd>掉落物的类别名称。</dd>
 						<dt>Reference3</dt>
-						<dd>きのこフラグ。きのこにあった場合は1、そうでなければ0。</dd>
+						<dd>蘑菇标志。若为蘑菇则为1，否则为0。</dd>
 						<dt>Reference4</dt>
-						<dd>落下物のターゲット名。</dd>
+						<dd>掉落物的目标名称。</dd>
 					</dl>
 				</dd>
 			</dl>
 		</section>
 		<section class="category application">
-			<h1>アプリ「YunaSoft SexyFont Plug-in」</h1>
+			<h1>应用「YunaSoft SexyFont Plug-in」</h1>
 			<ul class="caption link">
-				<li>公開元：<a href="https://yunasoft.nerv.org/?page_id=2">https://yunasoft.nerv.org/?page_id=2</a></li>
-				<li><a href="list_shiori_event.html#OnMusicPlay">SSP 2.7.55より本体機能として取り込まれた</a>。</li>
+				<li>公开源：<a href="https://yunasoft.nerv.org/?page_id=2">https://yunasoft.nerv.org/?page_id=2</a></li>
+				<li><a href="list_shiori_event.html#OnMusicPlay">自SSP 2.7.55起已作为核心功能集成</a>。</li>
 			</ul>
 			<ul class="supported-baseware">
 				<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
@@ -2159,18 +2162,18 @@
 			<dl id="OnMusicPlay">
 				<dt class="entry">OnMusicPlay</dt>
 				<dd class="entry">
-					<p>音楽を再生した際に発生。</p>
+					<p>在播放音乐时触发。</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>曲タイトル。</dd>
+						<dd>曲目名称。</dd>
 					</dl>
 				</dd>
 			</dl>
 		</section>
 		<section class="category application">
-			<h1>アプリ「艦隊時計」</h1>
+			<h1>应用「艦隊時計」</h1>
 			<ul class="caption link">
-				<li>公開元：<a href="http://shisochou.net/factory/">http://shisochou.net/factory/</a></li>
+				<li>公开源：<a href="http://shisochou.net/factory/">http://shisochou.net/factory/</a></li>
 			</ul>
 			<ul class="supported-baseware">
 				<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
@@ -2180,18 +2183,18 @@
 			<dl id="OnFleetClockComplete">
 				<dt class="entry">OnFleetClockComplete</dt>
 				<dd class="entry">
-					<p>設定した予定のタイマーが0になった際に発生。</p>
+					<p>当设定的计划计时器归零时触发。</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>カテゴリ名。</dd>
+						<dd>类别名称。</dd>
 						<dt>Reference1</dt>
-						<dd>メモの内容。</dd>
+						<dd>备忘录内容。</dd>
 					</dl>
 				</dd>
 			</dl>
 		</section>
 		<section class="category application">
-			<h1>アプリ「Elona omake_MMA」</h1>
+			<h1>应用「Elona omake_MMA」</h1>
 			<ul class="caption link">
 				<li>参考：<a href="https://wikiwiki.jp/omakemma/">https://wikiwiki.jp/omakemma/</a></li>
 			</ul>
@@ -2203,90 +2206,90 @@
 			<dl id="OnElonaOmakeMMAEventNewGame">
 				<dt class="entry">OnElonaOmakeMMAEventNewGame</dt>
 				<dd class="entry">
-					<p>新規ゲーム開始時に発生。</p>
+					<p>在新游戏开始时触发。(注:PC = Player Character（玩家角色）)</p>
 					<dl class="reference" id="reference_elonamma_common">
 						<dt>Reference0</dt>
-						<dd>ゲームバージョン。</dd>
+						<dd>游戏版本。</dd>
 						<dt>Reference1</dt>
-						<dd>ゲーム内年</dd>
+						<dd>游戏内年</dd>
 						<dt>Reference2</dt>
-						<dd>ゲーム内月</dd>
+						<dd>游戏内月</dd>
 						<dt>Reference3</dt>
-						<dd>ゲーム内日</dd>
+						<dd>游戏内日</dd>
 						<dt>Reference4</dt>
-						<dd>ゲーム内時</dd>
+						<dd>游戏内时</dd>
 						<dt>Reference5</dt>
-						<dd>ゲーム内分</dd>
+						<dd>游戏内分</dd>
 						<dt>Reference6</dt>
-						<dd>ゲーム内秒</dd>
+						<dd>游戏内秒</dd>
 						<dt>Reference7</dt>
-						<dd>ゲーム内天候</dd>
+						<dd>游戏内天气</dd>
 						<dt>Reference8</dt>
-						<dd>マップ名</dd>
+						<dd>地图名称</dd>
 						<dt>Reference9</dt>
-						<dd>エリア名</dd>
+						<dd>区域名称</dd>
 						<dt>Reference10</dt>
-						<dd>ワールド名</dd>
+						<dd>世界名称</dd>
 						<dt>Reference11</dt>
-						<dd>階層</dd>
+						<dd>阶层</dd>
 						<dt>Reference12</dt>
-						<dd>所属ギルド</dd>
+						<dd>所属工会</dd>
 						<dt>Reference*</dt>
-						<dd>Reference13-19は未使用。予約。</dd>
+						<dd>Reference13-19未使用。预留。</dd>
 						<dt>Reference20</dt>
-						<dd>各イベントの対象キャラクター番号（0:PC、1～15:ペット、16～55:冒険者、56～:その他のNPC）</dd>
+						<dd>各事件的对应角色编号（0：玩家，1～15：宠物，16～55：冒险者，56～：其他NPC）</dd>
 						<dt>Reference21</dt>
-						<dd>PC:名前</dd>
+						<dd>PC:姓名</dd>
 						<dt>Reference22</dt>
-						<dd>PC:通り名</dd>
+						<dd>PC:称号</dd>
 						<dt>Reference23</dt>
-						<dd>PC:種族</dd>
+						<dd>PC:种族</dd>
 						<dt>Reference24</dt>
-						<dd>PC:職業</dd>
+						<dd>PC:职业</dd>
 						<dt>Reference25</dt>
 						<dd>PC:信仰</dd>
 						<dt>Reference26</dt>
-						<dd>PC:キャラ種別名(PCの種別は無いので「バグ」が代入される)</dd>
+						<dd>PC:角色类别名（由于PC没有类别，因此会代入“バグ”）</dd>
 						<dt>Reference27</dt>
 						<dd>PC:性別</dd>
 						<dt>Reference28</dt>
-						<dd>PC:年齢</dd>
+						<dd>PC:年龄</dd>
 						<dt>Reference29</dt>
-						<dd>PC:身長</dd>
+						<dd>PC:身高</dd>
 						<dt>Reference30</dt>
 						<dd>PC:体重</dd>
 						<dt>Reference31</dt>
-						<dd>PC:レベル</dd>
+						<dd>PC:等级</dd>
 						<dt>Reference32</dt>
-						<dd>PC:現在HP</dd>
+						<dd>PC:当前HP</dd>
 						<dt>Reference33</dt>
 						<dd>PC:最大HP</dd>
 						<dt>Reference34</dt>
-						<dd>PC:現在MP</dd>
+						<dd>PC:当前MP</dd>
 						<dt>Reference35</dt>
 						<dd>PC:最大MP</dd>
 						<dt>Reference36</dt>
-						<dd>PC:所持金</dd>
+						<dd>PC:持有金</dd>
 						<dt>Reference37</dt>
 						<dd>PC:名声</dd>
 						<dt>Reference38</dt>
-						<dd>PC:カルマ</dd>
+						<dd>PC:业力</dd>
 						<dt>Reference39</dt>
 						<dd>PC:DV</dd>
 						<dt>Reference40</dt>
 						<dd>PC:PV</dd>
 						<dt>Reference41</dt>
-						<dd>PC:筋力</dd>
+						<dd>PC:力量</dd>
 						<dt>Reference42</dt>
-						<dd>PC:耐久</dd>
+						<dd>PC:体质</dd>
 						<dt>Reference43</dt>
-						<dd>PC:器用</dd>
+						<dd>PC:灵巧</dd>
 						<dt>Reference44</dt>
-						<dd>PC:感覚</dd>
+						<dd>PC:感觉</dd>
 						<dt>Reference45</dt>
-						<dd>PC:習得</dd>
+						<dd>PC:学习</dd>
 						<dt>Reference46</dt>
-						<dd>PC:意思</dd>
+						<dd>PC:意志</dd>
 						<dt>Reference47</dt>
 						<dd>PC:魔力</dd>
 						<dt>Reference48</dt>
@@ -2294,860 +2297,860 @@
 						<dt>Reference49</dt>
 						<dd>PC:速度</dd>
 						<dt>Reference50</dt>
-						<dd>PC:運勢</dd>
+						<dd>PC:幸运</dd>
 						<dt>Reference*</dt>
-						<dd>Reference51-80には、PC情報+30の番号に同じ並び順でイベントの対象キャラクターのデータが入る。</dd>
+						<dd>在Reference51-80中，PC信息+30的编号以相同的顺序存放着事件的目标角色数据。</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventGameLoad">
 				<dt class="entry">OnElonaOmakeMMAEventGameLoad</dt>
 				<dd class="entry">
-					<p>ゲーム開始時に発生。</p>
+					<p>游戏开始时触发。</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference范围为0～80，<a href="#reference_elonamma_common">※通用参考值</a>。</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventGameQuit">
 				<dt class="entry">OnElonaOmakeMMAEventGameQuit</dt>
 				<dd class="entry">
-					<p>ゲーム終了時に発生。</p>
+					<p>游戏结束时触发。</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference范围为0～80，<a href="#reference_elonamma_common">※通用参考值</a>。</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventHourPlayed">
 				<dt class="entry">OnElonaOmakeMMAEventHourPlayed</dt>
 				<dd class="entry">
-					<p>ゲーム開始から現実の1時間毎に発生。</p>
+					<p>自游戏开始起，每经过现实中的1小时即触发一次。</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference范围为0～80，<a href="#reference_elonamma_common">※通用参考值</a>。</dd>
 						<dt>Reference82</dt>
-						<dd>Reference経過時間</dd>
+						<dd>Reference经过时间</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventMapChanged">
 				<dt class="entry">OnElonaOmakeMMAEventMapChanged</dt>
 				<dd class="entry">
-					<p>別マップに移動した時に発生。</p>
+					<p>当切换至其他地图时触发。</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference范围为0～80，<a href="#reference_elonamma_common">※通用参考值</a>。</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventLevelUp">
 				<dt class="entry">OnElonaOmakeMMAEventLevelUp</dt>
 				<dd class="entry">
-					<p>PCまたはペットのレベルが上がった時に発生。</p>
+					<p>当PC或宠物等级提升时触发。</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference范围为0～80，<a href="#reference_elonamma_common">※通用参考值</a>。</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventSkillUp">
 				<dt class="entry">OnElonaOmakeMMAEventSkillUp</dt>
 				<dd class="entry">
-					<p>PCまたはペットのスキルレベルが上がった時に発生。</p>
+					<p>当PC或宠物的技能等级提升时触发。</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference范围为0～80，<a href="#reference_elonamma_common">※通用参考值</a>。</dd>
 						<dt>Reference81</dt>
-						<dd>スキル名。</dd>
+						<dd>技能名称。</dd>
 						<dt>Reference82</dt>
-						<dd>スキルレベル。</dd>
+						<dd>技能等级。</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventSkillDown">
 				<dt class="entry">OnElonaOmakeMMAEventSkillDown</dt>
 				<dd class="entry">
-					<p>PCまたはペットのスキルレベルが下がった時に発生。</p>
+					<p>当PC或宠物的技能等级降低时触发。</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference范围为0～80，<a href="#reference_elonamma_common">※通用参考值</a>。</dd>
 						<dt>Reference81</dt>
-						<dd>スキル名。</dd>
+						<dd>技能名称。</dd>
 						<dt>Reference82</dt>
-						<dd>スキルレベル。</dd>
+						<dd>技能等级。</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventBelieveGod">
 				<dt class="entry">OnElonaOmakeMMAEventBelieveGod</dt>
 				<dd class="entry">
-					<p>PCが改宗した時に発生。</p>
+					<p>当PC改宗时触发。</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference范围为0～80，<a href="#reference_elonamma_common">※通用参考值</a>。</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventJoinParty">
 				<dt class="entry">OnElonaOmakeMMAEventJoinParty</dt>
 				<dd class="entry">
-					<p>ペットが仲間に加わった時に発生。</p>
+					<p>当宠物加入队伍时触发。</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference范围为0～80，<a href="#reference_elonamma_common">※通用参考值</a>。</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventSleep">
 				<dt class="entry">OnElonaOmakeMMAEventSleep</dt>
 				<dd class="entry">
-					<p>睡眠に入った時に発生。</p>
+					<p>在进入睡眠状态时触发。</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference范围为0～80，<a href="#reference_elonamma_common">※通用参考值</a>。</dd>
 						<dt>Reference81</dt>
-						<dd>寝具名。</dd>
+						<dd>寝具名称。</dd>
 						<dt>Reference82</dt>
-						<dd>遺伝子を残す場合は1。</dd>
+						<dd>留下后代的情况下为 1。</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventAwake">
 				<dt class="entry">OnElonaOmakeMMAEventAwake</dt>
 				<dd class="entry">
-					<p>睡眠から目覚めた時に発生。</p>
+					<p>从睡眠中醒来时触发。</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference范围为0～80，<a href="#reference_elonamma_common">※通用参考值</a>。</dd>
 						<dt>Reference81</dt>
-						<dd>寝具名。</dd>
+						<dd>寝具名称。</dd>
 						<dt>Reference82</dt>
-						<dd>遺伝子を残す場合は1。</dd>
+						<dd>留下后代的情况下为 1。</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventInvestNPC">
 				<dt class="entry">OnElonaOmakeMMAEventInvestNPC</dt>
 				<dd class="entry">
-					<p>NPCの調査をした時に発生。</p>
+					<p>对NPC进行调查时触发。</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference范围为0～80，<a href="#reference_elonamma_common">※通用参考值</a>。</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventRandomEvent">
 				<dt class="entry">OnElonaOmakeMMAEventRandomEvent</dt>
 				<dd class="entry">
-					<p>ランダムイベント発生時に発生。</p>
+					<p>触发随机事件时触发。</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference范围为0～80，<a href="#reference_elonamma_common">※通用参考值</a>。</dd>
 						<dt>Reference81</dt>
-						<dd>イベント名。</dd>
+						<dd>事件名称。</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventAddNewsTopic">
 				<dt class="entry">OnElonaOmakeMMAEventAddNewsTopic</dt>
 				<dd class="entry">
-					<p>冒険者のニューストピックが追加された時に発生。</p>
+					<p>当冒险者的新闻话题被添加时触发。</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference范围为0～80，<a href="#reference_elonamma_common">※通用参考值</a>。</dd>
 						<dt>Reference81</dt>
-						<dd>ニュースタイトル。</dd>
+						<dd>新闻话题。</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventWish">
 				<dt class="entry">OnElonaOmakeMMAEventWish</dt>
 				<dd class="entry">
-					<p>願いの入力ダイアログが表示された時に発生。</p>
+					<p>当愿望输入对话框显示时触发。</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference范围为0～80，<a href="#reference_elonamma_common">※通用参考值</a>。</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventWished">
 				<dt class="entry">OnElonaOmakeMMAEventWished</dt>
 				<dd class="entry">
-					<p>願いが入力された時に発生。</p>
+					<p>在输入愿望时触发。</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference范围为0～80，<a href="#reference_elonamma_common">※通用参考值</a>。</dd>
 						<dt>Reference81</dt>
-						<dd>願った内容。</dd>
+						<dd>愿望内容。</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventDead">
 				<dt class="entry">OnElonaOmakeMMAEventDead</dt>
 				<dd class="entry">
-					<p>PC死亡時に発生。</p>
+					<p>PC死亡时触发。</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference范围为0～80，<a href="#reference_elonamma_common">※通用参考值</a>。</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventPetDead">
 				<dt class="entry">OnElonaOmakeMMAEventPetDead</dt>
 				<dd class="entry">
-					<p>ペット死亡時に発生。</p>
+					<p>宠物死亡时触发。</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference范围为0～80，<a href="#reference_elonamma_common">※通用参考值</a>。</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventLastword">
 				<dt class="entry">OnElonaOmakeMMAEventLastword</dt>
 				<dd class="entry">
-					<p>遺言入力後に発生。</p>
+					<p>遗言输入后触发。</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference范围为0～80，<a href="#reference_elonamma_common">※通用参考值</a>。</dd>
 						<dt>Reference81</dt>
-						<dd>遺言。</dd>
+						<dd>遗言。</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventTravelGuide">
 				<dt class="entry">OnElonaOmakeMMAEventTravelGuide</dt>
 				<dd class="entry">
-					<p>ノルンの冒険ガイド表示時に発生。</p>
+					<p>在显示ノルン的冒险指南时触发。</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference范围为0～80，<a href="#reference_elonamma_common">※通用参考值</a>。</dd>
 						<dt>Reference82</dt>
-						<dd>data\exhelp.txtに書かれたヘルプ番号(%nの数字)</dd>
+						<dd>写在data\exhelp.txt中的帮助编号（%n中的数字）</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventAbandonPet">
 				<dt class="entry">OnElonaOmakeMMAEventAbandonPet</dt>
 				<dd class="entry">
-					<p>ペットと縁を切った時に発生。</p>
+					<p>与宠物断绝关系时触发。</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference范围为0～80，<a href="#reference_elonamma_common">※通用参考值</a>。</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventSaleSlave">
 				<dt class="entry">OnElonaOmakeMMAEventSaleSlave</dt>
 				<dd class="entry">
-					<p>ペットを奴隷商人に売った時に発生。</p>
+					<p>当把宠物卖给奴隶商人时触发。</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference范围为0～80，<a href="#reference_elonamma_common">※通用参考值</a>。</dd>
 						<dt>Reference82</dt>
-						<dd>売値。</dd>
+						<dd>售价。</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventSaleWife">
 				<dt class="entry">OnElonaOmakeMMAEventSaleWife</dt>
 				<dd class="entry">
-					<p>ラファエロに嫁を売った時に発生。</p>
+					<p>在把妻子卖给ラファエロ的时候触发。</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference范围为0～80，<a href="#reference_elonamma_common">※通用参考值</a>。</dd>
 						<dt>Reference82</dt>
-						<dd>嫁が人外の場合は1。</dd>
+						<dd>如果新娘是人外时，则为1。</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventMarriage">
 				<dt class="entry">OnElonaOmakeMMAEventMarriage</dt>
 				<dd class="entry">
-					<p>結婚時に発生。</p>
+					<p>结婚时触发。</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference范围为0～80，<a href="#reference_elonamma_common">※通用参考值</a>。</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventRefuseMarriage">
 				<dt class="entry">OnElonaOmakeMMAEventRefuseMarriage</dt>
 				<dd class="entry">
-					<p>求婚を断られた時に発生。</p>
+					<p>在被拒绝求婚时触发。</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference范围为0～80，<a href="#reference_elonamma_common">※通用参考值</a>。</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventJoinGuild">
 				<dt class="entry">OnElonaOmakeMMAEventJoinGuild</dt>
 				<dd class="entry">
-					<p>ギルド加入時に発生。</p>
+					<p>在加入公会时触发。</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference范围为0～80，<a href="#reference_elonamma_common">※通用参考值</a>。</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventMutation">
 				<dt class="entry">OnElonaOmakeMMAEventMutation</dt>
 				<dd class="entry">
-					<p>変異発生時に発生。</p>
+					<p>在发生变异时触发。</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference范围为0～80，<a href="#reference_elonamma_common">※通用参考值</a>。</dd>
 						<dt>Reference81</dt>
-						<dd>変異メッセージ。</dd>
+						<dd>变异消息。</dd>
 						<dt>Reference82</dt>
-						<dd>悪性変異は-1、良性変異は1。</dd>
+						<dd>恶性变异为-1，良性变异为1。</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventMutationCured">
 				<dt class="entry">OnElonaOmakeMMAEventMutationCured</dt>
 				<dd class="entry">
-					<p>変異治療時に発生。</p>
+					<p>在变异治疗时触发。</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference范围为0～80，<a href="#reference_elonamma_common">※通用参考值</a>。</dd>
 						<dt>Reference81</dt>
-						<dd>変異メッセージ。</dd>
+						<dd>变异消息。</dd>
 						<dt>Reference82</dt>
-						<dd>悪性変異は-1、良性変異は1。</dd>
+						<dd>恶性变异为-1，良性变异为1。</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventEtherDisease">
 				<dt class="entry">OnElonaOmakeMMAEventEtherDisease</dt>
 				<dd class="entry">
-					<p>エーテル病発生時に発生。</p>
+					<p>在以太病发作时触发。</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference范围为0～80，<a href="#reference_elonamma_common">※通用参考值</a>。</dd>
 						<dt>Reference81</dt>
-						<dd>変異メッセージ。</dd>
+						<dd>变异消息。</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventEtherDiseaseCured">
 				<dt class="entry">OnElonaOmakeMMAEventEtherDiseaseCured</dt>
 				<dd class="entry">
-					<p>エーテル病治療時に発生。</p>
+					<p>在治疗以太病时触发。</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference范围为0～80，<a href="#reference_elonamma_common">※通用参考值</a>。</dd>
 						<dt>Reference81</dt>
-						<dd>変異メッセージ。</dd>
+						<dd>变异消息。</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventAdventGod">
 				<dt class="entry">OnElonaOmakeMMAEventAdventGod</dt>
 				<dd class="entry">
-					<p>神の降臨時に発生。</p>
+					<p>在神降临之时触发。</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference范围为0～80，<a href="#reference_elonamma_common">※通用参考值</a>。</dd>
 						<dt>Reference81</dt>
-						<dd>神の名前。</dd>
+						<dd>神的名字。</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventMewmewmew">
 				<dt class="entry">OnElonaOmakeMMAEventMewmewmew</dt>
 				<dd class="entry">
-					<p>うみみゃぁ発動時に発生。</p>
+					<p>在うみみゃぁ发动时触发。</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference范围为0～80，<a href="#reference_elonamma_common">※通用参考值</a>。</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventBuyNuke">
 				<dt class="entry">OnElonaOmakeMMAEventBuyNuke</dt>
 				<dd class="entry">
-					<p>核爆弾購入時に発生。</p>
+					<p>在购买核弹时触发。</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference范围为0～80，<a href="#reference_elonamma_common">※通用参考值</a>。</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventSetNuke">
 				<dt class="entry">OnElonaOmakeMMAEventSetNuke</dt>
 				<dd class="entry">
-					<p>核爆弾設置時に発生。</p>
+					<p>在核弹部署时触发。</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference范围为0～80，<a href="#reference_elonamma_common">※通用参考值</a>。</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventNukeExploded">
 				<dt class="entry">OnElonaOmakeMMAEventNukeExploded</dt>
 				<dd class="entry">
-					<p>核爆弾爆発時に発生。</p>
+					<p>核弹爆炸时触发。</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference范围为0～80，<a href="#reference_elonamma_common">※通用参考值</a>。</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventLomiasInTheParty">
 				<dt class="entry">OnElonaOmakeMMAEventLomiasInTheParty</dt>
 				<dd class="entry">
-					<p>パーティに異形の森の使者『ロミアス』が参加してる時に発生。</p>
+					<p>当异形之森的使者『ロミアス』正在队伍中时触发。</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference范围为0～80，<a href="#reference_elonamma_common">※通用参考值</a>。</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventLomiasKilled">
 				<dt class="entry">OnElonaOmakeMMAEventLomiasKilled</dt>
 				<dd class="entry">
-					<p>異形の森の使者『ロミアス』殺害時に発生。</p>
+					<p>在击杀异形之森的使者『ロミアス』时触发。</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference范围为0～80，<a href="#reference_elonamma_common">※通用参考值</a>。</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventZeomeKilled">
 				<dt class="entry">OnElonaOmakeMMAEventZeomeKilled</dt>
 				<dd class="entry">
-					<p>偽りの預言者『ゼーム』撃破時に発生。</p>
+					<p>在击破伪预言者『ゼーム』时触发。</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference范围为0～80，<a href="#reference_elonamma_common">※通用参考值</a>。</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventConqueredLesimas">
 				<dt class="entry">OnElonaOmakeMMAEventConqueredLesimas</dt>
 				<dd class="entry">
-					<p>レシマス征服時に発生。</p>
+					<p>在レシマス被征服时触发。</p>
 					<dl class="reference">
 						<dt>Reference81</dt>
-						<dd>コメント。</dd>
+						<dd>评价。</dd>
 						<dt>Reference82</dt>
-						<dd>スコア。</dd>
+						<dd>分数。</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventAtonement">
 				<dt class="entry">OnElonaOmakeMMAEventAtonement</dt>
 				<dd class="entry">
-					<p>カルマが上昇して犯罪者でなくなった時に発生。</p>
+					<p>当业力上升并不再是罪犯时触发。</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference范围为0～80，<a href="#reference_elonamma_common">※通用参考值</a>。</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventBecomeCriminal">
 				<dt class="entry">OnElonaOmakeMMAEventBecomeCriminal</dt>
 				<dd class="entry">
-					<p>カルマが減少して犯罪者になった時に発生。</p>
+					<p>当业力下降并成为罪犯时触发。</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference范围为0～80，<a href="#reference_elonamma_common">※通用参考值</a>。</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventPerformance">
 				<dt class="entry">OnElonaOmakeMMAEventPerformance</dt>
 				<dd class="entry">
-					<p>PCが演奏を開始した時に発生。</p>
+					<p>当PC开始演奏时触发。</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference范围为0～80，<a href="#reference_elonamma_common">※通用参考值</a>。</dd>
 						<dt>Reference81</dt>
-						<dd>楽器アイテム名。</dd>
+						<dd>乐器物品名称。</dd>
 						<dt>Reference82</dt>
-						<dd>演奏スキル。</dd>
+						<dd>演奏技能。</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventClothOut">
 				<dt class="entry">OnElonaOmakeMMAEventClothOut</dt>
 				<dd class="entry">
-					<p>PCが気持ちいいことのために服を脱ぎ始めた時に発生。</p>
+					<p>当PC为了让自己感觉舒服而开始脱衣服时触发。</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference范围为0～80，<a href="#reference_elonamma_common">※通用参考值</a>。</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventStealItem">
 				<dt class="entry">OnElonaOmakeMMAEventStealItem</dt>
 				<dd class="entry">
-					<p>アイテムを盗み終わった時に発生。</p>
+					<p>在盗取物品结束后触发。</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference范围为0～80，<a href="#reference_elonamma_common">※通用参考值</a>。</dd>
 						<dt>Reference81</dt>
-						<dd>盗んだアイテム名。</dd>
+						<dd>盗取物品名称。</dd>
 						<dt>Reference82</dt>
-						<dd>NPCの所持品は1、マップ上アイテムは0。</dd>
+						<dd>NPC的随身物品为1，地图上的物品为0。</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventTreasureDigging">
 				<dt class="entry">OnElonaOmakeMMAEventTreasureDigging</dt>
 				<dd class="entry">
-					<p>宝の地図の場所を掘り当てた時に発生。</p>
+					<p>在挖掘出宝图上的地点时触发。</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference范围为0～80，<a href="#reference_elonamma_common">※通用参考值</a>。</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventReadTreasureMap">
 				<dt class="entry">OnElonaOmakeMMAEventReadTreasureMap</dt>
 				<dd class="entry">
-					<p>宝の地図を読んだ時に発生。</p>
+					<p>阅读宝图时触发。</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference范围为0～80，<a href="#reference_elonamma_common">※通用参考值</a>。</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventSkillLearned">
 				<dt class="entry">OnElonaOmakeMMAEventSkillLearned</dt>
 				<dd class="entry">
-					<p>トレーナーからスキルを習得した時に発生。</p>
+					<p>从训练师那里习得技能时触发。</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference范围为0～80，<a href="#reference_elonamma_common">※通用参考值</a>。</dd>
 						<dt>Reference81</dt>
-						<dd>スキル名。</dd>
+						<dd>技能名称。</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventWeatherChanged">
 				<dt class="entry">OnElonaOmakeMMAEventWeatherChanged</dt>
 				<dd class="entry">
-					<p>天候が変わった時に発生。</p>
+					<p>天气发生改变时触发。</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference范围为0～80，<a href="#reference_elonamma_common">※通用参考值</a>。</dd>
 						<dt>Reference81</dt>
-						<dd>変わる前の天候。</dd>
+						<dd>变化前的天气</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventRagnarok">
 				<dt class="entry">OnElonaOmakeMMAEventRagnarok</dt>
 				<dd class="entry">
-					<p>終末の日が訪れた時に発生。</p>
+					<p>当 終末の日 到来时触发。</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference范围为0～80，<a href="#reference_elonamma_common">※通用参考值</a>。</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventSisterRagnarok">
 				<dt class="entry">OnElonaOmakeMMAEventSisterRagnarok</dt>
 				<dd class="entry">
-					<p>妹の日が訪れた時に発生。</p>
+					<p>当妹の日到来时触发。</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference范围为0～80，<a href="#reference_elonamma_common">※通用参考值</a>。</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventPray">
 				<dt class="entry">OnElonaOmakeMMAEventPray</dt>
 				<dd class="entry">
-					<p>神に祈った時に発生。</p>
+					<p>在向神祈祷时触发。</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference范围为0～80，<a href="#reference_elonamma_common">※通用参考值</a>。</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventOffer">
 				<dt class="entry">OnElonaOmakeMMAEventOffer</dt>
 				<dd class="entry">
-					<p>祭壇にアイテムを捧げた時に発生。</p>
+					<p>在祭坛上供奉物品时触发。</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference范围为0～80，<a href="#reference_elonamma_common">※通用参考值</a>。</dd>
 						<dt>Reference81</dt>
-						<dd>捧げたアイテム。</dd>
+						<dd>供奉的物品。</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventPrayFailed">
 				<dt class="entry">OnElonaOmakeMMAEventPrayFailed</dt>
 				<dd class="entry">
-					<p>神に祈ったが無関心だった時に発生。</p>
+					<p>当向神祈祷却未获回应时触发。</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference范围为0～80，<a href="#reference_elonamma_common">※通用参考值</a>。</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventPrayEyth">
 				<dt class="entry">OnElonaOmakeMMAEventPrayEyth</dt>
 				<dd class="entry">
-					<p>無信仰で神に祈ってみた時に発生。</p>
+					<p>在无信仰的情况下尝试向神祈祷时触发。</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference范围为0～80，<a href="#reference_elonamma_common">※通用参考值</a>。</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventAreaChanged*">
 				<dt class="entry">OnElonaOmakeMMAEventAreaChanged*</dt>
 				<dd class="entry">
-					<p>別エリアに移動した時に発生（*はエリア番号）。</p>
+					<p>当移动到其他区域时触发（*为区域编号）。</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference范围为0～80，<a href="#reference_elonamma_common">※通用参考值</a>。</dd>
 						<dt>Reference81</dt>
-						<dd>移動前にいたエリア名。</dd>
+						<dd>移动前所在的区域名称。</dd>
 						<dt>Reference82</dt>
-						<dd>移動前にいたエリア番号。</dd>
+						<dd>移动前所在的区域编号。</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventPayTax">
 				<dt class="entry">OnElonaOmakeMMAEventPayTax</dt>
 				<dd class="entry">
-					<p>PCが請求書を納税箱に入れた時に発生。</p>
+					<p>当PC将账单投入纳税箱时触发。</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference范围为0～80，<a href="#reference_elonamma_common">※通用参考值</a>。</dd>
 						<dt>Reference81</dt>
-						<dd>支払った税金額。</dd>
+						<dd>已支付的税额。</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventCooking">
 				<dt class="entry">OnElonaOmakeMMAEventCooking</dt>
 				<dd class="entry">
-					<p>PCがアイテムを調理した時に発生。</p>
+					<p>当PC烹饪物品时触发。</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference范围为0～80，<a href="#reference_elonamma_common">※通用参考值</a>。</dd>
 						<dt>Reference81</dt>
-						<dd>料理アイテム名。</dd>
+						<dd>料理物品名称。</dd>
 						<dt>Reference82</dt>
-						<dd>料理アイテム識別子。</dd>
+						<dd>料理物品标识符。</dd>
 						<dt>Reference83</dt>
-						<dd>食物種別(1:肉、2:野菜、3:果物、4:お菓子、5:麺、6:魚、7:パン、8:卵)。</dd>
+						<dd>食物种类(1:肉、2:野菜、3:果物、4:お菓子、5:麺、6:魚、7:パン、8:卵)。</dd>
 						<dt>Reference84</dt>
-						<dd>料理ランク(1～9)。</dd>
+						<dd>料理等级(1～9)。</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventAreaChanged">
 				<dt class="entry">OnElonaOmakeMMAEventAreaChanged</dt>
 				<dd class="entry">
-					<p>不特定の別エリアに移動した時に発生。</p>
+					<p>移动到不特定的其他区域时触发。</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference范围为0～80，<a href="#reference_elonamma_common">※通用参考值</a>。</dd>
 						<dt>Reference81</dt>
-						<dd>移動前にいたエリア名。</dd>
+						<dd>移动前所在的区域名称。</dd>
 						<dt>Reference82</dt>
-						<dd>移動前にいたエリア番号。</dd>
+						<dd>移动前所在的区域编号。</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventHour">
 				<dt class="entry">OnElonaOmakeMMAEventHour</dt>
 				<dd class="entry">
-					<p>ゲーム内時間で1時間が経過した時に発生。</p>
+					<p>在游戏内时间经过1小时时触发。</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference范围为0～80，<a href="#reference_elonamma_common">※通用参考值</a>。</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventGrandmapocalypse">
 				<dt class="entry">OnElonaOmakeMMAEventGrandmapocalypse</dt>
 				<dd class="entry">
-					<p>グランマ黙示録が訪れた時に発生。</p>
+					<p>当グランマ黙示録到来时触发。</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference范围为0～80，<a href="#reference_elonamma_common">※通用参考值</a>。</dd>
 					</dl>
 				</dd>
 			</dl>
 		</section>
 		<section class="category application">
-			<h1>麻雀通信イベント</h1>
+			<h1>麻雀通信事件</h1>
 			<ul class="caption link">
-				<li>仕様提唱元：<a href="https://nikolat.github.io/">https://nikolat.github.io/</a></li>
-				<li>サーバーの実装例：<a href="https://github.com/nikolat/jong-bari">https://github.com/nikolat/jong-bari</a></li>
-				<li>クライアントの実装例(YAYA)：<a href="https://github.com/nikolat/jong-rinrin">https://github.com/nikolat/jong-rinrin</a></li>
-				<li>クライアントの実装例(華和梨)：<a href="https://github.com/nikolat/jong-chunchun">https://github.com/nikolat/jong-chunchun</a></li>
-				<li>クライアントの実装例(里々)：<a href="https://github.com/nikolat/jong-whanwhan">https://github.com/nikolat/jong-whanwhan</a></li>
+				<li>规范提出方：<a href="https://nikolat.github.io/">https://nikolat.github.io/</a></li>
+				<li>服务器的实现示例：<a href="https://github.com/nikolat/jong-bari">https://github.com/nikolat/jong-bari</a></li>
+				<li>客户端的实现示例（YAYA）：<a href="https://github.com/nikolat/jong-rinrin">https://github.com/nikolat/jong-rinrin</a></li>
+				<li>客户端的实现示例（华和梨）：<a href="https://github.com/nikolat/jong-chunchun">https://github.com/nikolat/jong-chunchun</a></li>
+				<li>客户端实现示例（里々）：<a href="https://github.com/nikolat/jong-whanwhan">https://github.com/nikolat/jong-whanwhan</a></li>
 			</ul>
 			<ul class="supported-baseware">
 				<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 				<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 				<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
-				<li><em>※推奨　SSP2.5.05以上</em></li>
+				<li><em>※建议SSP2.5.05及以上版本</em></li>
 			</ul>
 			<dl id="OnMahjong">
 				<dt class="entry">OnMahjong</dt>
 				<dd class="entry">
-					<p>ゲームの各タイミングで通知。後述の<a href="#reference_OnMahjong">※サーバコマンド</a>参照。</p>
+					<p>在游戏的各个时机发送通知。请参阅下文的<a href="#reference_OnMahjong">※服务器命令</a>。</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>バージョン（UKAJONG/0.2）</dd>
+						<dd>版本（UKAJONG/0.2）</dd>
 						<dt>Reference1</dt>
-						<dd><a href="#reference_OnMahjong">※サーバコマンド</a></dd>
+						<dd><a href="#reference_OnMahjong">※服务器命令</a></dd>
 						<dt>Reference*</dt>
-						<dd><a href="#reference_OnMahjong">※サーバコマンド</a>に応じた追加情報</dd>
+						<dd>根据<a href="#reference_OnMahjong">※服务器命令</a>提供的附加信息</dd>
 					</dl>
 					<section id="reference_OnMahjong">
-						<h1>UKAJONG/0.2におけるサーバコマンドとその追加情報</h1>
+						<h1>UKAJONG/0.2中的服务器命令及其附加信息</h1>
 						<dl class="reference">
 							<dt>Reference1</dt>
-							<dd>gamestart（ゲーム開始時）</dd>
+							<dd>gamestart（游戏开始时）</dd>
 							<dt>Reference2</dt>
 							<dd>席（東|南|西|北）</dd>
 							<dt>Reference3</dt>
-							<dd>プレイヤー名1</dd>
+							<dd>玩家名称1</dd>
 							<dt>Reference4</dt>
-							<dd>プレイヤー名2</dd>
+							<dd>玩家名称2</dd>
 							<dt>Reference5</dt>
-							<dd>プレイヤー名3</dd>
+							<dd>玩家名称3</dd>
 							<dt>Reference6</dt>
-							<dd>プレイヤー名4</dd>
+							<dd>玩家名称4</dd>
 						</dl>
 						<dl class="reference">
 							<dt>Reference1</dt>
-							<dd>gameend（ゲーム終了時）</dd>
+							<dd>gameend（游戏结束时）</dd>
 							<dt>Reference2</dt>
-							<dd>プレイヤー名1（バイト値１）点数</dd>
+							<dd>玩家名称1（字节值１）点数</dd>
 							<dt>Reference3</dt>
-							<dd>プレイヤー名2（バイト値１）点数</dd>
+							<dd>玩家名称2（字节值１）点数</dd>
 							<dt>Reference4</dt>
-							<dd>プレイヤー名3（バイト値１）点数</dd>
+							<dd>玩家名称3（字节值１）点数</dd>
 							<dt>Reference5</dt>
-							<dd>プレイヤー名4（バイト値１）点数</dd>
+							<dd>玩家名称4（字节值１）点数</dd>
 						</dl>
 						<dl class="reference">
 							<dt>Reference1</dt>
-							<dd>kyokustart（一局開始時）</dd>
+							<dd>kyokustart（一局开始时）</dd>
 							<dt>Reference2</dt>
 							<dd>場風（東|南|西|北）</dd>
 							<dt>Reference3</dt>
-							<dd>親プレイヤー名</dd>
+							<dd>庄家玩家名称</dd>
 							<dt>Reference4</dt>
-							<dd>本場（例 1）</dd>
+							<dd>本场（例 1）</dd>
 							<dt>Reference5</dt>
-							<dd>供託（例 1000）</dd>
+							<dd>供托（例 1000）</dd>
 						</dl>
 						<dl class="reference">
 							<dt>Reference1</dt>
-							<dd>kyokuend（一局終了時）</dd>
+							<dd>kyokuend（一局结束时）</dd>
 						</dl>
 						<dl class="reference">
 							<dt>Reference1</dt>
-							<dd>point（プレイヤーの点数を通知）</dd>
+							<dd>point（通知玩家的分数）</dd>
 							<dt>Reference2</dt>
-							<dd>プレイヤー名</dd>
+							<dd>玩家名称</dd>
 							<dt>Reference3</dt>
-							<dd>(=|+|-) =は点数の直指定、+-は増減を意味する</dd>
+							<dd>(=|+|-) =表示直接指定分数，+-表示增减</dd>
 							<dt>Reference4</dt>
 							<dd>点数</dd>
 						</dl>
 						<dl class="reference">
 							<dt>Reference1</dt>
-							<dd>haipai（配牌を配る時）</dd>
+							<dd>haipai（发牌时）</dd>
 							<dt>Reference2</dt>
-							<dd>プレイヤー名</dd>
+							<dd>玩家名称</dd>
 							<dt>Reference3</dt>
 							<dd>配牌（例 1m2m3m4p5p6p7s8s9s1z5z6z7z）</dd>
 						</dl>
 						<dl class="reference">
 							<dt>Reference1</dt>
-							<dd>dora（ドラ表示牌を送る時）</dd>
+							<dd>dora（发送宝牌指示牌时）</dd>
 							<dt>Reference2</dt>
 							<dd>牌（例 7z）</dd>
 						</dl>
 						<dl class="reference">
 							<dt>Reference1</dt>
-							<dd>open（手牌を公開する時 チー、ポン、カン等）</dd>
+							<dd>open（公开手牌时（吃、碰、杠等））</dd>
 							<dt>Reference2</dt>
-							<dd>プレイヤー名</dd>
+							<dd>玩家名称</dd>
 							<dt>Reference3</dt>
 							<dd>牌（例 1p2p3p）</dd>
 						</dl>
 						<dl class="reference">
 							<dt>Reference1</dt>
-							<dd>tsumo（ツモの時）</dd>
+							<dd>tsumo（自摸时）</dd>
 							<dt>Reference2</dt>
-							<dd>プレイヤー名（自分）</dd>
+							<dd>玩家名称（自己）</dd>
 							<dt>Reference3</dt>
-							<dd>残り枚数</dd>
+							<dd>剩余张数</dd>
 							<dt>Reference4</dt>
 							<dd>牌（例 7z）</dd>
 						</dl>
 						<dl class="reference">
 							<dt>Reference1</dt>
-							<dd>sutehai（捨牌時）</dd>
+							<dd>sutehai（弃牌时）</dd>
 							<dt>Reference2</dt>
-							<dd>プレイヤー名（自分）</dd>
+							<dd>玩家名称（自己）</dd>
 							<dt>Reference3</dt>
 							<dd>牌（例 7z）</dd>
 						</dl>
 						<dl class="reference">
 							<dt>Reference1</dt>
-							<dd>say（発声時）</dd>
+							<dd>say（发声时）</dd>
 							<dt>Reference2</dt>
-							<dd>プレイヤー名</dd>
+							<dd>玩家名称</dd>
 							<dt>Reference3</dt>
-							<dd>発声内容（chi|pon|kan|ron|tsumo|richi|tenpai|noten）</dd>
+							<dd>发声内容（chi|pon|kan|ron|tsumo|richi|tenpai|noten）</dd>
 						</dl>
 						<dl class="reference">
 							<dt>Reference1</dt>
-							<dd>agari（あがりの時）</dd>
+							<dd>agari（胡牌时）</dd>
 							<dt>Reference2</dt>
-							<dd>プレイヤー名</dd>
+							<dd>玩家名称</dd>
 							<dt>Reference3</dt>
 							<dd>符</dd>
 							<dt>Reference4</dt>
-							<dd>役,ハン数</dd>
+							<dd>役,番数</dd>
 							<dt>Reference5</dt>
-							<dd>以降、Reference4同様</dd>
+							<dd>以下同Reference4</dd>
 						</dl>
 						<dl class="reference">
 							<dt>Reference1</dt>
-							<dd>ryukyoku（流局時）</dd>
+							<dd>ryukyoku（流局时）</dd>
 						</dl>
-						<p>以下のコマンドは返信が要求されている。要求元がGHOSTである場合は\![raiseother]等で返信しても良いが、要求元が外部アプリでSSTPによる通知であった場合はX-SSTP-PassThru-*ヘッダを用いて返信する必要がある。</p>
-						<p>\![raiseother]で返信する場合はOnMahjongResponseイベントを返す。SHIORIレスポンスヘッダを用いる場合はX-SSTP-PassThru-ID: OnMahjongResponseとする。</p>
-						<p>要求された対象に空文字を設定した場合、サーバーに対応を委任したものとみなす。</p>
+						<p>以下命令需要回复。当请求方为人格时，可使用\![raiseother]等方式进行回复；但若请求方为外部应用并通过SSTP发送通知，则必须使用X-SSTP-PassThru-*头部进行回复。</p>
+						<p>使用\![raiseother]进行回复时，返回OnMahjongResponse事件。若使用SHIORI响应头，则X-SSTP-PassThru-ID应设为OnMahjongResponse。</p>
+						<p>如果将所请求的对象设置为空字符串，则视为已将处理委托给服务器。</p>
 						<dl class="reference">
 							<dt>Reference1</dt>
-							<dd>hello（接続確認）</dd>
-						</dl>
-						<dl class="reference">
-							<dt>Reference1</dt>
-							<dd>sutehai?（捨牌を尋ねる）</dd>
+							<dd>hello（确认链接）</dd>
 						</dl>
 						<dl class="reference">
 							<dt>Reference1</dt>
-							<dd>naku?（牌を鳴くか尋ねる。クライアントが可能なコマンドも送る）</dd>
+							<dd>sutehai?（询问是否要弃牌）</dd>
+						</dl>
+						<dl class="reference">
+							<dt>Reference1</dt>
+							<dd>naku?（询问是否要鸣牌。同时发送客户端可执行的命令）</dd>
 							<dt>Reference2</dt>
 							<dd>(ron|kan|pon|chi)</dd>
 							<dt>Reference3</dt>
-							<dd>以降、Reference2同様</dd>
+							<dd>以下同Reference2</dd>
 						</dl>
 						<dl class="reference">
 							<dt>Reference1</dt>
-							<dd>tenpai?（テンパイを宣言するか尋ねる）</dd>
+							<dd>tenpai?（询问是否宣布听牌）</dd>
 						</dl>
 					</section>
 				</dd>
@@ -3155,46 +3158,46 @@
 			<dl id="OnMahjongResponse">
 				<dt class="entry">OnMahjongResponse</dt>
 				<dd class="entry">
-					<p>OnMahjongイベントに対する返信。後述の<a href="#reference_OnMahjongResponse">※クライアントコマンド</a>参照。</p>
+					<p>针对OnMahjong事件的回复。详见下文的<a href="#reference_OnMahjongResponse">※客户端命令</a>。</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>バージョン（UKAJONG/0.2）</dd>
+						<dd>版本（UKAJONG/0.2）</dd>
 						<dt>Reference1</dt>
-						<dd><a href="#reference_OnMahjongResponse">※クライアントコマンド</a></dd>
+						<dd><a href="#reference_OnMahjongResponse">※客户端命令</a></dd>
 						<dt>Reference*</dt>
-						<dd><a href="#reference_OnMahjongResponse">※クライアントコマンド</a>に応じた追加情報</dd>
+						<dd>根据<a href="#reference_OnMahjongResponse">※客户端命令</a>提供的附加信息</dd>
 					</dl>
 					<section id="reference_OnMahjongResponse">
-						<h1>UKAJONG/0.2におけるクライアントコマンドとその追加情報</h1>
+						<h1>在UKAJONG/0.2中的客户端命令及其附加信息</h1>
 						<dl class="reference">
 							<dt>Reference1</dt>
-							<dd>hello（接続確認の返信）</dd>
+							<dd>hello（确认链接的回复）</dd>
 							<dt>Reference2</dt>
-							<dd>ump=(UMPバージョン)※厳密にUMPに準拠しているわけではないので特に見てないです。ump=?でOK</dd>
+							<dd>ump=(UMP版本)※由于并未严格遵循UMP标准，因此未特别关注。ump=? 即可</dd>
 							<dt>Reference3</dt>
-							<dd>name=(プレイヤー名)※sakura.nameを指定してください。</dd>
+							<dd>name=(玩家名称)※请指定sakura.name。</dd>
 						</dl>
 						<dl class="reference">
 							<dt>Reference1</dt>
-							<dd>sutehai?（捨牌の返信）</dd>
+							<dd>sutehai?（弃牌回复）</dd>
 							<dt>Reference2</dt>
 							<dd>(sutehai|ankan|kakan|richi|tsumo)</dd>
 							<dt>Reference3</dt>
-							<dd>選択された牌(tsumoの時は空でよい)</dd>
+							<dd>所选牌（tsumo时可为空）</dd>
 						</dl>
 						<dl class="reference">
 							<dt>Reference1</dt>
-							<dd>naku?（牌を鳴くかの返信）</dd>
+							<dd>naku?（对鸣牌的回复）</dd>
 							<dt>Reference2</dt>
 							<dd>(no|ron|kan|pon|chi)</dd>
 							<dt>Reference3</dt>
-							<dd>選択された牌1(chiの時に必要。2mに対し1mと3mまたは3mと4mのように指定する。そのうちの1枚目)</dd>
+							<dd>所选牌1（在chi时需要。针对2万，可指定为1万与3万，或3万与4万，其中为第一张）</dd>
 							<dt>Reference4</dt>
-							<dd>選択された牌2(上記の2枚目)</dd>
+							<dd>所选牌2（上述的第二张）</dd>
 						</dl>
 						<dl class="reference">
 							<dt>Reference1</dt>
-							<dd>tenpai?（テンパイを宣言するかの返信）</dd>
+							<dd>tenpai?（是否宣告听牌的回复）</dd>
 							<dt>Reference2</dt>
 							<dd>(yes|no)</dd>
 						</dl>
@@ -3203,7 +3206,7 @@
 			</dl>
 		</section>
 		<section class="category application">
-			<h1>Nostr通知イベント</h1>
+			<h1>Nostr通知事件</h1>
 			<ul class="caption link">
 				<li>[送信](Nostr/0.5)：<a href="https://github.com/betonetojp/omochat">omochat</a></li>
 				<li>[送信](Nostr/0.4)：<a href="https://github.com/nikolat/angolmois">angolmois</a></li>
@@ -3211,51 +3214,51 @@
 				<li>[送信](Nostr/0.4)：<a href="https://github.com/betonetojp/noka">noka</a></li>
 				<li>[送信](Nostr/0.3)：<a href="https://github.com/nikolat/nostryu">Nostrゅう</a></li>
 				<li>[送信](Nostr/0.3)：<a href="https://let.hatelabo.jp/Nikola/let/karR3IrkgOAA">nostter に SSTP over HTTP で喋らせるボタンを生やすブックマークレット</a></li>
-				<li>[受信](Nostr/0.3,Nostr/0.4,Nostr/0.5対応)：<a href="https://github.com/nikolat/nostalk">nostalk</a></li>
+				<li>[受信](兼容Nostr/0.3,Nostr/0.4,Nostr/0.5)：<a href="https://github.com/nikolat/nostalk">nostalk</a></li>
 			</ul>
 			<ul class="supported-baseware">
 				<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 				<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 				<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
-				<li><em>※推奨　SSP2.6.72以上</em></li>
+				<li><em>※建议使用SSP 2.6.72及以上版本</em></li>
 			</ul>
 			<dl id="OnNostr">
 				<dt class="entry">OnNostr</dt>
 				<dd class="entry">
 					<section id="reference_OnMahjong">
-						<h1>Nostr/0.5における通知情報</h1>
+						<h1>Nostr/0.5中的通知信息</h1>
 						<dl class="reference">
 							<dt>Reference0</dt>
-							<dd>バージョン（Nostr/0.5）</dd>
+							<dd>版本（Nostr/0.5）</dd>
 							<dt>Reference1</dt>
-							<dd>Nostrイベントのkind(数値)(1:note, 7:reaction, ...)</dd>
+							<dd>Nostr的kind(数值)(1:note, 7:reaction, ...)</dd>
 							<dt>Reference2</dt>
-							<dd>Nostrイベントのcontent</dd>
+							<dd>Nostr事件的content</dd>
 							<dt>Reference3</dt>
-							<dd>Nostrイベント署名者のkind0のname</dd>
+							<dd>Nostr事件签名者的kind0的name</dd>
 							<dt>Reference4</dt>
-							<dd>Nostrイベント署名者のkind0のdisplay_name</dd>
+							<dd>Nostr事件签名者的kind0ddisplay_name</dd>
 							<dt>Reference5</dt>
-							<dd>Nostrイベント署名者のkind0のpicture</dd>
+							<dd>Nostr事件签名者的kind0的picture</dd>
 							<dt>Reference6</dt>
-							<dd>NostrイベントのidのNIP-19エンコード(note1...またはnevent1...)</dd>
+							<dd>Nostr事件id的NIP-19编码(note1...またはnevent1...)</dd>
 							<dt>Reference7</dt>
-							<dd>Nostrイベント署名者の公開鍵のNIP-19エンコード(npub1...)</dd>
+							<dd>Nostr事件签名者的钥的NIP-19编码(npub1...)</dd>
 							<dt>Reference8</dt>
-							<dd>Nostrイベントのgタグの値</dd>
+							<dd>Nostr事件的g标签的值</dd>
 							<dt>Reference9</dt>
-							<dd>Nostrイベントのnタグの値</dd>
+							<dd>Nostr事件的n标签的值</dd>
 							<dt>Reference10</dt>
-							<dd>Nostrイベントのtタグの値</dd>
+							<dd>Nostr事件的t标签的值</dd>
 						</dl>
 					</section>
 				</dd>
 			</dl>
 		</section>
 		<section class="category application">
-			<h1>アプリ「さとりすと」</h1>
+			<h1>应用「さとりすと」</h1>
 			<ul class="caption link">
-				<li>公開元：<a href="http://nanachi.sakura.ne.jp/">http://nanachi.sakura.ne.jp/</a></li>
+				<li>公开源：<a href="http://nanachi.sakura.ne.jp/">http://nanachi.sakura.ne.jp/</a></li>
 			</ul>
 			<ul class="supported-baseware">
 				<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -3263,66 +3266,66 @@
 			<dl id="OnSatolistBoot">
 				<dt class="entry">OnSatolistBoot</dt>
 				<dd class="entry">
-					<p>さとりすとが起動した時に発生。</p>
+					<p>さとりすと启动时触发。</p>
 				</dd>
 			</dl>
 			<dl id="OnSatolistGhostOpened">
 				<dt class="entry">OnSatolistGhostOpened</dt>
 				<dd class="entry">
-					<p>さとりすとがゴーストを読み込んだ時に発生。</p>
+					<p>当さとりすと读取人格时触发。</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>本体側キャラクタ名。</dd>
+						<dd>本体侧角色名称。</dd>
 						<dt>Reference1</dt>
-						<dd>ゴースト名。</dd>
+						<dd>人格名称。</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnSatolistSaved">
 				<dt class="entry">OnSatolistSaved</dt>
 				<dd class="entry">
-					<p>さとりすとでゴーストを保存した時に発生。</p>
+					<p>在使用さとりすと保存人格时触发。</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>さとりすと終了時に保存をした場合はclosing、それ以外はedit</dd>
+						<dd>如果在さとりすと结束时进行了保存，则为closing，否则为edit</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnSatolistClosed">
 				<dt class="entry">OnSatolistClosed</dt>
 				<dd class="entry">
-					<p>さとりすとが終了しようとした時に発生。</p>
+					<p>在さとりすと即将结束时触发。</p>
 				</dd>
 			</dl>
 			<dl id="OnSatolistEventAdded">
 				<dt class="entry">OnSatolistEventAdded</dt>
 				<dd class="entry">
-					<p>さとりすとでイベントを作成した時に発生。</p>
+					<p>在さとりすと创建事件时触发。</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>追加した項目名。</dd>
+						<dd>新增项目名称。</dd>
 						<dt>Reference1</dt>
-						<dd>追加先のファイル名。</dd>
+						<dd>新增目标文件的名称。</dd>
 						<dt>Reference2</dt>
-						<dd>項目の種別。</dd>
+						<dd>项目类别。</dd>
 						<dt>Reference3</dt>
-						<dd>項目の発生条件。</dd>
+						<dd>项目触发条件。</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnSatolistDictionaryFolderChanged">
 				<dt class="entry">OnSatolistDictionaryFolderChanged</dt>
 				<dd class="entry">
-					<p>「辞書」で使用する辞書フォルダを変更した時に発生。</p>
+					<p>在“辞書”中更改所使用的词典文件夹时触发。</p>
 				</dd>
 			</dl>
 		</section>
 		<section class="category application">
-			<h1>GoogleChrome拡張「とうらぶえくすてんしょん」</h1>
+			<h1>GoogleChrome扩展「とうらぶえくすてんしょん」</h1>
 			<ul class="caption link">
-				<li>公開元：<del>とうらぶえくすてんしょん - Chrome ウェブストア</del><ins>消失</ins></li>
-				<li>関連：<a href="https://ayachi.hatenablog.com/entry/2015/03/14/183856">https://ayachi.hatenablog.com/entry/2015/03/14/183856</a></li>
-				<li>関連：<a href="https://ayachi.hatenablog.com/entry/2015/03/14/210107">https://ayachi.hatenablog.com/entry/2015/03/14/210107</a></li>
+				<li>公开源：<del>とうらぶえくすてんしょん - Chrome ウェブストア</del><ins>已消失</ins></li>
+				<li>相关：<a href="https://ayachi.hatenablog.com/entry/2015/03/14/183856">https://ayachi.hatenablog.com/entry/2015/03/14/183856</a></li>
+				<li>相关：<a href="https://ayachi.hatenablog.com/entry/2015/03/14/210107">https://ayachi.hatenablog.com/entry/2015/03/14/210107</a></li>
 			</ul>
 			<ul class="supported-baseware">
 				<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -3330,255 +3333,255 @@
 			<dl id="OnTourabuConquestStart">
 				<dt class="entry">OnTourabuConquestStart</dt>
 				<dd class="entry">
-					<p>遠征が開始されたときに発生。</p>
+					<p>远征开始时触发。</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>部隊の番号（1～4の整数）。</dd>
+						<dd>部队的编号（1～4的整数）。</dd>
 						<dt>Reference1</dt>
-						<dd>遠征が終わるまでのおよその時間。単位は分。</dd>
+						<dd>远征结束前的大致时间。单位为分钟。</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnTourabuConquestEnd">
 				<dt class="entry">OnTourabuConquestEnd</dt>
 				<dd class="entry">
-					<p>遠征が終了したとき発生。<br />仕様上実際の遠征終了より通知が数秒早いことがある。</p>
+					<p>远征结束后触发。<br />由于系统原因，通知可能会比实际远征结束早几秒。</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>部隊の番号（1～4の整数）。</dd>
+						<dd>部队的编号（1～4的整数）。</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnTourabuDutyStart">
 				<dt class="entry">OnTourabuDutyStart</dt>
 				<dd class="entry">
-					<p>内番が開始されたとき発生。</p>
+					<p>内番开始时触发。</p>
 				</dd>
 			</dl>
 			<dl id="OnTourabuDutyEnd">
 				<dt class="entry">OnTourabuDutyEnd</dt>
 				<dd class="entry">
-					<p>内番が終了したとき発生。</p>
+					<p>内番结束时触发。</p>
 				</dd>
 			</dl>
 		</section>
 		<section class="category application">
-			<h1>ゴースト開発用の対話型exe「ゴースト・ターミナル」</h1>
+			<h1>人格开发用对话型exe「ゴースト・ターミナル」</h1>
 			<ul class="caption link">
-				<li>公開元：<a href="https://github.com/Taromati2/ghost_terminal">https://github.com/Taromati2/ghost_terminal</a></li>
+				<li>公开源：<a href="https://github.com/Taromati2/ghost_terminal">https://github.com/Taromati2/ghost_terminal</a></li>
 			</ul>
 			<ul class="supported-baseware">
 				<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 			</ul>
 			<br><hr>
-			<h2>開始、終了</h2>
+			<h2>开始、结束</h2>
 			<dl id="ShioriEcho.Begin">
 				<dt class="entry">ShioriEcho.Begin</dt>
 				<dd class="entry">
-					<p>このゴーストが起動したときのghost_terminalイベント</p>
+					<p>ghost_terminal对此ghost启动时事件</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>ターミナルバージョン</dd>
+						<dd>终端版本</dd>
 						<dt>Reference1</dt>
-						<dd>端末のセッションタイプ<br />
-							端末が `-s` で始まる場合は `SakuraScript` となる。<br />
-							端末が `-c` で始まる場合は `Command` となる。<br />
-							端末が共通で起動する場合は `Common` となる。</dd>
-						<dt>戻り値：X-SSTP-PassThru-Tittle（オプション）</dt>
-						<dd>端末のタイトルを設定する</dd>
-						<dt>戻り値：X-SSTP-PassThru-Icon（オプション）</dt>
-						<dd>端末のアイコンを設定する</dd>
-						<dt>戻り値：X-SSTP-PassThru-SmallIcon（オプション）</dt>
-						<dd>端末の小さいアイコンを設定する<br />
-							設定されていない場合、`X-SSTP-PassThru-Icon`と一致する</dd>
-						<dt>戻り値：X-SSTP-PassThru-CustomLoginInfo（オプション）</dt>
-						<dd>設定された場合、端末はデフォルトのログイン情報を表示せず、この<br />
-							この戻り値は、単純にエスケープされます：<br />
-							- `\n` は改行に変換されます。<br />
-							- `\t` はタブに変換されます。<br />
-							- `\\` は `\` に変換される。</dd>
+						<dd>终端启动方式<br />
+							当 terminal 以 -s 启动时，为 SakuraScript<br />
+							当 terminal 以 -c 启动时，为 Command<br />
+							否则为 Common</dd>
+						<dt>返值：X-SSTP-PassThru-Tittle（可选）</dt>
+						<dd>设置终端标题</dd>
+						<dt>返值：X-SSTP-PassThru-Icon（可选）</dt>
+						<dd>设置终端图标（PNG或ICO路径）</dd>
+						<dt>返值：X-SSTP-PassThru-SmallIcon（可选）</dt>
+						<dd>设置终端小图标（PNG或ICO路径）<br />
+							如果不设置，将与 X-SSTP-PassThru-Icon 保持一致</dd>
+						<dt>返值：X-SSTP-PassThru-CustomLoginInfo（可选）</dt>
+						<dd>如果设置了，终端将不显示默认的登录信息，但会显示这个的内容。<br />
+							这个返回值将经过简单转义：<br />
+							\n 将转换为换行<br />
+							\t 将转变为制表符<br />
+							\\ 将转化为 \</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="ShioriEcho.End">
 				<dt class="entry">ShioriEcho.End</dt>
 				<dd class="entry">
-					<p>通常のプログラム終了時に発生するghost_terminalイベント</p>
+					<p>ghost_terminal正常程序退出时事件</p>
 				</dd>
 			</dl>
 			<dl id="ShioriEcho.GetName">
 				<dt class="entry">ShioriEcho.GetName</dt>
 				<dd class="entry">
-					<p>ghost_terminalが名前を取得したときのイベント</p>
+					<p>ghost_terminal获取名称时事件</p>
 					<dl class="reference">
-						<dt>戻り値：X-SSTP-PassThru-GhostName（オプション）</dt>
-						<dd>ゴーストの名前を表示する</dd>
-						<dt>戻り値：X-SSTP-PassThru-UserName（オプション）</dt>
-						<dd>ユーザー名を表示する</dd>
+						<dt>返值：X-SSTP-PassThru-GhostName（可选）</dt>
+						<dd>显示人格名</dd>
+						<dt>返值：X-SSTP-PassThru-UserName（可选）</dt>
+						<dd>显示用户名</dd>
 					</dl>
 				</dd>
 			</dl>
 			<br><hr>
-			<h2>コマンドを実行する</h2>
+			<h2>执行命令</h2>
 			<dl id="ShioriEcho">
 				<dt class="entry">ShioriEcho</dt>
 				<dd class="entry">
-					<p>コマンドが入力された後のイベント</p>
+					<p>命令键入完毕后事件</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>端末で収集したコマンド</dd>
-						<dt>戻り値</dt>
-						<dd>もし`ShioriEcho.GetResult`を定義していない場合、ここで`ShioriEcho.GetResult`でサポートされている任意の返値を返すことができます。これらの返値は、ターミナルによって正しく処理されます（ただし、戻り値3は、`ShioriEcho.GetResult`を定義せずに何も返さない場合、次のコマンド取得に入ります）。<br />
-							`ShioriEcho.GetResult`を定義している場合、ここでの返値は無視されます（**ただし、sakura scriptは正常に実行される**）。</dd>
+						<dd>终端所收集到的命令</dd>
+						<dt>返值</dt>
+						<dd>如果你没有定义 ShioriEcho.GetResult ，你可以在这里返回 ShioriEcho.GetResult 所支持的任意返回值，它们同样会被 terminal 正确处理（除了可能返值3，在没有定义 ShioriEcho.GetResult 的情况下 ShioriEcho 中什么都不返回只会进入下一个命令的获取）<br />
+						若你定义了 ShioriEcho.GetResult ，则这里的返回值将被忽略（但言灵(sakura script)正常执行）</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="ShioriEcho.GetResult">
 				<dt class="entry">ShioriEcho.GetResult</dt>
 				<dd class="entry">
-					<p>バリューリザルトイベントのクエリ</p>
-					<p>返信可能ヘッダ 1：</p>
+					<p>查询求值结果事件</p>
+					<p>可能返值1：</p>
 					<dl class="reference">
-						<dt>戻り値：X-SSTP-PassThru-Result</dt>
-						<dd>コンテンツを表示し、次のコマンド取得に進む。</dd>
-						<dt>戻り値（オプション）：X-SSTP-PassThru-Type</dt>
-						<dd>付加情報：値型</dd>
+						<dt>返值：X-SSTP-PassThru-Result</dt>
+						<dd>显示内容并进入下一命令的获取</dd>
+						<dt>返值（可选）：X-SSTP-PassThru-Type</dt>
+						<dd>补充信息：值类型</dd>
 					</dl>
-					<p>返信可能ヘッダ 2：</p>
+					<p>可能返值2：</p>
 					<dl class="reference">
-						<dt>戻り値：X-SSTP-PassThru-Special</dt>
-						<dd>コンテンツを表示し、次のコマンド取得に進む。<br />
-							この戻り値は、単純にエスケープされます：<br />
-							- `\n` は改行に変換されます。<br />
-							- `\t` はタブに変換されます。<br />
-							- `\\` は `\` に変換される。</dd>
+						<dt>返值：X-SSTP-PassThru-Special</dt>
+						<dd>显示内容并进入下一命令的获取<br />
+							这个返回值将经过简单转义：<br />
+							\n 将转换为换行<br />
+							\t 将转变为制表符<br />
+							\\ 将转化为 \</dd>
 
 					</dl>
-					<p>返信可能ヘッダ 3：エンプティ</p>
-					<p>1秒待ってShioriEcho.GetResultを再実行する。</p>
-					<p>その他</p>
+					<p>可能返值3：空</p>
+					<p>等待1秒后重新发起ShioriEcho.GetResult</p>
+					<p>其他</p>
 					<dl class="reference">
-						<dt>戻り値：X-SSTP-PassThru-Status</dt>
-						<dd>この返り値は、上記の返り値に重ね合わせることができます<br />
-							もし`End`であれば、端末は終了する。<br />
-							`Continue`であれば、端末は何も表示せず、次のコマンドの取得に進みます。</dd>
+						<dt>返值：X-SSTP-PassThru-Status</dt>
+						<dd>此返值可叠加在上述返值中<br />
+							若其为 End ，终端终止<br />
+							若其为 Continue ，终端不显示任何内容并进入下一命令的获取</dd>
 					</dl>
 				</dd>
 			</dl>
 			<br><hr>
-			<h2>その他</h2>
+			<h2>其他</h2>
 			<dl id="ShioriEcho.TabPress">
 				<dt class="entry">ShioriEcho.TabPress</dt>
 				<dd class="entry">
-					<p>コマンドは、タブでイベントを完了させます。</p>
+					<p>命令通过tab补全时事件</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>端末で収集したコマンド。</dd>
+						<dd>终端所收集到的命令</dd>
 						<dt>Reference1</dt>
-						<dd>タブを押したときにカーソルがあったコマンドの最初の文字（開始値0）。</dd>
+						<dd>按下tab时光标所在命令的第几个字符（起始值0）</dd>
 						<dt>Reference2</dt>
-						<dd>ユーザーが最初に連続してタブを押した回数（開始値0）。</dd>
+						<dd>用户连续第几次按下tab（起始值0）</dd>
 						<dt>Reference3</dt>
-						<dd>この一連のタブ補完の中で、最初にタブを押したときにカーソルがあったコマンドの最初の文字（開始値0）。</dd>
-						<dt>戻り値（オプション）：X-SSTP-PassThru-Command</dt>
-						<dd>コマンドをこの内容で置き換える。</dd>
-						<dt>戻り値（オプション）：X-SSTP-PassThru-InsertIndex</dt>
-						<dd>カーソルをこの位置に移動させる（提供されない場合は変更しない）。</dd>
-						<dt>戻り値（オプション）：X-SSTP-PassThru-OldInsertIndex</dt>
-						<dd>後続の `Reference3` をこの内容に更新し、この一連のタブコンプリートが終了するまで有効とする（提供されない場合は変更しない）。</dd>
+						<dd>这一系列tab补全中初次按下tab时光标所在命令的第几个字符（起始值0）</dd>
+						<dt>返值（可选）：X-SSTP-PassThru-Command</dt>
+						<dd>将命令替换为此内容</dd>
+						<dt>返值（可选）：X-SSTP-PassThru-InsertIndex</dt>
+						<dd>将光标移动到此位置（若不提供则保持不变）</dd>
+						<dt>返值（可选）：X-SSTP-PassThru-OldInsertIndex</dt>
+						<dd>将后续的 Reference3 更新为此内容，有效性直到这一系列的tab补全结束（若不提供则保持不变）</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="ShioriEcho.CommandUpdate">
 				<dt class="entry">ShioriEcho.CommandUpdate</dt>
 				<dd class="entry">
-					<p>コマンド更新時のイベント</p>
+					<p>命令更新时事件</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>端末で収集したコマンド</dd>
-						<dt>戻り値（オプション）：X-SSTP-PassThru-CommandForDisplay</dt>
-						<dd>表示されているコマンドをこの内容に置き換えます。<br />
-							ゴーストはこのイベントを利用して、パスワード入力時のマスク、通常読み上げ時のシンタックスハイライトなどの機能を実装することができます。</dd>
+						<dd>终端所收集到的命令</dd>
+						<dt>返值（可选）：X-SSTP-PassThru-CommandForDisplay</dt>
+						<dd>将显示的命令替换为此内容<br />
+							ghost可以通过此事件实现密码输入时的掩码、正常读入时的语法高亮、以及其他功能</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="ShioriEcho.CommandPrompt">
 				<dt class="entry">ShioriEcho.CommandPrompt</dt>
 				<dd class="entry">
-					<p>コマンドプロンプトが更新されたときのイベント</p>
+					<p>命令提示符更新时事件</p>
 					<dl class="reference">
-						<dt>戻り値（オプション）：X-SSTP-PassThru-Prompt</dt>
-						<dd>表示されているコマンドプロンプトをこの内容で置き換える<br />
-							ゴーストはこのイベントでコマンドプロンプトを動的に変更することができます。</dd>
+						<dt>返值（可选）：X-SSTP-PassThru-Prompt</dt>
+						<dd>将显示的命令提示符替换为此内容<br />
+							ghost可以通过此事件实现命令提示符的动态变化</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="ShioriEcho.CommandComplete">
 				<dt class="entry">ShioriEcho.CommandComplete</dt>
 				<dd class="entry">
-					<p>ユーザーがコマンドラインの右端にある `→` を押したときのイベント</p>
+					<p>用户于命令行最右端按下 → 时事件</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>端末が収集したコマンド</dd>
+						<dd>终端所收集到的命令</dd>
 						<dt>Reference1</dt>
-						<dd>カーソルがある位置で `→` を押したときのコマンドの最初の文字（開始値は0）。</dd>
-						<dt>戻り値（オプション）：X-SSTP-PassThru-Command</dt>
-						<dd>コマンドをこの内容で置き換える。<br />
-							ゴーストは、このイベントでコマンドをオートコンプリートすることができます。</dd>
-						<dt>戻り値（オプション）：X-SSTP-PassThru-InsertIndex</dt>
-						<dd>カーソルをこの位置に移動させる（提供されない場合はそのままにする）。</dd>
+						<dd>按下 → 时光标所在命令的第几个字符（起始值0）</dd>
+						<dt>返值（可选）：X-SSTP-PassThru-Command</dt>
+						<dd>将命令替换为此内容<br />
+							ghost可以通过此事件实现命令的自动补全</dd>
+						<dt>返值（可选）：X-SSTP-PassThru-InsertIndex</dt>
+						<dd>将光标移动到此位置（若不提供则保持不变）</dd>
 					</dl>
 				</dd>
 			</dl>
 			<br><hr>
-			<h2>コマンド履歴</h2>
+			<h2>命令历史</h2>
 			<dl id="ShioriEcho.CommandHistory.New">
 				<dt class="entry">ShioriEcho.CommandHistory.New</dt>
 				<dd class="entry">
-					<p>コマンドヒストリーの末尾に空のコマンドが追加されたときのイベント</p>
+					<p>命令历史末尾新增空命令时事件</p>
 				</dd>
 			</dl>
 			<dl id="ShioriEcho.CommandHistory.Update">
 				<dt class="entry">ShioriEcho.CommandHistory.Update</dt>
 				<dd class="entry">
-					<p>コマンドヒストリーが更新されたときのイベント</p>
+					<p>命令历史更新时事件</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>historyコマンドの内容</dd>
+						<dd>历史命令的内容</dd>
 						<dt>Reference1</dt>
-						<dd>履歴コマンドのインデックス（逆順、開始値0）</dd>
+						<dd>历史命令的索引（倒序，起始值0）</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="ShioriEcho.CommandHistory.Get">
 				<dt class="entry">ShioriEcho.CommandHistory.Get</dt>
 				<dd class="entry">
-					<p>コマンドヒストリーを取得したときのイベント</p>
+					<p>命令历史获取时事件</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>履歴コマンドのインデックス（逆順、開始値0）</dd>
-						<dt>戻り値（オプション）：X-SSTP-PassThru-Command</dt>
-						<dd>コマンドをこの内容で置き換える</dd>
+						<dd>历史命令的索引（倒序，起始值0）</dd>
+						<dt>返值（可选）：X-SSTP-PassThru-Command</dt>
+						<dd>将命令替换为此内容</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="ShioriEcho.CommandHistory.ForwardIndex">
 				<dt class="entry">ShioriEcho.CommandHistory.ForwardIndex</dt>
 				<dd class="entry">
-					<p>ユーザが `↑` を押したときにインデックスが更新されるときのイベント</p>
+					<p>用户按压 ↑ 时更新索引时事件</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>履歴コマンドのインデックス（逆順、開始値0）</dd>
+						<dd>历史命令的索引（倒序，起始值0）</dd>
 						<dt>Reference1</dt>
-						<dd>`index`の値上がりが予想される量。</dd>
-						<dt>戻り値（オプション）：X-SSTP-PassThru-Index</dt>
-						<dd>インデックスをこの値に更新する</dd>
+						<dd>index 被期望增加的值</dd>
+						<dt>返值（可选）：X-SSTP-PassThru-Index</dt>
+						<dd>将索引更新为此数值</dd>
 					</dl>
 				</dd>
 			</dl>
 		</section>
 		<section class="category application">
-			<h1>アプリ「Elin」</h1>
+			<h1>应用「Elin」</h1>
 			<ul class="caption link">
 				<li>参考：<a href="https://store.steampowered.com/app/2135150/Elin/">Steam: elin</a></li>
 				<li>参考：<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3371271468">Ukagaka for Elin</a></li>
@@ -3591,142 +3594,142 @@
 			<dl id="OnElinAllyCondition">
 				<dt class="entry">OnElinAllyCondition</dt>
 				<dd class="entry">
-					<p>ペットが何らかの状態異常にかかると発生。</p>
+					<p>当宠物受到某种状态异常时触发。</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>ペットの名前</dd>
+						<dd>宠物的名称</dd>
 						<dt>Reference1</dt>
-						<dd>状態異常の名前</dd>
+						<dd>异常状态的名称</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElinAllyDead">
 				<dt class="entry">OnElinAllyDead</dt>
 				<dd class="entry">
-					<p>ペットが死ぬと発生。</p>
+					<p>当宠物死亡时触发。</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>ペットの名前</dd>
+						<dd>宠物的名称</dd>
 						<dt>Reference1</dt>
 						<dd>死因</dd>
 						<dt>Reference2</dt>
-						<dd>(存在すれば)ペットを殺したNPCの名前</dd>
+						<dd>（若存在）杀死宠物的NPC名称</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElinCatchFish">
 				<dt class="entry">OnElinCatchFish</dt>
 				<dd class="entry">
-					<p>何かを釣り上げると発生。</p>
+					<p>当钓起某物时触发。</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>釣り上げたアイテムの名前</dd>
+						<dd>被钓起物品的名称</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElinMapCharaGenerate">
 				<dt class="entry">OnElinMapCharaGenerate</dt>
 				<dd class="entry">
-					<p>NPCが生成されると発生。Reference0-3のいずれかが値を持つ。</p>
+					<p>NPC生成时触发。Reference0-3中至少有一个字段具有值。</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>敵NPCの情報</dd>
+						<dd>敌对NPC信息</dd>
 						<dt>Reference1</dt>
-						<dd>中立NPCの情報</dd>
+						<dd>中立NPC信息</dd>
 						<dt>Reference2</dt>
-						<dd>友好NPCの情報</dd>
+						<dd>友好NPC信息</dd>
 						<dt>Reference3</dt>
-						<dd>味方NPCの情報</dd>
+						<dd>友方NPC信息</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElinMapEnter">
 				<dt class="entry">OnElinMapEnter</dt>
 				<dd class="entry">
-					<p>マップに入ると発生。</p>
+					<p>进入地图时触发。</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>マップの名前</dd>
+						<dd>地图名称</dd>
 						<dt>Reference1</dt>
-						<dd>敵NPCの情報</dd>
+						<dd>敌对NPC信息</dd>
 						<dt>Reference2</dt>
-						<dd>中立NPCの情報</dd>
+						<dd>中立NPC信息</dd>
 						<dt>Reference3</dt>
-						<dd>友好NPCの情報</dd>
+						<dd>友好NPC信息</dd>
 						<dt>Reference4</dt>
-						<dd>味方NPCの情報</dd>
+						<dd>友方NPC信息</dd>
 						<dt>Reference5</dt>
-						<dd>床に落ちている/設置されているアイテムの情報</dd>
+						<dd>掉在床上的/放置在床上的物品信息</dd>
 						<dt>Reference6</dt>
-						<dd>街かどうか</dd>
+						<dd>是否为街道</dd>
 						<dt>Reference7</dt>
-						<dd>ネフィアかどうか</dd>
+						<dd>是否为ネフィア</dd>
 						<dt>Reference8</dt>
-						<dd>PCの所有物件(?)かどうか</dd>
+						<dd>是否为PC的所有物件(?)</dd>
 						<dt>Reference9</dt>
-						<dd>固定ネフィアかどうか</dd>
+						<dd>是否为固定ネフィア</dd>
 						<dt>Reference10</dt>
-						<dd>何も無いフィールドマップかどうか</dd>
+						<dd>是否为无内容的字段地图</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElinMapItemGenerate">
 				<dt class="entry">OnElinMapItemGenerate</dt>
 				<dd class="entry">
-					<p>宝箱が生成されたとき等に発生</p>
+					<p>在宝箱生成时等情况下触发</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>アイテムの情報</dd>
+						<dd>物品信息</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElinPCCondition">
 				<dt class="entry">OnElinPCCondition</dt>
 				<dd class="entry">
-					<p>PCが状態異常にかかると発生</p>
+					<p>当玩家受到状态异常时触发</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>状態異常の名前</dd>
+						<dd>状态异常的名称</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElinPCDead">
 				<dt class="entry">OnElinPCDead</dt>
 				<dd class="entry">
-					<p>PCが死ぬと発生</p>
+					<p>当PC死亡时触发</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>PCの名前</dd>
+						<dd>PC的名称</dd>
 						<dt>Reference1</dt>
 						<dd>死因</dd>
 						<dt>Reference2</dt>
-						<dd>(存在すれば)PCを殺したNPCの名前</dd>
+						<dd>（若存在）击杀该玩家的NPC名称</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElinTarget">
 				<dt class="entry">OnElinTarget</dt>
 				<dd class="entry">
-					<p>NPCにShift+Fでターゲッティングすると発生</p>
+					<p>对NPC使用Shift+F进行目标锁定时触发</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>ターゲッティングしたNPCの名前</dd>
+						<dd>被锁定的NPC名称</dd>
 					</dl>
 				</dd>
 			</dl>
 			<div class="caption">
-				<h1>キャラクターとアイテムの情報</h1>
-                <h2>アイテムの情報</h2>
-                <p>アイテムはバイト値1で区切られている。例：土0x01金塊0x01鉄のつるはし0x01…</p>
-                <h2>キャラクターの情報</h2>
-                <p>1キャラクターはキャラクターの名前と持っているアイテムがバイト値1で区切られており、さらにキャラクター毎にバイト値2で区切られている。例：イーク0x02銅の短剣0x01ゴブリン0x02紙の大剣0x02珊瑚の軽外套0x01侍…</p>
+				<h1>角色与物品信息</h1>
+                <h2>物品信息</h2>
+                <p>物品以字节值1作为分隔符。例如：土0x01金块0x01铁镐0x01…</p>
+                <h2>角色信息</h2>
+                <p>1个角色的信息由角色名称和所持物品按字节值1分隔，再以字节值2进一步区分各角色。例如：伊克0x02铜制短剑0x01哥布林0x02纸制大剑0x02珊瑚轻甲0x01武士…<!--是不是反了?--></p>
 			</div>
         </section>
 		<section class="category application">
-			<h1>Music player通知イベント</h1>
+			<h1>Music player通知事件</h1>
 			<ul class="caption link">
-				<li>仕様提唱元：<a href="https://github.com/Zichqec/music_player">Music player</a></li>
-				<li>実装例：<a href="https://ukagaka.zichqec.com/ghost/flux">FLUX</a></li>
+				<li>规格提出方：<a href="https://github.com/Zichqec/music_player">Music player</a></li>
+				<li>实现示例：<a href="https://ukagaka.zichqec.com/ghost/flux">FLUX</a></li>
 			</ul>
 			<ul class="supported-baseware">
 				<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -3734,52 +3737,52 @@
 			<dl id="OnMusicPlayer.SongInfo">
 				<dt class="entry">OnMusicPlayer.SongInfo</dt>
 				<dd class="entry">
-					<p>Notifies information about the music player's internal state to all open ghosts. <em class="specsign">[NOTIFY]</em><br />
-					Because the implementation is added and updated on the ghost side, some ghosts may use an older version with fewer references.</p>
+					<p>向所有已打开的人格通知music player的内部状态信息。<em class="specsign">[NOTIFY]</em><br />
+					由于实现是在人格端添加并更新的，因此部分人格可能仍使用版本较旧、reference 较少的版本。</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>The sakura name of the ghost that sent the event.</dd>
+						<dd>发送该事件的人格的本体侧名称。</dd>
 						<dt>Reference1</dt>
-						<dd>The file path of the currently loaded song. Empty if no song is loaded.</dd>
+						<dd>当前加载歌曲的文件路径。若未加载任何歌曲，则为空。</dd>
 						<dt>Reference2</dt>
-						<dd>The playlist index number of the currently loaded song. -1 if no song is loaded, and in certain circumstances when a song has been removed from the playlist but is still playing.</dd>
+						<dd>当前已加载歌曲的播放列表索引号。若未加载任何歌曲，则为 -1；在某些情况下，当某首歌曲已从播放列表中移除但仍正在播放时，亦为 -1。</dd>
 						<dt>Reference3</dt>
-						<dd>The playback state. 0 if stopped, 1 if playing music, and 2 if playback is paused.</dd>
+						<dd>播放状态。停止时为0，正在播放音乐时为1，暂停播放时为2。</dd>
 						<dt>Reference4</dt>
-						<dd>The current volume, from 0-100.</dd>
+						<dd>当前音量，取值范围为0至100。</dd>
 						<dt>Reference5</dt>
-						<dd>The current playback speed, usually from 0-400. Some implementations may allow speeds higher than 400.</dd>
+						<dd>当前播放速度，通常在0到400之间。某些实现可能支持高于400的速度。</dd>
 						<dt>Reference6</dt>
-						<dd>The current left/right balance. -100 is all the way to the left, 0 is centered, and 100 is all the way to the right.</dd>
+						<dd>当前的左右平衡。-100表示完全向左，0表示居中，100表示完全向右。</dd>
 						<dt>Reference7</dt>
-						<dd>The play mode. Numbers correspond to the following modes.
+						<dd>播放模式。数字对应以下模式。
 						<ul>
-							<li>0 - Loop Playlist</li>
-							<li>1 - Shuffle and Loop</li>
-							<li>2 - Loop One Song</li>
-							<li>3 - Play One Song</li>
-							<li>4 - Random</li>
+							<li>0 - 循环播放列表</li>
+							<li>1 - 随机播放并循环</li>
+							<li>2 - 循环播放单首歌曲</li>
+							<li>3 - 播放单首歌曲</li>
+							<li>4 - 随机播放</li>
 						</ul>
 						</dd>
 						<dt>Reference8</dt>
-						<dd>A special flag for stopping playback. "stop after playback" means playback will stop when the current song ends. "stop after playlist" means playback will stop when the current playlist ends (applicable in both "Loop Playlist" and "Shuffle and Loop" modes). Empty if neither flag is set.</dd>
+						<dd>用于停止播放的特殊标志。“stop after playback”表示当前歌曲播放完毕后停止；“stop after playlist”表示当前播放列表播放完毕后停止（适用于“循环播放列表”和“随机播放并循环”两种模式）。如果两个标志均未设置，则为空。</dd>
 						<dt>Reference9</dt>
-						<dd>The number of songs in the current playlist.</dd>
+						<dd>当前播放列表中的歌曲数量。</dd>
 					</dl>
 				</dd>
 			</dl>
 		</section>
 		<section class="category other">
-			<h1>外部アプリ汎用イベント</h1>
+			<h1>外部应用通用事件</h1>
 			<dl id="OnApplicationBoot">
 				<dt class="entry">OnApplicationBoot</dt>
 				<dd class="entry">
-					<p>外部アプリケーションが起動した際に発生。</p>
+					<p>在外部应用程序启动时触发。</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>アプリケーション名。</dd>
+						<dd>应用程序名称。</dd>
 						<dt>Reference1</dt>
-						<dd>アプリケーションの情報。</dd>
+						<dd>应用程序的相关信息。</dd>
 					</dl>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
@@ -3791,12 +3794,12 @@
 			<dl id="OnApplicationClose">
 				<dt class="entry">OnApplicationClose</dt>
 				<dd class="entry">
-					<p>外部アプリケーションが終了した際に発生。</p>
+					<p>在外部应用程序结束时触发。</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>アプリケーション名。</dd>
+						<dd>应用程序名称。</dd>
 						<dt>Reference1</dt>
-						<dd>アプリケーションの情報。</dd>
+						<dd>应用程序的相关信息。</dd>
 					</dl>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
@@ -3808,12 +3811,12 @@
 			<dl id="OnApplicationExist">
 				<dt class="entry">OnApplicationExist</dt>
 				<dd class="entry">
-					<p>外部アプリケーションの存在を通知された際に発生。</p>
+					<p>在收到外部应用程序存在通知时触发。</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>アプリケーション名。</dd>
+						<dd>应用程序名称。</dd>
 						<dt>Reference1</dt>
-						<dd>アプリケーションの情報。</dd>
+						<dd>应用程序的相关信息。</dd>
 					</dl>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
@@ -3825,18 +3828,18 @@
 			<dl id="OnApplicationVersion">
 				<dt class="entry">OnApplicationVersion</dt>
 				<dd class="entry">
-					<p>外部アプリケーションのバージョン情報を通知された際に発生。</p>
+					<p>当收到外部应用程序的版本信息通知时触发。</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>アプリケーション名。</dd>
+						<dd>应用程序名称。</dd>
 						<dt>Reference1</dt>
-						<dd>アプリケーションの情報。</dd>
+						<dd>应用程序的相关信息。</dd>
 						<dt>Reference2</dt>
-						<dd>バージョン番号。</dd>
+						<dd>版本号。</dd>
 						<dt>Reference3</dt>
-						<dd>著作権。</dd>
+						<dd>版权。</dd>
 						<dt>Reference4</dt>
-						<dd>開発元のURL。</dd>
+						<dd>开发商的URL。</dd>
 					</dl>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
@@ -3848,14 +3851,14 @@
 			<dl id="OnApplicationOperationFinish">
 				<dt class="entry">OnApplicationOperationFinish</dt>
 				<dd class="entry">
-					<p>外部アプリケーションか何らかの処理が完了した際に発生。</p>
+					<p>当外部应用程序或某种处理完成时发生。</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>アプリケーション名。</dd>
+						<dd>应用程序名称。</dd>
 						<dt>Reference1</dt>
-						<dd>処理の内容。</dd>
+						<dd>处理的内容。</dd>
 						<dt>Reference2</dt>
-						<dd>処理の対象。</dd>
+						<dd>处理的对象。</dd>
 					</dl>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
@@ -3867,12 +3870,12 @@
 			<dl id="OnApplicationFileOpen">
 				<dt class="entry">OnApplicationFileOpen</dt>
 				<dd class="entry">
-					<p>外部アプリケーションがドキュメントファイルを開いた際に発生。</p>
+					<p>当外部应用程序打开文档文件时发生。</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>アプリケーション名。</dd>
+						<dd>应用程序名称。</dd>
 						<dt>Reference1</dt>
-						<dd>ファイルのフルパス。</dd>
+						<dd>文件的完整路径。</dd>
 					</dl>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
@@ -3884,12 +3887,12 @@
 			<dl id="OnWebsiteUpdateNotify">
 				<dt class="entry">OnWebsiteUpdateNotify</dt>
 				<dd class="entry">
-					<p>ウェブサイトの更新・新着情報を通知された際に発生。</p>
+					<p>在收到网站更新或新内容通知时触发。</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>ウェブサイト名。</dd>
+						<dd>网站名称。</dd>
 						<dt>Reference1</dt>
-						<dd>最終更新日時。</dd>
+						<dd>最后更新时间。</dd>
 						<dt>Reference2</dt>
 						<dd>更新内容。</dd>
 					</dl>
@@ -3904,7 +3907,7 @@
 		<section class="category other">
 			<h1>UKADOC</h1>
 			<ul class="caption link">
-				<li>公開元：<a href="./list_sakura_script.html">さくらスクリプトリスト</a></li>
+				<li>公开源：<a href="./list_sakura_script.html">さくらスクリプトリスト</a></li>
 			</ul>
 			<ul class="supported-baseware">
 				<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -3912,11 +3915,11 @@
 			<dl id="OnUkadocScriptExample">
 				<dt class="entry">OnUkadocScriptExample</dt>
 				<dd class="entry">
-					<p>UkadocのSakuraScript Listにあるサンプルスクリプトを実行した際に発生。<br />
-					このイベントを実装する場合は、危険なSakuraScriptタグを自分でエスケープする必要があることに注意。</p>
+					<p>在执行Ukadoc的SakuraScript列表中的示例脚本时发生。<br />
+					在实现此事件时，请注意需自行对危险的SakuraScript标签进行转义。</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>実行するスクリプト。</dd>
+						<dd>要执行的脚本。</dd>
 					</dl>
 				</dd>
 			</dl>

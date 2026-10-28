@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="zh">
 <head>
 <meta charset="utf-8" />
 <meta name="robots" content="INDEX,FOLLOW">
 <meta name="author" content="UKADOC Project">
 <meta name="keywords" content="ukadoc,伺か">
-<title>UKADOC Project Install設定</title>
+<title>UKADOC Project Install设定</title>
 <link rel="stylesheet" href="list.css" />
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 </head>
 <body>
-	<h1 id="page-title">Install/Update設定</h1>
+	<h1 id="page-title">Install/Update设定</h1>
 	<nav class="menu-header">
 		<table>
 			<tbody>
 				<tr>
-					<th>トップページへ戻る</th>
+					<th>返回首页</th>
 					<td colspan="2">
 						<ul>
 							<li><a href="http://ssp.shillest.net/ukadoc/manual/index.html">INDEX</a></li>
@@ -25,7 +25,7 @@
 			</tbody>
 			<tbody>
 				<tr>
-					<th rowspan="6">設定ファイル</th>
+					<th rowspan="6">设定文件</th>
 					<th>Ghost</th>
 					<td>
 						<ul>
@@ -81,24 +81,24 @@
 			</tbody>
 			<tbody>
 				<tr>
-					<th>さくらスクリプト</th>
+					<th>Sakura脚本</th>
 					<td colspan="2">
 						<ul>
-							<li><a href="./list_sakura_script.html">Sakura Script</a></li>
-							<li><a href="./list_propertysystem.html">Property System</a></li>
+							<li><a href="./list_sakura_script.html">Sakura脚本</a></li>
+							<li><a href="./list_propertysystem.html">属性系统</a></li>
 						</ul>
 					</td>
 				</tr>
 			</tbody>
 			<tbody>
 				<tr>
-					<th rowspan="2">イベント</th>
+					<th rowspan="2">事件</th>
 					<th>SHIORI</th>
 					<td>
 						<ul>
-							<li><a href="./list_shiori_event.html">SHIORI Event</a></li>
-							<li><a href="./list_shiori_event_ex.html">SHIORI Event（外部）</a></li>
-							<li><a href="./list_shiori_resource.html">SHIORI Resource</a></li>
+							<li><a href="./list_shiori_event.html">SHIORI事件</a></li>
+							<li><a href="./list_shiori_event_ex.html">SHIORI事件（外部）</a></li>
+							<li><a href="./list_shiori_resource.html">SHIORI资源</a></li>
 						</ul>
 					</td>
 				</tr>
@@ -106,26 +106,26 @@
 					<th>PLUGIN</th>
 					<td>
 						<ul>
-							<li><a href="./list_plugin_event.html">PLUGIN Event</a></li>
+							<li><a href="./list_plugin_event.html">PLUGIN事件</a></li>
 						</ul>
 					</td>
 				</tr>
 			</tbody>
 			<tbody>
 				<tr>
-					<th>規格</th>
+					<th>规格</th>
 					<td colspan="2">
 						<ul>
 							<li><a href="./spec_shiori3.html">SHIORI/3.0</a></li>
 							<li><a href="./spec_sstp.html">SSTP/1.x</a></li>
-							<li><a href="http://www.boreas.dti.ne.jp/~sdn/saori.html">SAORI/1.0</a>（外部サイト）</li>
+							<li><a href="http://www.boreas.dti.ne.jp/~sdn/saori.html">SAORI/1.0</a>（外部链接）</li>
 							<li><a href="./spec_saori_ex.html">SAORI over DirectSSTP</a></li>
 							<li><a href="./spec_plugin.html">PLUGIN/2.0</a></li>
 							<li><a href="./spec_headline.html">HEADLINE/2.0</a></li>
 							<li><a href="./spec_dll.html">DLL</a></li>
 							<li><a href="./spec_fmo_mutex.html">FMO/MUTEX</a></li>
-							<li><a href="./spec_update_file.html">更新定義ファイル</a></li>
-							<li><a href="./spec_web.html">Web関連</a></li>
+							<li><a href="./spec_update_file.html">更新定义文件</a></li>
+							<li><a href="./spec_web.html">Web关联</a></li>
 						</ul>
 					</td>
 				</tr>
@@ -138,21 +138,20 @@
 			<h1>install.txt</h1>
 			<ul>
 				<li class="caption introduction"><a href="#introduction_install.txt">install.txt</a></li>
-				<li class="caption introduction"><a href="#introduction_install_multi">同時インストール</a></li>
 			</ul>
 			<ul>
-				<li><a href="#charset,文字コード">charset,文字コード</a></li>
-				<li><a href="#name,オブジェクト名">name,オブジェクト名</a></li>
-				<li><a href="#type,種別">type,種別</a></li>
-				<li><a href="#accept,本体側名">accept,本体側名</a></li>
-				<li><a href="#directory,ディレクトリ名">directory,ディレクトリ名</a></li>
-				<li><a href="#bootghost,ディレクトリ名">bootghost,ディレクトリ名</a></li>
-				<li><a href="#refresh,数値">refresh,数値</a></li>
-				<li><a href="#refreshundeletemask,ファイル名1:ファイル名2...">refreshundeletemask,ファイル名1:ファイル名2...</a></li>
-				<li><a href="#*.directory,ディレクトリ名">*.directory,ディレクトリ名</a></li>
-				<li><a href="#*.source.directory,ディレクトリ名">*.source.directory,ディレクトリ名</a></li>
-				<li><a href="#*.refresh,数値">*.refresh,数値</a></li>
-				<li><a href="#*.refreshundeletemask,ファイル名1:ファイル名2...">*.refreshundeletemask,ファイル名1:ファイル名2...</a></li>
+				<li><a href="#charset,字符编码">charset,字符编码</a></li>
+				<li><a href="#name,对象名">name,对象名</a></li>
+				<li><a href="#type,种类">type,种类</a></li>
+				<li><a href="#accept,本体侧名">accept,本体侧名</a></li>
+				<li><a href="#directory,目录名">directory,目录名</a></li>
+				<li><a href="#bootghost,目录名">bootghost,目录名</a></li>
+				<li><a href="#refresh,数值">refresh,数值</a></li>
+				<li><a href="#refreshundeletemask,文件名1:文件名2...">refreshundeletemask,文件名1:文件名2...</a></li>
+				<li><a href="#*.directory,目录名">*.directory,目录名</a></li>
+				<li><a href="#*.source.directory,目录名">*.source.directory,目录名</a></li>
+				<li><a href="#*.refresh,数值">*.refresh,数值</a></li>
+				<li><a href="#*.refreshundeletemask,文件名1:文件名2...">*.refreshundeletemask,文件名1:文件名2...</a></li>
 			</ul>
 		</section>
 		<section class="navigation-category">
@@ -161,7 +160,7 @@
 				<li class="caption introduction"><a href="#introduction_delete.txt">delete.txt</a></li>
 			</ul>
 			<ul>
-				<li><a href="#相対パス">相対パス</a></li>
+				<li><a href="#相对路径">相对路径</a></li>
 			</ul>
 		</section>
 		<section class="navigation-category">
@@ -170,7 +169,7 @@
 				<li class="caption introduction"><a href="#introduction_developeroptions.txt">developer_options.txt</a></li>
 			</ul>
 			<ul>
-				<li><a href="#相対パス,オプション1,オプション2,...">相対パス,オプション1,オプション2,...</a></li>
+				<li><a href="#相对路径,选项1,选项2,...">相对路径,选项1,选项2,...</a></li>
 			</ul>
 		</section>
 		<section class="navigation-category">
@@ -185,7 +184,7 @@
 		<section class="navigation-category">
 			<h1>updates_def.txt</h1>
 			<ul>
-				<li><a href="#相対パス,ignore">相対パス,ignore</a></li>
+				<li><a href="#相对路径,ignore">相对路径,ignore</a></li>
 			</ul>
 		</section>
 	</section>
@@ -196,118 +195,69 @@
 				<h1>install.txt</h1>
 				<section>
 					<h1>概要</h1>
-					<p><a href="manual_install.html">ファイル構成「インストール」</a>のページも参考に。</p>
+					<p>也请参考<a href="manual_install.html">文件结构「安装」</a>的页面。</p>
 					<p>
-						ゴースト、バルーン、シェル他の伺か/SSPコンテンツアーカイブ（.narなど）のインストール設定ファイル。
-						全てのアーカイブは解凍して手動でインストールする事もできるが、適切に設定されたinstall.txtの存在によって、インストーラ機能が有効になり、アーカイブのD&amp;Dなどの簡易な手段でのインストールが可能となる。
+						人格、Balloon、Shell等各类伺か/SSP内容的安装配置文件。<br>
+						所有压缩包均可解压后手动安装，但若存在经过正确设置的install.txt文件，则会启用安装程序功能，从而可通过拖放等简便方式完成安装。
 					</p>
 				</section>
 				<section>
-					<h1>記述例と基本の書き方</h1>
-						<p>ゴーストの場合（バルーンやプラグインもtype部分を変えるだけでほぼ同じ）</p>
-<pre><code>charset,Shift_JIS
+					<h1>示例与基本写法</h1>
+						<p>对于人格的情况（Balloon和插件也只需更改type部分，几乎相同）</p>
+<pre><code>charset,UTF-8
 name,凡例さん
 type,ghost
 directory,example
 </code></pre>
-						<p>追加シェルの場合</p>
-<pre><code>charset,Shift_JIS
-name,凡例さんアルティメットフォーム
+						<p>对于附加Shell的情况</p>
+<pre><code>charset,UTF-8
+name,凡例さん终极形态
 type,shell
 directory,ultimate
 accept,凡例さん
 </code></pre>
-						<p>ゴーストのサプリメント（追加ファイル）の場合</p>
-<pre><code>charset,Shift_JIS
-name,凡例さん猫化パッチ
+						<p>对于人格的补充（附加文件）的情况</p>
+<pre><code>charset,UTF-8
+name,凡例さん猫化补丁
 type,supplement
 accept,凡例さん
 </code></pre>
-						<p>ゴーストにバルーンを同梱する場合</p>
-<pre><code>charset,Shift_JIS
+						<p>将Balloon随人格一同打包时</p>
+<pre><code>charset,UTF-8
 name,凡例さん
 type,ghost
 directory,example
 balloon.directory,example_balloon
 balloon.source.directory,balloon
 </code></pre>
-						<p>※SSPのみ　複数インストール用パッケージの場合の最上位に置くもの<br>（同梱する各内容に置くinstall.txtは普通どおりの記述でよい）</p>
+						<p>※仅适用于SSP，作为多实例安装包时置于最顶层<br>（随附的各组件中的install.txt可按常规方式编写）</p>
 <pre><code>charset,Shift_JIS
-name,凡例さんファミリー一括入居パッケージ
+name,凡例さん家族一次性入住套餐
 type,package
 </code></pre>
-					<p>charset指定は必ず1行目で行う（Shift_JISの場合省略可）。</p>
-					<p>name、typeは必須。directoryもtypeがsupplementかpackage以外の場合は必須。<br>それ以外の項目は、必要に応じて指定する。</p>
-					<p>追加シェルやサプリメントの場合、想定外のゴーストにインストールされる事を避けるためにaccept指定が利用できる。<br>特にサプリメントは予期せぬファイルの上書き破損事故の危険性があるためほぼ必須。<br>accept指定に用いるのはゴースト名ではなく<em>本体側名</em>であることに注意。</p>
-					<p>SSPでは、バルーンやプラグインをゴーストかシェルに同梱させる場合、*.directoryを利用する。<br />詳しくは<a href="#introduction_install_multi">「同時インストール」</a>を参照。</p>
-					<p>なおnameは主に、<a href="list_shiori_event.html#OnInstallComplete">インストール系SHIORI Event</a>のReferenceでの通知内容に用いられる。<br>ゴーストによってはこの情報を利用して、インストールされた直後の対象へ切り替えを実行できるような機能を備えている場合があるが、descript.txtにある実際のゴーストのnameとinstall.txtでの表記が異なると、その切り替えが正常に働かなくなるので注意。</p>
+					<p>charset的指定必须位于第一行（若为Shift_JIS可省略）。</p>
+					<p>name、type为必填项。directory在type非supplement或package时也为必填项。<br>其他各项可根据需要进行指定。</p>
+					<p>在追加Shell或插件的情况下，为避免被意外的人格程序安装，可以使用accept指定。<br>尤其是补充，由于存在意外覆盖导致文件损坏的风险，几乎不可或缺。<br>请注意，用于accept指定的是<em>本体侧名</em>，而非人格名称。</p>
+					<p>在SSP中，若要将Balloon或插件与人格或Shell一同打包，则需使用*.directory。</p>
+					<p>此外，name主要用于<a href="list_shiori_event.html#OnInstallComplete">安装类SHIORI Event</a>的Reference的通知内容中<br>某些人格可能会利用这一信息，在安装完成后立即对目标进行切换；但如果descript.txt中记载的实际人工名称与install.txt中的表述不一致，则该切换功能将无法正常生效，请务必注意。</p>
 				</section>
 			</section>
-			<section class="caption introduction" id="introduction_install_multi">
-				<h1>同時インストール</h1>
-				<section>
-					<h1>概要</h1>
-					<p>
-						SSPでは、ゴーストやシェルのアーカイブにバルーンなどを同梱して、まとめてインストールさせる事ができる。
-						<br />同梱する内容は「*.」で始まるエントリで指定し、*の部分には同梱する内容の種別が入る。
-					</p>
-					<p>*に書けるのは下記の5種類。</p>
-					<dl>
-						<dt>balloon</dt>
-						<dd>バルーン</dd>
-						<dt>headline</dt>
-						<dd>ヘッドラインセンサ</dd>
-						<dt>plugin</dt>
-						<dd>プラグイン</dd>
-						<dt>calendar.skin</dt>
-						<dd>カレンダーの外見ファイル</dd>
-						<dt>calendar.plugin</dt>
-						<dd>カレンダーのスケジュールセンサ</dd>
-					</dl>
-					<p><a href="#type,種別">type</a>での表記と異なり、カレンダー系は<em>ドット区切り</em>である事に注意（calendar skinではなくcalendar.skin）。</p>
-					<p>アーカイブ自身の<a href="#type,種別">type</a>を問わず機能するが、実用上はtypeが<em>ghost</em>か<em>shell</em>のアーカイブで用いる。</p>
-				</section>
-				<section>
-					<h1>複数同梱する場合の番号の付け方</h1>
-					<p>同じ種別のものを複数同梱する場合は、*の部分を balloon0、balloon1、… のように、種別の後ろへ0始まりの番号を付けて並べる。（SSP 2.7.00以降）</p>
-					<p>探索は<em>無印→0→1→2…</em>の順に行われ、<em>見つからない番号が出た時点で打ち切られる</em>。
-					<br />そのため<em>欠番を作ってはいけない</em>。例えばballoon0とballoon2だけを書いた場合、balloon1が無い時点で打ち切られるため、balloon2は読まれない。</p>
-					<p>無印と0は別のものとして扱われる。balloonとballoon0を両方書けば、バルーンが2個インストールされる。</p>
-					<p><a href="#*.directory,ディレクトリ名">*.directory</a>、<a href="#*.source.directory,ディレクトリ名">*.source.directory</a>、<a href="#*.refresh,数値">*.refresh</a>、<a href="#*.refreshundeletemask,ファイル名1:ファイル名2...">*.refreshundeletemask</a>は、いずれも番号ごとに独立して指定できる。</p>
-					<p>なお、ゴーストやシェルに<em>紐づくバルーンとして設定されるのは最初の1個だけ</em>である。
-					<br />2個目以降はインストールされるだけで、そのゴーストの標準バルーンにはならない。</p>
-				</section>
-				<section>
-					<h1>記述例</h1>
-					<p>ゴーストにバルーン2個とプラグイン1個を同梱する場合</p>
-<pre><code>charset,Shift_JIS
-name,凡例さん
-type,ghost
-directory,example
-balloon0.directory,example_balloon
-balloon0.source.directory,balloon_normal
-balloon1.directory,example_balloon_ex
-balloon1.source.directory,balloon_special
-plugin0.directory,example_plugin
-</code></pre>
-				</section>
-			</section>
-			<dl id="charset,文字コード">
-				<dt class="entry">charset,文字コード</dt>
+			<dl id="charset,字符编码">
+				<dt class="entry">charset,字符编码</dt>
 				<dd class="entry">
-					<p>表示する文字コード。旧い環境との互換性を考慮する場合はShift_JIS、それ以外はUTF-8を推奨。</p>
-					<p class="default">(OSの標準設定またはSSP->国際化->省略時の文字コード->テキスト定義)</p>
+					<p>要显示的字符编码。为考虑与旧版环境的兼容性，建议使用Shift_JIS；其他情况则推荐使用UTF-8。</p>
+					<p class="default">（操作系统默认设置或SSP→国际化→缩略时的字符编码→文本定义）</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
-			<dl id="name,オブジェクト名">
-				<dt class="entry">name,オブジェクト名</dt>
+			<dl id="name,对象名">
+				<dt class="entry">name,对象名</dt>
 				<dd class="entry">
-					<p>そのオブジェクトの名前。</p>
-					<p class="default">省略不可</p>
+					<p>该对象的名称。</p>
+					<p class="default">不可省略</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -315,35 +265,35 @@ plugin0.directory,example_plugin
 					</ul>
 				</dd>
 			</dl>
-			<dl id="type,種別">
-				<dt class="entry">type,種別</dt>
+			<dl id="type,种类">
+				<dt class="entry">type,种类</dt>
 				<dd class="entry">
-					<p>アーカイブの内容の種別。種類は下記の通り。</p>
+					<p>该对象的名称。</p>
 					<dl>
 						<dt>ghost</dt>
-						<dd>ゴースト</dd>
+						<dd>人格</dd>
 						<dt>shell</dt>
-						<dd>ゴーストへの追加シェル</dd>
+						<dd>添加到人格的Shell</dd>
 						<dt>supplement</dt>
-						<dd>ゴーストへの追加ファイル</dd>
+						<dd>添加到人格的文件</dd>
 						<dt>balloon</dt>
-						<dd>バルーン</dd>
+						<dd>气球</dd>
 						<dt>plugin</dt>
-						<dd>プラグイン</dd>
+						<dd>插件</dd>
 						<dt>headline</dt>
-						<dd>ヘッドラインセンサ</dd>
+						<dd>标题</dd>
 						<dt>language</dt>
-						<dd>（SSPのみ）言語パック</dd>
+						<dd>（仅限SSP）语言包</dd>
 						<dt>calendar skin</dt>
-						<dd>（SSPのみ）カレンダーの外見ファイル</dd>
+						<dd>（仅限SSP）日历外观文件</dd>
 						<dt>calendar plugin</dt>
-						<dd>（SSPのみ）カレンダーのスケジュールセンサ</dd>
+						<dd>（仅限SSP）日历的计划传感器</dd>
 						<dt>package</dt>
-						<dd>（SSPのみ）複数インストール用パッケージ</dd>
+						<dd>（仅限SSP）用于多实例安装的软件包</dd>
 					</dl>
-					<p>[旧仕様](SSPのみ) calendar のみを書くと calendar skin と同等の扱いになる。
-					<br />calendar pluginが無かった時代の互換用途であり、現在は書いてはいけない。</p>
-					<p class="default">省略不可</p>
+					<p>[旧规格](仅限SSP) 仅填写calendar时，将被视为与calendar skin同等。
+					<br />这是日历插件calendar plugin的兼容用途，目前已不应再使用。</p>
+					<p class="default">不可省略</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -352,10 +302,10 @@ plugin0.directory,example_plugin
 				</dd>
 			</dl>
 			<dl id="accept,本体側名">
-				<dt class="entry">accept,本体側名</dt>
+				<dt class="entry">accept,本体侧名</dt>
 				<dd class="entry">
-					<p>アーカイブを受け取ることができるゴーストの<em>本体側の</em>名前（＝\0名,sakura名）。<br />もしくはゴースト側descript.txtの<a href="descript_ghost.html#install.accept,名前1,名前2,名前3...">install.accept</a>に設定してある名前でも可。<br />追加シェルや追加ファイル（supplement）など、特定ゴーストに渡す内容では必ず用いる。</p>
-					<p class="default">挙動なし</p>
+					<p>可接收归档的人格的<em>本体侧的</em>名称（＝\0名,sakura名）。<br />或者也可使用人格端descript.txt文件中设置的<a href="descript_ghost.html#install.accept,名前1,名前2,名前3...">install.accept</a>所指定的名称。<br />在需要向特定人格传递附加Shell或附加文件（supplement）等内容时，务必使用此项。</p>
+					<p class="default">无任何行为</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -363,11 +313,11 @@ plugin0.directory,example_plugin
 					</ul>
 				</dd>
 			</dl>
-			<dl id="directory,ディレクトリ名">
-				<dt class="entry">directory,ディレクトリ名</dt>
+			<dl id="directory,目录名">
+				<dt class="entry">directory,目录名</dt>
 				<dd class="entry">
-					<p>そのアーカイブインストール後のディレクトリ名。半角英数推奨。</p>
-					<p class="default">省略不可/type,packageの場合のみ不要。</p>
+					<p>该归档文件安装后的目录名。建议使用半角英数字。</p>
+					<p class="default">不可省略/仅在type,package情况下无需填写。</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -375,20 +325,20 @@ plugin0.directory,example_plugin
 					</ul>
 				</dd>
 			</dl>
-			<dl id="bootghost,ディレクトリ名">
-				<dt class="entry">bootghost,ディレクトリ名</dt>
+			<dl id="bootghost,目录名">
+				<dt class="entry">bootghost,目录名</dt>
 				<dd class="entry">
-					<p>type,packageのみ有効。<a href="dev_nar.html#chapterEX7">initial_install.nar</a>またはnar関連付けからSSPを起動した際に、起動すべきゴーストのディレクトリ名を指定する。</p>
+					<p>仅对type,package有效。<a href="dev_nar.html#chapterEX7">initial_install.nar</a>或在通过nar关联启动SSP时，指定应启动的Ghost目录名。</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /> 2.7.52</li>
 					</ul>
 				</dd>
 			</dl>
-			<dl id="refresh,数値">
-				<dt class="entry">refresh,数値</dt>
+			<dl id="refresh,数值">
+				<dt class="entry">refresh,数值</dt>
 				<dd class="entry">
-					<p>数値に1をセットすると同じディレクトリのファイルを全て消去してからインストールする。</p>
-					<p class="default">1以外の任意値（refresh無効）</p>
+					<p>将数值设为1时，会在安装前先删除同一目录下的所有文件。</p>
+					<p class="default">1以外的任何值（refresh无效）</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -396,11 +346,11 @@ plugin0.directory,example_plugin
 					</ul>
 				</dd>
 			</dl>
-			<dl id="refreshundeletemask,ファイル名1:ファイル名2...">
-				<dt class="entry">refreshundeletemask,ファイル名1:ファイル名2...</dt>
+			<dl id="refreshundeletemask,文件名1:文件名2...">
+				<dt class="entry">refreshundeletemask,文件名1:文件名2...</dt>
 				<dd class="entry">
-					<p>refreshの消去から除外するファイル名。<br />複数ある場合はコロン「:」で区切る。<br />パス指定不可。全てのディレクトリの指定したファイル名のファイルが除外される。</p>
-					<p class="default">挙動なし</p>
+					<p>从refresh中排除的文件名。<br />若有多个，请以冒号「:」分隔。<br />无法指定路径。所有目录中指定文件名的文件都将被排除。</p>
+					<p class="default">无任何行为</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -408,48 +358,44 @@ plugin0.directory,example_plugin
 					</ul>
 				</dd>
 			</dl>
-			<dl id="*.directory,ディレクトリ名">
-				<dt class="entry">*.directory,ディレクトリ名</dt>
+			<dl id="*.directory,目录名">
+				<dt class="entry">*.directory,目录名</dt>
 				<dd class="entry">
-					<p>同時インストールする内容のインストール後のディレクトリ名。半角英数推奨。
-					<br />*部分の書き方と、同じ種別を複数同梱する場合の番号の付け方は<a href="#introduction_install_multi">「同時インストール」</a>を参照。
-					<br />ここに指定できるのは<em>1階層のディレクトリ名だけ</em>で、パス区切りは使えない（「_」に置換される）。
-					<br />アーカイブ自身の<a href="#type,種別">type</a>を問わず機能するが、実用上はtypeが<em>ghost</em>か<em>shell</em>のアーカイブで用いる。</p>
-					<p class="default">挙動なし</p>
+					<p>同时安装的内容在安装后的目录名。建议使用半角英数字。
+					<br />*部分应填写要同时安装的内容的类型（balloon、headline、plugin、calendar.skin、calendar.plugin 之一）。
+					<br />当需要安装多个相同类型的项目时，可在*部分后加上数字，如 balloon0、balloon1……，以表示多个实例。
+					<br />仅在<a href="#type,種別">type</a>为<em>ghost</em>或<em>shell</em>时方可进行设置。</p>
+					<p class="default">无任何行为</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
-			<dl id="*.source.directory,ディレクトリ名">
-				<dt class="entry">*.source.directory,ディレクトリ名</dt>
+			<dl id="*.source.directory,目录名">
+				<dt class="entry">*.source.directory,目录名</dt>
 				<dd class="entry">
-					<p>同時にインストールする内容のアーカイブ内でのディレクトリ名。半角英数推奨。
-					<br />同時にインストールする内容の、設置後のディレクトリ名とアーカイブ内でのディレクトリ名が一致しない場合に設定。
-					<br />番号付き（balloon0.source.directoryなど）も同様に指定できる。</p>
-					<p>SSP 2.9.00以降は、extra\bal1 のようにアーカイブ内の階層を辿る相対パスも指定できる。
-					<br />区切りは「\」「/」のどちらでもよい。「..」による上位階層への参照はできない（取り除かれる）。
-					<br />2.9.00未満では区切りが「_」に置換されるため、1階層のディレクトリ名しか指定できない。</p>
-					<p class="default">*.directoryで設定したディレクトリ名</p>
+					<p>同时安装的内容在归档文件中的目录名。建议使用半角英数字。
+					<br />当同时安装的内容在安装后的目录名与归档文件内的目录名不一致时进行设置。</p>
+					<p class="default">*.directory所设置的目录名</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
-			<dl id="*.refresh,数値">
-				<dt class="entry">*.refresh,数値</dt>
+			<dl id="*.refresh,数值">
+				<dt class="entry">*.refresh,数值</dt>
 				<dd class="entry">
-					<p>同時にインストールする内容の<a href="#refresh,数値">refresh</a>設定。<br />番号付き（balloon0.refreshなど）も同様に指定できる。</p>
-					<p class="default">1以外の任意値（refresh無効）</p>
+					<p>同时安装的内容的<a href="#refresh,数值">refresh</a>设置。</p>
+					<p class="default">1以外的任何值（refresh无效）</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
-			<dl id="*.refreshundeletemask,ファイル名1:ファイル名2...">
-				<dt class="entry">*.refreshundeletemask,ファイル名1:ファイル名2...</dt>
+			<dl id="*.refreshundeletemask,文件名1:文件名2...">
+				<dt class="entry">*.refreshundeletemask,文件名1:文件名2...</dt>
 				<dd class="entry">
-					<p>同時にインストールする内容の<a href="#refreshundeletemask,ファイル名1:ファイル名2...">refreshundeletemask</a>設定。<br />番号付き（balloon0.refreshundeletemaskなど）も同様に指定できる。</p>
+					<p>同时安装的内容的<a href="#refreshundeletemask,文件名1:文件名2...">refreshundeletemask</a>设置。</p>
 					<p class="default">挙動なし</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -463,32 +409,32 @@ plugin0.directory,example_plugin
 				<h1>delete.txt</h1>
 				<section>
 					<h1>概要</h1>
-					<p><a href="manual_update.html">ファイル構成「ネットワーク更新」</a>のページも参考に。</p>
+					<p>请同时参考<a href="manual_update.html">文件结构「网络更新」</a>的页面。</p>
 					<p>
-						クライアント（ユーザ）のファイルは、更新時にサーバ（作者）のファイルで上書きされるだけで、同期されるわけではない。
-						<br>つまり、一度クライアント側にダウンロード・作成されたファイルは、例えサーバ側で削除したとしても取り除く事ができない。
-						<br>従って、公開後に一度公開したファイルを削除する必要がある場合にはdelete.txtにそのファイルを記載しなければならない。
-						<br>なおdelete.txtは削除実行後も自動で削除されず、一度記載した内容は、変更しない限り永久に除外され続ける。
+						客户端（用户）的文件在更新时只会被服务器（作者）的文件覆盖，而不会进行同步。
+						<br>也就是说，一旦文件在客户端被下载并创建，即使在服务器端被删除，也无法将其移除。
+						<br>因此，如果在公开后需要删除已公开的文件，就必须将该文件写入delete.txt中。
+						<br>此外，delete.txt在执行删除操作后也不会自动被删除，一旦写入的内容在未被修改的情况下将永久保持被排除状态。
 					</p>
-					<p>以下はSSPのみの仕様。</p>
+					<p>以下为SSP专用规格。</p>
 					<dl>
-						<dt>charset,(文字コード)</dt>
-						<dd>ファイルの文字コードを指定する</dd>
+						<dt>charset,(字符编码)</dt>
+						<dd>指定文件的字符编码</dd>
 					</dl>
 				</section>
 				<section>
-					<h1>記述例</h1>
+					<h1>示例</h1>
 <pre><code>ghost\master\ai.dtx
 ghost\master\testdict\
 shell\master\surface110.png
 </code></pre>
 				</section>
 			</section>
-			<dl id="相対パス">
-				<dt class="entry">相対パス</dt>
+			<dl id="相对路径">
+				<dt class="entry">相对路径</dt>
 				<dd class="entry">
-					<p>ネットワーク更新時に削除するファイルをゴーストのホームフォルダからの相対パスで列挙する。<br>相対パスの階層は「\」区切り。<br>フォルダごとの指定も可能で、その場合は末尾を\で終える。</p>
-					<p class="default">挙動なし</p>
+					<p>在网络更新时，以人格主目录的相对路径列出要删除的文件。<br>相对路径的层级使用“\”作为分隔符。<br>也可按文件夹单独指定，此时末尾需以\结尾。</p>
+					<p class="default">无任何行为</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -503,59 +449,60 @@ shell\master\surface110.png
 				<h1>developer_options.txt</h1>
 				<section>
 					<h1>概要</h1>
-					<p><a href="manual_update.html">ファイル構成「ネットワーク更新」</a>・<a href="manual_install.html">ファイル構成「インストール」</a>のページも参考に。</p>
+					<p>也可参考<a href="manual_update.html">文件结构「网络更新」</a>・<a href="manual_install.html">文件结构「安装」</a>的页面。</p>
 					<p>
-						SSPがアーカイブやネットワーク更新情報ファイルの作成時に、対象とするファイルにオプションを設定するためのもの。
-						<br>SSPにゴーストなどのパッケージのフォルダをD&amp;Dすることで、アーカイブ（.nar）やupdateファイル（updates2.dau）を作成する機能があるが、その機能の実行時に参照される。
-						<br>従って原則的には他のツール、「そだて」や「ゴースト配布系自動化システム」を使ってそれらのファイルを作成した場合は<em>全く無関係</em>なので注意。
-						<br>例外として、「さとりすと」のようにdeveloper_options.txtを読み取って利用する機能が実装されているものもある。
+						SSP在创建归档文件或网络更新信息文件时，用于为目标文件设置选项。
+						<br>通过将人格等软件包的文件夹拖放到SSP中，可生成归档文件（.nar）及更新文件（updates2.dau），该功能在执行时会参照此文件。
+
+						<br>因此，原则上，如果使用其他工具，如“そだて”或“ゴースト配布系自動化システム”来创建这些文件的话<em>完全无关</em>，请注意。
+						<br>不过也有例外，比如“さとりすと”，它实现了读取并使用developer_options.txt的功能。
 					</p>
 				</section>
 				<section>
-					<h1>記述例</h1>
+					<h1>示例</h1>
 <pre><code>ghost/master/savedata.txt,noupdate
 shell/old/,nonar
 ghost/master/profile/,nonar,noupdate
 </code></pre>
 				</section>
 				<section>
-					<h1>注意点</h1>
-					<p>設定は一つの対象（ファイル・フォルダ）に対して<em>1行で行う</em>事に注意。例えば以下のような記述を行うと、<em>後ろ（下）で行っている設定だけが反映されて、nonarオプションが無効</em>になる。</p>
+					<h1>注意事项</h1>
+					<p>请注意，设置应针对单个对象（文件或文件夹）以<em>一行形式进行</em>。例如，若按如下方式编写，则<em>仅会应用位于后方（下方）的设置，而nonar选项将无效</em>。</p>
 					<pre><code>ghost/master/profile/,nonar<br>ghost/master/profile/,noupdate</code></pre>
-					<p>二つのオプションを指定する場合、正しくは先述の通り</p>
+					<p>在指定两个选项时，正确做法如前所述</p>
 					<pre><code>ghost/master/profile/,nonar,noupdate</code></pre>
-					<p>とする。</p>
+					<p>这样。</p>
 				</section>
 			</section>
-			<dl id="相対パス,オプション1,オプション2,...">
-				<dt class="entry">相対パス,オプション1,オプション2,...</dt>
+			<dl id="相对路径,选项1,选项2,...">
+				<dt class="entry">相对路径,选项1,选项2,...</dt>
 				<dd class="entry">
 					<p>
-						ゴーストのホームフォルダからの相対パスで指定したファイル・フォルダについて、カンマ区切りでオプションを指定する。
-						<br>相対パスの階層は「\」でなく「/」で区切る。
-						<br>フォルダを指定する場合は、末尾に/を付ける。
-						<br>ワイルドカードとして*と?を使用可能 (SSP 2.5.17より)
-						<br>オプションの内容は以下。
+						对于从人格的主目录出发、以相对路径指定的文件或文件夹，可使用逗号分隔的方式指定选项。
+						<br>相对路径的层级应使用“/”而非“\”进行分隔。
+						<br>指定文件夹时，应在末尾添加“/”。
+						<br>可使用通配符“*”和“?”（自SSP 2.5.17起）
+						<br>选项的具体内容如下。
 					</p>
 					<dl>
 						<dt>nonar</dt>
-						<dd>nar作成時に対象をnarに含めない。</dd>
+						<dd>在生成nar时，不将目标对象包含在nar中。</dd>
 						<dt>noupdate</dt>
-						<dd>updates2.dau（updates.txt）作成時に対象を更新対象に含めない。</dd>
+						<dd>在生成updates2.dau（updates.txt）时，不将目标对象纳入更新范围。</dd>
 					</dl>
 					<p>
-						<br>いずれもファイル作成時の制御であるため、<em>SSPや本ファイルを認識可能なアプリの機能でnar、更新ファイルを作成する場合</em>に限って有効である事に注意。
+						<br>由于这些均属于文件创建时的控制措施，<em>因此仅在使用SSP或能够识别本文件的应用程序功能来生成nar、更新文件时</em>才有效，请注意。
 					</p>
-					<p class="default">挙動なし</p>
+					<p class="default">无任何行为</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
 			<section class="caption" id="caption_ignore">
-				<h1>自動的に除外される対象</h1>
-				<p>SSPがnar/updates2.dau(updates.txt)を作成する場合、developer_options.txtの指定がなくとも以下のファイル・フォルダは自動的に対象から除外される。</p>
-				<p>ファイル</p>
+				<h1>自动排除的对象</h1>
+				<p>当SSP生成nar/updates2.dau（updates.txt）时，即使未在developer_options.txt中进行指定，以下文件与文件夹也会被自动排除在外。</p>
+				<p>文件</p>
 				<ul>
 					<li>desktop.ini</li>
 					<li>thumbs.db</li>
@@ -564,7 +511,7 @@ ghost/master/profile/,nonar,noupdate
 					<li>.DS_Store</li>
 					<li>_CATALOG.VIX</li>
 				</ul>
-				<p>フォルダ</p>
+				<p>文件夹</p>
 				<ul>
 					<li>profile/</li>
 					<li>var/</li>
@@ -578,39 +525,35 @@ ghost/master/profile/,nonar,noupdate
 			<section class="caption introduction">
 				<h1 id="#narignore_updateignore">.narignore / .updateignore</h1>
 				<section>
-					<p>developer_options.txtの記法より柔軟性をもたせるため、.gitignoreの記法をそのまま使えるようにしたものが、.narignore/.updateignoreである。</p>
-					<p>記法は <a href="https://git-scm.com/docs/gitignore/ja">.gitignoreのマニュアル</a> を確認するか、LLM(テキスト生成AI)にやりたいことを質問して生成してもらうとよい。</p>
-					<p>ただし.gitignoreと異なり、サブディレクトリに置いても機能しない。ゴーストのルートディレクトリ直下に置いた場合のみ有効である。</p>
-					<p>伺か限定の特殊機能として、include:指定がある。たとえば<br>
+					<p>为了使developer_options.txt的语法更加灵活，我们直接沿用了.gitignore的语法，将其应用于.narignore/.updateignore。</p>
+					<p>具体语法请参考 <a href="https://git-scm.com/docs/gitignore/ja">.gitignore的使用手册</a>或者向LLM（文本生成AI）提问，让它为你生成相应的配置。</p>
+					<p>作为仅限于伺か的特殊功能，有一个include:指定。例如
+<br>
 					include:.narignore<br>
-					と書くと、.narignoreファイルの内容をまるごとこの行の位置に挿入したかのように処理する。
+					这样写的话，会像把整个.narignore文件的内容都插入到这一行的位置一样进行处理。
 					</p>
-					<p>include:に指定する相対パスは、ゴーストのルートディレクトリを基準とするのではなく、その行が書かれているファイル自身があるディレクトリを基準に解決される。読み込んだ先のファイルの中でさらにinclude:を書くこともでき、その場合の基準ディレクトリは「今読み込んだファイルのあるディレクトリ」へとその都度更新される(親から子、子から孫へと基準が移動していく)。</p>
-					<p>この再帰読み込みには上限があり、最大3階層まで辿れる。それを超える深さのinclude:は読み込みを拒否される。パスの区切り文字は / と \ のどちらで書いてもよい。</p>
-					<p>例えばゴーストのルートディレクトリ直下の.narincludeにinclude:sub/extra.txtと書くと、sub/extra.txtを読み込む。そのextra.txt内でさらにinclude:foo.txtと書いた場合は、ゴーストのルートディレクトリではなく、extra.txtが置かれているsub/ディレクトリを基準に、sub/foo.txtを読み込む。</p>
 				</section>
 				<h1 id="#narinclude_updateinclude">.narinclude / .updateinclude</h1>
 				<section>
-					<p>.narignore/.updateignoreのホワイトリスト版。ここに書いたものだけが更新ファイル/NARに格納される。<br>
-					サブディレクトリの扱いがgitignoreと異なり、たとえばshell/masterとだけ書いてshell/は書かなくても、親ディレクトリをきちんと含んで処理する。</p>
-					<p>また.narignore/.updateignoreと同様、.gitignoreと異なりサブディレクトリに置いても機能しない。ゴーストのルートディレクトリ直下に置いた場合のみ有効である。</p>
+					<p>.narignore/.updateignore的白名单版本。只有写在这里的内容才会被存入更新文件/NAR中。<br>
+					对子目录的处理方式与gitignore不同，例如仅写shell/master，而无需再写shell/，系统会自动将父目录也一并纳入处理范围。</p>
 				</section>
 			</section>
 		</section>
 		<section class="category" id="#updates_def.txt">
 			<h1>updates_def.txt</h1>
 			<section class="caption">
-				<em class="specsign">[旧仕様]</em>であり、現在はdeveloper_options.txtで指定する。
+				<em class="specsign">[旧规格]</em>目前需在developer_options.txt中进行指定。
 			</section>
-			<dl id="相対パス,ignore">
-				<dt class="entry">相対パス,ignore</dt>
+			<dl id="相对路径,ignore">
+				<dt class="entry">相对路径,ignore</dt>
 				<dd class="entry">
 					<p>
-						ゴーストのホームフォルダからの相対パスで指定したファイルについて、カンマ区切りでオプションを指定する。
-						<br>フォルダごとの指定は不可。
-						<br>ignoreオプションがあると、updates2.dau（updates.txt）作成時に対象を更新対象に含めない。
+						以相对于人格主目录的路径指定文件，并用逗号分隔选项。
+						<br>不可按文件夹进行指定。
+						<br>若存在 ignore 选项，则在创建 updates2.dau（updates.txt）时，不将该对象包含在更新目标中。
 					</p>
-					<p class="default">挙動なし</p>
+					<p class="default">无任何行为</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>

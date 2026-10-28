@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="zh">
 <head>
 <meta charset="utf-8" />
 <meta name="robots" content="INDEX,FOLLOW">
 <meta name="author" content="UKADOC Project">
 <meta name="keywords" content="伺か,balloon,バルーン">
-<title>UKADOC Project バルーン</title>
+<title>UKADOC Project Balloon</title>
 <link rel="stylesheet" href="base.css">
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 </head>
@@ -25,10 +25,10 @@
 
 
 <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-<h1>バルーン</h1>
+<h1>Balloon</h1>
 <section>
 	<div class="passage">
-		<p>バルーンフォルダのファイルは以下の通り。</p>
+		<p>Balloon文件夹中的文件如下。</p>
 	</div>
 	<div class="passage">
 <pre>
@@ -58,13 +58,13 @@
 　　<em class="filename">+-arrowp*def0.png</em>  (SSP 2.5.51～)
 　　<em class="filename">+-arrowp*def1.png</em>  (SSP 2.5.51～)
 　　<em class="filename">+-thumbnail.png</em>
-　　<em class="filename">+-ok_down.png/ok_up.png</em> （SSPのみ）
-　　<em class="filename">+-cancel_down.png/cancel_up.png</em> （SSPのみ）
-　　<em class="filename">+-mode_down.png/mode_up.png</em> （SSPのみ）
-　　<em class="filename">+-sstp_new.png</em> （SSPのみ）
+　　<em class="filename">+-ok_down.png/ok_up.png</em> （仅限SSP）
+　　<em class="filename">+-cancel_down.png/cancel_up.png</em> （仅限SSP）
+　　<em class="filename">+-mode_down.png/mode_up.png</em> （仅限SSP）
+　　<em class="filename">+-sstp_new.png</em> （仅限SSP）
 　　<em class="filename">+-sstp_newk.png</em>  (SSP 2.5.51～)
 　　<em class="filename">+-sstp_newp*def.png</em>  (SSP 2.5.51～)
-　　<em class="filename">+-marker.png</em> （SSPのみ）
+　　<em class="filename">+-marker.png</em> （仅限SSP）
 　　<em class="filename">+-markers.png</em>  (SSP 2.4.78～)
 　　<em class="filename">+-markerk.png</em>  (SSP 2.4.78～)
 　　<em class="filename">+-markerp*def.png</em>  (SSP 2.5.51～)
@@ -80,25 +80,25 @@
 		<dl class="component">
 			<dt><a href="descript_balloon.html">descript.txt</a></dt>
 			<dd>
-				<p>バルーンを識別するためのファイル。</p>
-				<p>ゴーストやシェルのdescript.txtと比べても記載項目が多い。</p>
-				<p>詳細は<a href="descript_balloon.html" title="descript.txt">リンク先</a>を参照。</p>
+				<p>用于识别Balloon的文件。</p>
+				<p>与人格和Shell的descript.txt相比，其记载的项目更多。</p>
+				<p>详情请参阅<a href="descript_balloon.html" title="descript.txt">链接页面</a>。</p>
 			</dd>
 
 			<dt><a href="descript_balloon.html#balloonsoption">balloons*s.txt/balloonk*s.txt/balloonc*s.txt</a></dt>
 			<dd>
-				<p>バルーンごとの個別設定用ファイル。</p>
-				<p>対応するIDのサーフェス（balloons1.pngに対してballoons1s.txt）について用意すると、そのサーフェスに対してdescript.txtの記述を上書きする形で適応される。</p>
-				<p>特定IDのサーフェスのみ設定を変更したいとき等に使用する。</p>
-				<p>※ファイル名のsに注意（balloons*.txtではなくてballoons*<em>s</em>.txt）</p>
-				<p>入力ボックスにも利用できるようになった。balloonc*s.txtで指定すること。</p>
-				<p>詳細は<a href="descript_balloon.html#balloonsoption" title="balloon(s|k)*s.txt">リンク先</a>を参照。</p>
+				<p>用于每个Balloon的单独设置文件。</p>
+				<p>如果为对应的ID准备了相应的表面（例如，针对balloons1.png准备balloons1s.txt），则会以覆盖的方式将descript.txt中的描述应用到该表面上。</p>
+				<p>在只想修改特定ID的曲面设置时等情况下使用。</p>
+				<p>※请注意文件名中的s（不是balloons*.txt，而是balloons*<em>s</em>.txt）</p>
+				<p>现在输入框也可以使用了。通过balloonc*s.txt进行指定。</p>
+				<p>详情请参阅<a href="descript_balloon.html#balloonsoption" title="balloon(s|k)*s.txt">链接页面</a>。</p>
 			</dd>
 
 			<dt>readme.txt</dt>
 			<dd>
-				<p>バルーン作者が配布元などを記載するためのもの。</p>
-				<p>省略可能だが、用意しておくと、インストール時やベースウェアのメニューなどから参照できる。</p>
+				<p>供Balloon作者填写发布来源等内容之用。</p>
+				<p>可以省略，但事先准备好的话，在安装时或从基础软件的菜单中都可以查阅。</p>
 			</dd>
 		</dl>
 	</div>
@@ -109,68 +109,67 @@
 			<dt>balloons*.png</dt>
 			<dd>
 				<div class="passage">
-					<p>本体側の吹き出し。</p>
-					<p>*はバルーンのサーフェスIDになる数字。</p>
-					<p>偶数番のIDは左向きのバルーン、奇数番のIDは右向きのバルーンとして、二つセットになる。</p>
-					<p>なお一般的に下記のような割り当てになっているが、自由。4-5、6-7とセットを追加していってもよいし0-1だけでもよい。</p>
+					<p>主体一侧的对话Balloon。</p>
+					<p>*为Balloon的表面ID所对应的数字。</p>
+					<p>偶数编号的ID作为向左的Balloon，奇数编号的ID作为向右的Balloon，两者组成一对。</p>
+					<p>通常情况下采用如下分配方式，但也可自由设定。可以按4-5、6-7这样继续增加成对组合，也可以只使用0-1这一对。</p>
 				</div>
 				<ul>
-					<li>balloons0.png　および　balloons1.png　……　通常の吹き出し(左・右)</li>
-					<li>balloons2.png　および　balloons3.png　……　縦長の吹き出し(左・右)</li>
+					<li>balloons0.png　以及　balloons1.png　……　普通的对话Balloon(左・右)</li>
+					<li>balloons2.png　以及　balloons3.png　……　竖长的对话Balloon(左・右)</li>
 				</ul>
 			</dd>
 
 			<dt>balloons*.pna</dt>
 			<dd>
-				<p>MATERIAでは不可。</p>
-				<p>グレースケール（黒：透明←→不透明：白）のpng画像の拡張子部分pnaにリネームしたもの。</p>
-				<p>対応するID（balloons0.pngに対してballoons0.pna）のpngに対応したpnaを用意すると、それを透明度設定として利用できる。</p>
-				<p>SSPでは<a href="descript_balloon.html#use_self_alpha,%E5%80%A4">設定</a>でpng自体のアルファチャンネルを利用できる点も同じ。</p>
-				<p>このファイルは省略可。</p>
+				<p>MATERIA中不可使用。</p>
+				<p>将灰度（黑：透明←→不透明：白）的png图像的扩展名部分重命名为pna。</p>
+				<p>只要为对应的ID（例如，针对balloons0.png准备balloons0.pna）准备好相应的pna文件，便可将其用作透明度设置。</p>
+				<p>在SSP中同样可以在<a href="descript_balloon.html#use_self_alpha,%E5%80%A4">设置</a>里使用png图像本身的Alpha通道。</p>
 			</dd>
 
 			<dt>balloonk*.png</dt>
 			<dd>
-				<p>相方側（または三人目以降）の吹き出し。</p>
-				<p>基本的にballoons*.pngと同じだが縦サイズがやや小さめなのが一般的。</p>
-				<p>このファイルは省略可。省略時は本体側の対応するIDのものが使われる。</p>
+				<p>搭档方（或第三人及以后）的对话Balloon。</p>
+				<p>基本上与balloons*.png相同，但通常纵向尺寸略小。</p>
+				<p>此文件可省略。省略时将使用主体方对应ID的文件。</p>
 			</dd>
 
 			<dt>balloonk*.pna</dt>
 			<dd>
-				<p>balloons*.pnaのballoonk*.png版。説明は先述のballoons*.pna参照。</p>
+				<p>balloons*.pna的balloonk*.png版本。说明请参阅前述的balloons*.pna。</p>
 			</dd>
 
 			<dt>balloonp*def*.png</dt>
 			<dd>
-				<p>三人目以降の吹き出し。\p[2]に当たるバルーンが balloonp2def0.png / balloonp2def1.png になる。</p>
-				<p>このファイルは省略可。省略時はballoonk、さらになければballoonsが使われる。</p>
+				<p>第三人及之后的对话Balloon。对应\p[2]的Balloon将使用balloonp2def0.png / balloonp2def1.png。</p>
+				<p>此文件可省略。省略时将使用balloonk，若仍无则使用balloons。</p>
 			</dd>
 
 			<dt>balloonp*def*.pna</dt>
 			<dd>
-				<p>balloons*.pnaのballoonp*def*.png版。説明は先述のballoons*.pna参照。</p>
+				<p>balloons*.pna的balloonp*def*.png版本。说明请参阅前述的balloons*.pna。</p>
 			</dd>
 
 			<dt>balloonc*.png</dt>
 			<dd>
 				<div class="passage">
-					<p>バルーンの入力ウインドウ。</p>
-					<p>*には0から3（SSPは4）の数字が入り、各番号のファイルは以下に対応している。</p>
+					<p>输入窗口的Balloon</p>
+					<p>*处可填入0至3（SSP为4）的数字，各编号的文件对应如下。</p>
 				</div>
 				<ul>
-					<li>balloonc0.png　……　Sendボックス</li>
-					<li>balloonc1.png　……　Communicateボックス</li>
-					<li>balloonc2.png　……　Teachボックス</li>
-					<li>balloonc3.png　……　Inputボックス</li>
-					<li>balloonc4.png　……　Address Barボックス(SSP専用)</li>
-					<li>balloonc5.png　……　複数行入力(Textarea)ボックス(SSP 2.9.10以降。無い場合はバルーン本体の画像を使う)</li>
+					<li>balloonc0.png　……　发送框(Send)</li>
+					<li>balloonc1.png　……　交流框(Communicate)</li>
+					<li>balloonc2.png　……　教学框(Teach)</li>
+					<li>balloonc3.png　……　输入框(Input)</li>
+					<li>balloonc4.png　……　地址栏框(Address Bar)（仅限SSP）</li>
+					<li>balloonc5.png　……　多行输入（Textarea）框（SSP 2.9.10及以后版本。如果没有，则使用对话框本体的图片）</li>
 				</ul>
 			</dd>
 			
 			<dt>balloonc*.pna</dt>
 			<dd>
-				<p>balloons*.pnaの入力ボックス版。</p>
+				<p>balloons*.pna的输入框版本。</p>
 			</dd>
 
 		</dl>
@@ -181,79 +180,79 @@
 		<dl class="component">
 			<dt>online*.png</dt>
 			<dd>
-				<p>ネットワーク情報受信中に表示される画像。</p>
-				<p>番号順にアニメーションを繰り返す。</p>
+				<p>网络信息接收过程中显示的图像。</p>
+				<p>按编号顺序循环播放动画。</p>
 			</dd>
 
 			<dt>arrow*.png</dt>
 			<dd>
-				<p>文章をスクロールさせるのに使用する画像。</p>
-				<p>0が上向き、1が下向き。</p>
-				<p>SSPでは本体・相方専用のものを定義できる。後述。</p>
+				<p>用于滚动文本的图像。</p>
+				<p>0表示向上，1表示向下。</p>
+				<p>在SSP中，可以定义专用于本体和搭档的资源。详见后文。</p>
 			</dd>
 
 			<dt>sstp.png</dt>
 			<dd>
 				<ul>
-					<li>SSTP受信時に、送信者情報などを表示する際</li>
-					<li>\![*]タグ（SSPは%*でも同様）を実行した際</li>
+					<li>在SSTP接收时，用于显示发送者信息等。</li>
+					<li>当执行\![*]标签时（SSP中使用%*亦同）</li>
 				</ul>
-				<p>に表示される画像。SSPではそれぞれ専用のものを設定できる。後述。</p>
+				<p>显示的图片。在SSP中可为每种情况单独设置专用图片，详见后文。</p>
 			</dd>
 
 			<dt>thumbnail.png</dt>
 			<dd>
-				<p>メニューツリーでバルーンの選択時に表示されるサムネイル。</p>
-				<p>使用可能な画像形式はpngもしくはjpg。</p>
-				<p>pngをpnrにリネームすると画像左上の1ドット(座標0,0)と同色が透過される。</p>
-				<p>このファイルは省略可能。</p>
+				<p>在菜单树中选择Balloon时显示的缩略图。</p>
+				<p>支持的图片格式为png或jpg。</p>
+				<p>将png文件重命名为pnr后，图像左上角的1个像素点（坐标0,0）及其同色部分将被设为透明。</p>
+				<p>此文件可省略。</p>
 			</dd>
 		</dl>
 	</div>
 </section>
 <section>
 	<div class="passage">
-		以下SSP専用。全て省略可能。
+		以下内容仅适用于SSP，均可省略。
 	</div>
 	<div class="passage">
 		<dl class="component">
 			<dt>ok_down.png/ok_up.png</dt>
 			<dd>
-				<p>入力ボックス系のOKボタンの画像。</p>
+				<p>输入框类的确定按钮图片。</p>
 			</dd>
 
 			<dt>cancel_down.png/cancel_up.png</dt>
 			<dd>
-				<p>入力ボックス系のキャンセルボタンの画像。</p>
+				<p>输入框类的取消按钮图片。</p>
 			</dd>
 
 			<dt>mode_down.png/mode_up.png</dt>
 			<dd>
-				<p>モード切替ボタンの画像。</p>
+				<p>模式切换按钮图片。</p>
 			</dd>
 
 			<dt>sstp_new.png / sstp_newk.png / sstp_newp*def.png</dt>
 			<dd>
-				<p>SSTP受信時に、送信者情報などを表示する際に使用される画像（sstp.pngと異なりこの用途専用）。</p>
+				<p>SSTP接收时，用于显示发送者信息等的图像（与sstp.png不同，专为此用途设计）。</p>
 			</dd>
 
 			<dt>marker.png / markers.png / markerk.png / markerp*def.png</dt>
 			<dd>
-				<p>\![*]タグ（SSPは%*でも同様）で表示される画像（sstp.pngと異なりこの用途専用）。</p>
-				<p>markersが本体用(旧バージョン対応のためにmarkerで代用を推奨)、markerkが相方用、markerp2def以降が\p[2]以降用。</p>
+				<p>由\![*]标签（SSP中使用%*亦同）所显示的图像（与sstp.png不同，专为此用途设计）。</p>
+				<p>markers用于本体（为兼容旧版本，建议用marker替代），markerk用于搭档，markerp2def及之后的版本则用于\p[2]及之后。</p>
 			</dd>
 			
 			<dt>arrows*.png / arrowk*.png / arrowp*def.png</dt>
 			<dd>
-				<p>文章をスクロールさせるのに使用する画像。SSP 2.4.78以降専用。</p>
-				<p>0が上向き、1が下向き。</p>
-				<p>arrowsが本体用(旧バージョン対応のためにarrowで代用を推奨)、arrowkが相方用、arrowp2def以降が\p[2]以降用。</p>
+				<p>用于使文章滚动的图片。仅适用于SSP 2.4.78及更高版本。</p>
+				<p>0表示向上，1表示向下。</p>
+				<p>arrows用于主体（为兼容旧版本，建议用arrow替代），arrowk用于搭档，arrowp2def及之后的版本则适用于\p[2]及以后。</p>
 			</dd>
 			
 			<dt>clickwait.png / clickwaits*.png / clickwaitk*.png / clickwaitp*def.png</dt>
 			<dd>
-				<p>クリック待ち(\x)を表すのに使用する画像。SSP 2.5.54以降専用。</p>
-				<p>clickwaitsが本体用、clickwaitkが相方用、clickwaitp2def以降が\p[2]以降用。</p>
+				<p>用于表示等待点击（\x）的图片。仅适用于SSP 2.5.54及更高版本。</p>
+				<p>clickwaits用于主体，clickwaitk用于搭档，clickwaitp2def及之后的版本则适用于\p[2]及以后。</p>
 			</dd>
 		</dl>
 	</div>

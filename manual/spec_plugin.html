@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="zh">
 <head>
 <meta charset="utf-8" />
 <meta name="robots" content="INDEX,FOLLOW">
@@ -15,7 +15,7 @@
 		<table>
 			<tbody>
 				<tr>
-					<th>トップページへ戻る</th>
+					<th>返回首页</th>
 					<td colspan="2">
 						<ul>
 							<li><a href="http://ssp.shillest.net/ukadoc/manual/index.html">INDEX</a></li>
@@ -25,7 +25,7 @@
 			</tbody>
 			<tbody>
 				<tr>
-					<th rowspan="6">設定ファイル</th>
+					<th rowspan="6">设定文件</th>
 					<th>Ghost</th>
 					<td>
 						<ul>
@@ -81,24 +81,24 @@
 			</tbody>
 			<tbody>
 				<tr>
-					<th>さくらスクリプト</th>
+					<th>Sakura脚本</th>
 					<td colspan="2">
 						<ul>
-							<li><a href="./list_sakura_script.html">Sakura Script</a></li>
-							<li><a href="./list_propertysystem.html">Property System</a></li>
+							<li><a href="./list_sakura_script.html">Sakura脚本</a></li>
+							<li><a href="./list_propertysystem.html">属性系统</a></li>
 						</ul>
 					</td>
 				</tr>
 			</tbody>
 			<tbody>
 				<tr>
-					<th rowspan="2">イベント</th>
+					<th rowspan="2">事件</th>
 					<th>SHIORI</th>
 					<td>
 						<ul>
-							<li><a href="./list_shiori_event.html">SHIORI Event</a></li>
-							<li><a href="./list_shiori_event_ex.html">SHIORI Event（外部）</a></li>
-							<li><a href="./list_shiori_resource.html">SHIORI Resource</a></li>
+							<li><a href="./list_shiori_event.html">SHIORI事件</a></li>
+							<li><a href="./list_shiori_event_ex.html">SHIORI事件（外部）</a></li>
+							<li><a href="./list_shiori_resource.html">SHIORI资源</a></li>
 						</ul>
 					</td>
 				</tr>
@@ -106,26 +106,26 @@
 					<th>PLUGIN</th>
 					<td>
 						<ul>
-							<li><a href="./list_plugin_event.html">PLUGIN Event</a></li>
+							<li><a href="./list_plugin_event.html">PLUGIN事件</a></li>
 						</ul>
 					</td>
 				</tr>
 			</tbody>
 			<tbody>
 				<tr>
-					<th>規格</th>
+					<th>规格</th>
 					<td colspan="2">
 						<ul>
 							<li><a href="./spec_shiori3.html">SHIORI/3.0</a></li>
 							<li><a href="./spec_sstp.html">SSTP/1.x</a></li>
-							<li><a href="http://www.boreas.dti.ne.jp/~sdn/saori.html">SAORI/1.0</a>（外部サイト）</li>
+							<li><a href="http://www.boreas.dti.ne.jp/~sdn/saori.html">SAORI/1.0</a>（外部链接）</li>
 							<li><a href="./spec_saori_ex.html">SAORI over DirectSSTP</a></li>
 							<li><a href="./spec_plugin.html">PLUGIN/2.0</a></li>
 							<li><a href="./spec_headline.html">HEADLINE/2.0</a></li>
 							<li><a href="./spec_dll.html">DLL</a></li>
 							<li><a href="./spec_fmo_mutex.html">FMO/MUTEX</a></li>
-							<li><a href="./spec_update_file.html">更新定義ファイル</a></li>
-							<li><a href="./spec_web.html">Web関連</a></li>
+							<li><a href="./spec_update_file.html">更新定义文件</a></li>
+							<li><a href="./spec_web.html">Web关联</a></li>
 						</ul>
 					</td>
 				</tr>
@@ -137,68 +137,68 @@
 		<section class="navigation-category">
 			<h1>PLUGIN/2.0</h1>
 			<ul>
-				<li><a href="#chapter0">前書</a></li>
-				<li><a href="#chapter1">バージョンの設計思想と影響評価</a></li>
-				<li><a href="#chapter2">実体</a></li>
+				<li><a href="#chapter0">前书</a></li>
+				<li><a href="#chapter1">版本的设计思想与影响评估</a></li>
+				<li><a href="#chapter2">实体</a></li>
 				<li><a href="#chapter3">DLL</a></li>
-				<li><a href="#chapter4">request規定</a></li>
-				<li><a href="#chapter5">response規定</a></li>
-				<li><a href="#chapter6">プラグインID</a></li>
+				<li><a href="#chapter4">request规范</a></li>
+				<li><a href="#chapter5">response规范</a></li>
+				<li><a href="#chapter6">插件ID</a></li>
 				<li><a href="#chapter7">descript.txt</a></li>
-				<li><a href="#chapter8">ゴースト側拡張</a></li>
+				<li><a href="#chapter8">人格端扩展</a></li>
 			</ul>
 		</section>
 	</section>
 	<div class="text">
 		<div class="caption">
-			<p>最終変更：<time>2013-08-10</time></p>
+			<p>最后修改：<time>2013-08-10</time></p>
 		</div>
 		<div class="caption">
-			<p>参考：<a href="http://usada.sakura.vg/contents/plugin.html">PLUGIN/1.0</a>（外部サイト）</p>
+			<p>参考：<a href="http://usada.sakura.vg/contents/plugin.html">PLUGIN/1.0</a>（外部网站）</p>
 		</div>
 		<section id="chapter0">
-			<h1>前書</h1>
-			<p>PLUGIN/2.0は、旧来仕様（1.0）の改訂版です。SSPで実装。</p>
-			<p>整備中の規格であり、大幅な変更の可能性があります。</p>
+			<h1>前书</h1>
+			<p>PLUGIN/2.0是旧有规范（1.0）的修订版，已在SSP中实现。</p>
+			<p>此规范尚在完善中，存在重大变更的可能。</p>
 		</section>
 		<section id="chapter1">
-			<h1>バージョンの設計思想と影響評価</h1>
+			<h1>版本的设计思想与影响评估</h1>
 			<section>
-				<h1>設計思想</h1>
-				<p>手軽に本体やゴーストとやりとりできるよう改修し、SAORI群としてゴーストごとに分散してしまったもののうち「便利機能」にあたる部分を統合し、利用者側の利便性を改善する。</p>
-				<p>プラグイン開発者から実行環境へ負担を移すほうが良いでしょう……多分。</p>
+				<h1>设计思想</h1>
+				<p>对主体与人格进行便捷交互的功能进行了改造，并将原本分散在各个SAORI群中的“实用功能”部分予以整合，从而提升用户端的使用便利性。</p>
+				<p>或许将负担从插件开发者转移到运行环境会更好……大概吧。</p>
 			</section>
 			<section>
-				<h1>処理系</h1>
-				<p>処理系にいろいろ負担を移すことを前提としていますので、覚悟してください（苦笑</p>
+				<h1>处理系统</h1>
+				<p>由于本规范以将诸多负担转移至处理系统为前提，请做好心理准备（苦笑</p>
 			</section>
 			<section>
-				<h1>プラグイン作者</h1>
-				<p>新たにコール用にrequestエクスポートを定義するので、PLUGIN/1.0との衝突は考慮する必要はありません。</p>
-				<p>スクリプトやイベント等のゴーストへの通知が非常に楽になる。</p>
+				<h1>插件作者</h1>
+				<p>由于新增了用于调用的request导出定义，因此无需考虑与PLUGIN/1.0版本的冲突。</p>
+				<p>脚本及事件等向Ghost的通知将变得极为简便。</p>
 			</section>
 			<section>
-				<h1>ゴースト作者</h1>
-				<p>特定のプラグインにたとえ対応していなくてもデフォルトスクリプト仕様（後述）があるので致命的な事にならない。</p>
-				<p>どうしてもデフォルトスクリプトで雰囲気を壊されたくない場合は対応しましょう……</p>
+				<h1>人格作者</h1>
+				<p>即使某些插件尚未支持，也存在默认脚本规范（详见后文），因此不会导致严重问题</p>
+				<p>如果实在不想被默认脚本破坏氛围，那就采取应对措施吧……</p>
 			</section>
 			<section>
-				<h1>バージョンの影響評価</h1>
-				<p>ゴーストごとにちりぢりになった機能群をまとめて扱えるので便利かつ楽。</p>
+				<h1>版本影响评估</h1>
+				<p>可以将原本分散在各个人格中的功能模块统一管理，既方便又省心。</p>
 			</section>
 		</section>
 		<section id="chapter2">
-			<h1>実体</h1>
-			<p>設定ファイル「descript.txt」とdllファイルの2つが必要です。</p>
+			<h1>实体</h1>
+			<p>需要两个文件：配置文件“descript.txt”和dll文件。</p>
 		</section>
 		<section id="chapter3">
 			<h1>DLL</h1>
-			<p><a href="spec_dll.html">DLLのページ</a>を参照してください。</p>
-			<p><em>※YAYA/KAWARI as PLUGIN利用者・モジュール作者は読み飛ばして大丈夫です。</em></p>
+			<p>请参阅<a href="spec_dll.html">DLL</a>页面。</p>
+			<p><em>※YAYA/KAWARI as PLUGIN用户及模块作者，可直接跳过阅读。</em></p>
 		</section>
 		<section id="chapter4">
-			<h1>request規定</h1>
-			<p>典型的なリクエスト例は以下の通り。※改行コード＝CR+LF</p>
+			<h1>request规范</h1>
+			<p>典型的的请求示例如下。※换行符＝CR+LF</p>
 <pre><code>GET PLUGIN/2.0
 ID: OnGhostChange
 Charset: UTF-8
@@ -210,15 +210,15 @@ Charset: UTF-8
 Sender: 晶子
 Reference0: 17982
 </code></pre>
-			<p>空行で終了。他のDLL仕様といっしょで、ゼロ終端とは限らないので注意してください。</p>
-			<p>PLUGIN/2.0のフォーマットは基本的にSHIORI/3.0仕様に準じています。<br />イベント識別子のIDヘッダと、任意の数(8以降あり)の追加情報であるReferenceヘッダから構成されます。<br />Referenceの内容はIDによって変わります。</p>
-			<p>Reference等の内容に改行等を含めたい場合、また含めなければならないと規定したい場合は、%8f%73のように、回避したい文字のみURLエンコードして渡すよう規定することを *強く推奨* します（仕様ではありませんが）</p>
-			<p>Senderの内容は、後述するゴースト側からの呼び出し仕様によって呼び出された場合、ゴースト名となります。<br />本体側からコールされた場合はSenderヘッダ自体が消滅するか空文字列が代入されます。<br />SHIORIのように「本体の名前（SSPとかCROWとか）」が入るわけではないので注意してください。</p>
-			<p>通知されるリクエストの種類（ID）については、<a href="list_plugin_event.html">PLUGIN Eventのページ</a>を参照してください。</p>
+			<p>以空行结尾。与其它DLL规范相同，不一定以零终止，请注意。</p>
+			<p>PLUGIN/2.0的格式基本上遵循SHIORI/3.0规范。<br />由事件标识符的ID头部，以及任意数量（至少8个）的附加信息Reference头部构成。<br />Reference的内容会因ID而异。</p>
+			<p>若希望在Reference等内容中包含换行等字符，或规定必须包含此类字符时，*强烈建议* 按照%8f%73的方式，仅对需要转义的字符进行URL编码后传递（这并非规范要求）</p>
+			<p>Sender的内容，若是由后文所述的人格端调用，则会作为人格名称。<br />当从本体侧被调用时，Sender头部本身将被删除，或被赋为空字符串。<br />请注意，这并不像SHIORI那样包含“本体的名称（如SSP或CROW等）”。</p>
+			<p>有关将被通知的请求类型（ID），请参阅<a href="list_plugin_event.html">PLUGIN Event页面</a>。</p>
 		</section>
 		<section id="chapter5">
-			<h1>response規定</h1>
-			<p>レスポンスの例は以下の通り。※改行コード＝CR+LF</p>
+			<h1>response规范</h1>
+			<p>响应示例如下。※换行符＝CR+LF</p>
 <pre><code><!--
 -->PLUGIN/2.0 200 OK
 Charset: Shift_JIS
@@ -231,55 +231,55 @@ Reference2: 65
 Script: すくりぷと～
 ScriptOption: nobreak,notranslate
 </code></pre>
-			<p>※複数起動対応の処理系のみ※ 現在起動中のゴーストでTargetに該当するゴーストがいたらそれで処理されます。<br />"__SYSTEM_ALL_GHOST__"が指定されている場合は、「起動中の全ゴースト」に通知されます。</p>
-			<p>該当しない場合、何も指定しない場合は処理系に応じて適当なゴースト「1体」で処理されます。<br />また、後述のゴースト側からの呼び出し仕様で呼ばれた場合は、Targetヘッダで明示的に指定がされない限り、呼んだゴーストに返ります。</p>
-			<p>※対応していない処理系ではそもそも1体しかありませんのでそのゴーストが毎度呼び出されます。</p>
+			<p>※仅适用于支持多实例运行的处理系统※ 如果当前正在运行的人格中存在与Target匹配的人格，则将以该人格进行处理。<br />当指定为"__SYSTEM_ALL_GHOST__"时，将向“所有正在运行的人格”发送通知。</p>
+			<p>若不匹配，或未作任何指定，则根据具体处理系统，将以适当的“1个”人格进行处理。<br />另外，若按照下文所述的来自人格端的调用方式被调用时，除非在Target头部中明确指定，否则将返回给调用该人格。</p>
+			<p>※对于不支持该功能的处理系统，由于本来就只有一个实例，所以每次都会调用该人格。</p>
 			<section>
 				<h1>Event/Reference</h1>
-				<p>EventヘッダとReferenceヘッダはゴースト側に送るイベントです。<br />これにゴーストが反応しない場合、デフォルトスクリプトであるScriptヘッダが再生されます。</p>
+				<p>Event头部和Reference头部是发送给人格端的事件。<br />如果人格对此无反应，则会播放默认脚本中的Script头部。</p>
 			</section>
 			<section>
-				<h1>ScriptOption</h1>
-				<p>ScriptOptionは、Scriptヘッダ内容にのみ適用されるオプション指定です。</p>
+				<h1>ScriptOption 脚本选项</h1>
+				<p>ScriptOption仅适用于Script头部的内容，是一种选项指定。</p>
 				<dl>
 					<dt>notranslate</dt>
-					<dd>ゴーストのトランスレートを介さない</dd>
+					<dd>不经过人格的翻译处理</dd>
 					<dt>nobreak</dt>
-					<dd>現在喋っているトークを中断せず最後まで喋った後で指定したスクリプトを実行する</dd>
+					<dd>不中断当前正在播放的对话、直至其结束之后再执行指定的脚本</dd>
 				</dl>
 			</section>
 			<section>
-				<h1>EventOption</h1>
-				<p>EventOptionは、Eventヘッダ内容にのみ適用されるオプション指定です。</p>
+				<h1>EventOption 事件选项</h1>
+				<p>EventOption仅适用于Event头部内容的选项指定。</p>
 				<dl>
 					<dt>notify</dt>
-					<dd>指定したイベントをゴーストにnotifyで通知する</dd>
+					<dd>将指定的事件通过notify通知给人格</dd>
 				</dl>
 			</section>
-			<p>Event,EventOption,Reference,Target,Script,ScriptOptionはすべて省略可能です。<br />例えばイベントだけ送りたい、デフォルトスクリプトは不要な場合はScript/ScriptOptionヘッダを省略してください。<br />※スクリプトだけ送りたい場合はその逆です。</p>
+			<p>Event、EventOption、Reference、Target、Script、ScriptOption均可省略。<br />例如，如果您只想发送事件而不需要默认脚本，请省略Script/ScriptOption头部。<br />※如果只想发送脚本，则反之。</p>
 		</section>
 		<section id="chapter6">
-			<h1>プラグインID</h1>
-			<p><a href="descript_plugin.html#id,ID">Plugin設定のIDの項</a>を参照してください。
+			<h1>插件ID</h1>
+			<p>请参阅<a href="descript_plugin.html#id,ID">Plugin设定的ID项</a>。
 		</section>
 		<section id="chapter7">
 			<h1>descript.txt</h1>
-			<p><a href="descript_plugin.html">Plugin設定のページ</a>を参照してください。</p>
+			<p>请参阅<a href="descript_plugin.html">Plugin设定页面</a>。</p>
 		</section>
 		<section id="chapter8">
-			<h1>ゴースト側拡張</h1>
+			<h1>人格端扩展</h1>
 			<section>
-				<h1>スクリプト拡張</h1>
+				<h1>脚本扩展</h1>
 <pre><code><!--
--->\![raiseplugin,プラグイン名またはID,イベント,Reference0...]
-\![notifyplugin,プラグイン名またはID,イベント,Reference0...]
+-->\![raiseplugin,插件名称或ID,事件,Reference0...]
+\![notifyplugin,插件名称或ID,事件,Reference0...]
 </code></pre>
-				<p>指定したプラグインに指定したイベントを送信します。 プラグイン側でTarget指定がない限り(system_any)、プラグインからのレスポンスはraisepluginしたゴーストに優先的に割り振られますので、SAORIもどき的な使い方も可能です。</p>
-				<p>送信コマンドは、<a href="list_sakura_script.html#_!_raiseplugin,プラグインのIDまたは名前,イベント名,r0,r1,r2..._">\![raiseplugin]</a>の場合はGET、<a href="list_sakura_script.html#_!_notifyplugin,プラグインのIDまたは名前,イベント名,r0,r1,r2..._">\![notifyplugin]</a>の場合はNOTIFYとなります。</p>
+				<p>向指定的插件发送指定的事件。除非插件侧指定了Target（即为system_any），否则来自插件的响应将优先分配给执行raiseplugin的人格，因此也可以像SAORI那样使用。</p>
+				<p>发送命令中，<a href="list_sakura_script.html#_!_raiseplugin,插件的ID或名称,事件名,r0,r1,r2..._">\![raiseplugin]</a>表示GET，<a href="list_sakura_script.html#_!_notifyplugin,插件的ID或名称,事件名,r0,r1,r2..._">\![notifyplugin]</a>表示NOTIFY。</p>
 			</section>
 			<section>
-				<h1>SHIORIイベント拡張</h1>
-				<p><a href="list_shiori_event.html#installedplugin">installedpluginの項目</a>を参照してください。</p>
+				<h1>SHIORI事件扩展</h1>
+				<p>请参阅<a href="list_shiori_event.html#installedplugin">installedplugin的项目</a></p>
 			</section>
 		</section>
 	</div>

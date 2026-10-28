@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="zh">
 <head>
 <meta charset="utf-8" />
 <meta name="robots" content="INDEX,FOLLOW">
 <meta name="author" content="UKADOC Project">
 <meta name="keywords" content="ukadoc,メニュー,オーナードロー,右クリックメニュー">
-<title>UKADOC Project オーナードローメニュー</title>
+<title>UKADOC Project 所有者下拉菜单</title>
 <link rel="stylesheet" href="base.css">
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 </head>
@@ -25,10 +25,10 @@
 
 
 <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-<h1>オーナードローメニュー</h1>
+<h1>所有者下拉菜单</h1>
 <section>
 	<div class="passage">
-		<p>オーナードローメニュー（右クリックメニュー）に使用する画像ファイル類。</p>
+		<p>用于所有者下拉菜单（右键菜单）的图像文件。</p>
 <pre>
 +-(myghost)
 　　+-shell
@@ -49,8 +49,8 @@
 　　　　　　<em class="filename">+-menu_foreground.png</em>
 　　　　　　<em class="filename">+-menu_sidebar.png</em>
 </pre>
-		<p>実際には必ずしも上記位置にファイルがある必要はなく、フォルダ内などにあってもよい。</p>
-		<p>SHIORI Resourceによってオーナードローメニューの設定をする場合、ghost/master側にあった方が都合がよい（ghost/master基点の相対パスで指定するので）。</p>
+		<p>实际上，这些文件并不一定非得位于上述位置，放在文件夹内等其他位置也是可以的。</p>
+		<p>使用SHIORI Resource设置所有者右键菜单时，最好将其放置在人格/master端（因为是以ghost/master为基准的相对路径进行指定）。</p>
 	</div>
 </section>
 <section>
@@ -58,35 +58,35 @@
 		<dl class="component">
 			<dt>menu_background.png</dt>
 			<dd>
-				<p>オーナードローメニューの背景画像。</p>
-				<p>メニューの領域は画像ではなくメニューの大きさになる。</p>
-				<p>省略可能（標準のメニュー表示になる）。</p>
+				<p>右键菜单的背景图片。</p>
+				<p>菜单的区域将以菜单的大小为准，而非图片。</p>
+				<p>可省略（将显示标准菜单）。</p>
 			</dd>
 
 			<dt>menu_foreground.png</dt>
 			<dd>
-				<p>オーナードローメニューツリーのカーソル選択部分の画像。</p>
-				<p>省略可能（標準のメニュー表示になる）。</p>
+				<p>用于右键菜单树中光标选中部分的图像。</p>
+				<p>可省略（将显示标准菜单）。</p>
 			</dd>
 
 			<dt>menu_sidebar.png</dt>
 			<dd>
-				<p>オーナードローメニューツリーの左側に追加できる画像。</p>
-				<p>横幅のみ画像の幅となる。</p>
-				<p>省略可能。</p>
+				<p>可添加到右键菜单树左侧的图像。</p>
+				<p>仅以宽度为准，即图像的宽度</p>
+				<p>可省略。</p>
 			</dd>
 		</dl>
 	</div>
 	<div class="passage">
-		<p>いずれも画像、文字色などの指定はシェルの<a href="descript_shell.html">descript.txt</a>または<a href="list_shiori_resource.html" target="_top">SHIORI Resource</a>によって行う。</p>
-		<p>SHIORI Resourceで指定する場合は、キャラクターが入れ替わり制であったり、モード切替のような機能を持つゴーストで、その状態に応じてメニュー表示を変更するなどの仕掛けに使える。</p>
-		<p>shell側descript.txtとSHIORI Resourceの両方で指定した場合、SHIORI Resourceの方が優先される。</p>
-		<p>また、各画像のファイル名は必ずしも上例の通りにする必要は無い（任意名でよい）。</p>
-		<p>詳細は<a href="dev_ownerdraw.html">オーナードローメニューの設定</a>のページも参照。</p>
+		<p>以上各项的图像、文字颜色等设置，均通过Shell的<a href="descript_shell.html">descript.txt</a>或<a href="list_shiori_resource.html" target="_top">SHIORI Resource</a>来完成。</p>
+		<p>在SHIORI Resource中进行指定时，可用于设置角色为替换制，或使用具备模式切换等功能的人格，并根据其状态动态调整菜单显示等机制。</p>
+		<p>若同时在Shell端的descript.txt与SHIORI Resource中进行了指定，则以SHIORI Resource中的设定为准。</p>
+		<p>此外，各图像的文件名并不一定非得与上述示例完全一致（可使用任意名称）。</p>
+		<p>详情请参阅<a href="dev_ownerdraw.html">所有者下拉菜单的设置</a>页面。</p>
 	</div>
 	<div class="passage">
-		<p>メニューの画像が切れた部分はその端の色を単色で塗り潰す。</p>
-		<p>指定が無かった場合は一般的なポップアップになる。</p>
+		<p>菜单图片被截断的部分，用其边缘颜色进行单色填充。</p>
+		<p>若无特别指定，则采用通用的弹出窗口样式。</p>
 	</dl>
 </section>
 <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
