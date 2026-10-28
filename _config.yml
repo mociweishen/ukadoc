@@ -1,0 +1,28 @@
+# GitHub Pages (Jekyll) ビルド設定
+#
+# このサイトは静的な HTML のみで構成されているため、Jekyll には
+# 「サイトとして公開しないディレクトリ」を教えるだけでよい。
+#
+# 注意: Jekyll ではユーザーの exclude が既定の除外リストを丸ごと上書きする
+#       (配列はマージされない) ため、既定値をそのまま書き並べておく。
+
+exclude:
+  # --- Jekyll / GitHub Pages の既定値 (上書きされないよう明示) ---
+  - .sass-cache
+  - .jekyll-cache
+  - gemfiles
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle
+  - vendor/cache
+  - vendor/gems
+  - vendor/ruby
+
+  # --- このリポジトリ固有 ---
+  # SSP HELP Builder (Node.js 製のローカル用ツール)。
+  # ここを除外しないと、同梱の node_modules 以下にある js-yaml の
+  # テスト用 YAML (意図的に不正な YAML) が front matter として解釈され、
+  #   Invalid YAML front matter in .../document-separator-in-quoted-scalar.yml
+  # で GitHub Pages のビルドが失敗する。
+  - ssphelp_builder
